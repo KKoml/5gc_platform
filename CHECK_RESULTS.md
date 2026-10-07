@@ -14,3 +14,13 @@ The Core-side publication passed all 22 read-only local checks. Validation parse
 `SHA256SUMS.txt` covers the publication payload. The checksum file and validation/check reports are excluded from that list to avoid circular report/hash dependencies; Git commit identity covers the complete repository tree. `LOCAL_VALIDATION.json` gives individual local verdicts.
 
 External state: cloud raw-data upload and final experiment-machine materials are pending their owners. Public Git retrieval and anonymous-mirror checks are recorded separately after pushing. Uploading this branch does not establish anonymous mirror tracking or full raw/model availability.
+
+## Checks after upload
+
+- The published payload commit is `782711568257e8e8d13ee8118b6e74ac6d5ad90a`; the remote branch head matched the local commit. An unauthenticated HTTPS Git read returned the same branch commit.
+- Unauthenticated raw-GitHub retrieval returned HTTP 200 for the appendix index, 81-column dictionary, W1-D06 base-table example and SHA-256 list. Every downloaded byte stream matched its local publication copy.
+- The anonymous review page (`5gc_platform-1FEA`) returned HTTP 200 when fetched with an explicit client identifier, but another automated request returned HTTP 403; the static page alone does not establish access to appendix/data files or tracking of this branch. Anonymous artifact retrieval remains **unverified**.
+- A GitHub API request was rate-limited (HTTP 403). Public-file availability was checked through direct unauthenticated Git/raw retrieval instead.
+- The default `main` branch was not overwritten or merged by this task. These materials are on the named `codex/` branch; anonymous mirror/default-branch integration requires a separate repository/mirror arrangement.
+
+These checks establish delivery of the small Core-side publication, not cloud raw-data, final model-input identity or anonymous-mirror availability.
