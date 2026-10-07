@@ -1,0 +1,8 @@
+artifact,fields,scope,actual_unit,rule,program,caveat
+metrics/interface-resource.jsonl,rx_bps;tx_bps,source collector,byte/s,Counter-byte delta / actual interval; no factor8,scripts/host_metrics_collector.py,Name contains bps but implementation is byte/s
+metrics/nf-resource.jsonl,rx_bps;tx_bps,K8s collector,bit/s when applicable,Producer-specific network conversion;hostNetwork skipped/null,scripts/k8s_state_collector.py,Do not use host-interface formula by same name
+metrics/control-plane-kpis.jsonl,registration_success_rate;pdu_session_success_rate,control-plane collector,percent_0_to_100,100 * cumulative success / cumulative request;null if no requests,scripts/control_plane_collector.py,Current generic ratio labels must not silently change data
+report/v3_timeseries.csv,registration_success_rate;cp_pdu_session_success_rate,base exporter,percent_0_to_100,Mapped from cp source/model column,scripts/export_v3_timeseries.py,Check actual source values and do not multiply twice
+report/v3_business_completion_windows.csv,completion_rate,terminal-outcome exporter,ratio_0_to_1,success/(success+failure);timeout/error failures;min20 outcomes,scripts/export_model_timeseries_csv.py,Low sample count yields missing
+core24 candidate,rx_bitrate_bps;tx_bitrate_bps,final task builder pending,bit/s,8*host-interface source byte/s;verify final builder,handoff/CORE24_SOURCE_MATCH.csv,Candidate name/units do not establish final tensor identity
+metrics/nf-resource.jsonl,cpu_millicores;cpu_pct_of_limit;cpu_pct_of_node,NF resource collector,millicore;percent;percent,Different denominators / entities,scripts/k8s_state_collector.py,Do not merge as one CPU usage variable

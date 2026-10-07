@@ -1,0 +1,8 @@
+{
+  "source_sha256": "65d80d9289e93ac87c4dfebcdf017a067f0c57401335828a0a3db6141054c1cb",
+  "rows_provided": 12,
+  "source_relative_path": "data/D06/core_features_5s.csv.gz",
+  "source_package": "existing_core_side_candidate",
+  "final_experiment_machine_input_identity": "UNVERIFIED",
+  "run_binding": "D06 slot; requires experiment-machine provenance confirmation"
+}

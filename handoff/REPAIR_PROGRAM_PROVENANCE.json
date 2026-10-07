@@ -1,0 +1,8 @@
+{
+  "source_sha256": "7a95178e8b52bc29c45e13f8d9f64e29a6a9ad3bcfca13a97f4f733d8c46df4a",
+  "published_sha256": "e2c8d2246ee80d45e4b78b49ea8c0c3bfc079c9ad8902c12547bfa4065a5dbf6",
+  "source_git_commit": "none recorded",
+  "version": "w1-future-leakage-fixed-task-views.v1",
+  "collection_commit": "dffa0226d406235017f26a28c50ec59a304840ff",
+  "identity_with_final_prediction_inputs": "UNVERIFIED; experiment machine supplies authoritative manifest"
+}

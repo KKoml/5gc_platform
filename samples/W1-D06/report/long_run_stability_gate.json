@@ -1,0 +1,98 @@
+{
+  "accepted": true,
+  "checks": [
+    {
+      "accepted": true,
+      "detail": "missing metrics/run-health.jsonl",
+      "name": "run_health.present"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "allowed_secs": 70.0,
+        "max_gap_secs": 33.0
+      },
+      "name": "run_health.sample_gap"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "bad_samples": 0,
+        "startup_grace_samples": 2
+      },
+      "name": "run_health.sample_status"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "low_disk_samples": 0,
+        "min_free_bytes": 21474836480
+      },
+      "name": "run_health.disk_free"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "max_clock_skew_ms": 1000.0,
+        "skew_ratio": 0.0,
+        "skewed_samples": 0,
+        "startup_grace_samples": 2,
+        "total_post_grace": 2746
+      },
+      "name": "run_health.clock_skew"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "core_components": [
+          "amf-a",
+          "amf-b",
+          "ausf",
+          "mongodb",
+          "nrf",
+          "nssf",
+          "pcf",
+          "smf-gold",
+          "smf-silver",
+          "udm",
+          "udr",
+          "upf-gold",
+          "upf-silver"
+        ],
+        "count": 0,
+        "failures": [],
+        "ignored_optional_pods": 0,
+        "startup_grace_samples": 2
+      },
+      "name": "k8s_pods.running_no_restarts"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "count": 0,
+        "failures": []
+      },
+      "name": "collectors.alive"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "count": 0,
+        "failures": [],
+        "isolated_ignored": 0
+      },
+      "name": "traffic.liveness"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "count": 0,
+        "stalls": []
+      },
+      "name": "captures.growing_or_closed"
+    }
+  ],
+  "gate": "long_run_stability",
+  "generated_at": "2026-08-08T01:21:23.080236Z",
+  "reasons": []
+}

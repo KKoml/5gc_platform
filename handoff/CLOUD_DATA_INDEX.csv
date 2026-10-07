@@ -1,0 +1,8 @@
+run_id,raw_manifest,time_start,time_end,cloud_url,cloud_object_sha256,delivery,anonymous_access,individual_file_hash_scope
+W1-D01,manifests/RAW_FILES.csv,2026-08-12T15:28:11+00:00,2026-08-13T15:45:25+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D02,manifests/RAW_FILES.csv,2026-08-09T14:11:14+00:00,2026-08-10T14:26:40+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D03,manifests/RAW_FILES.csv,2026-08-03T20:48:55+00:00,2026-08-04T21:05:34+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D04,manifests/RAW_FILES.csv,2026-08-10T19:44:40+00:00,2026-08-11T20:01:27+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D05,manifests/RAW_FILES.csv,2026-08-05T15:01:03+00:00,2026-08-06T15:17:45+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D06,manifests/RAW_FILES.csv,2026-08-06T20:19:36+00:00,2026-08-07T20:36:28+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending
+W1-D07,manifests/RAW_FILES.csv,2026-08-08T01:32:07+00:00,2026-08-09T01:48:37+00:00,,,manifest_only,pending_owner_upload,see hash_status; missing hashes pending

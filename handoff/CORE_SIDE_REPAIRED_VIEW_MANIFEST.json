@@ -1,0 +1,28 @@
+{
+  "slot": "D06",
+  "run_id": "W1-D06",
+  "split": "test",
+  "source_v3": "/mnt/free5gc_experiments/W1-D06/report/v3_timeseries.csv",
+  "t1_candidates": 1455,
+  "t2_candidates": 17471,
+  "history_rows": {
+    "T1": 87300,
+    "T2": 1048260
+  },
+  "target_rows": 5820,
+  "cutoffs": 17471,
+  "affected_fields": [
+    "n6_bitrate_bps",
+    "end_to_end_rtt_ms",
+    "jitter_ms",
+    "packet_loss_rate"
+  ],
+  "unchanged_fields": "all other original V3 fields and original construction",
+  "n6_scope": {
+    "saved_n6_link_rows": 786058,
+    "selected_n6_link_rows": 786058,
+    "direct_n6_candidates": 892407,
+    "logical_n6_candidates": 99251,
+    "unmapped_n6_link_rows": 0
+  }
+}

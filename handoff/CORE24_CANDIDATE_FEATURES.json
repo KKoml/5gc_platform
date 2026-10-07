@@ -1,0 +1,30 @@
+{
+  "status": "core-side candidate; experiment-machine final identity UNVERIFIED",
+  "features": [
+    "amf-a__cpu_millicores",
+    "amf-b__cpu_millicores",
+    "smf-silver__cpu_millicores",
+    "smf-gold__cpu_millicores",
+    "upf-silver__cpu_millicores",
+    "upf-gold__cpu_millicores",
+    "amf-a__memory_bytes",
+    "amf-b__memory_bytes",
+    "smf-silver__memory_bytes",
+    "smf-gold__memory_bytes",
+    "upf-silver__memory_bytes",
+    "upf-gold__memory_bytes",
+    "core-host-local__cpu_pct",
+    "core-host-local__mem_used_pct",
+    "core-host-local__loadavg_1",
+    "core-host-local__swap_used_bytes",
+    "core-if-upfgtp-silver__rx_bitrate_bps",
+    "core-if-upfgtp-silver__tx_bitrate_bps",
+    "core-if-upfgtp-silver__rx_packet_rate_pps",
+    "core-if-upfgtp-silver__tx_packet_rate_pps",
+    "core-if-upfgtp-silver__tx_dropped_delta",
+    "core-if-upfgtp-silver__tx_errors_delta",
+    "upf-silver__ready",
+    "upf-gold__ready"
+  ],
+  "source_file_sha256": "5568cd928a9b3c2212ccb6f84f513d237376170463d36f93b01853d813ef04d6"
+}

@@ -1,0 +1,6 @@
+{"note": "stable_window_open", "phase": "baseline", "run_id": "W1-D06", "state": "start", "timestamp": "2026-08-06T20:22:48.339906+00:00"}
+{"note": "stable_window_complete", "phase": "baseline", "run_id": "W1-D06", "state": "end", "timestamp": "2026-08-06T20:24:52.643006+00:00"}
+{"note": "", "phase": "timeline", "run_id": "W1-D06", "state": "start", "timestamp": "2026-08-06T20:24:52.766008+00:00"}
+{"note": "", "phase": "timeline", "run_id": "W1-D06", "state": "end", "timestamp": "2026-08-07T20:30:46.012061+00:00"}
+{"note": "timeline_complete", "phase": "recovery", "run_id": "W1-D06", "state": "start", "timestamp": "2026-08-07T20:30:46.064950+00:00"}
+{"note": "stable_window_complete", "phase": "recovery", "run_id": "W1-D06", "state": "end", "timestamp": "2026-08-07T20:33:54.066881+00:00"}

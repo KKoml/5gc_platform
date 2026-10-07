@@ -1,0 +1,37 @@
+field,dictionary_role,candidate_body32_inclusion,reason,mapping_status
+seconds_from_session_start,metric,False,time quantity,candidate_only; final manuscript metric list not provided
+time_since_last_fault_end_sec,metric,False,time quantity,candidate_only; final manuscript metric list not provided
+recovery_elapsed_sec,metric,False,time quantity,candidate_only; final manuscript metric list not provided
+OT,metric,False,compatibility alias of N3 uplink,candidate_only; final manuscript metric list not provided
+n3_uplink_bitrate_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+n3_downlink_bitrate_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+n6_bitrate_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_rx_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_tx_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+cp_pdu_session_success_rate,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+cp_pdu_session_failure_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+end_to_end_rtt_ms,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+jitter_ms,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+packet_loss_rate,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+business_completion_rate,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_cpu_millicores,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_memory_bytes,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+cp_active_session_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+cp_pending_session_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+cp_pdu_session_request_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+registration_success_rate,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+registration_failure_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+registration_request_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+ran_pdu_active_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+ready_gnb_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+observed_ue_count,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+n4_bitrate_bps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_rx_pps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+perf_upf_tx_pps,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+host_cpu_pct,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+host_mem_used_pct,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+host_loadavg_1,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+smf_cpu_pct,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+smf_rss_bytes,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+amf_cpu_pct,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided
+amf_rss_bytes,metric,True,network/resource/session/application observation,candidate_only; final manuscript metric list not provided

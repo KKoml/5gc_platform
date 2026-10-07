@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "publication_sha256",
+      "passed": true,
+      "detail": {
+        "files": 471,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "manifest_file_scope",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "go_parser_syntax",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "python_ast_syntax",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "bash_static_syntax",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "json_jsonl_parse",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "csv_row_width",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "anonymous_site_identity_scan",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "private_key_token_scan",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "git_file_size_under_50MiB",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "markdown_local_links",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "dictionary_scope_400_215",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "base_dictionary_81_unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "seven_base_runs_611777_rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "coverage_metadata_matches_observed_cells",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sample_plan_execution_identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "72_accepted_checkpoints_same_run_and_groups",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "base_sample_81_columns_contiguous_real_grid",
+      "passed": true,
+      "detail": {
+        "rows": 440
+      }
+    },
+    {
+      "check": "core24_candidate_24_names_distinct",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "source_publication_hashes",
+      "passed": true,
+      "detail": {
+        "files": 395
+      }
+    },
+    {
+      "check": "provided_file_hashes_and_scope",
+      "passed": true,
+      "detail": {
+        "entries": 33
+      }
+    },
+    {
+      "check": "saved_runtime_matches_pinned_source",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "collection_commit": "dffa0226d406235017f26a28c50ec59a304840ff",
+  "manuscript_sha256": "00a3860218b348342d81de4956512af20baa0de99f793fdc44dcb3072f4398bb",
+  "language": "English",
+  "selected_sample_run": "W1-D06",
+  "original_data_changed": false,
+  "network_or_fault_execution": false,
+  "raw_cloud_location": "pending owner upload",
+  "experiment_machine_task_manifests": "pending separate upload",
+  "publication_branch": "codex/platform-data-appendices-20261007"
+}

@@ -1,0 +1,44 @@
+{
+  "accepted": true,
+  "campaign_id": "v3-week-balanced-random-v15-n6startfix-planids-20260803",
+  "contract_sha256": "ebaa0ae0744162633fbb42f6197bf8e0a72d640314f73e842d891e3e78b141da",
+  "core_images": {
+    "amf-a": "75be35539639418a9d023fb2c4642a25dfed2865d9b185bc0591052cd3ee22e7",
+    "amf-b": "e0a0bc6e518ebd2a02bc69570666a92d954d979ecdfdf27f60567b42866f221c",
+    "ausf": "e52e5902ba718e93a7f3fa9cc12ee2694c725fde3a0f790d07bd2702beb28e64",
+    "mongodb": "088f6c61f437ff76a948f9f9137a3f1cd38f886f2e8683073ae97f37f95f2aad",
+    "nrf": "2cc11641d3075fc07d243992e38e580dadb22f59181a2b188793606756819f8e",
+    "nssf": "1a228b52eab5f5a870fd8d0f2e5e70a86e3bdef76c388bde459d29d2c3b7b603",
+    "pcf": "62bd857e518bb3b646e24c9a834d4507cfa93cd33088c3793cc600421f5e62c7",
+    "smf-gold": "c8dd565ff31bf7906f491f41e72c4a543cfa05eba8bcc37f7d7c2a3ed1cac750",
+    "smf-silver": "295315b4feaced6595e6f6a81f771726be1bc25fa222402115ac702770c25b79",
+    "udm": "01dca8226309c7034ad4efdd6789188e978490f130bbed1448df583958835ce6",
+    "udr": "11fc26212bf0db58f17177a38163a815ab1615648b19a82d67048691f1eeb6c4",
+    "upf-gold": "6968ce06f9ba1bf85064b080358c097b9f85bab8afa92f1f07f6d8d66013f41a",
+    "upf-silver": "6968ce06f9ba1bf85064b080358c097b9f85bab8afa92f1f07f6d8d66013f41a"
+  },
+  "plan_sha256": "89aee2bbf17b90893b0b9ea01b6a30a8f441dc3e7561b6d47b2d40b5d97c2897",
+  "ran_images": {
+    "local-ueransim:batch-1000": "f50a50cc8235349a344202b02a67eb4704201986fc21931d8a1df4db3070f3e4",
+    "local-ueransim:batch-1000-trace": "d046cc45f5c70498bbd5afd492bb1b8f3940f5235c6c36fba0a98935d5136696"
+  },
+  "run_id": "W1-D06",
+  "schema_version": "v3-run-provenance.v1",
+  "slot": "D06",
+  "source_commit": "dffa0226d406235017f26a28c50ec59a304840ff",
+  "source_dirty": false,
+  "source_root": "/opt/platform",
+  "topology": {
+    "path": "config/k8s/topologies/multi-worker-amf-smf-upf.yaml",
+    "sha256": "4beca4fb531b84a58e8a007f6887cef14b0c0db44fb989effab2353d0fa4f5bc"
+  },
+  "topology_sha256": "4beca4fb531b84a58e8a007f6887cef14b0c0db44fb989effab2353d0fa4f5bc",
+  "traffic_scenario": {
+    "path": "tools/ue_tracer/scenario_vali1.json",
+    "sha256": "579f5f7b7eb038e59247aeb5d732fbe1c647532ff3ddbe69bfadaec7bc289fd1"
+  },
+  "traffic_script": {
+    "path": "tools/ue_tracer/trace_play_scenario_v11.py",
+    "sha256": "398818e5dc521465f9c7495ca1f910bc964364714a924213af5e4a8750ffdd9a"
+  }
+}
