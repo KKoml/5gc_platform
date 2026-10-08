@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source_lock_files": 323,
+  "source_lock_hash_matches": 323,
+  "weight_files_compared": 87,
+  "weight_hashes_match": 87,
+  "prediction_input_files": 14,
+  "prediction_field_comparison": "run-ID pseudonymization; fields exact except listed float64 CSV roundtrip differences; rtol2e-15/atol2e-8; format hashes separate",
+  "limits": "No common manuscript-to-historical-execution binding; current source inspection, not proof of historical execution."
+}

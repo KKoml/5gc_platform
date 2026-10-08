@@ -1,0 +1,16 @@
+{
+  "model": "TimeFilter",
+  "task": "T1",
+  "target": "n6_aggregate",
+  "slot": "D07",
+  "seed": 43,
+  "n_samples": 1447,
+  "index_hash": "0bdb4274da852b8f49999c5834752ff9fb1331173b4d702317de91b559e7f832",
+  "prediction_sha256": "f44227f08d0000f326bfc1d8ef41e2ed78fb35ac40976419d86c1f350c5b9c5a",
+  "inference_seconds": 0.05322321900166571,
+  "seconds_per_window": 3.678176848767499e-05,
+  "inference_scope": "local offline model+adapter; excludes data IO; not live network latency",
+  "device": "cuda",
+  "input_panel": "M",
+  "config_hash": "05f8e2fdb9361fc54bf387b42fb3f7e83597843b00e871b9fc414f92586aecfd"
+}

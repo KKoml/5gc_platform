@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "independent_agent": "env_witness",
+  "command": "documented local-cuda ledger invocation",
+  "sentinel": "ARIS_LOCAL_ENV_READY",
+  "exit_code": 0,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "torch": "2.11.0+cu128",
+  "seed": 20260831,
+  "kernel_mean": -0.00457036
+}

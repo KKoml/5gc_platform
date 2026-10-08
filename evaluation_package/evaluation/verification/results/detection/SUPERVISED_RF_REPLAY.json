@@ -1,0 +1,222 @@
+{
+  "status": "PASS",
+  "tol_score_absolute": 1e-12,
+  "tol_metric_absolute": 1e-06,
+  "rows": [
+    {
+      "fit": "FD_detection__RF_full__seed17",
+      "seed": 17,
+      "split": "validation",
+      "n": 16519,
+      "max_score_abs_difference": 4.440892098500626e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": []
+    },
+    {
+      "fit": "FD_detection__RF_full__seed17",
+      "seed": 17,
+      "split": "test",
+      "n": 33039,
+      "max_score_abs_difference": 5.551115123125783e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": [
+        {
+          "budget": 0.1,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.3680555555555556,
+            "event_recall_eligible_main": 0.3680555555555556,
+            "false_alerts_per_hour": 0.1973954763536669,
+            "auprc_unadjusted": 0.7872677344017832,
+            "f1_unadjusted": 0.29120636323464427,
+            "first_detection_delay_median_seconds": 71.53092,
+            "hit_event_count": 53,
+            "false_alert_count": 8,
+            "effective_normal_hours": 40.52777777777778
+          }
+        },
+        {
+          "budget": 1.0,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.7569444444444444,
+            "event_recall_eligible_main": 0.7569444444444444,
+            "false_alerts_per_hour": 0.6415352981494173,
+            "auprc_unadjusted": 0.7872677344017832,
+            "f1_unadjusted": 0.6811961479979727,
+            "first_detection_delay_median_seconds": 30.501073,
+            "hit_event_count": 109,
+            "false_alert_count": 26,
+            "effective_normal_hours": 40.52777777777778
+          }
+        }
+      ]
+    },
+    {
+      "fit": "FD_detection__RF_full__seed29",
+      "seed": 29,
+      "split": "validation",
+      "n": 16519,
+      "max_score_abs_difference": 4.440892098500626e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": []
+    },
+    {
+      "fit": "FD_detection__RF_full__seed29",
+      "seed": 29,
+      "split": "test",
+      "n": 33039,
+      "max_score_abs_difference": 4.440892098500626e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": [
+        {
+          "budget": 0.1,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.3263888888888889,
+            "event_recall_eligible_main": 0.3263888888888889,
+            "false_alerts_per_hour": 0.17272104180945852,
+            "auprc_unadjusted": 0.7864169396886379,
+            "f1_unadjusted": 0.2694717994628469,
+            "first_detection_delay_median_seconds": 73.047673,
+            "hit_event_count": 47,
+            "false_alert_count": 7,
+            "effective_normal_hours": 40.52777777777778
+          }
+        },
+        {
+          "budget": 1.0,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.7430555555555556,
+            "event_recall_eligible_main": 0.7430555555555556,
+            "false_alerts_per_hour": 0.6168608636052091,
+            "auprc_unadjusted": 0.7864169396886379,
+            "f1_unadjusted": 0.6787406905890319,
+            "first_detection_delay_median_seconds": 27.99238,
+            "hit_event_count": 107,
+            "false_alert_count": 25,
+            "effective_normal_hours": 40.52777777777778
+          }
+        }
+      ]
+    },
+    {
+      "fit": "FD_detection__RF_full__seed43",
+      "seed": 43,
+      "split": "validation",
+      "n": 16519,
+      "max_score_abs_difference": 4.440892098500626e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": []
+    },
+    {
+      "fit": "FD_detection__RF_full__seed43",
+      "seed": 43,
+      "split": "test",
+      "n": 33039,
+      "max_score_abs_difference": 4.440892098500626e-16,
+      "threshold_max_abs_difference": 0.0,
+      "paper_metrics": [
+        {
+          "budget": 0.1,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.3611111111111111,
+            "event_recall_eligible_main": 0.3611111111111111,
+            "false_alerts_per_hour": 0.1973954763536669,
+            "auprc_unadjusted": 0.7907297351852073,
+            "f1_unadjusted": 0.3384879725085911,
+            "first_detection_delay_median_seconds": 66.7908075,
+            "hit_event_count": 52,
+            "false_alert_count": 8,
+            "effective_normal_hours": 40.52777777777778
+          }
+        },
+        {
+          "budget": 1.0,
+          "max_metric_abs_difference": 0.0,
+          "paper_fields": [
+            "event_recall_all_main",
+            "event_recall_eligible_main",
+            "false_alerts_per_hour",
+            "auprc_unadjusted",
+            "f1_unadjusted",
+            "first_detection_delay_median_seconds",
+            "hit_event_count",
+            "false_alert_count",
+            "effective_normal_hours"
+          ],
+          "recomputed": {
+            "event_recall_all_main": 0.7152777777777778,
+            "event_recall_eligible_main": 0.7152777777777778,
+            "false_alerts_per_hour": 0.5921864290610007,
+            "auprc_unadjusted": 0.7907297351852073,
+            "f1_unadjusted": 0.659106529209622,
+            "first_detection_delay_median_seconds": 30.501073,
+            "hit_event_count": 103,
+            "false_alert_count": 24,
+            "effective_normal_hours": 40.52777777777778
+          }
+        }
+      ]
+    }
+  ],
+  "fit_count": 3,
+  "scope": "RF seed17/29/43; full D05 validation and D06-D07 test; thresholds recalibrated from replayed D05 only; test metrics evaluated using frozen thresholds"
+}

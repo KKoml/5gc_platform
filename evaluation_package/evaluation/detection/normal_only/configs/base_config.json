@@ -1,0 +1,154 @@
+{
+  "contract_version": "core-fault-v1-execution-20260923T092730Z",
+  "package_root": "<REVIEWER_CONFIGURE_PATH>",
+  "result_root": "<REVIEWER_CONFIGURE_PATH>",
+  "runtime_python": "<REVIEWER_CONFIGURE_PATH>",
+  "tasks": {
+    "FD_detection": {
+      "feature_set": "FD_detection_24",
+      "deep_models": [
+        "AE",
+        "TranAD_adapted_v2",
+        "KAN-AD"
+      ],
+      "simple_models": [
+        "IsolationForest"
+      ],
+      "fit_sample_count": 55196
+    },
+    "FL_localization": {
+      "feature_set": "FL_primary_10",
+      "deep_models": [
+        "LSTM",
+        "TCN",
+        "small_Transformer"
+      ],
+      "simple_models": [
+        "RF"
+      ],
+      "fit_sample_count": 288,
+      "paired_ablation": {
+        "feature_set": "FL_baseline_6",
+        "models": [
+          "TCN",
+          "RF"
+        ],
+        "same_sample_ids_required": true
+      }
+    },
+    "FP_forewarning": {
+      "feature_set": "FP_warning_16",
+      "deep_models": [
+        "LSTM",
+        "TCN",
+        "small_Transformer"
+      ],
+      "simple_models": [
+        "LR"
+      ],
+      "fit_sample_count": 54572,
+      "diagnostic_controls": [
+        "Constant",
+        "TimingLR",
+        "MaskOnlyLR"
+      ]
+    }
+  },
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "deep_fit_cap_main": 27,
+  "deep_fit_cap_extra_fl6_tcn": 3,
+  "max_epochs": 50,
+  "early_stopping_patience": 8,
+  "physical_batch_size": 128,
+  "effective_batch_size": 128,
+  "small_classifier": {
+    "width": 64,
+    "layers": 2,
+    "dropout": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001
+  },
+  "training_objectives": {
+    "FL_localization": "cross entropy on the 288 training events",
+    "FP_forewarning": "binary cross entropy with logits; pos_weight is the D01-D04 eligible training negative/positive ratio only",
+    "FD_AE": "observed numeric sequence masked MSE; current-step observed numeric squared residual mean at scoring",
+    "FD_TranAD_adapted_v2": "bounded logistic two-stage self-conditioned reconstruction with explicit opposing decoder-2 gradients; not claimed as an exact-paper reproduction",
+    "FD_KAN_AD": "author KANAD shared-univariate first-difference current-anchor forecast; Adam lr=0.003 and StepLR(5,0.75)"
+  },
+  "checkpoint_selection": {
+    "FD_detection": "minimum D05 current-normal reconstruction or forecast loss",
+    "FL_localization": "minimum D05 classification loss",
+    "FP_forewarning": "minimum D05 weighted classification loss",
+    "heldout_or_external_used": false
+  },
+  "independent_controls": {
+    "FD_detection": [
+      "ReadyMaskIF"
+    ],
+    "FL_localization": [
+      "ReadyMaskRF"
+    ],
+    "FP_forewarning": [
+      "Constant",
+      "TimingLR",
+      "MaskOnlyLR"
+    ],
+    "controls_are_formal_x": false
+  },
+  "classical": {
+    "IsolationForest": {
+      "n_estimators": 200,
+      "max_samples": 256,
+      "n_jobs": 4
+    },
+    "RandomForest": {
+      "n_estimators": 200,
+      "max_depth": 8,
+      "min_samples_leaf": 5,
+      "class_weight": null,
+      "n_jobs": 4
+    },
+    "LogisticRegression": {
+      "C": 1.0,
+      "max_iter": 2000,
+      "class_weight": "balanced",
+      "solver": "lbfgs"
+    }
+  },
+  "event_evaluation": {
+    "grid_seconds": 5.0,
+    "segment_gap_break_seconds": 7.5,
+    "point_adjustment": false,
+    "alert_time": "first positive valid grid point of each segment",
+    "invalid_breaks_segment": true,
+    "negative_breaks_segment": true,
+    "matching_order": "process alerts by run_id, alert onset UTC, segment id; among unused candidate events choose event start UTC then event_id",
+    "one_to_one": true,
+    "FD_match_interval": "[event start,event end)",
+    "FP_match_interval": "[event start-60s,event start-10s]",
+    "normal_exposure": "sum 5 seconds for each eligible prediction-valid y=0 grid point; missing/ineligible/unscored points contribute zero and break segments",
+    "threshold_budgets_false_alerts_per_hour": [
+      0.1,
+      1.0
+    ],
+    "threshold_objective": "among thresholds with actual false-alerts/hour <= budget maximize main-event hits, then minimize false-alert count, then choose the higher threshold",
+    "threshold_candidate_set": "positive infinity plus exact finite D05 score values",
+    "threshold_no_exact_budget_policy": "report target, actual false alerts, actual false-alerts/hour, exposure hours and feasibility; never invent budget attainment",
+    "test_feedback_allowed": false
+  },
+  "split_roles": {
+    "train": "D01-D04",
+    "validation": "D05",
+    "test": "D06-D07 previously used post-hoc reevaluation",
+    "external_validation": "V4 separate",
+    "supplementary_only": "Core24h separate",
+    "diagnostic_holdout": "diagnostic5 separate",
+    "development_only": "baseline2h development-only"
+  },
+  "fp_onset_claim_boundary": "prediction is relative to faults.jsonl start record; physical first-effect time and command-to-log latency are not certified"
+}

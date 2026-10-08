@@ -1,0 +1,17 @@
+{
+  "scope": "experiment appendices, code, configs, models and saved results; datasets and platform source withheld",
+  "model_artifact_hashes_matched": 87,
+  "table_recomputation": {
+    "prediction_mean_cells": 9,
+    "imputation_table_cells": 60,
+    "match_3dp": true
+  },
+  "plot_execution": "both published CSV-based figure scripts completed in isolated copy",
+  "navigation_links": 64,
+  "privacy_scan_findings": 0,
+  "anonymous_http": 403,
+  "anonymous_readability": "unverified",
+  "repository_visibility": "private; preserved",
+  "training_or_checkpoint_inference_this_upload": false,
+  "full_local_package_receipts": "historical scope; not completeness proof for publication tree"
+}

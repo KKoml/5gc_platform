@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "scope": "saved D05/test scores only; no weights, inference or training",
+  "normal_only_seed_budget_rows": 18,
+  "rf_seed_budget_rows": 6,
+  "rf_max_metric_difference": 0.0,
+  "threshold_selection": "D05 only; test thresholds fixed"
+}

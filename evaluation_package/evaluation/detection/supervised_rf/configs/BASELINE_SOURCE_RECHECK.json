@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-09-25T07:30:12.141335+00:00",
+  "passed": 9,
+  "checks": [
+    {
+      "reference": "metrics/FINAL_SUMMARY.json",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "metrics/ALL_METRICS.csv",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "event_matches/EVENT_LEDGER_621.csv",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "code/evaluation.py",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "code/reporting.py",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "artifacts/PREPARE_RECEIPT.json",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "artifacts/FINAL_D05_FREEZE.json",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "package/metadata/protocol.json",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    },
+    {
+      "reference": "package/SHA256SUMS.txt",
+      "resolved": "<REVIEWER_CONFIGURE_PATH>",
+      "match": true
+    }
+  ]
+}

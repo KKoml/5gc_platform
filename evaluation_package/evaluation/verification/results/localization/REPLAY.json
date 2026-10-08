@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "scope": "checkpoint-only replay over all 612 fixed windows; 5 models x 3 seeds; no fitting",
+  "models": 15,
+  "rows_replayed": 9180,
+  "probability_elements": 110160,
+  "class_predictions_equal_rows": 9180,
+  "max_abs_probability_difference": 2.220446049250313e-16,
+  "max_metric_difference": 1.1102230246251565e-16,
+  "paper_metric_cells_checked": 24,
+  "paper_metric_max_difference": 2.220446049250313e-16,
+  "tolerance": {
+    "probability_rtol": 1e-06,
+    "probability_atol": 2e-06,
+    "metrics_abs": 1e-07,
+    "paper_abs": 1e-12
+  }
+}

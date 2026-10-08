@@ -1,0 +1,16 @@
+{
+  "model": "ARIMA",
+  "task": "T1",
+  "target": "n3_downlink",
+  "slot": "D07",
+  "seed": 42,
+  "n_samples": 1451,
+  "index_hash": "8e397db130f4b267e9f0b7f3844f8e5303760219861107a047dddb120b2c6a32",
+  "prediction_sha256": "79565be6daaf8735a85f90548d66baffa91ace1fcdd1d73bf390db3bb29fd1c4",
+  "inference_seconds": 3.0975731840590015,
+  "seconds_per_window": 0.0021347851027284643,
+  "inference_scope": "local offline model+adapter; excludes data IO; not live network latency",
+  "device": "cpu",
+  "input_panel": "U_extended_access",
+  "config_hash": "09b8d1c6e3fac0986dfe81abb259dfb262902030ae1d88ad8f84c8b34783c50f"
+}

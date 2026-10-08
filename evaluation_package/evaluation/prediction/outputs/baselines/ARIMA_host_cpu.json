@@ -1,0 +1,102 @@
+{
+  "target": "host_cpu",
+  "model": "ARIMA",
+  "seed": 42,
+  "task": "T1",
+  "status": "completed",
+  "spec": {
+    "id": "ARIMA",
+    "panel": "U_extended_access"
+  },
+  "native_transform": "causal log1p forward fill; stepwise expm1 then mean; no z-score",
+  "order": [
+    2,
+    1,
+    1
+  ],
+  "trend": "t",
+  "fallback": 3.495385720316731,
+  "selected": {
+    "slot": "D02",
+    "aic": -76016.97627877635,
+    "params": [
+      1.807036328080197e-06,
+      0.840903602512238,
+      -0.1608018254346623,
+      -0.9830874204501232,
+      0.010071820701817818
+    ],
+    "fit_seconds": 9.01559487299528,
+    "optimizer_converged": true,
+    "warnings": [],
+    "validation_MAE": 2.685924547744971
+  },
+  "candidates": [
+    {
+      "slot": "D01",
+      "aic": -14852.301764341784,
+      "params": [
+        3.8905531386113246e-06,
+        0.8182303412842346,
+        -0.1678357909187476,
+        -1.0084626652695121,
+        0.04083580001900882
+      ],
+      "fit_seconds": 10.984154048957862,
+      "optimizer_converged": true,
+      "warnings": [],
+      "validation_MAE": 2.694763856284182
+    },
+    {
+      "slot": "D02",
+      "aic": -76016.97627877635,
+      "params": [
+        1.807036328080197e-06,
+        0.840903602512238,
+        -0.1608018254346623,
+        -0.9830874204501232,
+        0.010071820701817818
+      ],
+      "fit_seconds": 9.01559487299528,
+      "optimizer_converged": true,
+      "warnings": [],
+      "validation_MAE": 2.685924547744971
+    },
+    {
+      "slot": "D03",
+      "aic": -10566.96909465061,
+      "params": [
+        5.874900758947838e-06,
+        0.8200387895547939,
+        -0.1791921366734174,
+        -1.0080990144352868,
+        0.04507998564013069
+      ],
+      "fit_seconds": 14.690060326945968,
+      "optimizer_converged": true,
+      "warnings": [],
+      "validation_MAE": 2.695720774397718
+    },
+    {
+      "slot": "D04",
+      "aic": -64779.636864166416,
+      "params": [
+        -7.384014734984571e-06,
+        0.9174041920975362,
+        -0.07673742169826238,
+        -0.9972350972267294,
+        0.01305968243944904
+      ],
+      "fit_seconds": 17.565253124921583,
+      "optimizer_converged": true,
+      "warnings": [],
+      "validation_MAE": 2.7041483830909256
+    }
+  ],
+  "selection": "D05 raw MAE over four independent train-tail candidates",
+  "total_fit_seconds": 52.263856249977835,
+  "config_hash": "9de59e46c7b9102a761c2ffaf42c004879a63cb46a2afa575feb7b2b17754107",
+  "test_status": "post_hoc",
+  "device": "cpu",
+  "future_suffix_invariance": "passed"
+}

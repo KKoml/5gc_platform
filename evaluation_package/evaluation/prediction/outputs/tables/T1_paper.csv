@@ -1,0 +1,21 @@
+target,model,input_panel,D06,D07
+host_cpu,ARIMA,U_extended_access,2.71871,2.54665
+host_cpu,PatchTST,U,2.70056 ± 0.0102,2.54675 ± 0.00399
+host_cpu,RecentMean10,U,3.21881,3.11669
+host_cpu,TimeFilter,M,2.73635 ± 0.00674,2.58024 ± 0.0146
+host_cpu,XGBoost,M,2.48919 ± 0.0206,2.48415 ± 0.0189
+host_cpu,XGBoost_schedule_only,Supervised diagnostic,11.2667 ± 0.0071,11.5802 ± 0.00543
+host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,2.60242 ± 0.00179,2.60529 ± 0.00434
+n3_downlink,ARIMA,U_extended_access,4.58657,4.46816
+n3_downlink,PatchTST,U,4.25135 ± 0.0275,4.25296 ± 0.0451
+n3_downlink,RecentMean10,U,6.3264,6.18144
+n3_downlink,TimeFilter,M,4.22473 ± 0.0134,4.20338 ± 0.0149
+n3_downlink,XGBoost,M,3.81336 ± 0.0176,3.8841 ± 0.00808
+n3_downlink,XGBoost_schedule_only,Supervised diagnostic,4.04864 ± 0.0246,4.10264 ± 0.0206
+n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,4.11694 ± 0.00586,4.13947 ± 0.015
+n6_aggregate,PatchTST,U,5.12448 ± 0.005,5.00731 ± 0.0124
+n6_aggregate,RecentMean10,U,7.12839,7.14929
+n6_aggregate,TimeFilter,M,5.15321 ± 0.00524,5.06803 ± 0.0094
+n6_aggregate,XGBoost,M,4.27815 ± 0.0426,4.41272 ± 0.0157
+n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,4.38057 ± 0.00241,4.43699 ± 0.00344
+n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,4.87869 ± 0.0192,4.98772 ± 0.0176

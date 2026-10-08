@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "all six non-training evaluation slots; original checkpoints/config/masks; fresh extraction inputs; run outputs in temporary copy; packaged saved outputs read only",
+  "prediction_files": 54,
+  "prediction_rows": 6748290,
+  "metric_rows": 12636,
+  "max_abs_numeric_difference": 0.0,
+  "numeric_policy": "bitwise array equality including NaNs; no relaxed tolerance"
+}

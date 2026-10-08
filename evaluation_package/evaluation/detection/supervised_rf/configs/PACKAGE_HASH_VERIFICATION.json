@@ -1,0 +1,623 @@
+{
+  "time": "2026-09-25T07:22:57.087850+00:00",
+  "entries": 154,
+  "passed": 154,
+  "files": [
+    {
+      "path": "MANIFEST.md",
+      "match": true
+    },
+    {
+      "path": "NEXT_MACHINE_PROMPT.md",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "match": true
+    },
+    {
+      "path": "REMOTE_RUNBOOK.md",
+      "match": true
+    },
+    {
+      "path": "code/README.md",
+      "match": true
+    },
+    {
+      "path": "code/build_package.py",
+      "match": true
+    },
+    {
+      "path": "code/dataset.py",
+      "match": true
+    },
+    {
+      "path": "code/smoke_load.py",
+      "match": true
+    },
+    {
+      "path": "code/validate_package.py",
+      "match": true
+    },
+    {
+      "path": "data/D03/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D03/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D03/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D03/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D03/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D03/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D03/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D03/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D03/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D05/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D05/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D05/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D05/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D05/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D05/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D05/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D05/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D05/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D06/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D06/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D06/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D06/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D06/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D06/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D06/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D06/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D06/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D07/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D07/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D07/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D07/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D07/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D07/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D07/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D07/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D07/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D02/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D02/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D02/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D02/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D02/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D02/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D02/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D02/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D02/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D04/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D04/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D04/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D04/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D04/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D04/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D04/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D04/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D04/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/D01/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D01/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D01/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/D01/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D01/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/D01/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/D01/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/D01/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/D01/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/README.md",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/development_excluded/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/supp_core24h/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/validation_v4r6/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/core_features_5s.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/core_features_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/episodes.csv",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/excluded_episode_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/recovery_audit.csv",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/source_age_5s.parquet",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/source_binding.json",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/source_context_index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "data/diagnostic5/user_behavior_events.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/ALL_CORE_EPISODES.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/BUILDER_ENVIRONMENT.json",
+      "match": true
+    },
+    {
+      "path": "metadata/COLUMN_ROLES.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/EVENT_EVALUABILITY.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/EXPERIMENT_KPI_DICTIONARY.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/FEATURE_COVERAGE_BY_RUN.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/FILE_INVENTORY.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/MODEL_PLAN.json",
+      "match": true
+    },
+    {
+      "path": "metadata/README.md",
+      "match": true
+    },
+    {
+      "path": "metadata/TASK_ALIASES.json",
+      "match": true
+    },
+    {
+      "path": "metadata/TASK_FEATURE_LIST.csv",
+      "match": true
+    },
+    {
+      "path": "metadata/feature_sets.json",
+      "match": true
+    },
+    {
+      "path": "metadata/protocol.json",
+      "match": true
+    },
+    {
+      "path": "metadata/runs.csv",
+      "match": true
+    },
+    {
+      "path": "provenance/FILE_LINEAGE.csv",
+      "match": true
+    },
+    {
+      "path": "provenance/README.md",
+      "match": true
+    },
+    {
+      "path": "provenance/SOURCE_EXTRACTED_KPI_DICTIONARY.csv",
+      "match": true
+    },
+    {
+      "path": "provenance/SOURCE_FEATURE_SELECTION.json",
+      "match": true
+    },
+    {
+      "path": "provenance/SOURCE_PROTOCOL.json",
+      "match": true
+    },
+    {
+      "path": "provenance/SOURCE_SHA256SUMS.txt",
+      "match": true
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_PLAN_20260923T082801Z.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/EXPERIMENT_TRACKER_20260923T082801Z.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/MANIFEST.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/MANIFEST_20260923T082801Z.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/NEXT_MACHINE_PROMPT_20260923T082801Z.md",
+      "match": true
+    },
+    {
+      "path": "refine-logs/REMOTE_RUNBOOK_20260923T082801Z.md",
+      "match": true
+    },
+    {
+      "path": "reports/BUILD_REPORT.json",
+      "match": true
+    },
+    {
+      "path": "reports/FL_COUNTS_BY_TYPE_TARGET.csv",
+      "match": true
+    },
+    {
+      "path": "reports/INDEPENDENT_DATA_AUDIT.json",
+      "match": true
+    },
+    {
+      "path": "reports/README.md",
+      "match": true
+    },
+    {
+      "path": "reports/SOURCE_IMMUTABILITY.json",
+      "match": true
+    },
+    {
+      "path": "reports/TASK_COUNTS.csv",
+      "match": true
+    },
+    {
+      "path": "reports/VALIDATION_PRESEAL.json",
+      "match": true
+    },
+    {
+      "path": "requirements-data.txt",
+      "match": true
+    },
+    {
+      "path": "tasks/FD_detection/index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "tasks/FD_detection/index.parquet",
+      "match": true
+    },
+    {
+      "path": "tasks/FL_localization/index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "tasks/FL_localization/index.parquet",
+      "match": true
+    },
+    {
+      "path": "tasks/FP_forewarning/index.csv.gz",
+      "match": true
+    },
+    {
+      "path": "tasks/FP_forewarning/index.parquet",
+      "match": true
+    },
+    {
+      "path": "tasks/README.md",
+      "match": true
+    },
+    {
+      "path": "tests/README.md",
+      "match": true
+    },
+    {
+      "path": "tests/test_dataset.py",
+      "match": true
+    }
+  ]
+}

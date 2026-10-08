@@ -1,0 +1,72 @@
+{
+  "status": "selected",
+  "selected_by": "D05_raw_MAE",
+  "winner": {
+    "task": "T1",
+    "target": "n6_aggregate",
+    "model": "XGBoost",
+    "spec": {
+      "id": "XGBoost",
+      "panel": "M",
+      "trainable": true,
+      "architecture": {
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 3,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "search": [
+        {
+          "max_depth": 4
+        },
+        {
+          "max_depth": 6
+        }
+      ]
+    },
+    "hp": {
+      "max_depth": 6
+    },
+    "seed": 42,
+    "config_hash": "dd59c296f0e6a30b9ebab25177799279feaf8f158d2802c55c63519284e91c32",
+    "checkpoint": "outputs/jobs/T1_n6_aggregate_XGBoost_candidate1_seed42/estimator.joblib",
+    "train_index_hash": "950ab7ec972145cc1a830a80bf87afa60af25a33aeef5070521acac1be6bee09",
+    "validation_index_hash": "51f4e1e9a95b8a0e3d851e0cf3332c2a2d767db206b16dafcf003ccd3ee5aad8",
+    "status": "completed",
+    "info": {
+      "target_index": 2,
+      "model_target_index": 2,
+      "target_mean": 6471467.5278624445,
+      "target_scale": 12723444.362735018
+    },
+    "device": "cuda",
+    "precision": "fp32",
+    "started_at": 1789711377.1012738,
+    "total_fit_seconds": 0.8051591729745269,
+    "train_seconds": 0.8051597829908133,
+    "epochs": null,
+    "steps": null,
+    "peak_gpu_allocated_bytes": 0,
+    "checkpoint_sha256": "6d1173026f978e679b2a62fd10cbc170d9334f63b7ec679f73e5248d70ae656e",
+    "selection_inference_seconds": 0.02434796595480293,
+    "selection_metric": 4329294.029764852
+  },
+  "candidate_statuses": [
+    {
+      "hp": {
+        "max_depth": 4
+      },
+      "status": "completed",
+      "error": null
+    },
+    {
+      "hp": {
+        "max_depth": 6
+      },
+      "status": "completed",
+      "error": null
+    }
+  ],
+  "selected_at": 1789711378.1192575
+}

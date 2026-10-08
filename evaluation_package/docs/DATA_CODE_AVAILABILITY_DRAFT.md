@@ -1,0 +1,7 @@
+# Data and Code Availability statement draft
+
+The code, task-ready processed data, model checkpoints, fixed evaluation inputs, and saved per-sample outputs used for the reported forecasting, anomaly-scoring/event-detection, known-injection-start classification, and offline imputation evaluations are provided in the anonymous-review artifact at **[insert the anonymous access link or submission-platform attachment reference]**. The archive includes run instructions, pinned Python dependencies, third-party notices, and commands for saved-result recomputation, checkpoint inference, and separate retraining.
+
+The archive contains seven current D01–D07 one-second platform exports and the current 400-entry platform field dictionary. Their exact historical version identity relative to the manuscript has not been established. The paper's statement of 32 numeric indicators does not map exactly to the current schema and dictionary. The five-second task tables intersect the one-second UTC time grid, but sampled same-timestamp host values differ; the artifact therefore does not claim that the task tables are simple resamples of those exports.
+
+Raw packet captures and other full raw platform records are not included. The supplied task-level tables and fixed inputs are sufficient for the included table-level saved-result checks and checkpoint replays. D06 and D07 had been accessed before this verification and are post-hoc evaluation runs, not blind tests. New verification and retraining runs are identified separately and do not replace the paper-result files.

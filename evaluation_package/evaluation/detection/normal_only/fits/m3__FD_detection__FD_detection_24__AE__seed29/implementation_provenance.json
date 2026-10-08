@@ -1,0 +1,18 @@
+{
+  "adaptation": "sequence length 60->12; input dimension follows FD value+mask; numeric channels alone define loss/score",
+  "adapter_source_sha256": "2e67c73f11bf9cfff2ba5fedb87f759d5c81efffe5ef091b279edd714d1681dd",
+  "architecture": {
+    "activation": "GELU",
+    "hidden": 256,
+    "latent": 64
+  },
+  "history_steps": 12,
+  "identity": "existing DenseAutoencoder topology",
+  "loss": "observed numeric sequence masked MSE",
+  "prior_source_path": "<REVIEWER_CONFIGURE_PATH>",
+  "prior_source_sha256": "0209377115fb48bd47cb6fcd26ab91722e6a27a3b6979218a6933052adbdcb28",
+  "registered_name": "AE",
+  "score": "current valid standardized numeric residual squared mean",
+  "torch_version": "2.11.0+cu128",
+  "trainable_parameters": 328832
+}

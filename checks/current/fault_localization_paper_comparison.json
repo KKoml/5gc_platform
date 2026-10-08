@@ -1,0 +1,8 @@
+{
+  "current_paper_sha256": "06d70513b1d8b4c19b84d2b301a72aeca3406131075e78bcddb2e2caeba36cbe",
+  "packaged_figure_sha256": "a86fba2eed8fd0ce4d846b1664eee0a0125b9a789d31375bbed7778703d7e235",
+  "old_candidate_figure_byte_identical": false,
+  "current_figure_copy_sha256": "06d70513b1d8b4c19b84d2b301a72aeca3406131075e78bcddb2e2caeba36cbe",
+  "current_figure_copy_byte_identical": true,
+  "renderer": "paper_figures/plot_localization.py"
+}

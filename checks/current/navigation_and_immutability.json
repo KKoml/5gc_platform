@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "syntax_checked": [
+    "tools/build_inventory.py",
+    "tools/recompute_detection_saved.py",
+    "tools/recompute_saved_metrics.py",
+    "paper_figures/plot_detection.py",
+    "paper_figures/plot_localization.py",
+    "data_machine/dataset/task_data/code/build_package.py"
+  ],
+  "navigation_links_checked": 57,
+  "broken_navigation_links": [],
+  "input_manifest_rows": 489,
+  "input_processor_hashes_match": true,
+  "paper_files_unchanged": 19,
+  "scope": "new supplement navigation, code syntax, input processor hashes and current paper immutability",
+  "current_graph_and_additional_RF_paths_checked": true
+}

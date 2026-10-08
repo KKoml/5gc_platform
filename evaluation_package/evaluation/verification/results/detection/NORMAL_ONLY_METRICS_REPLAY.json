@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "summary_cells": [
+    {
+      "model": "AE",
+      "budget": 0.1,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 0.0,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    },
+    {
+      "model": "AE",
+      "budget": 1.0,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 0.0,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    },
+    {
+      "model": "KAN-AD",
+      "budget": 0.1,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 1.3877787807814457e-17,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    },
+    {
+      "model": "KAN-AD",
+      "budget": 1.0,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 0.0,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "budget": 0.1,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 1.3877787807814457e-17,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "budget": 1.0,
+      "seeds": 3,
+      "max_abs_mean_sd_diff": 2.220446049250313e-16,
+      "fields": [
+        "event_recall_all_main",
+        "event_recall_eligible_main",
+        "false_alerts_per_hour",
+        "auprc_unadjusted",
+        "f1_unadjusted",
+        "first_detection_delay_median_seconds"
+      ]
+    }
+  ],
+  "threshold_max_abs_diff": 0.0,
+  "limits": "D05 thresholds replayed for 9 normal-only checkpoints (3 models x 3 seeds); D06/D07 combined test event metrics recomputed with frozen thresholds and compared against 6 published per-model seed summaries"
+}

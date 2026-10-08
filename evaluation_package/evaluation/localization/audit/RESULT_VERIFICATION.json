@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "metric_rows_recomputed": 1800,
+  "max_metric_error": 1.1102230246251565e-16,
+  "max_replay_probability_error": 2.220446049250313e-16,
+  "replays": [
+    {
+      "model": "LSTM",
+      "seed": 17,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "LSTM",
+      "seed": 29,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "LSTM",
+      "seed": 43,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "TCN",
+      "seed": 17,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "TCN",
+      "seed": 29,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "TCN",
+      "seed": 43,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "RF_24",
+      "seed": 17,
+      "cases": 612,
+      "max_probability_error": 2.220446049250313e-16
+    },
+    {
+      "model": "RF_24",
+      "seed": 29,
+      "cases": 612,
+      "max_probability_error": 1.1102230246251565e-16
+    },
+    {
+      "model": "RF_24",
+      "seed": 43,
+      "cases": 612,
+      "max_probability_error": 1.1102230246251565e-16
+    },
+    {
+      "model": "RF_FL10",
+      "seed": 17,
+      "cases": 612,
+      "max_probability_error": 1.1102230246251565e-16
+    },
+    {
+      "model": "RF_FL10",
+      "seed": 29,
+      "cases": 612,
+      "max_probability_error": 2.220446049250313e-16
+    },
+    {
+      "model": "RF_FL10",
+      "seed": 43,
+      "cases": 612,
+      "max_probability_error": 1.1102230246251565e-16
+    },
+    {
+      "model": "ReadyMaskRF",
+      "seed": 17,
+      "cases": 612,
+      "max_probability_error": 0.0
+    },
+    {
+      "model": "ReadyMaskRF",
+      "seed": 29,
+      "cases": 612,
+      "max_probability_error": 1.3877787807814457e-17
+    },
+    {
+      "model": "ReadyMaskRF",
+      "seed": 43,
+      "cases": 612,
+      "max_probability_error": 1.3877787807814457e-17
+    }
+  ],
+  "frozen_sources_unchanged": true,
+  "package_154_hashes_match": true,
+  "all15_success": true,
+  "summary_mean_sample_std_recomputed": true,
+  "checkpoint_selection_verified": true,
+  "method": "independent numpy confusion matrix/rank arithmetic; same saved estimators replayed; no refitting"
+}

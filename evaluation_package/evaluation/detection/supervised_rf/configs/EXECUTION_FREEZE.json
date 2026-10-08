@@ -1,0 +1,14 @@
+{
+  "time": "2026-09-25T07:22:57.088603+00:00",
+  "hashes": {
+    "code/pilot.py": "e0002fafa9743958fecb4391638829248fd389d953d3b10d6baf6bcb26969df3",
+    "code/environment_probe.py": "3ff98d48769219e863deb077fc2f2fad2c1e0d5b05b9eeea8fe3677e399f8140",
+    "code/timing_control.py": "5128af9fe9b93aa646e216a201ffb33fb2d52f9d335fefb40dbdf0656a113e1c",
+    "code/baseline_runtime/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "code/baseline_runtime/data.py": "967ba4261a816e0d508c2cde96f05c49677de8e3644a76fd95a53ff69427b2c2",
+    "code/baseline_runtime/evaluation.py": "06bf8178619508819c2670f860793e0959735fe80180fda3903daf5a04dfcf7f",
+    "configs/protocol.json": "3f073b90a30835d3fe8c080c2575d153216606fff3f9bd470171114ea4e3f504",
+    "configs/FINAL_FREEZE.json": "b0926224d1a19fc6ce7e85f1202390ee6a25e347d345c69669937182157d1012",
+    "configs/TIMING_DIAGNOSTIC_ADDENDUM.json": "68ff01ae00049f0caa0a921cd4318add914f1f8c0cddd6dfcedf25e863ec1936"
+  }
+}

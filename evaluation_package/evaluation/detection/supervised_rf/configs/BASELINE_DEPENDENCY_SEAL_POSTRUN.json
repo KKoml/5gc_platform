@@ -1,0 +1,89 @@
+{
+  "captured_at": "2026-09-25T07:42:17.100691+00:00",
+  "timing": "POSTRUN; does not replace original FINAL_FREEZE chronology",
+  "dependencies": [
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "4b74b0ffdcca1004ca67f27673105bce2b5a3da5a1436dab8c2188f66d703716",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "f0f9f04da5c8d40991c6dcf4ebc71742f515572222b26586b7dc9759fe6be77f",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "486ae5ba8db896e84bde66dede0a6eb6d38fe5cf8097518aac58f9d5f1dca0dd",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "43c189a3bcb924be3be4a4021dfadcd4ca34c2c517f5014047b3d816acf6540d",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "01a7ac6b985ac5cb5d51d42e5591928953f346816ab10b760dc55def00060c0a",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "3dac4b6a9da7fa61b8752343bf754ee533dbed3d4850061de7ab4b56e108164e",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "4c990540f22aeeaf81f4183ed449c304134d1980cc1da789e107261fdf43d4ef",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "4b299d36a0f9afc01cc0eacc1f2c5c27cd5d0e093a8788db54dd68c653a5c99e",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "b093a2ab917dcb36d2bd9f1eba6b6b99b691a50a056454bec266ef6c8c26c468",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "d4ee748f7582e2aa0d2bf93ec0d9c0b7cc60acf82d42ee673c52dea4919acc3a",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "a3072e0d278afdd9e38cba861222f758b1ff442b2ecca8c4e697a03db04a2c66",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "c2efb2662c4b161c290b3216fb19e1cafe8b3609617910a69322034de6c5128c",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "f528b6ab022ee133efed383495f67a7d144a556c7d082891eec63830bf0a20c0",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "4be5ad5cca0ac08ed900401f23cec9887c2776da420005471573327ba84addc3",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "70e1a6a695592845cfb093c5f0d51a068edaf8342fd5918fc42919ffe6dc9ce3",
+      "matches_original_tree_seal": true
+    },
+    {
+      "source": "<REVIEWER_CONFIGURE_PATH>",
+      "sha256": "5205e1b9732ee96040c8a8d79e05b0519025b6c2a3178a0389a94ac989471399",
+      "matches_original_tree_seal": true
+    }
+  ],
+  "original_tree_manifest": "<REVIEWER_CONFIGURE_PATH>",
+  "original_tree_manifest_sha256": "299b36861c316c3c69f70f75d3243857745876fccccacdebb5d22af2c03fec29",
+  "original_checksums_sha256": "ab057ec56baa5d11bbca42fde3c6e3dfede3edaf97e89e68d53cd112298f2633"
+}

@@ -1,0 +1,27 @@
+{
+  "time": "2026-09-25T11:50:38.661191+00:00",
+  "config_sha256": "5db17a498b800a5fd7ff6e36951ec50821b372658d76fcdb4b278fad71686082",
+  "code": {
+    "code/blocked_audit.py": "a45335a6ab866a40bb6919100f200d0a4cee4070b0564fccc82e1e5b3c8d113c",
+    "code/environment_probe.py": "195a98ced0bbaf9b27f124a405e822f1369cd9bebc402821d45be117bb674b3c",
+    "code/legacy_models.py": "2e67c73f11bf9cfff2ba5fedb87f759d5c81efffe5ef091b279edd714d1681dd",
+    "code/pipeline.py": "5906eadbda52abbc80d3281160a5082dc978cde6f883bae1fd1bfe6072cd4f1e",
+    "code/preflight.py": "f90da21f9e166403add7a6fea15cdde5b6739c84949bbc41b46b28956045fd6f",
+    "code/roles.py": "97fc3aff305c456ccff5889d20c71275399b55edd4b3c5c0648e22ab90108242"
+  },
+  "contract": {
+    "data_contract/class_counts.csv": "b3f11769d2e7777d9d7669f6e6f1afc11e30bac90b254a6b60d612556fda1fac",
+    "data_contract/classes.json": "21909fe52a9182737bd7912dc712b4af24a51b0abd1beea724ec44693599e554",
+    "data_contract/coverage.csv": "be3a8c35423ec498f3b9a6a47ede74ef1befae6b32b4a415b2f539e8647b22c8",
+    "data_contract/event_disposition_621.csv": "998d3ff2f8f75026265a5c5fe30d5b44c848e0a7d519dc5171039d93d281f063",
+    "data_contract/feature_whitelist.json": "65941946730d93fb41d3513b72e132d21e63957e12f078a8afb395fe995b0c8f",
+    "data_contract/feature_whitelists.json": "ccb8435aa47273b729d93489233cef85a0b56f38c35bbcb6e77c71bd86d26e15",
+    "data_contract/fit_sample_ids.json": "7a4851f390a2fc479e019fffe7b9843d4fad7972b4041d62b56c91682d3b7216",
+    "data_contract/provisional_label_audit.csv": "c74c27d1af80d00f14e67ed44a272365f4d5f9ea5e8d9a71c012c1d10f287d0b",
+    "data_contract/role_resolution.json": "727d2c188ddf334e9224dbe9cdc8ef94e2dd148ae3a5e67d20597f1a8c05dd31",
+    "data_contract/sample_index.csv": "1e2e517629d5e19a83982d3b066c4c0daf9a36007173bd8f292d645d210e657a",
+    "data_contract/window_boundaries.csv": "680cf8274fd01c73ed87c1dcf32d1e4ad2e55097b047f9ba9476a89733bda105"
+  },
+  "preprocess_sha256": "7be4d95328288c5dff17d2e5c8dc7116171f9e1aca45ebd0b7f785323ab7460d",
+  "heldout_model_inference_started": false
+}

@@ -1,0 +1,16 @@
+{
+  "model": "PatchTST",
+  "task": "T1",
+  "target": "n3_downlink",
+  "slot": "D06",
+  "seed": 43,
+  "n_samples": 1452,
+  "index_hash": "dbfd122f7242fc26a553e0130ea2e000924a203825e53acfdced64d1973cf2b5",
+  "prediction_sha256": "18faafd99a937fe7ad249e62c4b3fef89ec3965489d00836fdfba346b82c8fce",
+  "inference_seconds": 0.018636934109963477,
+  "seconds_per_window": 1.283535407022278e-05,
+  "inference_scope": "local offline model+adapter; excludes data IO; not live network latency",
+  "device": "cuda",
+  "input_panel": "U",
+  "config_hash": "08135392919d6cf03cd88aa1fbaa6b46db7c240a4c1039aee4b32f3725563d78"
+}

@@ -1,7 +1,3 @@
-# D-GATE: Anonymous Review Materials
+# D-GATE 中文实验附录与审稿材料
 
-This repository is reserved for the anonymous review materials accompanying the manuscript.
-
-Code, datasets, and evaluation artifacts are being prepared and will be added here. They are not yet available through this repository.
-
-This placeholder does not establish reproducibility or availability of the experimental materials. The supported verification procedures and limitations will be documented with the uploaded release.
+材料入口、图表对应关系和复现范围见 [README.md](README.md)。完整附录见 [APPENDIX.md](APPENDIX.md)。

@@ -1,0 +1,18 @@
+[
+  {
+    "model": "LSTM",
+    "updates": 36,
+    "initial_loss": 2.4925029277801514,
+    "final_loss": 0.09591326862573624,
+    "train_smoke_accuracy": 1.0,
+    "formal_score": false
+  },
+  {
+    "model": "TCN",
+    "updates": 21,
+    "initial_loss": 2.779780626296997,
+    "final_loss": 0.048785049468278885,
+    "train_smoke_accuracy": 1.0,
+    "formal_score": false
+  }
+]

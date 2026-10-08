@@ -1,0 +1,8 @@
+{
+  "current_paper_sha256": "9bfa480cf5f9d980cea4170e0580256b1e8c0f3861d3c29976bad286e26235bd",
+  "packaged_figure_sha256": "e97030feee2cdacb402660d49eb261e3dbcffe4b4ffd99d2e6a53a14b13e2c40",
+  "old_candidate_figure_byte_identical": false,
+  "current_figure_copy_sha256": "9bfa480cf5f9d980cea4170e0580256b1e8c0f3861d3c29976bad286e26235bd",
+  "current_figure_copy_byte_identical": true,
+  "renderer": "paper_figures/plot_detection.py"
+}

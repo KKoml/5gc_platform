@@ -1,0 +1,88 @@
+{
+  "language": "zh",
+  "user_confirmed": true,
+  "paper_version": "D_GATE_platform_revision",
+  "entry": "latex/main.tex",
+  "source_files": [
+    {
+      "path": "latex/figures/deployment.pdf",
+      "sha256": "c54635232d8f556878364a78d1a22bbcd778c796909360fa1f0e4dbd0d00b4c4"
+    },
+    {
+      "path": "latex/figures/fault_detection.pdf",
+      "sha256": "9bfa480cf5f9d980cea4170e0580256b1e8c0f3861d3c29976bad286e26235bd"
+    },
+    {
+      "path": "latex/figures/fault_localization.pdf",
+      "sha256": "06d70513b1d8b4c19b84d2b301a72aeca3406131075e78bcddb2e2caeba36cbe"
+    },
+    {
+      "path": "latex/figures/platform-architecture.pdf",
+      "sha256": "1c205849ba4ddfe6f0a35a8dcb785a7504bbfb6f6e3a0242d6f6d78b816fda06"
+    },
+    {
+      "path": "latex/figures/platform_float.tex",
+      "sha256": "fc831b7b14d17ad973f77130798750c3d08bac59b89c081628e7153888beb097"
+    },
+    {
+      "path": "latex/main.tex",
+      "sha256": "ff55ebb5bc422d283c8fb545e1f515158a4f0a0b26a8886f219a6da589399578"
+    },
+    {
+      "path": "latex/manuscript.tex",
+      "sha256": "289f3fe228647dba0717f1996ea9425481258c024e408b39e0533ddd7d800501"
+    },
+    {
+      "path": "latex/math_commands.tex",
+      "sha256": "3fc4f1ddb7b92980382794d88637ce81a7ed153f574ad6fe4e48e5c246296049"
+    },
+    {
+      "path": "latex/preamble.tex",
+      "sha256": "2ca11ac21e555371b45f13552e4c6214c617a89578906f4c7e846e1ea75d8d5b"
+    },
+    {
+      "path": "latex/sections/0_abstract.tex",
+      "sha256": "78170f11d0dbb7cd7c40178e3bd1f640608b844b69fb1709c1b0159d4eca0533"
+    },
+    {
+      "path": "latex/sections/1_introduction.tex",
+      "sha256": "8ec2a7eac094a3ab350077a5855fa7f84f283d71db299227caf18dec94713cea"
+    },
+    {
+      "path": "latex/sections/2_background_related.tex",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "latex/sections/3_testbed.tex",
+      "sha256": "aa2166af8ef43179f999663771a2a7865706a816eafa819f20c29b9e927ec2c7"
+    },
+    {
+      "path": "latex/sections/4_data_benchmark.tex",
+      "sha256": "91ccd9612f772b015c56916dbf801e685b5207e253835c9722979005d44f7193"
+    },
+    {
+      "path": "latex/sections/5_evaluation_protocol.tex",
+      "sha256": "d91ee1fa9db665f56f631be2d7a5060566229dd18c9335e7fcc897178c6ac366"
+    },
+    {
+      "path": "latex/sections/6_conclusion.tex",
+      "sha256": "9089b30d9dbfa9c145bcddbabc0ea4b2ee8db059910d71df12002e0f0655c1a7"
+    }
+  ],
+  "pdf_files": [
+    {
+      "path": "D_GATE_开发贡献修订版.pdf",
+      "sha256": "a82cc9b4b53018d61a5a620536aaaaf0738442ff6fec4200048186a37b157544"
+    },
+    {
+      "path": "正文主要修改高亮版.pdf",
+      "sha256": "6807f8299f7112d2b33d26f41ab91f28e4699179aba21a8a79c902c893d1f065"
+    },
+    {
+      "path": "正文修改对照.pdf",
+      "sha256": "6b5bdbe8098af2f421c62f2c71252925b41c42a8f3e1c4050a83bde8e84f783f"
+    }
+  ],
+  "anonymous_entry": "https://anonymous.4open.science/r/5gc_platform-1FEA/",
+  "historical_run_identity": "unconfirmed"
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "saved-output recomputation only; no training or inference",
+  "per_seed_mae_rows_recomputed": 200,
+  "paper_mean_sd_cells_recomputed": 9,
+  "input_ablation_per_run_seed_values_checked": 54,
+  "paper_cells": {
+    "n3_downlink:RecentMean10": {
+      "mean": 6.253918296199048,
+      "sample_sd": null,
+      "seeds": 1,
+      "matches_3dp": true
+    },
+    "n3_downlink:PatchTST": {
+      "mean": 4.2521552534891685,
+      "sample_sd": 0.03621389492292982,
+      "seeds": 3,
+      "matches_3dp": true
+    },
+    "n3_downlink:XGBoost": {
+      "mean": 3.8487285429489932,
+      "sample_sd": 0.012850124876229175,
+      "seeds": 3,
+      "matches_3dp": true
+    },
+    "n6_aggregate:RecentMean10": {
+      "mean": 7.1388402439865235,
+      "sample_sd": null,
+      "seeds": 1,
+      "matches_3dp": true
+    },
+    "n6_aggregate:PatchTST": {
+      "mean": 5.065893529505273,
+      "sample_sd": 0.007608015438356583,
+      "seeds": 3,
+      "matches_3dp": true
+    },
+    "n6_aggregate:XGBoost": {
+      "mean": 4.345433319482399,
+      "sample_sd": 0.027563860360755966,
+      "seeds": 3,
+      "matches_3dp": true
+    },
+    "host_cpu:RecentMean10": {
+      "mean": 3.1677490378006867,
+      "sample_sd": null,
+      "seeds": 1,
+      "matches_3dp": true
+    },
+    "host_cpu:PatchTST": {
+      "mean": 2.6236571920356884,
+      "sample_sd": 0.006602433039312384,
+      "seeds": 3,
+      "matches_3dp": true
+    },
+    "host_cpu:XGBoost": {
+      "mean": 2.4866722573520446,
+      "sample_sd": 0.019214243422598292,
+      "seeds": 3,
+      "matches_3dp": true
+    }
+  }
+}

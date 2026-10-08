@@ -1,0 +1,31 @@
+{
+  "model": "RF_24",
+  "seed": 43,
+  "status": "success",
+  "seconds": 1.3016812598798424,
+  "epochs_run": 0,
+  "selected_epoch": null,
+  "validation": {
+    "n": 72,
+    "top1": 0.7916666666666666,
+    "macro_f1": 0.7944333444333443,
+    "top3": 0.9722222222222222,
+    "mrr": 0.8835648148148149,
+    "balanced_accuracy": 0.7916666666666666,
+    "mechanism_accuracy": 0.7916666666666666,
+    "mechanism_macro_f1": 0.7958400429414922,
+    "target_accuracy": 1.0,
+    "f1_labels": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+    "support": "[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]"
+  },
+  "trainable_parameters": null,
+  "peak_cuda_allocated_bytes": 25018368,
+  "process_peak_rss_kib": 1647040,
+  "config_sha256": "5db17a498b800a5fd7ff6e36951ec50821b372658d76fcdb4b278fad71686082",
+  "fit_sample_ids_sha256": "7a4851f390a2fc479e019fffe7b9843d4fad7972b4041d62b56c91682d3b7216",
+  "input_shape": [
+    288,
+    168
+  ],
+  "completed_utc": "2026-09-25T11:51:55.570642+00:00"
+}

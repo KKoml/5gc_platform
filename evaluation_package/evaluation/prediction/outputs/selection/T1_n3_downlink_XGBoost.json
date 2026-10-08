@@ -1,0 +1,72 @@
+{
+  "status": "selected",
+  "selected_by": "D05_raw_MAE",
+  "winner": {
+    "task": "T1",
+    "target": "n3_downlink",
+    "model": "XGBoost",
+    "spec": {
+      "id": "XGBoost",
+      "panel": "M",
+      "trainable": true,
+      "architecture": {
+        "n_estimators": 500,
+        "learning_rate": 0.04,
+        "min_child_weight": 3,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9
+      },
+      "search": [
+        {
+          "max_depth": 4
+        },
+        {
+          "max_depth": 6
+        }
+      ]
+    },
+    "hp": {
+      "max_depth": 6
+    },
+    "seed": 42,
+    "config_hash": "9ac77df8e1a7d1f6122aa3a2c8aafe66fe7a0ed5fea1a6b1da51db59ffb5936a",
+    "checkpoint": "outputs/jobs/T1_n3_downlink_XGBoost_candidate1_seed42/estimator.joblib",
+    "train_index_hash": "2bfc24f3b626642f1a35b095a41cd1a00ee0e9cf4cb77525bf30d6cb64bb5603",
+    "validation_index_hash": "31e3130c235e74194af2c4063ac3ffab81a51df60ce606718ba2a87ee445be05",
+    "status": "completed",
+    "info": {
+      "target_index": 1,
+      "model_target_index": 1,
+      "target_mean": 5516797.376096858,
+      "target_scale": 15330655.28492452
+    },
+    "device": "cuda",
+    "precision": "fp32",
+    "started_at": 1789711295.3722758,
+    "total_fit_seconds": 0.7677672299323604,
+    "train_seconds": 0.7677677399478853,
+    "epochs": null,
+    "steps": null,
+    "peak_gpu_allocated_bytes": 0,
+    "checkpoint_sha256": "c8beca30a65118af39bf4a3e095ff6bf9df1bbd6d114ec39e00686fa9a5bfad4",
+    "selection_inference_seconds": 0.024218887090682983,
+    "selection_metric": 3826507.527237177
+  },
+  "candidate_statuses": [
+    {
+      "hp": {
+        "max_depth": 4
+      },
+      "status": "completed",
+      "error": null
+    },
+    {
+      "hp": {
+        "max_depth": 6
+      },
+      "status": "completed",
+      "error": null
+    }
+  ],
+  "selected_at": 1789711296.2867608
+}

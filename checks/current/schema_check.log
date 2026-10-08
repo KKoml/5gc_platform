@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "total_rows": 611777,
+  "columns": 81,
+  "field_dictionary": {
+    "entries": 400,
+    "unique_ids": 400,
+    "metric_role_entries": 215,
+    "fields_in_81_column_schema": {
+      "configuration": 21,
+      "identifier": 6,
+      "label": 4,
+      "metric": 39,
+      "quality": 9,
+      "state": 5
+    },
+    "distinct_metric_role_fields_in_schema": 39,
+    "per_run_coverage_status_for_metric_role_fields": {
+      "D01": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D02": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D03": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D04": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D05": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D06": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      },
+      "D07": {
+        "capability_missing": 10,
+        "ok": 25,
+        "replaced": 1,
+        "snapshot_only": 3
+      }
+    }
+  },
+  "task_dictionary_entries": 24,
+  "interpretation": "The 5 s tables and 1 s exports share slot identities and exactly aligned UTC timestamps, but direct host-field values are not elementwise identical at those times. They are separately derived views and cannot be claimed as simple 1 s-to-5 s resampling from this package. Current schema/dictionary counts are confirmed; the exact historical version behind the manuscript 32-metric statement is not resolved by present-day hashes."
+}

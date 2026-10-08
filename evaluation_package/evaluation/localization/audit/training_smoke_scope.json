@@ -1,0 +1,21 @@
+{
+  "sample_ids": [
+    "FL_localization:D01:r01_p01_n3_block_silver_core",
+    "FL_localization:D01:r01_p02_n3_block_gold_core",
+    "FL_localization:D01:r01_p03_n3_delay_silver_core",
+    "FL_localization:D01:r01_p04_n3_delay_gold_core",
+    "FL_localization:D01:r01_p05_n3_loss_silver_core",
+    "FL_localization:D01:r01_p06_n3_loss_gold_core",
+    "FL_localization:D01:r01_p07_n4_block_silver_core",
+    "FL_localization:D01:r01_p08_n4_block_gold_core",
+    "FL_localization:D01:r01_p09_n6_block_silver_core",
+    "FL_localization:D01:r01_p10_n6_block_gold_core",
+    "FL_localization:D01:r01_p11_upf_stop_silver_core",
+    "FL_localization:D01:r01_p12_upf_stop_gold_core"
+  ],
+  "role": "train",
+  "formal_fit": false,
+  "learning_rate": 0.003,
+  "seed": 170,
+  "note": "same 12 actual training events, one per class; smoke weights discarded"
+}

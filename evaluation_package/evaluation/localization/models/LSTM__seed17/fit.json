@@ -1,0 +1,32 @@
+{
+  "model": "LSTM",
+  "seed": 17,
+  "status": "success",
+  "seconds": 3.0967635561246425,
+  "epochs_run": 39,
+  "selected_epoch": 31,
+  "validation": {
+    "n": 72,
+    "top1": 0.6805555555555556,
+    "macro_f1": 0.6847902097902098,
+    "top3": 0.9166666666666666,
+    "mrr": 0.8008267195767195,
+    "balanced_accuracy": 0.6805555555555555,
+    "mechanism_accuracy": 0.7083333333333334,
+    "mechanism_macro_f1": 0.709426434600375,
+    "target_accuracy": 0.9305555555555556,
+    "f1_labels": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+    "support": "[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]"
+  },
+  "trainable_parameters": 63244,
+  "peak_cuda_allocated_bytes": 50475008,
+  "process_peak_rss_kib": 1450688,
+  "config_sha256": "5db17a498b800a5fd7ff6e36951ec50821b372658d76fcdb4b278fad71686082",
+  "fit_sample_ids_sha256": "7a4851f390a2fc479e019fffe7b9843d4fad7972b4041d62b56c91682d3b7216",
+  "input_shape": [
+    288,
+    12,
+    48
+  ],
+  "completed_utc": "2026-09-25T11:51:46.077016+00:00"
+}

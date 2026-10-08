@@ -1,0 +1,53 @@
+{
+  "base": "existing read-only Python 3.10 venv with CUDA 12.8 PyTorch",
+  "runtime_python": "<REVIEWER_CONFIGURE_PATH>",
+  "system_pkgs": [],
+  "pip_phases": [],
+  "warm_reuse_only": true,
+  "must_not_modify_runtime_env": true,
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "XDG_CACHE_HOME": "<REVIEWER_CONFIGURE_PATH>",
+    "TORCH_HOME": "<REVIEWER_CONFIGURE_PATH>",
+    "MPLCONFIGDIR": "<REVIEWER_CONFIGURE_PATH>",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8",
+    "NUMEXPR_NUM_THREADS": "8"
+  },
+  "required_versions_observed": {
+    "python": "3.10.12",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.2.6",
+    "pandas": "2.3.2",
+    "pyarrow": "21.0.0",
+    "scikit_learn": "1.7.1",
+    "scipy": "1.15.3"
+  },
+  "resource_shape": {
+    "gpus": 1,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "gpu_memory_mib": 97887,
+    "cpus_for_job": 8
+  },
+  "smoke": {
+    "import_names": [
+      "torch",
+      "numpy",
+      "pandas",
+      "pyarrow",
+      "sklearn",
+      "scipy"
+    ],
+    "gpu_tests": [
+      {
+        "cmd": "<REVIEWER_CONFIGURE_PATH>",
+        "expect": "^GPU_KERNEL_WITNESS (64, 64) cuda:0 NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+      }
+    ],
+    "cli_checks": [
+      "nvidia-smi"
+    ]
+  }
+}

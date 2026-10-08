@@ -1,0 +1,24 @@
+[
+  {
+    "figure": "detection",
+    "shape": [
+      1420,
+      1500,
+      3
+    ],
+    "max_channel_diff": 0,
+    "different_pixels": 0,
+    "pixel_identical": true
+  },
+  {
+    "figure": "localization",
+    "shape": [
+      975,
+      1500,
+      3
+    ],
+    "max_channel_diff": 0,
+    "different_pixels": 0,
+    "pixel_identical": true
+  }
+]

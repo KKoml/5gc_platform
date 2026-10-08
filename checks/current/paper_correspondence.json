@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "paper_version": "Chinese platform revision, user confirmed",
+  "forecast_printed_mean_cells": 9,
+  "imputation_printed_cells": 60,
+  "current_figure_copy_hashes_match": 2,
+  "old_candidate_figure_hashes_match": 0,
+  "limits": "Current values and current figures; original experiment identity unresolved"
+}

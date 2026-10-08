@@ -1,0 +1,235 @@
+{
+  "status": "COMPLETED_WITH_RECORDED_WARNINGS",
+  "interpretation": "Every entry is a new post-paper local training execution. None replaces paper results or claims historical identity.",
+  "environment": {
+    "python": "3.10.12",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.2",
+      "pyarrow": "21.0.0",
+      "scikit-learn": "1.7.1",
+      "scipy": "1.15.3",
+      "joblib": "1.5.3",
+      "PyYAML": "6.0.2",
+      "xgboost": "3.0.4",
+      "einops": "0.8.2",
+      "matplotlib": "3.10.5"
+    },
+    "torch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+  },
+  "runs": [
+    {
+      "task": "T1 forecasting",
+      "run_id": "DGATE_T1_BUNDLE_TRAIN_20261003T190532Z",
+      "status": "DONE",
+      "methods": [
+        "XGBoost"
+      ],
+      "targets": [
+        "host_cpu"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "fit_split": "D01-D04",
+      "selection_split": "D05 only",
+      "heldout_data_read": false,
+      "wall_seconds": 15.93253779411316,
+      "input_manifest_sha256": "7c796ce1a9e5ae5e4d73e2585d32ad6d0327724272ab775953355ca5b090a259",
+      "code_sha256": {
+        "src/__init__.py": "010731dd6d523b64f402021e46311854c2ef270612bc3bc9ce78d3c170a0d999",
+        "src/baselines.py": "bb1cf04b4d60ca0fb878da2315e689d6fdbde3391443c8019909af7628a99ad0",
+        "src/classic_native.py": "0209377115fb48bd47cb6fcd26ab91722e6a27a3b6979218a6933052adbdcb28",
+        "src/data.py": "a80178bcf3ebef8597e65e58578168a7e96800b4d039c06717b21931d7b837d7",
+        "src/engine.py": "01b29cd816c646a929796961d6a773b1ba773fe00165f97ba7a1bd9383b95038",
+        "src/models.py": "a9009c1bc50c0ee7557d90faf0f6360f22cbfc18143e47a18035a60b3a6ce3ca",
+        "src/prepare_repaired.py": "796b96450c88402b2879bbd044facc2068dfa40828d3deefd43142e248855033",
+        "src/repaired_run.py": "cd341928982d006bb1577c822bb4bbdb9a83310bc658c067cbcad1aad5ee01b4",
+        "src/report.py": "d7fecc293e15043b90dab23ab66e890009a28e36ee46f100c208c589be15a415",
+        "src/supplement_models.py": "edb87a91638ab734acd36d9a288d42b46af7fca71ecf4530559085d8a5c8535d",
+        "src/tranad_native.py": "ca14252263307bb813eb69705235df095e941e6cfc73e972dfc09c4e9eb570ad"
+      },
+      "fit_records": [
+        {
+          "seed": 42,
+          "selected_depth": 6,
+          "fit_seconds": 3.9611735709477216,
+          "checkpoint_sha256": "9b47ecc8623ae9fd857a2aa3b539ffe29b1c1265b4c457e04bcc575cab192375"
+        },
+        {
+          "seed": 43,
+          "selected_depth": 6,
+          "fit_seconds": 4.034189793979749,
+          "checkpoint_sha256": "e068a5a0ba99196ba00daa3a7673847b2f7b292d1f470e38c3273bc74a3ed5f9"
+        },
+        {
+          "seed": 44,
+          "selected_depth": 6,
+          "fit_seconds": 3.983643588144332,
+          "checkpoint_sha256": "02eebe8ca202cf12c5327ba317401413234b753e6d11c6445fd7353c02ff7bb1"
+        }
+      ],
+      "note": "One target and method executed as a fresh pipeline check; it is not a retraining of every forecast target/method/seed in the manuscript."
+    },
+    {
+      "task": "Fault detection",
+      "run_id": "DGATE_FD_BUNDLE_AE_17_20261003T191508Z",
+      "status": "DONE",
+      "method": "AE",
+      "seed": 17,
+      "fit_split": "D01-D04",
+      "checkpoint_selection_split": "D05 only",
+      "threshold_split": "D05 only",
+      "heldout_evaluation": "D06-D07, post-hoc after frozen checkpoint and D05 thresholds",
+      "fit_seconds": 172.4016473731026,
+      "selected_epoch": 39,
+      "checkpoint_sha256": "aa8e27852bae555f72a21298cc8d0943161c4751e06f3fb00ce754542d777e7c",
+      "input_task_manifest_sha256": "6dbdb9429b2a91719784faccbe9283b07704a363e88621886b89d13e76d4b150",
+      "code_sha256": {
+        "__init__.py": "9498ba514f485aaecb065a660027e25ab8dbef2798e6706acc3738b61b0f893b",
+        "data.py": "967ba4261a816e0d508c2cde96f05c49677de8e3644a76fd95a53ff69427b2c2",
+        "evaluation.py": "06bf8178619508819c2670f860793e0959735fe80180fda3903daf5a04dfcf7f",
+        "local_queue.py": "ae0394922e9c10478253134c30cb21fc382dc2820474ce10ac656ef0aa6e3852",
+        "models.py": "e21e8caa555259cd69de5e09918f99253990988602a9cfdc29fcab561cfcb118",
+        "pipeline.py": "f6a8107278da04d7d60e926a2f28de431204b7843ba9a86d11eca16e424a84db",
+        "reporting.py": "d4a22ab49a6103655b2261eab97a000982482d0eecec6b2c0f1b613ea3d18bd4",
+        "train.py": "a4d2ecfd9445f6dcddf6955b12f74a5d5a5abc44ca8c515c6715e55ee1d5fbda"
+      },
+      "elapsed_postprocessing_seconds": 3.0112428665161133,
+      "note": "The fit completed in an isolated directory before the initial wrapper NameError; the corrected wrapper resumed validation and post-hoc evaluation from that saved new checkpoint. The initial failure is retained privately.",
+      "epochs_executed": 47,
+      "peak_gpu_allocated_bytes": 25703936,
+      "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+    },
+    {
+      "task": "Known-start 12-class classification",
+      "run_id": "DGATE_FL_BUNDLE_TRAIN_20261003T192318Z",
+      "status": "DONE",
+      "methods": [
+        "LSTM",
+        "TCN",
+        "RF_24",
+        "RF_FL10",
+        "ReadyMaskRF"
+      ],
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "fit_count": 15,
+      "grouped_metric_rows": 1800,
+      "fit_split": "D01-D04",
+      "selection_split": "D05 only",
+      "heldout_evaluation": "D06-D07 and supplemental roles after TEST_FREEZE",
+      "wall_seconds": 38.39573836326599,
+      "data_manifest_sha256": "6dbdb9429b2a91719784faccbe9283b07704a363e88621886b89d13e76d4b150",
+      "freeze_sha256": "674aa6357e5c5cd0abd4eb1f80d101c58385f3080f4d531dff3424a858193e50",
+      "code_sha256": {
+        "code/check_contract.py": "c580801b648f26c1af13668079ea6415f1d6db4272f77d0d1343cab2d002a5d7",
+        "code/environment_probe.py": "195a98ced0bbaf9b27f124a405e822f1369cd9bebc402821d45be117bb674b3c",
+        "code/final_report.py": "fea09290ce3e2303fbdff37ba2a77f705c5e9b49c3ed45d791c0ff8d6c700753",
+        "code/legacy_models.py": "3c6dcafbbae518f5fb1e9064fa960c29ea968b2581bcee0cadfbecc9a3773728",
+        "code/pipeline.py": "1321a791e0d7a2d6363fbe8e1995631d71d36dd7795e83ec05a8433816efc356",
+        "code/pipeline_eval_v2.py": "c709a89d51fc922afe395436c5f0ac1f18e96a1b2f70219e800f59935eec4274",
+        "code/report_results.py": "b1b2b204ab15209e49c846473f9ea11dad4aa551e0cccf3eebe65830249408e7",
+        "code/roles.py": "eb24da440b173638d4c9c2829806abb89bff00365b54582f2d24f406e2594522",
+        "code/verify_results.py": "380d76bdcd1915606ee8941fda512a1edad8e4a3be144f4b6b578dc586e330f1"
+      },
+      "max_peak_cuda_allocated_bytes": 50475008,
+      "note": "Completed after package-compatibility fixes in a fresh run directory. Sklearn emitted expected warnings for strata whose truth set does not contain every predicted class; evaluation completed and all metrics were written."
+    },
+    {
+      "task": "Offline imputation",
+      "run_id": "DGATE_IMPUTATION_BUNDLE_TRAIN_20261003T194209Z",
+      "status": "DONE",
+      "methods": [
+        "M",
+        "H"
+      ],
+      "seeds": [
+        17,
+        29,
+        43
+      ],
+      "checkpoint_count": 6,
+      "fit_split": "D01-D04",
+      "selection_split": "D05 only",
+      "heldout_evaluation": "D06-D07 and supplemental slots after all six checkpoint files were frozen",
+      "metrics_rows": 13914,
+      "wall_seconds": 1122.1255099773407,
+      "task_manifest_sha256_at_fit": "6dbdb9429b2a91719784faccbe9283b07704a363e88621886b89d13e76d4b150",
+      "code_sha256": {
+        "code/audit.py": "beb610264f29ef53c97f3a87b3ba9109497569a9db83e875c1cde839653237d6",
+        "code/audit_derived.py": "d3979e7165d7357617c92332e0542de3fdfdeed8f616b350514ad79ea37c5adf",
+        "code/evaluate.py": "cdfe305b079b6219138518ab5e7ee3808054679888c7ca0c3bb62132ac4e7bb6",
+        "code/experiment.py": "a34ccb25b88488f6f8c4be027b9c453a76f962624cf79ed46baf10071de2faee",
+        "code/finish.py": "b3dcaa196df7ba8f74d5f77ab9cb6541bf7da32202e3c8bc9b56115c9126eeda",
+        "code/freeze.py": "0036b2ededf8f5ae2dcda9cc1ed5e6261d4b548109e06b4dbbed67e3cc074ffa",
+        "code/report.py": "3f32bfa261f6a2602db3b9b2c92baf0043791574d18da1d3bf09267bc4ec7ab7",
+        "code/source_audit.py": "d14ddee24677d3488b7170f5dcd891525b369be3bde878955d612a3772ff4a18",
+        "code/verify_presentation.py": "baba23d5e0e0a1c7d392a61808dcc515438f4d8a784f5f16a315a69cccb432a7"
+      },
+      "fit_logs": {
+        "fit_17.json": {
+          "epochs": 50,
+          "wall_seconds": 344.2525725364685,
+          "best_epochs": {
+            "M": 49,
+            "H": 49
+          },
+          "branch_seconds": {
+            "M": 170.12237095832825,
+            "H": 171.83258295059204
+          },
+          "gpu_peak_allocated_bytes": 111717888
+        },
+        "fit_29.json": {
+          "epochs": 50,
+          "wall_seconds": 338.3841655254364,
+          "best_epochs": {
+            "M": 46,
+            "H": 49
+          },
+          "branch_seconds": {
+            "M": 166.5041720867157,
+            "H": 169.58036994934082
+          },
+          "gpu_peak_allocated_bytes": 111717888
+        },
+        "fit_43.json": {
+          "epochs": 50,
+          "wall_seconds": 350.34893441200256,
+          "best_epochs": {
+            "M": 50,
+            "H": 47
+          },
+          "branch_seconds": {
+            "M": 172.60327672958374,
+            "H": 175.3605296611786
+          },
+          "gpu_peak_allocated_bytes": 111717888
+        }
+      },
+      "checkpoints": {
+        "M_43.pt": "2ad561c92cc8b44cf786cf767b22d264df312e09bdf758a74effeec52e6e3ad2",
+        "M_29.pt": "600c5000267d2e7d9001b58f75092deb83ba98ae1bd6c0f0cebfcb0ca8cc3986",
+        "M_17.pt": "014dd563f0e6efc42c070c1ec8bdfb4bf40735ae682443a81e9c88b971c880f5",
+        "H_29.pt": "e9b6f3f919dc5ada0944439ac8e401b69444ab8faa98afdb14f6f2e330710fed",
+        "H_43.pt": "b5792204aba44224937d055ba13abe63dbbf42249f354761703fca4346cf813c",
+        "H_17.pt": "5df168814208be5faa5c8294659c486e144f4d2d37cb033ecd19690aa588ac52"
+      },
+      "note": "After this run, the final reviewer copy removed one unused absolute-path annotation from a duplicate run-map CSV; the 284 other task-data files and all numeric inputs stayed byte-identical. Its final sealed manifest was refreshed and will be checked after fresh extraction."
+    }
+  ],
+  "warning_summary": [
+    "One benign PyTorch warning occurred during imputation scalar logging; training completed and produced finite validation records.",
+    "The current package and historical paper-run identities remain unconfirmed as described in the private source-lineage report."
+  ]
+}

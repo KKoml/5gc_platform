@@ -1,0 +1,142 @@
+schema_version: 1
+status: planning_only_not_a_training_launcher
+experiment: icc2027_t1_t2_prefixfix
+source_package: REVIEWER_CONFIGURE_SOURCE_PACKAGE
+source_sha256: b68c8266f16f458e3f79a1ebd77a925fcc73eec6661193e76cc94b5f992475d1
+legacy_parent: REVIEWER_CONFIGURE_LEGACY_PARENT
+legacy_supplement: REVIEWER_CONFIGURE_LEGACY_SUPPLEMENT
+new_run_template: REVIEWER_CONFIGURE_NEW_RUN_TEMPLATE
+method_roster_status: frozen_from_user_designated_paper
+scope:
+  tasks:
+  - T1
+  - T2
+  new_methods: false
+  new_capture: false
+  platform_changes: false
+  overwrite_legacy: false
+  paper_edits: false
+split:
+  train:
+  - D01
+  - D02
+  - D03
+  - D04
+  validation:
+  - D05
+  test:
+  - D06
+  - D07
+  test_status: previously_accessed_post_hoc
+input:
+  representation: cutoff_conditioned_window_tensor
+  history_seconds: 60
+  numeric_channels: 18
+  missing_channels: 18
+  feature_order_source: legacy_parent_src_data_and_temporal_audit_contract
+  allow_timestamp_deduplication: false
+  allow_legacy_global_cache: false
+  metadata_features: false
+  per_model_sample_drops: false
+  t1_scaler_fit: all_train_T1_candidate_history_positions_equal_weight
+  t2_scaler_fit: frozen_all_clean_train_T2_history_positions_equal_weight
+  imputation: train_finite_median
+  normalization: train_finite_mean_population_std
+  constant_scale: 1.0
+  all_missing_required_feature: block_affected_panel
+  tranad_normalization: train_clean_minmax_no_test_clipping
+t1:
+  targets:
+  - n3_downlink
+  - n6_aggregate
+  - flow_rtt_proxy
+  - host_cpu
+  separate_target_models: true
+  history_interval: '[c-60,c)'
+  target_interval: '[c+60,c+70)'
+  stride_seconds: 60
+  min_finite_target_buckets: 8
+  target_source: repaired_T1_targets_target_mean
+  target_transform: linear_zscore_from_T1_training_history_target_channel
+  primary_metric: MAE
+  selection: min_D05_raw_scale_MAE
+  base_models:
+  - RecentMean10
+  - ARIMA
+  - PatchTST
+  - TimeFilter
+  - XGBoost
+  conditional_extended_access:
+  - ARIMA:n6_aggregate
+  - ARIMA:flow_rtt_proxy
+  max_epochs: 50
+  patience: 8
+  diagnostics:
+  - XGBoost_schedule_only
+  - XGBoost_matched_H_vs_M
+  matched_input_config: new_repaired_M_D05_winner_shared_with_H_no_H_search
+t2:
+  stride_seconds: 5
+  label_source: legacy_saved_T2_command_overlap_indices
+  join_keys:
+  - slot
+  - run_id
+  - cutoff_row
+  - anchor_row
+  preserve_legacy_order: true
+  min_observed_numeric_at_anchor: 1
+  train_all_clean_only: applies_to_scorers_not_supervised_probes
+  unknown_as_negative: false
+  primary_metric: AP
+  config_selection: max_D05_AP
+  threshold_selection: max_D05_positive_F1_tie_higher_threshold
+  point_adjustment: false
+  test_score_normalization: false
+  base_models:
+  - PCA
+  - IsolationForest
+  - AE
+  - TranAD
+  - KANAD
+  max_epochs: 40
+  patience: 6
+  supervised_probes:
+  - ScheduleResidue900
+  - XGBoost_missingness_only
+  - XGBoost_RAN_only
+  kanad_score: last_step_numeric_absolute_error_from_first_59_steps
+  kanad_checkpoint: D05_clean_last_step_numeric_prediction_MSE
+training:
+  architecture_and_search: inherit_original_per_model_config_no_expansion
+  max_candidate_configs: 2
+  selection_seed: 42
+  final_seeds:
+  - 42
+  - 43
+  - 44
+  reuse_selected_complete_seed42_fit: true
+  reuse_old_trained_weights: false
+  reuse_old_scalers_or_thresholds: false
+  effective_batch_size: 128
+required_gates:
+- full_window_shape_time_mask_validation
+- target_mean_recomputation
+- exact_frozen_T2_label_join
+- train_only_statistics
+- current_GPU_and_dependency_probe
+- all_adapter_smoke_and_wall_time_estimate
+- freeze_D05_selection_before_test
+- common_sample_hash_and_per_sample_metric_recomputation
+paper:
+  path: REVIEWER_CONFIGURE_PATH
+  sha256: b8af5a314277a61d9225c0dcae011f647330f513cce585f2bc0269df3d5a1043
+  sections:
+  - IV-C
+  - V-A
+  - V-D
+  - V-E
+  tables:
+  - I
+  - IV
+  - V-A
+

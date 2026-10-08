@@ -1,0 +1,11 @@
+slot,start_row,stop_row,length,windows,tail_uncovered,reason
+D01,0,17487,17487,1453,3,tail_not_padded
+D02,0,17466,17466,1451,6,tail_not_padded
+D03,0,17480,17480,1452,8,tail_not_padded
+D04,0,17482,17482,1452,10,tail_not_padded
+D05,0,17481,17481,291,21,tail_not_padded
+D06,0,17482,17482,291,22,tail_not_padded
+D07,0,17478,17478,291,18,tail_not_padded
+core24h,0,17391,17391,289,51,tail_not_padded
+v4r6,0,17521,17521,292,1,tail_not_padded
+diagnostic5,0,5990,5990,99,50,tail_not_padded

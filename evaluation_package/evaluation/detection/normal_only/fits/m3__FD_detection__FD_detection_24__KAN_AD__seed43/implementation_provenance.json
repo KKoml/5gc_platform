@@ -1,0 +1,23 @@
+{
+  "adaptation": "12-step multivariate window -> per-channel first-difference length10 -> shared author KANADModel -> current anchor forecast",
+  "adapter_source_sha256": "2e67c73f11bf9cfff2ba5fedb87f759d5c81efffe5ef091b279edd714d1681dd",
+  "architecture": {
+    "native_window": 10,
+    "order": 2,
+    "shared_univariate_channels": 24
+  },
+  "history_steps": 12,
+  "identity": "pinned author KANADModel",
+  "loss": "current observed numeric forecast MSE",
+  "official_commit": "7c3a0d96b77e0d609660a240c2b11db084ba523f",
+  "official_files_sha256": {
+    "LICENSE": "47042b24aecf09c1e1ee52fb719659eae87c65b9f55e00a270747a36f23100dd",
+    "SOURCE_COMMIT": "0f4418ff98da09bab2d8b83b877cb20c433bbdde22a2bb413cc9e51f639f36d1",
+    "kanad/kanad.py": "a43bb9d29a2564e08e078f3a4d98058b4582343ec23b88d6814959d9d0c2fa6f"
+  },
+  "official_repository": "https://github.com/issaccv/KAN-AD",
+  "registered_name": "KAN-AD",
+  "score": "current valid numeric mean absolute forecast residual",
+  "torch_version": "2.11.0+cu128",
+  "trainable_parameters": 188
+}

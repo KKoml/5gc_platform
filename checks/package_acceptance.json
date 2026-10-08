@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "stage": "release_tree_checks_before_archive_seal",
+  "privacy_finding_files": 0,
+  "third_party_attribution_exceptions": 3,
+  "navigation": "PASS",
+  "paper_and_original_weights": "read only; verified correspondence and immutability as listed in current receipts",
+  "saved_result_recomputation": "PASS",
+  "current_figure_render_pixels": "identical",
+  "training_this_request": false,
+  "checkpoint_inference_this_request": false,
+  "github_commit": null,
+  "github_push": "not performed; target pending user setup",
+  "anonymous_entry": "1FEA; HTTP403; readable files unverified",
+  "final_archive_receipt": "PACKAGE_ACCEPTANCE.json delivered alongside archive; outside the sealed tree"
+}

@@ -1,0 +1,68 @@
+{
+  "task": "RCA_joint12",
+  "created_utc": "2026-09-25T11:50:38.660656+00:00",
+  "package_root": "<REVIEWER_CONFIGURE_PATH>",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "models": [
+    "LSTM",
+    "TCN",
+    "RF_24",
+    "RF_FL10",
+    "ReadyMaskRF"
+  ],
+  "formal_fits": 15,
+  "classes": [
+    "n3-block|upf-silver",
+    "n3-block|upf-gold",
+    "n3-delay|upf-silver",
+    "n3-delay|upf-gold",
+    "n3-loss|upf-silver",
+    "n3-loss|upf-gold",
+    "n4-block|upf-silver",
+    "n4-block|upf-gold",
+    "n6-block|upf-silver",
+    "n6-block|upf-gold",
+    "instance-stop|upf-silver",
+    "instance-stop|upf-gold"
+  ],
+  "device": "cuda:0",
+  "threads": 4,
+  "deep": {
+    "width": 64,
+    "dropout": 0.1,
+    "LSTM_layers": 2,
+    "TCN_blocks": 2,
+    "TCN_dilations": [
+      1,
+      2
+    ],
+    "kernel": 3,
+    "input_dim": 48,
+    "output_dim": 12,
+    "batch": 32,
+    "epochs": 50,
+    "patience": 8,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "selection": "max D05 Macro-F1, then min D05 CE, then earliest epoch"
+  },
+  "RF": {
+    "n_estimators": 500,
+    "min_samples_leaf": 2,
+    "max_features": "sqrt",
+    "max_depth": null,
+    "n_jobs": 4,
+    "class_weight": null
+  },
+  "ranking_ties": "stable frozen class order",
+  "preprocess": "288 training cases observed-value median imputation; median/IQR scale except Ready; zero IQR -> std ->1; masks preserved",
+  "split_status": "fixed historical split additional non-blind reevaluation; externals never tune",
+  "metric_policy": "all12 for W1/main role macro-F1; diagnostic and mechanism-stratum macro-F1 supported true labels only; full12 ranking everywhere",
+  "composite_policy": "predict all12, no closed-set metrics",
+  "smoke": "one training event per class, 250 updates maximum, no formal score"
+}

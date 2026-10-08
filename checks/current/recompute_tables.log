@@ -1,0 +1,7 @@
+{
+  "prediction_mean_cells": 9,
+  "prediction_means_match_3dp": true,
+  "imputation_table_cells": 60,
+  "imputation_cells_match_3dp": true,
+  "scope": "aggregation only; no training or inference"
+}

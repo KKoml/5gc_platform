@@ -1,0 +1,32 @@
+{
+  "model": "TCN",
+  "seed": 17,
+  "status": "success",
+  "seconds": 1.2954009210225195,
+  "epochs_run": 24,
+  "selected_epoch": 16,
+  "validation": {
+    "n": 72,
+    "top1": 0.6805555555555556,
+    "macro_f1": 0.6683170995670995,
+    "top3": 0.9444444444444444,
+    "mrr": 0.8152777777777778,
+    "balanced_accuracy": 0.6805555555555557,
+    "mechanism_accuracy": 0.6666666666666666,
+    "mechanism_macro_f1": 0.6510394731409225,
+    "target_accuracy": 0.9444444444444444,
+    "f1_labels": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]",
+    "support": "[6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]"
+  },
+  "trainable_parameters": 50252,
+  "peak_cuda_allocated_bytes": 28080640,
+  "process_peak_rss_kib": 1630656,
+  "config_sha256": "5db17a498b800a5fd7ff6e36951ec50821b372658d76fcdb4b278fad71686082",
+  "fit_sample_ids_sha256": "7a4851f390a2fc479e019fffe7b9843d4fad7972b4041d62b56c91682d3b7216",
+  "input_shape": [
+    288,
+    12,
+    48
+  ],
+  "completed_utc": "2026-09-25T11:51:49.796478+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "XGBoost",
+  "task": "T1",
+  "target": "host_cpu",
+  "slot": "D07",
+  "seed": 43,
+  "n_samples": 1455,
+  "index_hash": "2ba59bbb8ffffdb49d46f03380d18a49edc7a905520cc8af6fac0e74858d3530",
+  "prediction_sha256": "142cf330833e65d876076ce3fb79a7da7d09e5337256d4a13b26f49474dfe098",
+  "inference_seconds": 0.024449688964523375,
+  "seconds_per_window": 1.680390994125318e-05,
+  "inference_scope": "local offline model+adapter; excludes data IO; not live network latency",
+  "device": "cuda",
+  "input_panel": "M",
+  "config_hash": "f5a1128e34c2d4599a3210aae6be3dcf3cba3341ca4f574b00c6fb93c0626b7d"
+}

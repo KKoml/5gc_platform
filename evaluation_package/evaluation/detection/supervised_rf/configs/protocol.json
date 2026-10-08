@@ -1,0 +1,111 @@
+{
+  "created_at": "2026-09-25T07:15:13.200957+00:00",
+  "purpose": "Bounded FD/FP diagnostic and optimization pilot; preserve immutable baseline",
+  "package_root": "<REVIEWER_CONFIGURE_PATH>",
+  "baseline_root": "<REVIEWER_CONFIGURE_PATH>",
+  "output_root": "<REVIEWER_CONFIGURE_PATH>",
+  "selection_roles": [
+    "train",
+    "validation"
+  ],
+  "selection_slot": "D05",
+  "heldout_after_freeze": [
+    "test",
+    "external_validation",
+    "supplementary_only",
+    "diagnostic_holdout",
+    "development_only"
+  ],
+  "scope": "Post-hoc non-blind optimization; historical test results and failure modes already known. No new collection or blind generalization claim.",
+  "budgets": [
+    0.1,
+    1.0
+  ],
+  "seed_development": 17,
+  "seed_confirmation": [
+    29,
+    43
+  ],
+  "fd_unsupervised_candidates": [
+    "train_normal_channel_max",
+    "train_normal_channel_top3",
+    "frozen_AE_or_ReadyMaskIF"
+  ],
+  "supervised_candidates": [
+    {
+      "name": "HGB_full_d3",
+      "kind": "hgb",
+      "mode": "full",
+      "max_depth": 3
+    },
+    {
+      "name": "HGB_full_d6",
+      "kind": "hgb",
+      "mode": "full",
+      "max_depth": 6
+    },
+    {
+      "name": "HGB_numeric_d3",
+      "kind": "hgb",
+      "mode": "numeric",
+      "max_depth": 3
+    },
+    {
+      "name": "HGB_state_d3",
+      "kind": "hgb",
+      "mode": "state",
+      "max_depth": 3
+    },
+    {
+      "name": "RF_full",
+      "kind": "rf",
+      "mode": "full",
+      "max_depth": 12
+    }
+  ],
+  "hgb_fixed": {
+    "max_iter": 120,
+    "learning_rate": 0.05,
+    "min_samples_leaf": 50,
+    "l2_regularization": 1.0,
+    "early_stopping": false
+  },
+  "rf_fixed": {
+    "n_estimators": 160,
+    "min_samples_leaf": 20,
+    "max_features": "sqrt",
+    "class_weight": "balanced_subsample",
+    "n_jobs": 8
+  },
+  "feature_summary": [
+    "last",
+    "mean",
+    "std",
+    "last_minus_first",
+    "mean_last3_minus_first3",
+    "observed_fraction",
+    "last_observed"
+  ],
+  "numeric_mode": "Exclude Ready and explicit missingness features; training-median imputation can still encode missingness indirectly.",
+  "state_mode": "Ready summaries and all observed masks only; FP contains only observed-mask summaries.",
+  "FD_fit_regimes": {
+    "unsupervised": "exact 55196 clean normal training windows",
+    "supervised": "all eligible D01-D04 windows including injected positives; changed supervision regime, not a like-for-like unsupervised replacement"
+  },
+  "FP_fit_scope": "original eligible D01-D04 clean-history index; 54572 windows",
+  "scaling": "reuse frozen baseline train-only preprocessor for each task",
+  "selection": "Within each task and supervision regime, maximize D05 event recall at 0.1/h, then lower actual FAR, then higher AUPRC, then lexicographic name; state control not eligible as numeric-main winner. Preserve state control as separate result.",
+  "followup_fits": "Refit selected supervised winner with seeds29/43; refit matched state control with seeds29/43. No new hyperparameter search after evaluation.",
+  "constraints": [
+    "no model input metadata/time/schedule/labels",
+    "unchanged labels, eligibility, event matching, FAR denominators",
+    "no point adjustment",
+    "no test/external feedback into selection",
+    "failed/zero-recall candidates retained",
+    "no claims that new training seeds are physical repeats"
+  ],
+  "copied_runtime_hashes": {
+    "data.py": "967ba4261a816e0d508c2cde96f05c49677de8e3644a76fd95a53ff69427b2c2",
+    "evaluation.py": "06bf8178619508819c2670f860793e0959735fe80180fda3903daf5a04dfcf7f"
+  }
+}

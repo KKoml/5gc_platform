@@ -1,0 +1,10 @@
+{
+  "device_name": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "epochs_executed": 26,
+  "fit_seconds": 48.18619064008817,
+  "measurement_scope": "real fit including D05 checkpoint validation; excludes later split inference",
+  "peak_gpu_allocated_bytes": 5478912,
+  "seconds_per_executed_epoch": 1.8533150246187757,
+  "selected_epoch": 18,
+  "upper_50epoch_gpu_hours_from_observed_mean": 0.02574048645303855
+}

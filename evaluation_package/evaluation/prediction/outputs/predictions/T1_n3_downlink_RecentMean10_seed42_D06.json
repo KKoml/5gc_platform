@@ -1,0 +1,16 @@
+{
+  "model": "RecentMean10",
+  "task": "T1",
+  "target": "n3_downlink",
+  "slot": "D06",
+  "seed": 42,
+  "n_samples": 1452,
+  "index_hash": "dbfd122f7242fc26a553e0130ea2e000924a203825e53acfdced64d1973cf2b5",
+  "prediction_sha256": "966fd7048749067cfa5a632b66048e467fd48894e9f080636ed16667437d3dc8",
+  "inference_seconds": 0.019829330034554005,
+  "seconds_per_window": 1.3656563384679067e-05,
+  "inference_scope": "local offline model+adapter; excludes data IO; not live network latency",
+  "device": "cpu",
+  "input_panel": "U",
+  "config_hash": "0148fdad6bef7ce52a2ef5cfea824bbde8384c992ef4c97f328150bcad3f38a5"
+}

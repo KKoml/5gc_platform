@@ -1,0 +1,24 @@
+{
+  "version": "core24h_source_role_clarification_v1",
+  "unique_run": "supp_core24h",
+  "slot": "core24h",
+  "source": "event_block_protocol",
+  "effective": "supplementary_only",
+  "index_registry_equality_required": true,
+  "input_hashes": {
+    "metadata/runs.csv": "1ce484289b2e1f4b35def211f57c9c7a5a9fa61d06239d0d6454fe4387105bd4",
+    "metadata/ALL_CORE_EPISODES.csv": "b3081c15566b5937abb94365c988bbfaed069835008fd850c40341397cfd4e03",
+    "tasks/FL_localization/index.csv.gz": "268af1ff9e46cd90970c07f011b6c358002fe6181782d872448668cba3a10be1",
+    "tasks/FL_localization/index.parquet": "e244195a6bb99e0cc2fa3264f3b78f5325a791a0b2eeb66e63738fc4ac3beb31"
+  },
+  "ledger_rows": 36,
+  "FL_rows": 28,
+  "Core24h_training_cases": 0,
+  "authority": "explicit user clarification received in this conversation",
+  "basis": [
+    "metadata/README.md:3",
+    "code/validate_package.py:112-116",
+    "code/build_package.py:87-89"
+  ],
+  "all_other_mismatches": "error"
+}

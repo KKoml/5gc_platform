@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "label_single_and_composite",
+    "label_unknown_and_conflicting_rejected",
+    "manual_ties_topk_mrr",
+    "heldout_perturbation_does_not_change_training_statistics",
+    "ReadyMaskRF_excludes_nonReady_values",
+    "whitelist_shapes",
+    "Ready_observed_values_unchanged",
+    "612_source_windows_and_FL10_equal_elementwise",
+    "621_event_disposition_and_role_counts",
+    "run_isolation_and_time_boundaries"
+  ]
+}

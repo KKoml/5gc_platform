@@ -1,0 +1,21 @@
+{
+  "seed": 43,
+  "status": "DONE",
+  "epochs": 50,
+  "best_epochs": {
+    "M": 50,
+    "H": 47
+  },
+  "best_scores": {
+    "M": 0.39034776150133516,
+    "H": 0.4161652045098318
+  },
+  "branch_seconds": {
+    "M": 169.67708659172058,
+    "H": 172.4856252670288
+  },
+  "wall_seconds": 344.51260352134705,
+  "gpu_peak_allocated": 111717888,
+  "gpu_peak_reserved": 186646528,
+  "cpu_maxrss_kib": 2068212
+}

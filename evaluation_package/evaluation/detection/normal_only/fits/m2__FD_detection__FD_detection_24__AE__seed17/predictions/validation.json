@@ -1,0 +1,12 @@
+{
+  "inference_seconds": 0.8019684781320393,
+  "metadata_columns_are_output_only": true,
+  "model": "AE",
+  "point_adjustment": false,
+  "prediction_file_sha256": "3dac4b6a9da7fa61b8752343bf754ee533dbed3d4850061de7ab4b56e108164e",
+  "sample_count": 16519,
+  "sample_id_sha256": "2f98099ec3b9e505b9e5d07c3669ca3600293cd89e677fe089138618a28de5af",
+  "seed": 17,
+  "split": "validation",
+  "task": "FD_detection"
+}

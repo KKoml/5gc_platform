@@ -1,0 +1,29 @@
+{
+  "adapter_source_sha256": "2e67c73f11bf9cfff2ba5fedb87f759d5c81efffe5ef091b279edd714d1681dd",
+  "architecture": {
+    "d_model": 96,
+    "decoder_count": 2,
+    "decoder_layers_each": 1,
+    "encoder_layers": 1,
+    "heads": 48,
+    "input_features": 48
+  },
+  "history_steps": 12,
+  "identity": "pinned official TranAD classes plus audited bounded_logistic_v2 adapter",
+  "loss": "two-stage self-conditioned bounded reconstruction with explicit opposing decoder-2 gradients",
+  "official_commit": "7ffb98d0c18189cc3d9ab732b4cb0278200a0af0",
+  "official_files_sha256": {
+    "LICENSE": "4389d205c769d6edf92105fe2f4ac8cb8b8feabcef7baa359136dd3eec79cf12",
+    "main.py": "0529c581d3d871bf5cc32316b45428ce9642650b8a0fa2e40e754341f57d4c0c",
+    "src/dlutils.py": "35265d47f3c1c0f999590ab25cf47774cfd2293c99ca3f842419f31dfef750fe",
+    "src/models.py": "43a30e7caa7c8b28e91b5e875c724219c9c15789da1f6009bb2015fb1f81d84b"
+  },
+  "official_output_sigmoid_preserved": true,
+  "official_repository": "https://github.com/imperial-qore/TranAD",
+  "paper_numerical_reproduction_claimed": false,
+  "registered_name": "TranAD_adapted_v2",
+  "score": "current valid bounded-space mean of phase1/phase2 squared residuals",
+  "torch_version": "2.11.0+cu128",
+  "trainable_parameters": 200448,
+  "variant": "bounded_logistic_v2"
+}

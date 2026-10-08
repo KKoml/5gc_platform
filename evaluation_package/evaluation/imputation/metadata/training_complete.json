@@ -1,0 +1,11 @@
+{
+  "status": "DONE",
+  "checkpoints": {
+    "M_43.pt": "2ad561c92cc8b44cf786cf767b22d264df312e09bdf758a74effeec52e6e3ad2",
+    "M_29.pt": "600c5000267d2e7d9001b58f75092deb83ba98ae1bd6c0f0cebfcb0ca8cc3986",
+    "M_17.pt": "014dd563f0e6efc42c070c1ec8bdfb4bf40735ae682443a81e9c88b971c880f5",
+    "H_29.pt": "e9b6f3f919dc5ada0944439ac8e401b69444ab8faa98afdb14f6f2e330710fed",
+    "H_43.pt": "b5792204aba44224937d055ba13abe63dbbf42249f354761703fca4346cf813c",
+    "H_17.pt": "5df168814208be5faa5c8294659c486e144f4d2d37cb033ecd19690aa588ac52"
+  }
+}

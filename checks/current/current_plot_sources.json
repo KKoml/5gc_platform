@@ -1,0 +1,7 @@
+{
+  "current_detection_script_original_sha256": "84aafff8647f2cc24f930fe1002b0a8c0549c2f28edcfc8a82375aa41aa8e3d7",
+  "copied_script_sha256": "84aafff8647f2cc24f930fe1002b0a8c0549c2f28edcfc8a82375aa41aa8e3d7",
+  "classification_source_script_sha256": "20944ebafa5627d771c24d2d876d18d00a6aeaa41dc98ab30ff5cde731b2bfd7",
+  "classification_source_pdf_matches_current": true,
+  "adaptation": "classification code extracted; relative input and output locations changed; plotting statistics/style retained"
+}

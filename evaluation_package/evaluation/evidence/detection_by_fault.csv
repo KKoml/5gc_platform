@@ -1,0 +1,109 @@
+Method,seed,Budget,Fault,Events,Hits,Recall
+Autoencoder,17,0.1,N3 traffic blocking,24,12,50.0
+Autoencoder,17,0.1,N3 delay injection,24,0,0.0
+Autoencoder,17,0.1,N3 packet loss injection,24,0,0.0
+Autoencoder,17,0.1,N4 traffic blocking,24,0,0.0
+Autoencoder,17,0.1,N6 traffic blocking,24,0,0.0
+Autoencoder,17,0.1,UPF shutdown,24,0,0.0
+Autoencoder,17,1.0,N3 traffic blocking,24,12,50.0
+Autoencoder,17,1.0,N3 delay injection,24,0,0.0
+Autoencoder,17,1.0,N3 packet loss injection,24,0,0.0
+Autoencoder,17,1.0,N4 traffic blocking,24,0,0.0
+Autoencoder,17,1.0,N6 traffic blocking,24,0,0.0
+Autoencoder,17,1.0,UPF shutdown,24,0,0.0
+Autoencoder,29,0.1,N3 traffic blocking,24,12,50.0
+Autoencoder,29,0.1,N3 delay injection,24,0,0.0
+Autoencoder,29,0.1,N3 packet loss injection,24,0,0.0
+Autoencoder,29,0.1,N4 traffic blocking,24,0,0.0
+Autoencoder,29,0.1,N6 traffic blocking,24,0,0.0
+Autoencoder,29,0.1,UPF shutdown,24,0,0.0
+Autoencoder,29,1.0,N3 traffic blocking,24,12,50.0
+Autoencoder,29,1.0,N3 delay injection,24,0,0.0
+Autoencoder,29,1.0,N3 packet loss injection,24,0,0.0
+Autoencoder,29,1.0,N4 traffic blocking,24,1,4.166666666666666
+Autoencoder,29,1.0,N6 traffic blocking,24,0,0.0
+Autoencoder,29,1.0,UPF shutdown,24,0,0.0
+Autoencoder,43,0.1,N3 traffic blocking,24,12,50.0
+Autoencoder,43,0.1,N3 delay injection,24,0,0.0
+Autoencoder,43,0.1,N3 packet loss injection,24,0,0.0
+Autoencoder,43,0.1,N4 traffic blocking,24,0,0.0
+Autoencoder,43,0.1,N6 traffic blocking,24,0,0.0
+Autoencoder,43,0.1,UPF shutdown,24,0,0.0
+Autoencoder,43,1.0,N3 traffic blocking,24,12,50.0
+Autoencoder,43,1.0,N3 delay injection,24,0,0.0
+Autoencoder,43,1.0,N3 packet loss injection,24,0,0.0
+Autoencoder,43,1.0,N4 traffic blocking,24,0,0.0
+Autoencoder,43,1.0,N6 traffic blocking,24,0,0.0
+Autoencoder,43,1.0,UPF shutdown,24,0,0.0
+Isolation Forest,17,0.1,N3 traffic blocking,24,0,0.0
+Isolation Forest,17,0.1,N3 delay injection,24,0,0.0
+Isolation Forest,17,0.1,N3 packet loss injection,24,0,0.0
+Isolation Forest,17,0.1,N4 traffic blocking,24,0,0.0
+Isolation Forest,17,0.1,N6 traffic blocking,24,0,0.0
+Isolation Forest,17,0.1,UPF shutdown,24,0,0.0
+Isolation Forest,17,1.0,N3 traffic blocking,24,0,0.0
+Isolation Forest,17,1.0,N3 delay injection,24,0,0.0
+Isolation Forest,17,1.0,N3 packet loss injection,24,0,0.0
+Isolation Forest,17,1.0,N4 traffic blocking,24,0,0.0
+Isolation Forest,17,1.0,N6 traffic blocking,24,0,0.0
+Isolation Forest,17,1.0,UPF shutdown,24,0,0.0
+Isolation Forest,29,0.1,N3 traffic blocking,24,0,0.0
+Isolation Forest,29,0.1,N3 delay injection,24,0,0.0
+Isolation Forest,29,0.1,N3 packet loss injection,24,0,0.0
+Isolation Forest,29,0.1,N4 traffic blocking,24,0,0.0
+Isolation Forest,29,0.1,N6 traffic blocking,24,0,0.0
+Isolation Forest,29,0.1,UPF shutdown,24,0,0.0
+Isolation Forest,29,1.0,N3 traffic blocking,24,0,0.0
+Isolation Forest,29,1.0,N3 delay injection,24,0,0.0
+Isolation Forest,29,1.0,N3 packet loss injection,24,0,0.0
+Isolation Forest,29,1.0,N4 traffic blocking,24,0,0.0
+Isolation Forest,29,1.0,N6 traffic blocking,24,0,0.0
+Isolation Forest,29,1.0,UPF shutdown,24,0,0.0
+Isolation Forest,43,0.1,N3 traffic blocking,24,0,0.0
+Isolation Forest,43,0.1,N3 delay injection,24,0,0.0
+Isolation Forest,43,0.1,N3 packet loss injection,24,0,0.0
+Isolation Forest,43,0.1,N4 traffic blocking,24,0,0.0
+Isolation Forest,43,0.1,N6 traffic blocking,24,0,0.0
+Isolation Forest,43,0.1,UPF shutdown,24,0,0.0
+Isolation Forest,43,1.0,N3 traffic blocking,24,0,0.0
+Isolation Forest,43,1.0,N3 delay injection,24,0,0.0
+Isolation Forest,43,1.0,N3 packet loss injection,24,0,0.0
+Isolation Forest,43,1.0,N4 traffic blocking,24,0,0.0
+Isolation Forest,43,1.0,N6 traffic blocking,24,0,0.0
+Isolation Forest,43,1.0,UPF shutdown,24,0,0.0
+Random Forest,17,0.1,N3 traffic blocking,24,8,33.33333333333333
+Random Forest,17,0.1,N3 delay injection,24,10,41.66666666666667
+Random Forest,17,0.1,N3 packet loss injection,24,8,33.33333333333333
+Random Forest,17,0.1,N4 traffic blocking,24,8,33.33333333333333
+Random Forest,17,0.1,N6 traffic blocking,24,10,41.66666666666667
+Random Forest,17,0.1,UPF shutdown,24,9,37.5
+Random Forest,17,1.0,N3 traffic blocking,24,19,79.16666666666666
+Random Forest,17,1.0,N3 delay injection,24,12,50.0
+Random Forest,17,1.0,N3 packet loss injection,24,17,70.83333333333334
+Random Forest,17,1.0,N4 traffic blocking,24,20,83.33333333333334
+Random Forest,17,1.0,N6 traffic blocking,24,17,70.83333333333334
+Random Forest,17,1.0,UPF shutdown,24,24,100.0
+Random Forest,29,0.1,N3 traffic blocking,24,9,37.5
+Random Forest,29,0.1,N3 delay injection,24,10,41.66666666666667
+Random Forest,29,0.1,N3 packet loss injection,24,5,20.833333333333336
+Random Forest,29,0.1,N4 traffic blocking,24,5,20.833333333333336
+Random Forest,29,0.1,N6 traffic blocking,24,10,41.66666666666667
+Random Forest,29,0.1,UPF shutdown,24,8,33.33333333333333
+Random Forest,29,1.0,N3 traffic blocking,24,19,79.16666666666666
+Random Forest,29,1.0,N3 delay injection,24,12,50.0
+Random Forest,29,1.0,N3 packet loss injection,24,17,70.83333333333334
+Random Forest,29,1.0,N4 traffic blocking,24,20,83.33333333333334
+Random Forest,29,1.0,N6 traffic blocking,24,17,70.83333333333334
+Random Forest,29,1.0,UPF shutdown,24,22,91.66666666666666
+Random Forest,43,0.1,N3 traffic blocking,24,8,33.33333333333333
+Random Forest,43,0.1,N3 delay injection,24,10,41.66666666666667
+Random Forest,43,0.1,N3 packet loss injection,24,7,29.166666666666668
+Random Forest,43,0.1,N4 traffic blocking,24,7,29.166666666666668
+Random Forest,43,0.1,N6 traffic blocking,24,11,45.83333333333333
+Random Forest,43,0.1,UPF shutdown,24,9,37.5
+Random Forest,43,1.0,N3 traffic blocking,24,18,75.0
+Random Forest,43,1.0,N3 delay injection,24,12,50.0
+Random Forest,43,1.0,N3 packet loss injection,24,15,62.5
+Random Forest,43,1.0,N4 traffic blocking,24,19,79.16666666666666
+Random Forest,43,1.0,N6 traffic blocking,24,16,66.66666666666666
+Random Forest,43,1.0,UPF shutdown,24,23,95.83333333333334

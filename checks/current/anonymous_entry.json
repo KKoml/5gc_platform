@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://anonymous.4open.science/r/5gc_platform-1FEA/",
+    "http_status": 403,
+    "body_excerpt": "error code: 1010\n",
+    "verified_readable_files": false,
+    "checked_utc": "2026-10-07T15:34:46.885395+00:00"
+  },
+  {
+    "url": "https://anonymous.4open.science/r/5gc_platform-FBAF/",
+    "http_status": 403,
+    "body_excerpt": "error code: 1010\n",
+    "verified_readable_files": false,
+    "checked_utc": "2026-10-07T15:34:47.228779+00:00"
+  }
+]

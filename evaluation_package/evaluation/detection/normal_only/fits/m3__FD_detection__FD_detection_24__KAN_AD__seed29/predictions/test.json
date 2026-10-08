@@ -1,0 +1,12 @@
+{
+  "inference_seconds": 0.46686883084475994,
+  "metadata_columns_are_output_only": true,
+  "model": "KAN-AD",
+  "point_adjustment": false,
+  "prediction_file_sha256": "1473820e1c86d84627e418629cda294d05672b0ca2ef66df60b087af083b017b",
+  "sample_count": 33039,
+  "sample_id_sha256": "fe8ea2ab7085c8411f9e0d35e97946edd43d242fb1b2f68b42aa5c85b1808e7e",
+  "seed": 29,
+  "split": "test",
+  "task": "FD_detection"
+}

@@ -1,0 +1,28 @@
+{
+  "mechanisms": [
+    "n3-block",
+    "n3-delay",
+    "n3-loss",
+    "n4-block",
+    "n6-block",
+    "instance-stop"
+  ],
+  "targets": [
+    "upf-silver",
+    "upf-gold"
+  ],
+  "classes": [
+    "n3-block|upf-silver",
+    "n3-block|upf-gold",
+    "n3-delay|upf-silver",
+    "n3-delay|upf-gold",
+    "n3-loss|upf-silver",
+    "n3-loss|upf-gold",
+    "n4-block|upf-silver",
+    "n4-block|upf-gold",
+    "n6-block|upf-silver",
+    "n6-block|upf-gold",
+    "instance-stop|upf-silver",
+    "instance-stop|upf-gold"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "model": "AE",
+      "seed": 17,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 1.1440563201904297
+    },
+    {
+      "model": "AE",
+      "seed": 17,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 1.0473990440368652
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 17,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 0.8109991550445557
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 17,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 0.9774589538574219
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 17,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 1.2604212760925293
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 17,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 1.7894408702850342
+    },
+    {
+      "model": "AE",
+      "seed": 29,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 0.6356887817382812
+    },
+    {
+      "model": "AE",
+      "seed": 29,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 0.8961985111236572
+    },
+    {
+      "model": "AE",
+      "seed": 43,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 0.5701780319213867
+    },
+    {
+      "model": "AE",
+      "seed": 43,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 0.9220590591430664
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 29,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 0.6930530071258545
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 29,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 0.9318158626556396
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 43,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 0.6564481258392334
+    },
+    {
+      "model": "KAN-AD",
+      "seed": 43,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 1.0114006996154785
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 29,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 1.0650787353515625
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 29,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 1.7335703372955322
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 43,
+      "split": "validation",
+      "n": 16519,
+      "max_abs": 0.0,
+      "seconds": 1.0473606586456299
+    },
+    {
+      "model": "TranAD_adapted_v2",
+      "seed": 43,
+      "split": "test",
+      "n": 33039,
+      "max_abs": 0.0,
+      "seconds": 1.8566749095916748
+    }
+  ],
+  "count": 18,
+  "max_score_abs_difference": 0.0,
+  "tolerance": {
+    "rtol": 1e-06,
+    "atol": 2e-06
+  },
+  "scope": "normal-only FD models AE,KAN-AD,TranAD; seeds 17,29,43; D05,D06-D07 scores; no fitting; saved artifacts were read only"
+}

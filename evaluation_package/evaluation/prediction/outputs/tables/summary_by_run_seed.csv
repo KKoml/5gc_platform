@@ -1,0 +1,201 @@
+task,target,model,input_panel,slot,metric,unit,mean,std,count
+T1,host_cpu,ARIMA,U_extended_access,D06,MAE,percentage points,2.718712917025571,,1
+T1,host_cpu,ARIMA,U_extended_access,D06,R2,dimensionless,-0.12598557568625002,,1
+T1,host_cpu,ARIMA,U_extended_access,D06,RMSE,percentage points,3.7678973677644962,,1
+T1,host_cpu,ARIMA,U_extended_access,D06,WAPE,percent,12.2134454204944,,1
+T1,host_cpu,ARIMA,U_extended_access,D06,eligible_window_coverage,dimensionless,1.0,,1
+T1,host_cpu,ARIMA,U_extended_access,D07,MAE,percentage points,2.5466475727414046,,1
+T1,host_cpu,ARIMA,U_extended_access,D07,R2,dimensionless,0.031710254356322354,,1
+T1,host_cpu,ARIMA,U_extended_access,D07,RMSE,percentage points,3.5817853643753503,,1
+T1,host_cpu,ARIMA,U_extended_access,D07,WAPE,percent,11.567647658469857,,1
+T1,host_cpu,ARIMA,U_extended_access,D07,eligible_window_coverage,dimensionless,1.0,,1
+T1,host_cpu,PatchTST,U,D06,MAE,percentage points,2.7005603515848726,0.01016504742075676,3
+T1,host_cpu,PatchTST,U,D06,R2,dimensionless,-0.10127699886333708,0.003457284864705533,3
+T1,host_cpu,PatchTST,U,D06,RMSE,percentage points,3.7263237004050933,0.005849952887184995,3
+T1,host_cpu,PatchTST,U,D06,WAPE,percent,12.131897506456282,0.04566508331669716,3
+T1,host_cpu,PatchTST,U,D06,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,PatchTST,U,D07,MAE,percentage points,2.5467540324865037,0.003993097573129196,3
+T1,host_cpu,PatchTST,U,D07,R2,dimensionless,0.06006861784438874,0.007482213763236264,3
+T1,host_cpu,PatchTST,U,D07,RMSE,percentage points,3.5289269755947656,0.014049793521081912,3
+T1,host_cpu,PatchTST,U,D07,WAPE,percent,11.568131231004314,0.01813786339588656,3
+T1,host_cpu,PatchTST,U,D07,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,RecentMean10,U,D06,MAE,percentage points,3.218811752577319,,1
+T1,host_cpu,RecentMean10,U,D06,R2,dimensionless,-0.5005934159866194,,1
+T1,host_cpu,RecentMean10,U,D06,RMSE,percentage points,4.3497487249375935,,1
+T1,host_cpu,RecentMean10,U,D06,WAPE,percent,14.460070944879117,,1
+T1,host_cpu,RecentMean10,U,D06,eligible_window_coverage,dimensionless,1.0,,1
+T1,host_cpu,RecentMean10,U,D07,MAE,percentage points,3.1166863230240547,,1
+T1,host_cpu,RecentMean10,U,D07,R2,dimensionless,-0.27847891003827563,,1
+T1,host_cpu,RecentMean10,U,D07,RMSE,percentage points,4.115699663874478,,1
+T1,host_cpu,RecentMean10,U,D07,WAPE,percent,14.156936999297606,,1
+T1,host_cpu,RecentMean10,U,D07,eligible_window_coverage,dimensionless,1.0,,1
+T1,host_cpu,TimeFilter,M,D06,MAE,percentage points,2.736346887056716,0.006744555268157437,3
+T1,host_cpu,TimeFilter,M,D06,R2,dimensionless,-0.1379102946701399,0.00890935436654063,3
+T1,host_cpu,TimeFilter,M,D06,RMSE,percentage points,3.7877773922764053,0.0148224787796624,3
+T1,host_cpu,TimeFilter,M,D06,WAPE,percent,12.29266361568275,0.030298990797185905,3
+T1,host_cpu,TimeFilter,M,D06,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,TimeFilter,M,D07,MAE,percentage points,2.5802363363930616,0.014605720647869715,3
+T1,host_cpu,TimeFilter,M,D07,R2,dimensionless,0.029319716483425573,0.0002871485713261809,3
+T1,host_cpu,TimeFilter,M,D07,RMSE,percentage points,3.5862040131864017,0.0005304584486098028,3
+T1,host_cpu,TimeFilter,M,D07,WAPE,percent,11.720218036626944,0.06634362448146601,3
+T1,host_cpu,TimeFilter,M,D07,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost,M,D06,MAE,percentage points,2.4891929844891,0.02062631763734924,3
+T1,host_cpu,XGBoost,M,D06,R2,dimensionless,0.1221096653920896,0.011978430644518022,3
+T1,host_cpu,XGBoost,M,D06,RMSE,percentage points,3.3269480826507842,0.022736890111453786,3
+T1,host_cpu,XGBoost,M,D06,WAPE,percent,11.182358558989128,0.09266090697253823,3
+T1,host_cpu,XGBoost,M,D06,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost,M,D07,MAE,percentage points,2.484151530214989,0.018859006828727928,3
+T1,host_cpu,XGBoost,M,D07,R2,dimensionless,0.15785655063264173,0.006235183395975259,3
+T1,host_cpu,XGBoost,M,D07,RMSE,percentage points,3.3403189803568125,0.012376389505755248,3
+T1,host_cpu,XGBoost,M,D07,WAPE,percent,11.283771629555458,0.08566334365165525,3
+T1,host_cpu,XGBoost,M,D07,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D06,MAE,percentage points,11.26669164243578,0.007096240693919428,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D06,R2,dimensionless,-9.73761422742063,0.017303625821123523,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D06,RMSE,percentage points,11.635537646621318,0.009374891564027196,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D06,WAPE,percent,50.61406909964506,0.03187888940502637,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D07,MAE,percentage points,11.580151648491752,0.005430073099043182,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D07,R2,dimensionless,-9.784808520733685,0.012403275958055477,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D07,RMSE,percentage points,11.953719557329293,0.006874132490939803,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D07,WAPE,percent,52.60057007307142,0.02466504318925684,3
+T1,host_cpu,XGBoost_schedule_only,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D06,MAE,percentage points,2.6024199331885267,0.0017869226653850147,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D06,R2,dimensionless,0.01345387325636238,0.0028663704310901207,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D06,RMSE,percentage points,3.526882924411004,0.005125020527104145,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D06,WAPE,percent,11.691015118278415,0.008027505334473502,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D07,MAE,percentage points,2.6052866845801006,0.004338576816820213,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D07,R2,dimensionless,0.08248048268555615,0.0019451173170602692,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D07,RMSE,percentage points,3.4866181304216632,0.0036962953943901465,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D07,WAPE,percent,11.834004335387442,0.019707135173855146,3
+T1,host_cpu,XGBoost_target_history_and_mask,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,1.0,0.0,3
+T1,n3_downlink,ARIMA,U_extended_access,D06,MAE,Mb/s,4.586567805450234,,1
+T1,n3_downlink,ARIMA,U_extended_access,D06,R2,dimensionless,-0.146630642816026,,1
+T1,n3_downlink,ARIMA,U_extended_access,D06,RMSE,Mb/s,9.5667380622734,,1
+T1,n3_downlink,ARIMA,U_extended_access,D06,WAPE,percent,83.84205051448374,,1
+T1,n3_downlink,ARIMA,U_extended_access,D06,eligible_window_coverage,dimensionless,0.9979381443298969,,1
+T1,n3_downlink,ARIMA,U_extended_access,D07,MAE,Mb/s,4.468163742250555,,1
+T1,n3_downlink,ARIMA,U_extended_access,D07,R2,dimensionless,-0.1492044601959568,,1
+T1,n3_downlink,ARIMA,U_extended_access,D07,RMSE,Mb/s,8.96289397415323,,1
+T1,n3_downlink,ARIMA,U_extended_access,D07,WAPE,percent,84.17497978975915,,1
+T1,n3_downlink,ARIMA,U_extended_access,D07,eligible_window_coverage,dimensionless,0.9972508591065292,,1
+T1,n3_downlink,PatchTST,U,D06,MAE,Mb/s,4.251345781033309,0.027532044204649365,3
+T1,n3_downlink,PatchTST,U,D06,R2,dimensionless,0.27820414363360874,0.014647812987206008,3
+T1,n3_downlink,PatchTST,U,D06,RMSE,Mb/s,7.590047304072896,0.0767994288550736,3
+T1,n3_downlink,PatchTST,U,D06,WAPE,percent,77.7142217987863,0.5032833131192737,3
+T1,n3_downlink,PatchTST,U,D06,eligible_window_coverage,dimensionless,0.9979381443298969,0.0,3
+T1,n3_downlink,PatchTST,U,D07,MAE,Mb/s,4.252964725945028,0.04512663813344733,3
+T1,n3_downlink,PatchTST,U,D07,R2,dimensionless,0.19088180759186527,0.01786118185885309,3
+T1,n3_downlink,PatchTST,U,D07,RMSE,Mb/s,7.520348690024503,0.08295285538478425,3
+T1,n3_downlink,PatchTST,U,D07,WAPE,percent,80.12088197839071,0.850133090903569,3
+T1,n3_downlink,PatchTST,U,D07,eligible_window_coverage,dimensionless,0.9972508591065292,0.0,3
+T1,n3_downlink,RecentMean10,U,D06,MAE,Mb/s,6.326396785919806,,1
+T1,n3_downlink,RecentMean10,U,D06,R2,dimensionless,-0.49470834444521605,,1
+T1,n3_downlink,RecentMean10,U,D06,RMSE,Mb/s,10.92270842934584,,1
+T1,n3_downlink,RecentMean10,U,D06,WAPE,percent,115.645969142647,,1
+T1,n3_downlink,RecentMean10,U,D06,eligible_window_coverage,dimensionless,0.9979381443298969,,1
+T1,n3_downlink,RecentMean10,U,D07,MAE,Mb/s,6.181439806478291,,1
+T1,n3_downlink,RecentMean10,U,D07,R2,dimensionless,-0.5394239854094882,,1
+T1,n3_downlink,RecentMean10,U,D07,RMSE,Mb/s,10.37358170775439,,1
+T1,n3_downlink,RecentMean10,U,D07,WAPE,percent,116.45109731807709,,1
+T1,n3_downlink,RecentMean10,U,D07,eligible_window_coverage,dimensionless,0.9972508591065292,,1
+T1,n3_downlink,TimeFilter,M,D06,MAE,Mb/s,4.224728795335369,0.013352253249962141,3
+T1,n3_downlink,TimeFilter,M,D06,R2,dimensionless,0.2678538944270723,0.012505036108587376,3
+T1,n3_downlink,TimeFilter,M,D06,RMSE,Mb/s,7.644346848346103,0.06543009009944169,3
+T1,n3_downlink,TimeFilter,M,D06,WAPE,percent,77.22766567357694,0.24407799883285072,3
+T1,n3_downlink,TimeFilter,M,D06,eligible_window_coverage,dimensionless,0.9979381443298969,0.0,3
+T1,n3_downlink,TimeFilter,M,D07,MAE,Mb/s,4.2033822419860885,0.014897233831990141,3
+T1,n3_downlink,TimeFilter,M,D07,R2,dimensionless,0.18642737052126732,0.016852775192157415,3
+T1,n3_downlink,TimeFilter,M,D07,RMSE,Mb/s,7.541055831895001,0.07832397396061073,3
+T1,n3_downlink,TimeFilter,M,D07,WAPE,percent,79.18680596284443,0.28064646442421126,3
+T1,n3_downlink,TimeFilter,M,D07,eligible_window_coverage,dimensionless,0.9972508591065292,0.0,3
+T1,n3_downlink,XGBoost,M,D06,MAE,Mb/s,3.8133608339502882,0.017635068593495503,3
+T1,n3_downlink,XGBoost,M,D06,R2,dimensionless,0.503797194936275,0.005139112950172927,3
+T1,n3_downlink,XGBoost,M,D06,RMSE,Mb/s,6.293291395383356,0.03257090154629267,3
+T1,n3_downlink,XGBoost,M,D06,WAPE,percent,69.70789601978403,0.3223674814281087,3
+T1,n3_downlink,XGBoost,M,D06,eligible_window_coverage,dimensionless,0.9979381443298969,0.0,3
+T1,n3_downlink,XGBoost,M,D07,MAE,Mb/s,3.884096251947698,0.008084628358404077,3
+T1,n3_downlink,XGBoost,M,D07,R2,dimensionless,0.3932170912598254,0.0011081844377067213,3
+T1,n3_downlink,XGBoost,M,D07,RMSE,Mb/s,6.512776228595036,0.0059479301984620815,3
+T1,n3_downlink,XGBoost,M,D07,WAPE,percent,73.17183128667068,0.15230494402910313,3
+T1,n3_downlink,XGBoost,M,D07,eligible_window_coverage,dimensionless,0.9972508591065292,0.0,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D06,MAE,Mb/s,4.048642041777659,0.024612362814026074,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D06,R2,dimensionless,0.3577082945703222,0.009313293876458458,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D06,RMSE,Mb/s,7.159961054345523,0.051906030715770636,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D06,WAPE,percent,74.0088155196179,0.4499117976370547,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,0.9979381443298969,0.0,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D07,MAE,Mb/s,4.102644683897417,0.02064761734038953,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D07,R2,dimensionless,0.24122807460222642,0.007514063918440275,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D07,RMSE,Mb/s,7.282855200833839,0.03611096377904819,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D07,WAPE,percent,77.28902817193638,0.38897696516791946,3
+T1,n3_downlink,XGBoost_schedule_only,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,0.9972508591065292,0.0,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D06,MAE,Mb/s,4.116935557068447,0.005859601957329748,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D06,R2,dimensionless,0.45246731526732065,0.0033440306381508226,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D06,RMSE,Mb/s,6.610826933101847,0.020173799131949003,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D06,WAPE,percent,75.25721488962564,0.10711300129857149,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,0.9979381443298969,0.0,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D07,MAE,Mb/s,4.1394696509659346,0.015000728938218468,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D07,R2,dimensionless,0.39559725034271115,0.006060363332588914,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D07,RMSE,Mb/s,6.499937687283787,0.03254890070543114,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D07,WAPE,percent,77.98276748803177,0.28259619119736296,3
+T1,n3_downlink,XGBoost_target_history_and_mask,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,0.9972508591065292,0.0,3
+T1,n6_aggregate,PatchTST,U,D06,MAE,Mb/s,5.1244765163319945,0.005002469749664409,3
+T1,n6_aggregate,PatchTST,U,D06,R2,dimensionless,-0.20330669285406647,0.01587257876110797,3
+T1,n6_aggregate,PatchTST,U,D06,RMSE,Mb/s,7.840114082422688,0.05180752988884293,3
+T1,n6_aggregate,PatchTST,U,D06,WAPE,percent,74.01569602599302,0.07225348368567346,3
+T1,n6_aggregate,PatchTST,U,D06,eligible_window_coverage,dimensionless,0.9917525773195877,0.0,3
+T1,n6_aggregate,PatchTST,U,D07,MAE,Mb/s,5.007310542678554,0.012429241786892585,3
+T1,n6_aggregate,PatchTST,U,D07,R2,dimensionless,-0.18667789471254306,0.01455420292775213,3
+T1,n6_aggregate,PatchTST,U,D07,RMSE,Mb/s,7.919481275697941,0.04865065697356704,3
+T1,n6_aggregate,PatchTST,U,D07,WAPE,percent,73.37749333432562,0.1821390142662511,3
+T1,n6_aggregate,PatchTST,U,D07,eligible_window_coverage,dimensionless,0.9945017182130584,0.0,3
+T1,n6_aggregate,RecentMean10,U,D06,MAE,Mb/s,7.128388882764127,,1
+T1,n6_aggregate,RecentMean10,U,D06,R2,dimensionless,-1.352253704912148,,1
+T1,n6_aggregate,RecentMean10,U,D06,RMSE,Mb/s,10.961818774592526,,1
+T1,n6_aggregate,RecentMean10,U,D06,WAPE,percent,102.95932921542453,,1
+T1,n6_aggregate,RecentMean10,U,D06,eligible_window_coverage,dimensionless,0.9917525773195877,,1
+T1,n6_aggregate,RecentMean10,U,D07,MAE,Mb/s,7.149291605208921,,1
+T1,n6_aggregate,RecentMean10,U,D07,R2,dimensionless,-1.3804242564585016,,1
+T1,n6_aggregate,RecentMean10,U,D07,RMSE,Mb/s,11.216644530606269,,1
+T1,n6_aggregate,RecentMean10,U,D07,WAPE,percent,104.76623980779625,,1
+T1,n6_aggregate,RecentMean10,U,D07,eligible_window_coverage,dimensionless,0.9945017182130584,,1
+T1,n6_aggregate,TimeFilter,M,D06,MAE,Mb/s,5.1532145460759935,0.0052400957047058425,3
+T1,n6_aggregate,TimeFilter,M,D06,R2,dimensionless,-0.24991644136970873,0.030031031088831716,3
+T1,n6_aggregate,TimeFilter,M,D06,RMSE,Mb/s,7.99024522396699,0.09605368511168008,3
+T1,n6_aggregate,TimeFilter,M,D06,WAPE,percent,74.4307755501432,0.07568564898102652,3
+T1,n6_aggregate,TimeFilter,M,D06,eligible_window_coverage,dimensionless,0.9917525773195877,0.0,3
+T1,n6_aggregate,TimeFilter,M,D07,MAE,Mb/s,5.068031247108178,0.009398699974983816,3
+T1,n6_aggregate,TimeFilter,M,D07,R2,dimensionless,-0.2323785336917589,0.016292104675198472,3
+T1,n6_aggregate,TimeFilter,M,D07,RMSE,Mb/s,8.070519579943051,0.05341019949209171,3
+T1,n6_aggregate,TimeFilter,M,D07,WAPE,percent,74.26729895883496,0.13772923386469307,3
+T1,n6_aggregate,TimeFilter,M,D07,eligible_window_coverage,dimensionless,0.9945017182130584,0.0,3
+T1,n6_aggregate,XGBoost,M,D06,MAE,Mb/s,4.278150495983823,0.042616320852699986,3
+T1,n6_aggregate,XGBoost,M,D06,R2,dimensionless,0.24984812211832894,0.008929599168071862,3
+T1,n6_aggregate,XGBoost,M,D06,RMSE,Mb/s,6.1902756975065785,0.036907333477279945,3
+T1,n6_aggregate,XGBoost,M,D06,WAPE,percent,61.79173339071955,0.6155314869580794,3
+T1,n6_aggregate,XGBoost,M,D06,eligible_window_coverage,dimensionless,0.9917525773195877,0.0,3
+T1,n6_aggregate,XGBoost,M,D07,MAE,Mb/s,4.412716142980973,0.01566638167808884,3
+T1,n6_aggregate,XGBoost,M,D07,R2,dimensionless,0.19458937180866206,0.0005773363564199799,3
+T1,n6_aggregate,XGBoost,M,D07,RMSE,Mb/s,6.524457894516819,0.002338348065833625,3
+T1,n6_aggregate,XGBoost,M,D07,WAPE,percent,64.66426370165784,0.2295762979665326,3
+T1,n6_aggregate,XGBoost,M,D07,eligible_window_coverage,dimensionless,0.9945017182130584,0.0,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D06,MAE,Mb/s,4.3805692324544205,0.002411745706532261,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D06,R2,dimensionless,0.19997605084814726,0.000998166088917525,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D06,RMSE,Mb/s,6.392812618939676,0.003987622084612129,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D06,WAPE,percent,63.271024795766344,0.034834199461693194,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,0.9917525773195877,0.0,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D07,MAE,Mb/s,4.4369851825019735,0.00344351833931207,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D07,R2,dimensionless,0.1375134924908099,0.003498349514507282,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D07,RMSE,Mb/s,6.751671940613392,0.013700571132128725,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D07,WAPE,percent,65.01990397411636,0.05046156850785413,3
+T1,n6_aggregate,XGBoost_schedule_only,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,0.9945017182130584,0.0,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D06,MAE,Mb/s,4.878686789204985,0.019167604421676334,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D06,R2,dimensionless,0.040502487311760094,0.004685613707588528,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D06,RMSE,Mb/s,7.0010245390478865,0.017103350730702276,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D06,WAPE,percent,70.46561677958324,0.2768484893822483,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D06,eligible_window_coverage,dimensionless,0.9917525773195877,0.0,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D07,MAE,Mb/s,4.987723069016624,0.01757099655116907,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D07,R2,dimensionless,-0.005486115091282902,0.0029596591854339524,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D07,RMSE,Mb/s,7.289932352863205,0.010733075722023228,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D07,WAPE,percent,73.09045706888647,0.2574866630143504,3
+T1,n6_aggregate,XGBoost_target_history_and_mask,Supervised diagnostic,D07,eligible_window_coverage,dimensionless,0.9945017182130584,0.0,3

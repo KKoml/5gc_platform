@@ -1,0 +1,12 @@
+{
+  "inference_seconds": 1.1378027580212802,
+  "metadata_columns_are_output_only": true,
+  "model": "TranAD_adapted_v2",
+  "point_adjustment": false,
+  "prediction_file_sha256": "044b53a18adc19638cf6075f4937733c5933e900174fd49fbe5e74d81e182be1",
+  "sample_count": 33039,
+  "sample_id_sha256": "fe8ea2ab7085c8411f9e0d35e97946edd43d242fb1b2f68b42aa5c85b1808e7e",
+  "seed": 43,
+  "split": "test",
+  "task": "FD_detection"
+}

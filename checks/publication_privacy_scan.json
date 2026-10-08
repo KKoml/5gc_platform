@@ -1,0 +1,31 @@
+{
+  "files_scanned": 1018,
+  "binary_or_compressed_files_scanned": 382,
+  "logical_strings_scanned": 10672137,
+  "finding_files": 0,
+  "findings": [],
+  "third_party_attribution_exceptions": [
+    {
+      "path": "evaluation_package/evaluation/prediction/third_party/tslib/layers/DWT_Decomposition.py",
+      "categories": {
+        "email": 2
+      },
+      "reason": "third-party source attribution retained"
+    },
+    {
+      "path": "evaluation_package/evaluation/prediction/third_party/tslib/layers/FourierCorrelation.py",
+      "categories": {
+        "email": 1
+      },
+      "reason": "third-party source attribution retained"
+    },
+    {
+      "path": "evaluation_package/evaluation/prediction/third_party/tslib/models/WPMixer.py",
+      "categories": {
+        "email": 1
+      },
+      "reason": "third-party source attribution retained"
+    }
+  ],
+  "method": "decoded text, Parquet string columns, NPZ string arrays, gzip text, ZIP members, and printable runs in other binaries; known configure-local redaction placeholder is not classified as a credential"
+}
