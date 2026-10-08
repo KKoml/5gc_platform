@@ -1,0 +1,27 @@
+{
+  "supplement_file_count": 19,
+  "all_supplement_files_match_source": true,
+  "markdown_relative_links_checked": 84,
+  "broken_links": [],
+  "privacy_pattern_findings": [],
+  "existing_experiment_code_models_results_unchanged": true,
+  "no_training_or_inference": true,
+  "sample_checks": {
+    "sample": "data/timeseries_1s_sample.csv",
+    "data_rows": 20,
+    "columns": 81,
+    "grid_seconds": 1,
+    "source_cells_equal": true,
+    "source_sha256": "8ca85f3af32070e3d327868e1d7eac22ff22efacf2f01c96fcca8a88da4f8496",
+    "sample_sha256": "fca05f1b1b8f082f437b6d299d940c2c6046d92ac2c0649a5f21606fc45ba626"
+  },
+  "anonymous_access": {
+    "checked_hong_kong_date": "2026-10-09",
+    "listing": "one old readme.md, 467 bytes",
+    "download_status": 403,
+    "error": "github_app_access_required",
+    "new_supplement_visible": false
+  },
+  "new_directory": "manuscript_supplement",
+  "source_manuscript_pdf_sha256": "2da3a23811300f02308788f7ca24ea6de1054b976b814dcb5a73ea035c28b661"
+}

@@ -1,0 +1,78 @@
+{
+  "edition": "Chinese compressed manuscript",
+  "date_hong_kong": "2026-10-09",
+  "pages_including_references": 6,
+  "authors_blank": true,
+  "pdf_sha256": "2da3a23811300f02308788f7ca24ea6de1054b976b814dcb5a73ea035c28b661",
+  "source_files": [
+    {
+      "path": "IEEEtran.bst",
+      "sha256": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f"
+    },
+    {
+      "path": "IEEEtran.cls",
+      "sha256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7"
+    },
+    {
+      "path": "figures/collection_algorithm.tex",
+      "sha256": "cb170b938c6f0428aa8d0959d0faf59d914129697b758f94f5fa7fd3a4ff27bd"
+    },
+    {
+      "path": "figures/platform_float.tex",
+      "sha256": "620c90ff6b774dba02c9962f357ef31ab1357fcc3edaebc7f18b758384af3ff6"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "ff55ebb5bc422d283c8fb545e1f515158a4f0a0b26a8886f219a6da589399578"
+    },
+    {
+      "path": "manuscript.tex",
+      "sha256": "289f3fe228647dba0717f1996ea9425481258c024e408b39e0533ddd7d800501"
+    },
+    {
+      "path": "math_commands.tex",
+      "sha256": "3fc4f1ddb7b92980382794d88637ce81a7ed153f574ad6fe4e48e5c246296049"
+    },
+    {
+      "path": "preamble.tex",
+      "sha256": "d74a629183af4c49b89d059ebbf14aeb426fc4076ad6ba4985337a56ab378881"
+    },
+    {
+      "path": "references.bib",
+      "sha256": "17b710d9eecfeba05ca7e15be66c822e64dae7ca2fc81b76d137dd66fe390a02"
+    },
+    {
+      "path": "sections/0_abstract.tex",
+      "sha256": "8069f3ed129384413f0f2b91db4fa07a849906780f006fca992e8cb96f25b5a3"
+    },
+    {
+      "path": "sections/1_introduction.tex",
+      "sha256": "1ace06f93e924a052c8fd269b190c946d94b366caf73d97edf6747bb08510f9b"
+    },
+    {
+      "path": "sections/2_background_related.tex",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "sections/3_testbed.tex",
+      "sha256": "e33b0f0435320767f6d224db2f983755a2573a7fd783ba03fa7883913d75fad5"
+    },
+    {
+      "path": "sections/4_data_benchmark.tex",
+      "sha256": "7ce67f025ee736ebcc33925d1abfaac992509dd8ae8853c4c45f94234bd14000"
+    },
+    {
+      "path": "sections/5_evaluation_protocol.tex",
+      "sha256": "4323bca12283836bfce6876977760b3419ec456587115cd4b52b0a7eb9921c08"
+    },
+    {
+      "path": "sections/6_conclusion.tex",
+      "sha256": "e366672ec4513560011db4c37e9a84b5c9fe6bcf9d23be7c2e37c1578adfb4d2"
+    }
+  ],
+  "appendix_directory": "manuscript_supplement",
+  "previous_experiment_baseline": "manifests/paper_baseline.json",
+  "numerical_results_changed": false,
+  "historical_run_identity": "unconfirmed",
+  "anonymous_readability": "not_verified_github_app_access_required"
+}

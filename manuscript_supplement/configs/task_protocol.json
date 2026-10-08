@@ -1,0 +1,92 @@
+{
+  "version": "core-fault-experiment-package-v1",
+  "created_utc": "2026-09-23T08:28:01Z",
+  "delivery": "portable_data_and_plan_only",
+  "training_executed": false,
+  "grid_seconds": 5,
+  "history_steps": 12,
+  "task_feature_sets": {
+    "FD_detection": "FD_detection_24",
+    "FL_localization": "FL_primary_10",
+    "FP_forewarning": "FP_warning_16"
+  },
+  "observation_columns": [
+    "amf-a__cpu_millicores",
+    "amf-b__cpu_millicores",
+    "smf-silver__cpu_millicores",
+    "smf-gold__cpu_millicores",
+    "upf-silver__cpu_millicores",
+    "upf-gold__cpu_millicores",
+    "amf-a__memory_bytes",
+    "amf-b__memory_bytes",
+    "smf-silver__memory_bytes",
+    "smf-gold__memory_bytes",
+    "upf-silver__memory_bytes",
+    "upf-gold__memory_bytes",
+    "core-host-local__cpu_pct",
+    "core-host-local__mem_used_pct",
+    "core-host-local__loadavg_1",
+    "core-host-local__swap_used_bytes",
+    "core-if-upfgtp-silver__rx_bitrate_bps",
+    "core-if-upfgtp-silver__tx_bitrate_bps",
+    "core-if-upfgtp-silver__rx_packet_rate_pps",
+    "core-if-upfgtp-silver__tx_packet_rate_pps",
+    "core-if-upfgtp-silver__tx_dropped_delta",
+    "core-if-upfgtp-silver__tx_errors_delta",
+    "upf-silver__ready",
+    "upf-gold__ready"
+  ],
+  "task_aliases": {
+    "FD_detection": "T2",
+    "FL_localization": "T4_upf",
+    "FP_forewarning": "T3"
+  },
+  "coverage_policy": {
+    "preserve_nan": true,
+    "minimum_observed_fraction_by_task": {
+      "FD_detection": 0.8,
+      "FL_localization": 0.5,
+      "FP_forewarning": 0.8
+    },
+    "per_channel_floor": null,
+    "FL_case_set": "same_source_cases_for_primary10_and_baseline6"
+  },
+  "FP_warning_min_seconds": 10,
+  "FP_warning_max_seconds": 60,
+  "FL_post_start_seconds": 60,
+  "T3_warning_min_seconds": 10,
+  "T3_warning_max_seconds": 60,
+  "T4_post_start_seconds": 60,
+  "FD_fit_rule": "eligible AND split=train AND normal_train_window; preprocessing uses exactly the same clean subset",
+  "expected_FD_normal_training_windows": 55196,
+  "FP_history_rule": "clean 60s history; no active/recovery/prelude; nearest future start >=10s; complete next60s",
+  "FP_event_link": "nearest strictly future actual start within same run; metadata never model input",
+  "FL_scope": "main Silver/Gold intervention targets or associated paths; known onset conditional localization",
+  "label_scope": "actual recorded Core interventions; not independent business-effect ground truth",
+  "main_split": "W1 D01-D04 train; D05 validation; D06-D07 previously used test; not calendar-forward",
+  "access_scope": "gNB/UE actions are user behavior; excluded from Core fault labels and model observation columns",
+  "time_availability": "frozen conservative source-time alignment; centralized arrival times not certified",
+  "non_W1_coverage_basis": "parsed_span_inferred; not lifecycle-certified complete collection",
+  "source_context_index_role": "audit only; legacy labels and eligibility are NOT the current task contract",
+  "sample_unit": {
+    "FD_detection": "12-step window",
+    "FP_forewarning": "12-step pre-onset window; evaluate per event too",
+    "FL_localization": "one post60 case per event"
+  },
+  "expected_totals": {
+    "FD_detection": {
+      "candidates": 164769,
+      "eligible": 156260
+    },
+    "FL_localization": {
+      "candidates": 612,
+      "eligible": 612
+    },
+    "FP_forewarning": {
+      "candidates": 164769,
+      "eligible": 130370
+    }
+  },
+  "runtime_requires_source_paths": false,
+  "FP_onset_evidence_boundary": "s is the faults.jsonl start record timestamp, not independently certified first physical effect. A 10s lead does not rule out execution-to-log delay. Prediction claims are relative to the recorded onset until dispatch/effect evidence is audited."
+}

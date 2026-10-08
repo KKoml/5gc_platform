@@ -1,0 +1,74 @@
+[
+  {
+    "file": "data/field_dictionary.csv",
+    "source": "data_machine/dataset/metadata/PLATFORM_FIELD_DICTIONARY_400.csv"
+  },
+  {
+    "file": "data/timeseries_1s_sample.csv",
+    "source": "data_machine/dataset/timeseries_1s/D06/v3_timeseries.csv.gz",
+    "extraction": "header plus first 20 data rows; original cells and missing values preserved",
+    "source_sha256": "8ca85f3af32070e3d327868e1d7eac22ff22efacf2f01c96fcca8a88da4f8496",
+    "sample_sha256": "fca05f1b1b8f082f437b6d299d940c2c6046d92ac2c0649a5f21606fc45ba626",
+    "data_rows": 20,
+    "columns": 81,
+    "grid_seconds": 1,
+    "source_availability": "full dataset withheld from publication; this entry documents the sample origin"
+  },
+  {
+    "file": "data/schema_verification.json",
+    "source": "evaluation_package/evaluation/verification/results/data_schema_verification.json"
+  },
+  {
+    "file": "configs/task_protocol.json",
+    "source": "data_machine/dataset/task_data/metadata/protocol.json"
+  },
+  {
+    "file": "configs/classification.json",
+    "source": "evaluation_package/evaluation/localization/config.json"
+  },
+  {
+    "file": "configs/imputation.json",
+    "source": "evaluation_package/evaluation/imputation/metadata/config.json"
+  },
+  {
+    "file": "configs/prediction_selection.json",
+    "source": "evaluation_package/evaluation/prediction/outputs/SELECTION_FROZEN_T1.json"
+  },
+  {
+    "file": "configs/prediction_design_spec.yaml",
+    "source": "evaluation_package/evaluation/prediction/resolved_config.yaml"
+  },
+  {
+    "file": "configs/detection_base.json",
+    "source": "evaluation_package/evaluation/detection/normal_only/configs/base_config.json"
+  },
+  {
+    "file": "configs/detection_AE_seed43.json",
+    "source": "evaluation_package/evaluation/detection/normal_only/fits/m3__FD_detection__FD_detection_24__AE__seed43/experiment_config.json"
+  },
+  {
+    "file": "configs/detection_KAN_AD_seed43.json",
+    "source": "evaluation_package/evaluation/detection/normal_only/fits/m3__FD_detection__FD_detection_24__KAN_AD__seed43/experiment_config.json"
+  },
+  {
+    "file": "configs/detection_TranAD_adapted_v2_seed43.json",
+    "source": "evaluation_package/evaluation/detection/normal_only/fits/m3__FD_detection__FD_detection_24__TranAD_adapted_v2__seed43/experiment_config.json"
+  },
+  {
+    "file": "configs/detection_RF_seed17.json",
+    "source": "evaluation_package/evaluation/detection/supervised_rf/fits/FD_detection__RF_full__seed17/fit_config.json"
+  },
+  {
+    "file": "source_notes/RESULTS_MAP.md",
+    "source": "evaluation_package/docs/RESULTS_MAP.md"
+  },
+  {
+    "file": "source_notes/DATASET_GUIDE.md",
+    "source": "data_machine/docs/DATASET_GUIDE.md"
+  },
+  {
+    "file": "data/core_features_5s_sample.csv",
+    "source": "data_machine/dataset/task_data/data/D06/core_features_5s.csv.gz",
+    "extraction": "header plus first 10 data rows"
+  }
+]

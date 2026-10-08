@@ -15,7 +15,7 @@
 | 已知起点/LSTM | 两层64单元，dropout0.1，输入48/输出12，末位置分类头；63,244参数 | AdamW lr0.001，weight_decay1e−4，batch32，max50，patience8；D05宏F1最大→CE最低→最早轮；种子17/29/43 |
 | 已知起点/TCN | 两残差因果块，width64、dilation1/2、kernel3、dropout0.1，末位置头；50,252参数 | 同分类训练与选择规则 |
 | 已知起点/RF及对照 | 500树，min_samples_leaf2，max_features=sqrt，max_depth=null，class_weight=null，n_jobs4 | RF_24、RF_FL10、ReadyMaskRF同一固定配置，种子17/29/43，测试不调参 |
-| 重建/SAITS-M,H | 作者commit `660b87f19c1277065f314f24134f646229e89ca9`；实际构造 `SAITS(2,1,60,24,64,128,4,16,16,0.1)`，input_with_mask、inner_group共享、对角attention mask；H屏蔽非目标，不改变参数量 | AdamW lr0.001，weight_decay1e−4，batch64，max50；两分支同时stale≥8才停；目标MIT MAE+三个目标可见ORT MAE均值，1:1；各分支按D05等权目标/条件标准化截断MAE选点；17/29/43 |
+| 重建/SAITS-M,H | 作者commit `660b87f19c1277065f314f24134f646229e89ca9`；实际构造 `SAITS(2,1,60,24,64,128,4,16,16,0.1)`，input_with_mask、inner_group共享、对角attention mask；H屏蔽非目标，不改变参数量 | AdamW lr0.001，weight_decay1e−4，batch64，max50；两分支同时stale≥8才停；当前目标MIT MAE+三个重建输出在当前目标可见位置的ORT MAE均值，1:1；各分支按D05等权目标/条件标准化截断MAE选点；17/29/43 |
 
 检测的正常拟合模型仍使用带标签的 D05 标定阈值，不是端到端完全无监督。候选包括正无穷和 D05 全部有限得分，在实际 FAR 不超过预算的候选中依次最大化命中、最小化误报、取较高阈值。D06/D07 固定阈值，不做测试归一化或点调整；保留无报警及漏报结果。
 

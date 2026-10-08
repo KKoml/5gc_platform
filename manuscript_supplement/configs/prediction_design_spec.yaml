@@ -1,0 +1,565 @@
+schema_version: 1
+experiment_id: icc2027_recent_methods_v2
+created_date: '2026-09-06'
+note: Design specification; Codex must implement and resolve adapters. Not an executable
+  TSLib configuration.
+permissions:
+  offline_training: true
+  local_dependency_install: true
+  public_code_and_weight_download: true
+  new_capture: false
+  fault_injection: false
+  network_or_service_changes: false
+  remote_ssh: false
+  modify_original_data: false
+  overwrite_historical_results: false
+  automatic_paper_overwrite: false
+  external_data_upload: false
+  paid_apis_or_cloud: false
+paths:
+  local_paths_override: LOCAL_PATHS.yaml
+  output_relative: experiments/icc2027_recent_methods_v2
+  project_candidates:
+  - REVIEWER_CONFIGURE_PROJECT_CANDIDATES
+  - REVIEWER_CONFIGURE_PROJECT_CANDIDATES
+  data_candidates:
+  - REVIEWER_CONFIGURE_DATA_CANDIDATES
+data:
+  selection: author_selected_registered_view_else_W1
+  do_not_select_by_test_score: true
+  legacy_screen_allowed: true
+  legacy_screen_label: legacy_pipeline_screen
+  official_claim_requires_documented_scope: true
+  statuses_separate:
+  - measurement_kind
+  - observation_support
+  - output_availability
+  never_infer_validity_from_directory_name: true
+  targets:
+  - id: n3_downlink
+    legacy_field: n3_downlink_bitrate_bps
+    display: N3 downlink
+    report_unit: Mb/s
+    scale_from_bps: 1.0e-06
+    nonnegative: true
+    warning: Not the bidirectional p1 pilot.
+  - id: n6_aggregate
+    legacy_field: n6_bitrate_bps
+    display: N6 aggregate (source-defined)
+    report_unit: Mb/s
+    scale_from_bps: 1.0e-06
+    nonnegative: true
+    warning: Legacy flow allocation is not direct per-second receiver throughput.
+  - id: flow_rtt_proxy
+    legacy_field: end_to_end_rtt_ms
+    display: Flow RTT proxy
+    report_unit: ms
+    nonnegative: true
+    warning: Do not relabel as UE-Traffic end-to-end RTT.
+  - id: host_cpu
+    legacy_field: host_cpu_pct
+    display: Host CPU
+    report_unit: percentage points
+    nonnegative: true
+    warning: Resolve node identity, unit and native sampling.
+  feature_list_source: registered_feature_manifest; do not hardcode C=18 for new views
+  legacy_values_channels: 18
+  append_missingness_mask_for_multivariate: true
+  valid_mask: measurement_defined_if_available_else_finite_for_legacy_screen_only
+  whole_raw_pcap_reconstruction_required: false
+  split:
+    train:
+    - D01
+    - D02
+    - D03
+    - D04
+    validation:
+    - D05
+    test:
+    - D06
+    - D07
+    test_status: previously_accessed_post_hoc
+    merge_additional_runs_automatically: false
+    random_row_split: false
+  freeze_one_index_per_task_target_view: true
+  allow_per_model_sample_drops: false
+t1:
+  enabled: true
+  history_s: 60
+  gap_after_history_end_s: 60
+  target_span_s: 10
+  stride_s: 60
+  min_valid_target_buckets: 8
+  input_interval: '[c-60,c)'
+  target_interval: '[c+60,c+70)'
+  label: mean of valid target values; future validity only used by evaluator
+  supervised_prediction: one scalar delayed interval mean
+  supervised_pred_len: 1
+  mask_input_from_future: false
+  joint_target_supervision: false
+  input_scaler: train_per_channel_zscore
+  imputation: train_per_channel_median
+  neural_tree_target_transform: linear_zscore_using_target_training_row_stats
+  neural_tree_log1p_target: false
+  arima_transform: reuse_recorded_native_transform_as_explicit_exception; regenerate
+    V2 predictions
+  neural_loss: SmoothL1(beta=1)
+  tree_loss: squared_error
+  selection_metric: validation_raw_scale_MAE
+  selection_direction: min
+  primary_metric: MAE
+  secondary_metrics:
+  - RMSE
+  - WAPE
+  - R2
+  secondary_complete_target_subset: true
+  models:
+  - id: RecentMean10
+    panel: U
+    trainable: false
+    mean_window_s: 10
+  - id: ARIMA
+    panel: U_extended_access
+    trainable: true
+    native_baseline: true
+    order:
+    - 2
+    - 1
+    - 1
+    resolve_from_existing_config: true
+  - id: PatchTST
+    panel: U
+    source: S2
+    trainable: true
+    architecture:
+      d_model: 64
+      n_heads: 4
+      e_layers: 2
+      d_ff: 128
+      patch_len: 12
+      stride: 6
+      dropout: 0.1
+    search:
+    - lr: 0.001
+    - lr: 0.0003
+  - id: TimeFilter
+    panel: M
+    search:
+    - lr: 0.001
+    - lr: 0.0003
+    architecture:
+      d_model: 64
+      d_ff: 128
+      n_heads: 4
+      e_layers: 2
+      dropout: 0.1
+      patch_len: 12
+      alpha: 0.1
+      top_p: 0.5
+      pos: true
+    year: 2025
+    venue: ICML
+    auxiliary_moe_coefficient: 0.05
+  - id: XGBoost
+    panel: M
+    trainable: true
+    architecture:
+      n_estimators: 500
+      learning_rate: 0.04
+      min_child_weight: 3
+      subsample: 0.9
+      colsample_bytree: 0.9
+    search:
+    - max_depth: 4
+    - max_depth: 6
+  training:
+    optimizer: AdamW_for_neural
+    weight_decay: 0.0001
+    max_epochs: 50
+    patience: 8
+    effective_batch_size: 128
+    grad_norm: 5
+  diagnostics:
+    enabled: true
+    views:
+    - target_history_and_mask
+    - schedule_only
+    - missingness_only
+    reuse_main_xgboost_selected_hyperparameters: true
+    use_existing_feature_definitions: true
+    report_in_separate_panel: true
+t2:
+  enabled: true
+  name: command-overlap window detection proxy
+  history_s: 60
+  stride_s: 5
+  history_interval: '[a-59,a+1)'
+  label_timestamp: a
+  cutoff: a+1
+  fit_all_clean_histories_only: true
+  eval_known_anchor_label_only: true
+  min_observed_numerical_channels_at_anchor: 1
+  score_timestamp: last_observed_bucket
+  reconstruction_score: masked numeric MSE at last bucket
+  missingness_error_in_score: false
+  missingness_error_in_neural_loss: false
+  default_scaler: train_clean_zscore
+  tranad_scaler: train_clean_minmax_no_test_clipping
+  checkpoint_metric: validation_clean_masked_reconstruction_MSE
+  hyperparameter_selection: max_validation_AP
+  threshold_selection: max_validation_positive_F1_ties_choose_higher_threshold
+  selection_uses_validation_labels: true
+  point_adjustment: false
+  test_score_normalization: false
+  primary_metric: AP_average_precision_score
+  secondary_metrics:
+  - AUROC
+  - F1
+  - eligible_event_coverage
+  - clean_false_positive_window_decisions_per_eligible_hour
+  models:
+  - id: PCA
+    trainable: true
+    search:
+    - n_components: 16
+    - n_components: 32
+  - id: IsolationForest
+    trainable: true
+    n_estimators: 300
+    search:
+    - max_samples: 2048
+    - max_samples: 8192
+    score_direction: negative_score_samples
+  - id: AE
+    trainable: true
+    architecture:
+      hidden: 256
+      latent: 64
+    search:
+    - lr: 0.001
+    - lr: 0.0003
+  - id: TranAD
+    source: S5
+    trainable: true
+    architecture: official two-phase self-conditioning; window and positional encoding=60
+    native_sigmoid: true
+    native_objective: true
+    search:
+    - lr: 0.001
+    - lr: 0.0003
+  - id: KANAD
+    panel: M_values_shared_univariate
+    search:
+    - lr: 0.01
+    - lr: 0.003
+    architecture:
+      order: 2
+      difference_order: 1
+    year: 2025
+    venue: ICML
+    checkpoint_metric: D05_clean_anchor_forecast_MSE
+    score: numeric_valid_channel_mean_absolute_forecast_error
+  training:
+    max_epochs: 40
+    patience: 6
+    effective_batch_size: 128
+    grad_norm: 5
+    specialized_objectives_and_native_optimizers_preserved: true
+  diagnostics:
+    enabled: true
+    views:
+    - schedule_only
+    - missingness_only
+    - RAN_only
+    reuse_existing_definitions: true
+    same_v2_eval_index: true
+    separate_supervised_panel: true
+    no_peer_unsupervised_ranking: true
+extensions:
+  chronos2:
+    enabled_if_core_complete_and_budget_available: true
+    source: S8
+    model_id: amazon/chronos-2
+    revision: resolve_and_lock_locally
+    mode: zero_shot
+    finetune: false
+    input_panel: U
+    context_length: 60
+    prediction_length: 70
+    point: average_of_stepwise_q0.5_indices_60_to_69
+    cross_learning: false
+    independent_task_per_anchor: true
+    future_covariates: false
+    remote_inference: false
+    maximum_download_GiB: 3
+  modern_tcn_t2:
+    enabled: false
+    source: S9
+    history_s: 60
+    resolve_native_anomaly_config: true
+    max_configs: 2
+    pred_len: 0
+  long_context:
+    enabled: false
+    history_s: 600
+    models:
+    - XGBoost
+    - TCN
+    - iTransformer
+    - PatchTST
+    compare_with_60_on_common_anchor_subset: true
+    separate_panel: true
+t3:
+  add_new_models: false
+  run_existing_models_this_round: false
+  note: If a later paper uses a new view for T3, rerun its existing models on that
+    view; do not copy old scores.
+selection:
+  max_configs_per_core_model_target: 2
+  developer_seed: 42
+  final_seeds:
+  - 42
+  - 43
+  - 44
+  deterministic_baselines_single_fit: true
+  reuse_developer_winner_only_if_exactly_same_fit: true
+  read_test_metrics_after_selection_only: true
+  increase_search_after_bad_test: false
+resources:
+  max_concurrent_gpus: 1
+  max_cpu_threads: 8
+  dataloader_workers: 2
+  core_gpu_hours: 24
+  extension_gpu_hours: 8
+  max_fit_minutes: 90
+  precision_default: fp32
+  bf16_after_smoke_validation: true
+  stop_at_budget_and_write_resume_commands: true
+  estimate_from_smoke_not_guarantee: true
+required_tests:
+- time_half_open_and_horizon
+- no_run_crossing
+- no_future_truth_in_inputs
+- target_index_permutation
+- train_only_scalers
+- t2_anchor_and_unknown_mask
+- no_test_threshold_or_point_adjustment
+- batch_composition_invariance
+- prediction_index_bijection
+- official_mechanism_fidelity
+- finite_loss_and_gradients
+outputs:
+  language_prose: zh
+  language_figures_tables_captions: en
+  row_level_predictions: true
+  long_metrics: true
+  source_commit_and_checkpoint_lock: true
+  keep_failed_and_skipped_jobs: true
+  paper_source_overwrite: false
+  report_filename: RUN_SUMMARY.md
+  archive_excludes:
+  - raw_pcaps
+  - model_weights
+  - full_training_tensor_cache
+resolved:
+  project_root: REVIEWER_CONFIGURE_PROJECT_ROOT
+  dataset_root: REVIEWER_CONFIGURE_DATASET_ROOT
+  task_root: REVIEWER_CONFIGURE_TASK_ROOT
+  feature_manifest: REVIEWER_CONFIGURE_FEATURE_MANIFEST
+  local_paths_override: null
+  data_version: w1-fourfield-prefixfix-20260917
+  view_id: cutoff_conditioned_strict18_missing18
+  purpose: fourfield_prefix_repaired_offline_rerun
+  observation_support_status: four_fields_prefix_repaired_other_legacy_scope_limits_retained
+  features:
+  - n3_uplink_bitrate_bps
+  - n3_downlink_bitrate_bps
+  - n6_bitrate_bps
+  - cp_pdu_session_success_rate
+  - cp_pdu_session_failure_count
+  - end_to_end_rtt_ms
+  - jitter_ms
+  - packet_loss_rate
+  - cp_active_session_count
+  - cp_pending_session_count
+  - cp_pdu_session_request_count
+  - registration_success_rate
+  - registration_failure_count
+  - registration_request_count
+  - n4_bitrate_bps
+  - host_cpu_pct
+  - host_mem_used_pct
+  - host_loadavg_1
+  ran_features:
+  - ran_pdu_active_count
+  - ready_gnb_count
+  - observed_ue_count
+  device: cuda
+  precision: fp32
+  threads: 16
+  output_root: REVIEWER_CONFIGURE_OUTPUT_ROOT
+  arima_native:
+    order:
+    - 2
+    - 1
+    - 1
+    training_tail_rows: 43200
+    input_contract: univariate target-only baseline with causal forward fill; exempt
+      from explicit missing-indicator channels
+  test_status: previously_accessed_post_hoc
+  field_status:
+  - field: n3_uplink_bitrate_bps
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: bit/s
+    source_file: derived/n3-gtpu-*_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: n3_downlink_bitrate_bps
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: bit/s
+    source_file: derived/n3-gtpu-*_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: n6_bitrate_bps
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: bit/s
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: cp_pdu_session_success_rate
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: percent[0,100]
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: cp_pdu_session_failure_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: end_to_end_rtt_ms
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: ms
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: jitter_ms
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: ms
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: packet_loss_rate
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: ratio[0,1]
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: cp_active_session_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: cp_pending_session_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: cp_pdu_session_request_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: registration_success_rate
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: percent[0,100]
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: registration_failure_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: registration_request_count
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: count
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: n4_bitrate_bps
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: bit/s
+    source_file: derived/n4-pfcp-*_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: host_cpu_pct
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: percent
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: host_mem_used_pct
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: percent
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  - field: host_loadavg_1
+    measurement_kind: legacy_source_defined_proxy
+    observation_support: not_revalidated; legacy exporter scope may cross cutoff
+    output_availability: offline_export; timely_online_output_unverified
+    unit: '1'
+    source_file: report/model_timeseries.csv
+    native_cadence: UNKNOWN
+    hold_fill_policy: UNKNOWN
+  continuation_policy: Exact completed CPU checkpoints and D05 selections retained;
+    remaining fits run on GPU; interrupted candidate restarted, no partial checkpoint
+    import
+repair:
+  package: REVIEWER_CONFIGURE_PACKAGE
+  parent: REVIEWER_CONFIGURE_PARENT
+  paper: REVIEWER_CONFIGURE_PAPER
+  history_statistics: all train candidate window positions for T1; clean train windows
+    for T2; no timestamp dedup
+  zero_old_checkpoint_reuse: true
+

@@ -1,5 +1,7 @@
 # Platform code guide
 
+> This guide describes the archived local source snapshot. The platform source is withheld from the current repository; see [current platform supplement](../../manuscript_supplement/README.md) and [access scope](../../DATA_ACCESS.md).
+
 ## Source classes
 
 | Class | Included material | Role |
