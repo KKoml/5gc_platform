@@ -1,11 +1,20 @@
-# Core-to-experiment-machine handoff
+# Data Products and Task Inputs
 
-The Core machine supplies acquisition/execution evidence, source and dictionary contracts, source-table checks and published examples. The experiment machine supplies the authoritative final task inputs, builders, model settings and evaluation artifacts. Keep the two responsibilities separate.
+This directory describes the relationship between platform observations and the data products used to construct AI tasks. The platform's 1 s base table, 5 s Core24 candidate, and prediction views have separate construction rules.
 
-1. Fill `EXPERIMENT_MACHINE_MANIFEST_TEMPLATE.csv` for every final input/label/mask/index file. Use anonymous W1-D01..W1-D07 run IDs, relative paths, SHA-256, source time/grid range, field names, producer version and ordered transformations. Record source hashes and split identity.
-2. Match source hashes against `manifests/PROVIDED_FILES.csv`, `tables/RUN_LEDGER.csv` and `manifests/RAW_FILES.csv`. Recorded transfer hashes require separate retrieval-time verification; blank hashes require the data owner to supply them. A slot label or row count alone is not a version match.
-3. Match Core24 names against `CORE24_SOURCE_MATCH.csv` and record the actual builder's binning, as-of tolerance, masks, readiness formula, byte/bit conversions and reset policy. CPU percentages, millicores and host resource scopes are not interchangeable.
-4. Match prediction inputs against `CORE_SIDE_REPAIRED_VIEW_MANIFEST.json` and `REPAIR_PROGRAM_PROVENANCE.json` if used, or declare a different builder. Retain source cutoff versus target window; do not claim direct old-base selection when prefix reconstruction was used.
-5. Verify task windows never cross run/gap boundaries, masks preserve unavailable observations, training-only normalization is documented, and final published file hashes match actual experiment files. These checks do not rerun models.
+| Data product | Reference | What it describes |
+| --- | --- | --- |
+| 1 s base table | [81-column dictionary](../dictionaries/BASE_TABLE_81.csv) and [processing stages](../tables/PROCESSING_LINEAGE.csv) | Fields and processing steps for the platform's base table |
+| 5 s Core24 candidate | [Variable list](CORE24_CANDIDATE_FEATURES.json), [source-field mapping](CORE24_SOURCE_MATCH.csv), and [sample description](CORE24_SAMPLE_PROVENANCE.json) | The 24 variables, source streams, units, and conversions behind the example |
+| Prediction views | [D06 view summary](CORE_SIDE_REPAIRED_VIEW_MANIFEST.json) and [builder details](REPAIR_PROGRAM_PROVENANCE.json) | Histories constructed from observations before each cutoff, with targets calculated in separate intervals |
+| Raw data | [Download index](CLOUD_DATA_INDEX.csv) and [file inventory](../manifests/RAW_FILES.csv) | Full-run files; download links are not currently provided |
 
-`CLOUD_DATA_INDEX.csv` reserves raw-data links for the owner. It currently marks all full raw material `manifest_only` and cloud access `pending`. The complete original runs have not been uploaded by this task. Model code/settings/results are reserved under `experiment-machine/`, pending that machine's separate upload. Private original-ID/site mappings and local machine paths are excluded from Git.
+## Interpreting the data products
+
+The Core24 candidate draws on NF resources, host resources, interface counters, and NF state. Its 5 s grid does not describe the native sampling interval of every source. Interface byte rates require conversion to bit/s, cumulative counters require a difference and reset policy, and CPU percentages and millicores describe different quantities. Readiness and missing observations also have distinct meanings.
+
+The prediction builder uses source records available before the history cutoff. Its target interval is separate from that history. The historical base-table exporter uses some completed-flow summaries, so directly selecting its columns does not reproduce the prefix-based prediction construction.
+
+The Core24 example and prediction-view summary document platform-side data products. Their correspondence to the final AI input files has not been established. The final task definitions, windowing, masks, splits, and training-set preprocessing are described in `appendix/D3_data_construction.md` on the `main` branch; see the [AI evaluation directory guide](../experiment-machine/README.md).
+
+Small examples are available in [W1-D06](../samples/W1-D06/README.md). Reconstructing complete inputs requires the full source records and the corresponding task builders.

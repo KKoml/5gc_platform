@@ -1,22 +1,26 @@
-# 5GC platform and data: Core-machine review materials
+# D-GATE Supplementary Materials: Platform and Data
 
-This branch provides the English platform/data appendices and checked publication copies accompanying the supplied manuscript. Start with the [appendix index](appendices/INDEX.md).
+This branch contains the English platform and data appendices, field dictionaries, experiment configurations, and data examples for D-GATE. Start with the [appendix index](appendices/INDEX.md), or use the guide below.
 
-- [Platform implementation and deployment](appendices/APPENDIX_A.md), including [development correspondence](tables/PLATFORM_DEVELOPMENT_MAP.csv).
-- [Configuration and execution control](appendices/APPENDIX_B.md), with saved plans, actual operations and recovery evidence.
-- [Data formats, dictionary and coverage](appendices/APPENDIX_C.md); 400 dictionary definitions, 81 base columns, body metric scope and 24-variable candidates are explicitly distinguished.
-- [Association/alignment/construction](appendices/APPENDIX_D.md), source/version/output lineage and separate prediction-repair provenance.
-- [Real W1-D06 examples](samples/W1-D06/README.md), [provided-file manifest](manifests/PROVIDED_FILES.csv), [raw inventory](manifests/RAW_FILES.csv) and [handoff](handoff/README.md).
-- [License and attribution](licenses/NOTICE.md), [release checks](CHECK_RESULTS.md) and [remaining items](OPEN_ITEMS.md).
+## Reading guide
 
-The acquisition implementation is pinned to the historical W1 collection commit; source files are selected complete files with documented identity redaction and per-file before/after hashes. Examples preserve observed values and timestamps. No network experiment, fault injection, new collection, model training or manuscript-body edit was performed for this release.
+| Topic | Materials |
+| --- | --- |
+| Platform implementation and deployment | [Appendix A](appendices/APPENDIX_A.md) and [module-to-implementation table](tables/PLATFORM_DEVELOPMENT_MAP.csv) |
+| Experiment configuration and control | [Appendix B](appendices/APPENDIX_B.md), [configuration table](tables/CONFIGURATION.csv), and [operation settings](tables/OPERATIONS.csv) |
+| Data organization and field definitions | [Appendix C](appendices/APPENDIX_C.md), [platform field dictionary](dictionaries/PLATFORM_FIELDS.csv), and [81-column base-table dictionary](dictionaries/BASE_TABLE_81.csv) |
+| Session association and data processing | [Appendix D.1–D.2](appendices/APPENDIX_D.md) and [processing stages](tables/PROCESSING_LINEAGE.csv) |
+| Configuration and data examples | [W1-D06 sample guide](samples/W1-D06/README.md) |
+| Data products and AI task materials | [Data-product guide](handoff/README.md) and [AI evaluation directory guide](experiment-machine/README.md) |
 
-## Delivery scope
+## Data included
 
-**Complete files provided:** selected platform source/modules, saved sample-run configuration and evidence reports, field/source tables and publication manifests. **Samples provided:** bounded original observed records and base/Core24 excerpts. **Manifest only:** full original runs, packet captures and large logs. Cloud storage will be supplied by the data owner; no download availability is claimed until its links are verified. Model code, final input manifests, training settings and results will be uploaded separately by the experiment machine.
+The sample directory contains complete configuration and execution-report files for W1-D06, recovery checks, and excerpts of metrics, events, session records, packet-derived flows, and processed tables. The [provided-file catalog](manifests/PROVIDED_FILES.csv) identifies complete files and excerpts. [Run summaries](tables/RUN_LEDGER.csv) and [field coverage](tables/FIELD_COVERAGE.csv) describe the seven runs.
 
-## Offline verification
+These examples are not the complete dataset. Full original runs, packet captures, and large logs are listed in the [raw-file inventory](manifests/RAW_FILES.csv); download links are not currently provided. The 5 s Core24 example is a separate data product whose correspondence to the final AI inputs has not been established.
 
-Run `python3 processing/verify_release.py` from this repository. It verifies publication hashes, JSON/CSV shape, source syntax and anonymous sample linkage. The verification script does not start services or change laboratory state. Full data reconstruction additionally needs the manifest-listed off-site raw files and documented external dependencies. Runtime launch scripts under `platform/source/` are reference implementations and require a configured private deployment.
+## Platform source and AI evaluation
 
-The manuscript's anonymous-review route is a separate reader entrance, not a Git remote. This branch upload does not by itself establish that an anonymous mirror tracks this branch or serves these files. See `OPEN_ITEMS.md` and the external checks before claiming reviewer access.
+[Platform source](platform/source/) contains selected modules for experiment control, data collection, fault injection, recovery checks, and data processing, together with selected network-function implementations. Running the platform requires the deployment dependencies and local configuration described in [Appendix A](appendices/APPENDIX_A.md). See the [license and attribution notes](licenses/NOTICE.md).
+
+AI task construction, model settings, saved models, and evaluation results are available on this repository's `main` branch under `appendix/` and `evaluation_package/`. The [AI evaluation directory guide](experiment-machine/README.md) lists the relevant paths.
