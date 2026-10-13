@@ -25,6 +25,6 @@ The [figure directory](../../paper_figures/) contains the detection and classifi
 
 See [task construction](../../appendix/D3_data_construction.md) for feature lists, windows, validity indicators, labels, and preprocessing, and [model parameters](../../appendix/E1_models_hyperparameters.md) for settings and seeds.
 
-Full task inputs are not yet available for download. Calculations from individual predictions, checkpoint inference, and training may require those inputs; use [Data access](../../DATA_ACCESS.md) and the [evaluation instructions](../../appendix/E3_reproduction.md) to identify the required files.
+Prepared task inputs are included: [5 s observations and events](../../data_machine/dataset/task_data/data/), [task indices](../../data_machine/dataset/task_data/tasks/), and [prediction histories and targets](../../prediction_inputs/README.md). The task directories also contain prepared classification windows, imputation masks, and preprocessing scales. Use [Data access](../../DATA_ACCESS.md) and the [evaluation instructions](../../appendix/E3_reproduction.md) to find the files and runtime dependencies for each step. This update adds data without reporting new model execution.
 
 Classification uses observations following a known injection start. Imputation uses artificial masks and observations on both sides of each gap. These task definitions are retained throughout the results.

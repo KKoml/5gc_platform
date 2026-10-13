@@ -8,6 +8,8 @@ SMA averages the last 10 s of valid target observations. PatchTST uses target hi
 
 | Path | Contents |
 | --- | --- |
+| [Histories and targets](../../../prediction_inputs/README.md) | Prediction input tables for D01–D07 |
+| [Sample indices](outputs/indices/) | Fixed target/run indices |
 | [Source code](src/) | Input construction and model evaluation |
 | [Experiment configuration](resolved_config.yaml) | Task and model settings |
 | [Selected configurations](outputs/SELECTION_FROZEN_T1.json) | Model selection records for the paper targets |
@@ -20,4 +22,4 @@ For each seed, MAE is averaged equally over D06 and D07. The table reports the m
 
 The [evaluation overview](../README.md) gives the command for aggregating the saved table. [Task construction](../../../appendix/D3_data_construction.md) and [model parameters](../../../appendix/E1_models_hyperparameters.md) describe the inputs and comparisons in detail.
 
-Full prediction histories, target tables, and task indices are not included in this branch. Checking individual predictions, rebuilding inputs, and running inference or training require the corresponding data. See [Data access](../../../DATA_ACCESS.md) and the [evaluation instructions](../../../appendix/E3_reproduction.md).
+Prediction histories, target tables, and sample indices are included in this branch. See [Data access](../../../DATA_ACCESS.md) and the [evaluation instructions](../../../appendix/E3_reproduction.md) for calculations from saved predictions, checkpoint inference, and training requirements.

@@ -2,7 +2,7 @@
 
 **A Controlled 5G Core Data Generation Platform for AI Task Evaluation**
 
-This repository provides experiment descriptions, field definitions, data examples, model configurations, evaluation code, and saved results accompanying the paper.
+This repository provides experiment descriptions, field definitions, prepared datasets, model configurations, evaluation code, and saved results accompanying the paper.
 
 ## Start here
 
@@ -10,7 +10,9 @@ This repository provides experiment descriptions, field definitions, data exampl
 | --- | --- |
 | [Supplementary appendix](manuscript_supplement/README.md) | Platform functions, experiment settings, data formats, task construction, and model parameters |
 | [Field dictionary](manuscript_supplement/data/field_dictionary.csv) | 400 field definitions with types, units, sources, and availability information |
-| [1 s data example](manuscript_supplement/data/timeseries_1s_sample.csv) · [5 s data example](manuscript_supplement/data/core_features_5s_sample.csv) | Examples of the 81-column export and the core observation table |
+| [Platform exports and task data](data_machine/README.md) | 1 s exported tables, 5 s core observations, event records, and task indices |
+| [Prediction inputs](prediction_inputs/README.md) | History and target tables for D01–D07 |
+| [1 s data example](manuscript_supplement/data/timeseries_1s_sample.csv) · [5 s data example](manuscript_supplement/data/core_features_5s_sample.csv) | Small examples for viewing the table formats |
 | [Evaluation materials](evaluation_package/README.md) | Code, configurations, fitted models, and results for the four AI tasks |
 | [Paper result index](PAPER_RESULT_MAP.md) | Connections between paper tables and figures and their supporting files |
 | [Evaluation instructions](appendix/E3_reproduction.md) | Commands and data requirements for aggregation, inference, and training |
@@ -28,6 +30,6 @@ Detailed descriptions are available for [task construction](appendix/D3_data_con
 
 ## Data and platform materials
 
-Small data examples are included for reading the formats. Full datasets are not yet available for download; [Data access](DATA_ACCESS.md) explains which evaluation steps require them. Saved summary tables and the supplied figure data can be inspected without the full datasets.
+The prepared AI inputs and 1 s platform exports are included in `main`, together with task indices, prepared windows, fixed masks, and preprocessing scales. [Data access](DATA_ACCESS.md) links each data product to its evaluation use. PCAP files are excluded, and the complete collection of original logs and raw records is not included. The provided data support the documented evaluation workflow; regenerating every derived product from raw collection records requires additional source material.
 
 Expanded English platform and data appendices, run examples, and selected platform source are available on the `codex/platform-data-appendices-20261007` branch, under `appendices/`, `samples/`, and `platform/source/`.

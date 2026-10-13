@@ -1,6 +1,6 @@
 # Appendix E.3　复现指南
 
-**当前发布限制：** 以下入口描述完整核验包。GitHub暂不包含数据集和平台源码；仅表级重算与相邻CSV绘图不依赖外部数据。其他命令须按 DATA_ACCESS.md 恢复网盘输入后运行，网盘地址待提供。
+**数据与运行入口：** 本仓库已包含[平台时间序列表与5 s任务数据](../data_machine/dataset/README.md)、[预测历史与目标](../prediction_inputs/README.md)、[预测索引](../evaluation_package/evaluation/prediction/outputs/indices/)、[分类窗口](../evaluation_package/evaluation/localization/cache/)，以及插补的[窗口数据](../evaluation_package/evaluation/imputation/data/)、[人工掩码](../evaluation_package/evaluation/imputation/masks/)和[训练尺度](../evaluation_package/evaluation/imputation/metadata/scales.npz)。运行前仍需安装下述软件依赖。PCAP明确排除，完整原始采集日志和业务输入语料未随包提供；具体范围见[数据访问说明](../DATA_ACCESS.md)。
 
 从材料根目录先执行 `sha256sum -c SHA256SUMS.txt`。运行时使用独立可写副本：部分既有验证程序会写 `evaluation_package/evaluation/verification/results/`，预测推理临时建立cache。保留封存副本和原实验。本包的表级入口不需要原实验目录或原始PCAP。
 
@@ -55,4 +55,4 @@ python evaluation_package/evaluation/verification/train_imputation_from_bundle.p
 
 ## E.3.4　范围与访问限制
 
-可检查当前1秒导出及400项字典，但未提供从原始记录重新生成它们所需的完整输入/程序；原始PCAP仅清单化。预测、24变量表与平台导出的未确认关系见 LINEAGE.md。发布与匿名同步另记 PUBLICATION_STATUS.md，本地材料不等于审稿入口已可用。RUN_GUIDE.md保留已有更细命令与历史验证范围。
+当前仓库已提供1 s导出、400项字典、5 s任务表及上述评估输入，但未提供重建全部原始采集过程所需的完整日志、业务语料和部署材料；PCAP不在上传范围内。预测、24变量表与平台导出的未确认关系见 [LINEAGE.md](LINEAGE.md)。选定平台源码位于同仓库的 `codex/platform-data-appendices-20261007` 分支，路径为 `platform/source/`。仓库文件可用不等于论文匿名入口已同步可用。[RUN_GUIDE.md](../RUN_GUIDE.md)保留更细命令与既有验证范围。

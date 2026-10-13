@@ -75,4 +75,6 @@ Imputation uses only D01–D04 to fit and D05 for checkpoint selection. D06/D07 
 
 ## 5. Access and limits
 
-The archive is still local; there is no external anonymous access endpoint in this package. No upload or publication is performed by these commands. Raw PCAP contents are excluded and are not needed by the provided table-level replay paths. D06/D07 are not blind tests.
+The repository includes the [platform tables and task observations](data_machine/dataset/README.md), [forecast histories and targets](prediction_inputs/README.md), [prediction indices](evaluation_package/evaluation/prediction/outputs/indices/), [classification windows](evaluation_package/evaluation/localization/cache/), and imputation [windows](evaluation_package/evaluation/imputation/data/), [masks](evaluation_package/evaluation/imputation/masks/), and [preprocessing scales](evaluation_package/evaluation/imputation/metadata/scales.npz).
+
+These are the prepared inputs for the supplied evaluation code. PCAP files are excluded. Complete original collection logs and traffic-input corpora are not included, and the supplied inputs do not constitute a full reconstruction of the collection archive. See [Data access](DATA_ACCESS.md) for the release scope. Availability in this repository does not by itself establish access through the paper's anonymous entry. D06/D07 are post hoc test runs.

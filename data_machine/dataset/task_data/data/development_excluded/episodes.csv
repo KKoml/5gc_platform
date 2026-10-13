@@ -1,0 +1,1 @@
+run_id,fault_id,fault_type,target_instance,target_nf,affected_plane,start_time,end_time,end_exclusion_time,label_basis,source_refs,quality

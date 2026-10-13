@@ -1,0 +1,100 @@
+[
+  {
+    "slot": "D01",
+    "file": "D01/T1_history.csv.gz",
+    "rows": 87360,
+    "columns": 53,
+    "sha256": "230f16033f9ce02c3d766d95aba4e9a8fd85968763f426aaa64b1b33a46cf570"
+  },
+  {
+    "slot": "D01",
+    "file": "D01/T1_targets.csv.gz",
+    "rows": 5824,
+    "columns": 24,
+    "sha256": "294e65ceadab9fe0a0f1ab37275a492c49cc05870bdcbee4cd8595bc27e04bb1"
+  },
+  {
+    "slot": "D02",
+    "file": "D02/T1_history.csv.gz",
+    "rows": 87240,
+    "columns": 53,
+    "sha256": "1aa5a890a91c4541ba6ef94221dcaef1e97a82a53cf696165f5ae1aaf115694f"
+  },
+  {
+    "slot": "D02",
+    "file": "D02/T1_targets.csv.gz",
+    "rows": 5816,
+    "columns": 24,
+    "sha256": "0aa7f30fd6ce37f17d1d69b3fa0276fa0180f6e26f336f98f0a700fd4c3a5015"
+  },
+  {
+    "slot": "D03",
+    "file": "D03/T1_history.csv.gz",
+    "rows": 87300,
+    "columns": 53,
+    "sha256": "287d1ee57162c465c6755dbf982c5d354a62728fec364c81a4da4eb7fa80fc94"
+  },
+  {
+    "slot": "D03",
+    "file": "D03/T1_targets.csv.gz",
+    "rows": 5820,
+    "columns": 24,
+    "sha256": "ac18636234adceb237157be4986b3e19e1856f7eed8cc631fd5a579af9e7974c"
+  },
+  {
+    "slot": "D04",
+    "file": "D04/T1_history.csv.gz",
+    "rows": 87300,
+    "columns": 53,
+    "sha256": "3194ccc99b1b16c9081821b3d9a0712d241927eb49806679d4c901d0ea1026ec"
+  },
+  {
+    "slot": "D04",
+    "file": "D04/T1_targets.csv.gz",
+    "rows": 5820,
+    "columns": 24,
+    "sha256": "b80f2068412dc13895f32eff62f0251795c69381c50335fe4323e1a2adb3e344"
+  },
+  {
+    "slot": "D05",
+    "file": "D05/T1_history.csv.gz",
+    "rows": 87300,
+    "columns": 53,
+    "sha256": "12ab9e26f99884dd7194d23caf00b50c322ffd8fea17567195a902b67b02849a"
+  },
+  {
+    "slot": "D05",
+    "file": "D05/T1_targets.csv.gz",
+    "rows": 5820,
+    "columns": 24,
+    "sha256": "7814d6bf5ff8e28f883f4d111b5f8c736d8cb72a4e75d1737d8af46d64e1516f"
+  },
+  {
+    "slot": "D06",
+    "file": "D06/T1_history.csv.gz",
+    "rows": 87300,
+    "columns": 53,
+    "sha256": "9df84e76aa5b836753b2816c9176f49d4b7750b3834511ad55d08b19132df690"
+  },
+  {
+    "slot": "D06",
+    "file": "D06/T1_targets.csv.gz",
+    "rows": 5820,
+    "columns": 24,
+    "sha256": "f95a62008c9c1ba109b4aa05dc0755616409ff65b6803c4080bcc46b9f5700a5"
+  },
+  {
+    "slot": "D07",
+    "file": "D07/T1_history.csv.gz",
+    "rows": 87300,
+    "columns": 53,
+    "sha256": "bdbb584b34bb0ecb1c407248207c2b7337624d8cca5f8823fada17e74c084e20"
+  },
+  {
+    "slot": "D07",
+    "file": "D07/T1_targets.csv.gz",
+    "rows": 5820,
+    "columns": 24,
+    "sha256": "11aa434c7e74c4754f3042d2c67c0f8e66e8e1281a176623196ec6c515858eca"
+  }
+]

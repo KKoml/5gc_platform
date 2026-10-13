@@ -9,7 +9,7 @@ These appendices describe the platform implementation, collection settings, data
 | [C. Task construction](#appendix-c-task-construction) | Prediction inputs, core-network observations, task windows, and data splits |
 | [D. Evaluation settings and results](#appendix-d-evaluation-settings-and-results) | Model configurations, hyperparameters, random seeds, and result files |
 
-The examples illustrate the data formats; the full dataset is not included in this branch. See [data access](../DATA_ACCESS.md) for availability and [the repository overview](../README.md) for the platform appendices and source code maintained in a separate branch.
+Prepared AI task inputs and 1 s platform exports are included in this branch; [data access](../DATA_ACCESS.md) links the observations, indices, windows, masks, and preprocessing scales. PCAP files and the complete original log collection are not included. See [the repository overview](../README.md) for the platform appendices and source code maintained in a separate branch.
 
 ## Appendix A. Platform implementation and configuration
 
@@ -126,7 +126,7 @@ The 5 s core-network observations contain **24 variables**. Their timestamps can
 | [1 s time-series sample](data/timeseries_1s_sample.csv) | Header and first 20 rows of the D06 81-column table, with 1 s spacing and recorded missing values |
 | [5 s core-network sample](data/core_features_5s_sample.csv) | First 10 rows of the D06 core-network observations |
 
-Missing or unavailable observations should not be replaced with zero. User/session associations use run scope and time windows, with source markers retained. These small examples illustrate fields, timing, and missing-value representation; they are not complete task inputs.
+Missing or unavailable observations should not be replaced with zero. User/session associations use run scope and time windows, with source markers retained. These small examples illustrate fields, timing, and missing-value representation. The [1 s exports](../data_machine/dataset/timeseries_1s/), [5 s task observations](../data_machine/dataset/task_data/data/), and [prediction inputs](../prediction_inputs/README.md) are available separately.
 
 ### B.4 Observation sources and derived metrics
 
@@ -222,4 +222,4 @@ Full model adaptations, training and selection rules, and environment details ar
 | [Reproduction guide](../appendix/E3_reproduction.md) | Saved-result calculations, inference replay, and training instructions |
 | [Data access](../DATA_ACCESS.md) | Available inputs and data required for each reproduction step |
 
-The repository includes saved models and evaluation results. Full-data inference and training require the complete task inputs described in the reproduction guide; the small samples in this directory demonstrate formats only.
+The repository includes saved models, evaluation results, and the prepared inputs described in the reproduction guide. Inference and training also require the specified runtime dependencies; this data update does not report new model runs. The small samples in this directory remain available for quickly inspecting the formats.

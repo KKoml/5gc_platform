@@ -1,0 +1,66 @@
+{
+  "version": "core-ai-transfer-v1",
+  "grid_seconds": 5,
+  "history_steps": 12,
+  "coverage_policy": {
+    "minimum_observed_fraction": 0.8,
+    "per_channel_floor": null,
+    "preserve_nan": true,
+    "no_imputation_fitted": true,
+    "note": "Per-task overall coverage only. T4 uses 0.5 to retain missing-resource symptoms of a stopped instance. Always report per-fault retention and sensitivity; missing is never zero.",
+    "minimum_observed_fraction_by_task": {
+      "T1": 0.8,
+      "T2": 0.8,
+      "T3": 0.8,
+      "T4_upf": 0.5,
+      "T4_six": 0.5
+    }
+  },
+  "task_feature_sets": {
+    "T1": "T1_performance_12",
+    "T2": "T2_detection_24",
+    "T3": "T3_warning_candidate_16",
+    "T4_upf": "T4_upf_localization_6",
+    "T4_six": "T4_six_instance_exploratory_18"
+  },
+  "target_features": [
+    "core-host-local__cpu_pct",
+    "upf-silver__cpu_millicores",
+    "upf-gold__cpu_millicores"
+  ],
+  "T1_target_offsets_seconds": [
+    60,
+    65
+  ],
+  "T3_warning_min_seconds": 10,
+  "T3_warning_max_seconds": 60,
+  "T4_post_start_seconds": 60,
+  "eligible_semantics": "syntactic/time/coverage eligibility only; not proof of predictability or effect",
+  "main_split": "W1 train D01-D04 / validation D05 / previously used test D06-D07; not chronological",
+  "index_contract": {
+    "required": [
+      "sample_id",
+      "run_id",
+      "slot",
+      "split",
+      "feature_set",
+      "start_row",
+      "stop_row",
+      "anchor_time",
+      "eligible",
+      "exclusion_reason",
+      "observed_fraction",
+      "min_channel_observed_fraction",
+      "missing_channel_count"
+    ],
+    "rows": "zero-based [start_row,stop_row) in immutable per-run core_features_5s; 12 rows; same run only",
+    "files": "tasks/<task>/index.parquet and index.csv.gz",
+    "labels": "T1: y_host_cpu_pct,y_upf_silver_cpu_millicores,y_upf_gold_cpu_millicores; other tasks y; all label/index fields excluded from X"
+  },
+  "T2_normal_train_rule": "clean entire history (no active/recovery/prelude) AND split=train AND eligible; score validation/test with frozen threshold",
+  "T3_history_rule": "clean entire history (no active/recovery/prelude); exclude nearest onset <10s, current active/recovery, and incomplete future; all real episodes considered incl prelude exclusion",
+  "T4_scope": "upf: main UPF episodes; six: main core_count episodes only; root-cause labels indicate injection target/path, not independent causal proof",
+  "training_executed": false,
+  "package_content": "plan, observations, task indices/labels, loader and checks; full deep-learning trainers are to be implemented/run on target machine",
+  "coverage_basis": "W1 uses frozen formal bounds; non-W1 uses previously parsed observation spans, not lifecycle-certified official run bounds"
+}

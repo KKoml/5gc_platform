@@ -13,4 +13,4 @@ For the shared protocol and table-generation entry point, start with the [evalua
 
 ## Using the materials
 
-Saved metric tables can be read and aggregated directly. Inference, training, and some calculations from individual predictions require the full task inputs, which are not yet available for download. See [Data access](../DATA_ACCESS.md) and the [evaluation instructions](../appendix/E3_reproduction.md) for the requirements of each step.
+Saved metric tables can be read and aggregated directly. The repository also includes the prepared task inputs, indices, windows, masks, and preprocessing scales used by the evaluation workflow. [Data access](../DATA_ACCESS.md) links these files; the [evaluation instructions](../appendix/E3_reproduction.md) describe dependencies and commands for calculations from individual predictions, checkpoint inference, and training. This data update does not report new inference or training runs.

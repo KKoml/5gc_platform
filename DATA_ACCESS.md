@@ -1,19 +1,31 @@
-# 数据与平台代码访问范围
+# Data Access
 
-完整数据集暂不上传；网盘下载链接、访问方式及匿名可用性待补充。平台源码快照暂不公开。[正文附录](manuscript_supplement/README.md)提供字段字典和两种少量真实样例（1 s表20行、5 s表10行），仅用于查看格式，不替代完整数据和任务输入。实验复现代码、模型、配置、保存结果及输入合同已纳入发布副本。
+The `main` branch includes the prepared AI task inputs and platform exports used by the accompanying evaluation materials. These files can be downloaded with the repository; no separate data download is required for the included inputs.
 
-## 清单与恢复目录
+## Included data
 
-- [实际输入合同](manifests/input_manifest.csv)：完整本地核验的489项输入及形状、字段、时间、处理规则。部分为模型尺度或派生缓存，随数据输入一起留待补充。
-- [未发布文件](manifests/omitted_files.csv)：逐文件区分待网盘数据与暂不发布平台代码，记录原副本路径、字节数和SHA-256。
-- [core交接](manifests/core_handoff.csv)、[预测转换交接](manifests/prediction_handoff.csv)：保留转换前后各自哈希和差异，不要求格式不同文件哈希相同。
+| Data product | Location | Contents |
+| --- | --- | --- |
+| 1 s platform exports | [Exported tables](data_machine/dataset/timeseries_1s/) · [Run index](data_machine/dataset/metadata/TIMESERIES_1S_INDEX.json) | D01–D07, 81 columns per table, 611,777 rows in total |
+| 5 s task observations and events | [Run data](data_machine/dataset/task_data/data/) | Core observations, episode records, recovery information, and source context |
+| Prediction histories and targets | [Prediction inputs](prediction_inputs/README.md) | `T1_history` and `T1_targets` for D01–D07 |
+| Prediction indices | [Target/run indices](evaluation_package/evaluation/prediction/outputs/indices/) | Fixed sample indices for the three prediction targets |
+| Detection and classification indices | [Task indices](data_machine/dataset/task_data/tasks/) · [Task metadata](data_machine/dataset/task_data/metadata/) | Window membership, labels, split roles, feature definitions, and event information |
+| Prepared classification windows | [Windows](evaluation_package/evaluation/localization/cache/windows.npz) · [Sample descriptions](evaluation_package/evaluation/localization/data_contract/) | Prepared arrays, sample indices, class counts, and window boundaries |
+| Imputation data and masks | [Window data](evaluation_package/evaluation/imputation/data/) · [Fixed masks](evaluation_package/evaluation/imputation/masks/) | Prepared windows and artificial missingness patterns |
+| Imputation scales and window metadata | [Preprocessing scales](evaluation_package/evaluation/imputation/metadata/scales.npz) · [Window metadata](data_machine/dataset/task_data/imputation/metadata/) | Training-derived scales, window indices, run information, and masking configuration |
+| Field definitions | [Field dictionary](manuscript_supplement/data/field_dictionary.csv) | 400 definitions covering metrics and contextual fields |
 
-网盘数据提供后，在本材料根目录恢复 omitted_files.csv 中 dataset_pending_external_download 项的相对路径，并逐文件验证其SHA-256。平台源码项不能作为数据恢复清单；其中原始导出程序仅用于核验来源描述，不属于当前复现代码的已发布入口。完整本地包封存不受本次发布筛选影响。原始PCAP等未纳入完整本地包的记录仍仅清单化，不能用本清单证明其已打包。
+The 1 s exports, 5 s observations, and prediction tables are separate data products. Matching timestamps do not establish a direct resampling relationship. See [task construction](appendix/D3_data_construction.md) for inputs and preprocessing, and [data lineage](appendix/LINEAGE.md) for documented relationships and remaining gaps.
 
-## 当前可运行范围
+The [data file index](manifests/dataset_files.csv) lists the included files.
 
-表级重算入口 `python evaluation_package/evaluation/verify_paper_tables.py` 读取已发布的指标表；绘图入口 `python paper_figures/plot_detection.py`、`python paper_figures/plot_localization.py` 读取相邻已发布CSV。它们不需要模型推理或数据集。
+## Using the data
 
-逐预测保存值检查、全部检测/重建指标重新计算、数据合同校验、检查点推理和从头训练须按各程序依赖补齐网盘输入后运行。分类逐预测重算是否独立可运行仍以脚本实际依赖为准；不将部分运行成功泛化为完整复现。旧回执证明完整本地包的已执行范围，不证明当前删去输入的发布树可直接运行所有命令。
+[Evaluation instructions](appendix/E3_reproduction.md) describe saved-result calculations, checkpoint inference, and training. Saved summary tables can be aggregated without loading the task data; calculations from individual predictions and model execution use the linked inputs. Install the dependencies specified for each step. Including these files does not imply that inference or training has been rerun for this update.
 
-所有数据相关入口和原输入路径继续保留，供恢复后执行。任何目录中旧的完整包文件清单、Data/Code Availability草稿、旧README与2026-10-03回执必须结合本访问范围解释，不能将旧完成状态理解为网盘已公开或匿名镜像已同步。
+## Collection records and platform code
+
+**PCAP files are excluded from this release.** The repository also does not contain the complete set of original non-PCAP logs and raw collection records; [the raw-record inventory](data_machine/dataset/raw_inventory.csv) describes source material and does not imply that each listed file is included. Consequently, the included exports and task inputs do not by themselves provide every input needed to regenerate all derived data from raw collection records.
+
+The platform implementation and expanded platform appendices are maintained separately on the `codex/platform-data-appendices-20261007` branch under `platform/source/` and `appendices/`. See [the repository overview](README.md). Anonymous reviewer access is tracked in [access status](PUBLICATION_STATUS.md).

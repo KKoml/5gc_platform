@@ -1,0 +1,62 @@
+{
+  "status": "planned_not_trained",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "max_epochs": 50,
+  "early_stopping_patience": 8,
+  "validation_role": "D05 only; checkpoint selection and alert threshold calibration",
+  "deep_comparators": {
+    "FD_detection": [
+      "AE_existing_verified",
+      "TranAD_official_verified",
+      "KAN-AD_existing_verified"
+    ],
+    "FL_localization": [
+      "LSTM",
+      "TCN",
+      "small_Transformer"
+    ],
+    "FP_forewarning": [
+      "LSTM",
+      "TCN",
+      "small_Transformer"
+    ]
+  },
+  "simple_comparator": {
+    "FD_detection": "IsolationForest",
+    "FL_localization": "RandomForest",
+    "FP_forewarning": "LogisticRegression"
+  },
+  "small_classifiers_default": {
+    "hidden_width": 64,
+    "layers": 2,
+    "dropout": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "effective_batch_size": 128
+  },
+  "FD_architecture_rule": "reuse and verify actual existing model implementations; do not substitute a generic AE for a named paper model",
+  "FL_paired_ablation": {
+    "sets": [
+      "FL_baseline_6",
+      "FL_primary_10"
+    ],
+    "models": [
+      "TCN",
+      "RandomForest"
+    ],
+    "same_events": true
+  },
+  "alert_false_alarm_budgets_per_hour": [
+    0.1,
+    1.0
+  ],
+  "main_deep_fits_if_all_run": 27,
+  "extra_FL_baseline_TCN_fits": 3,
+  "training_framework_included": false,
+  "preprocessing_fit_rule": "training_index only; FD must use normal_train_window for all statistics as well as model fitting"
+}

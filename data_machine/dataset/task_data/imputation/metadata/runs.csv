@@ -1,0 +1,11 @@
+run_id,slot,family,split,data_path
+D01,D01,W1,train,data/D01
+D02,D02,W1,train,data/D02
+D03,D03,W1,train,data/D03
+D04,D04,W1,train,data/D04
+D05,D05,W1,validation,data/D05
+D06,D06,W1,test,data/D06
+D07,D07,W1,test,data/D07
+supp_core24h,supp_core24h,core_count,supplementary_only,data/supp_core24h
+validation_v4r6,validation_v4r6,V4,external_validation,data/validation_v4r6
+diagnostic5,diagnostic5,diagnostic,diagnostic_holdout,data/diagnostic5

@@ -1,0 +1,102 @@
+[
+  {
+    "slot": "D01",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D02",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D03",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D04",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D05",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D06",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "D07",
+    "episodes": 72,
+    "quality_counts": {
+      "source_marked_inferred": 72
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 72
+    }
+  },
+  {
+    "slot": "supp_core24h",
+    "episodes": 36,
+    "quality_counts": {
+      "source_marked_inferred": 36
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 36
+    }
+  },
+  {
+    "slot": "validation_v4r6",
+    "episodes": 73,
+    "quality_counts": {
+      "source_marked_inferred": 73
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 73
+    }
+  },
+  {
+    "slot": "diagnostic5",
+    "episodes": 8,
+    "quality_counts": {
+      "source_marked_inferred": 8
+    },
+    "label_basis_counts": {
+      "actual_faults_jsonl_start_end_timestamps": 8
+    }
+  }
+]

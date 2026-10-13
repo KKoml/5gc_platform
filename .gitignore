@@ -2,3 +2,11 @@ __pycache__/
 *.pyc
 .venv/
 evaluation_package/evaluation/prediction/cache/
+
+# Packet captures are excluded from the data release.
+*.pcap
+*.pcapng
+*.cap
+*.pcap.gz
+*.pcapng.gz
+*.cap.gz

@@ -1,0 +1,19 @@
+run_id,event_time,behavior_type,source_file,source_row,source_refs,notes
+diagnostic5,2026-09-07T10:40:10.911639Z,start,events/ran_control.jsonl,1,"[""events/ran_control.jsonl:1""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T10:43:20.097843Z,end,events/ran_control.jsonl,2,"[""events/ran_control.jsonl:2""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T11:40:08.964098Z,start,events/ran_control.jsonl,3,"[""events/ran_control.jsonl:3""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T11:43:21.284663Z,end,events/ran_control.jsonl,4,"[""events/ran_control.jsonl:4""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T12:13:20.854011Z,end,events/ran_control.jsonl,5,"[""events/ran_control.jsonl:5""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T12:40:09.419893Z,start,events/ran_control.jsonl,6,"[""events/ran_control.jsonl:6""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T12:43:20.805721Z,end,events/ran_control.jsonl,7,"[""events/ran_control.jsonl:7""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T13:40:10.792985Z,start,events/ran_control.jsonl,8,"[""events/ran_control.jsonl:8""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T13:43:26.110561Z,end,events/ran_control.jsonl,9,"[""events/ran_control.jsonl:9""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T14:39:48.343883Z,start,events/ran_control.jsonl,10,"[""events/ran_control.jsonl:10""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T14:41:51.235484Z,end,events/ran_control.jsonl,11,"[""events/ran_control.jsonl:11""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T16:09:48.033783Z,start,events/ran_control.jsonl,12,"[""events/ran_control.jsonl:12""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T16:11:50.533562Z,end,events/ran_control.jsonl,13,"[""events/ran_control.jsonl:13""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T16:40:18.011129Z,start,events/ran_control.jsonl,14,"[""events/ran_control.jsonl:14""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T16:44:31.891330Z,end,events/ran_control.jsonl,15,"[""events/ran_control.jsonl:15""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T17:44:41.744333Z,end,events/ran_control.jsonl,16,"[""events/ran_control.jsonl:16""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T18:10:12.265313Z,start,events/ran_control.jsonl,17,"[""events/ran_control.jsonl:17""]",Observed access-side command; excluded from Core fault targets.
+diagnostic5,2026-09-07T18:14:27.469402Z,end,events/ran_control.jsonl,18,"[""events/ran_control.jsonl:18""]",Observed access-side command; excluded from Core fault targets.
