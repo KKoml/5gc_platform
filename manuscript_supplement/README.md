@@ -1,222 +1,225 @@
-# D-GATE 正文配套附录 A–D
+# D-GATE Supplementary Appendices
 
-本附录对应当前压缩正文，补充平台实现、实验配置、数据格式、任务输入和评测参数，并承接正文移出的细节。A–D 为当前正文的附录编号；同仓原有 D.3/E.1–E.3 提供更完整的任务构造、模型、结果和复现材料，两套编号的对应入口列于文末。
+These appendices describe the platform implementation, collection settings, data formats, task construction, and evaluation settings used in the D-GATE study. Detailed AI evaluation materials are linked alongside the corresponding sections.
 
-本目录在配套仓库中位于 `manuscript_supplement/`。GitHub源仓库更新与匿名入口同步分别核验，访问状态见仓库根目录 `PUBLICATION_STATUS.md`。发布范围延续原材料安排：完整数据集及平台源码暂不提供；本目录提供字段说明、配置和少量真实样例。所附配置及数值沿用已有材料，本次没有重新训练模型，也不以配置文件存在证明全部历史结果身份已经绑定。
-
-## 附录A 平台实现、流程与配置
-
-### A.1 图一功能与开发内容
-
-| 图一编号 | 实现内容 | 输入与输出 |
-|---|---|---|
-| ① 业务生成 | 根据协议、相对收发时间、方向和数据量调度；客户端绑定UE TUN，与DN服务端进行TCP/UDP收发 | 输入业务记录；输出实际收发时间、数据量及完成/超时/失败结果 |
-| ② 实验控制 | 网络和业务准备，UE数量调整、UE重建、gNB重启，核心网故障，采集进程及恢复检查 | 配置与计划；实际命令起止时间、执行和恢复结果 |
-| ③ 多源采集 | 组织抓包、日志获取与解析、管理/容器/OS接口查询，保留来源、时间、实例及采集状态 | PCAP、文本日志、JSON/JSONL原始记录 |
-| ④ 回收核验与归档 | 跨主机回收；按文件清单比较相对路径、大小及内容，通过后标记回收完成 | 按运行标识归档的文件及核验结果 |
-| ⑤ 数据处理 | 会话关联、时间对齐与聚合、完整性及字段覆盖检查 | CSV时间序列、JSONL关联记录、实验报告 |
-
-下表进一步区分上游组件与本文的集成、适配和新增程序。实现入口是归档源码快照中的相对位置，用于说明工作对应关系；平台源码暂不属于当前发布范围。
-
-| 工作性质 | 对应工作 | 归档实现入口与可检查产物 |
-|---|---|---|
-| 上游协议实现 | free5GC网络功能与UERANSIM接入仿真 | 上游软件承担注册、鉴权、会话管理及接入仿真；本文保留其名称和版本 |
-| 配置集成 | 两组DNN、SMF/UPF路径、容器/虚拟机部署与实例映射 | 部署与运行配置；本次采集配置汇总见A.4 |
-| 业务工具适配 | 按输入记录调度TCP/UDP收发、绑定UE TUN并保存实际结果 | `tools/ue_tracer/trace_play_scenario_v11.py`、`scripts/continuous_traffic_runner.py`；客户端/服务端业务记录 |
-| 实验控制与恢复 | 接入操作与核心网故障时间线、恢复判定和失败分支 | `scripts/scenario_timeline_runner.sh`、`scripts/online_recovery_checkpoint.py`；操作与恢复记录 |
-| 多源采集 | 控制面、资源、实例状态与主机/接口采集 | `scripts/control_plane_collector.py`、`nf_state_collector.py`、`host_metrics_collector.py`、`ran_k3s_workload_collector.py`；原始观测及状态 |
-| 回收核验 | 跨主机文件回收、清单检查及运行审计 | `scripts/traffic_transfer_bundle.py`、`scripts/audit_scenario_one_run.py`；文件清单和审计报告 |
-| 关联与导出 | 会话映射、指标整理、字段与质量检查 | `scripts/export_session_map.py`、`scripts/export_v3_timeseries.py`、`scripts/dataset_schema.py`；关联记录与派生表 |
-
-上述对应关系区分上游组件、工具适配和新增程序；现有观测及评测材料沿用已保存的运行记录。
-
-free5GC和UERANSIM提供协议实现与接入侧仿真。本文扩展SMF会话日志以保存用户、会话、地址和隧道的映射。网元扩展和异常处理包括：修复旧会话释放失败时的本地清理逻辑，避免删除已指向新会话的索引；完善SMF的PFCP响应匹配、UPF失效会话处理，以及AMF注册状态更新、NRF切片标识匹配和PCF数值类型兼容。这些实现项用于支持干预期间的持续运行与记录关联；本次附录整理未重新执行回归测试。
-
-采集程序对持续生成的控制面日志保存读取位置并解析新增内容，在文件替换或截断时重置读取位置；资源记录保留实例标识、值及采集状态，以区分零值与没有有效观测。
-
-### A.2 干预与恢复
-
-接入侧三类操作为UE数量调整、UE实例重建和gNB重启。核心网六类操作为N3阻断、N3附加时延、N3随机丢包、N4阻断、N6阻断和停止UPF实例。计划与实际执行记录分别保存。
-
-恢复阶段撤销规则或恢复实例，等待同期接入侧操作结束，检查NF就绪、规则残留、gNB/UE数量、PDU连通性及业务结果。采集在操作、恢复和观察期间继续运行。恢复checkpoint拒绝继续故障时间线，不应等同为立即终止全部采集。
-
-本地归档的恢复检查程序使用两个60 s业务窗口及120 s稳定观察，最小样本数15，业务完成率阈值0.95、失败和超时比例阈值各0.05。这是归档实现的取值；WINDOW_SECS、WINDOW_COUNT及GUARD_SECS仍为代码常量，见source_notes/recovery_constants.txt。主入口的阶段时长参数不等于这几个检查内部参数。这些检查内部窗口尚未实现参数化，区别于主入口已有的阶段时长配置。
-
-### A.3 已支持的结束与中断行为
-
-下表整理归档入口支持的结束与中断行为，并与恢复检查内部常量区分。
-
-| 机制 | 参数或模式 | 收尾行为与边界 |
-|---|---|---|
-| 阶段时长 | --baseline-secs、--fault-secs、--recovery-secs | 各阶段结束后停止采集并回收；不同阶段仍按实际调度执行 |
-| 故障计划完成 | --fault-plan FILE | 时间线完成后进入恢复观察与收尾 |
-| 磁盘保护 | --min-free-gb | 本机抓包watchdog检查失败后中断主流程并触发清理 |
-| 恢复检查失败 | combined-only恢复checkpoint | 停止后续时间线；主流程继续恢复、回收与审计 |
-| 人工中断 | Ctrl+C / SIGTERM | 记录原因并尝试清理、回收 |
-| 性能阈值、样本数、总数据量、指定钟点 | 无统一主入口参数 | 不作为当前已有的通用停止配置 |
-
-图一中的Collection settings、Collection control和Recovery checks分别表示采集设置、控制及恢复检查；各类中断机制按上表触发。
-
-### A.4 网络、业务、干预和采集配置
-
-一次实验由网络配置、业务配置、操作计划和采集设置共同确定。网络配置包含组件数量、部署位置、接口地址、gNB与UE组映射，以及DNN、切片标识和地址池。控制模块按配置启动网络或使用已有网络；UE完成注册、建立PDU会话并生成TUN接口后，业务客户端绑定该接口，与DN应用服务器通信。调整UE或NF规模时，还需适配地址、实例映射和运行检查。
-
-本次采集使用三台物理主机和一台以太网交换机。free5GC v4.1.0的NF容器运行在5GC物理宿主机及其虚拟机构成的K3s集群中。两组AMF、SMF和UPF分别部署在宿主机与虚拟机，其余NF及MongoDB部署在宿主机。UERANSIM v3.2.7的gNB/UE与DN业务服务器分别位于另外两台物理主机。UE按DNN分为两组，每组初始2个gNB、20个UE，由对应SMF管理会话并经对应UPF转发；两组共享DN服务器。
-
-| 配置项 | 本次取值 |
+| Appendix | Contents |
 |---|---|
-| 5GC宿主机 | 8线程；62.45 GiB K3s可分配内存 |
-| 5GC虚拟机 | 2 vCPU；5.79 GiB K3s可分配内存；位于上述宿主机中 |
-| UE/gNB主机 | 32线程；128 GiB内存 |
-| DN业务服务器 | 20线程；64 GiB内存 |
-| gNB / 初始UE / DNN | 4 / 40 / 2 |
-| NF类型 / 实例 | 9 / 12；MongoDB另计 |
-| 传输协议 / 业务UE | TCP和UDP / 每个DNN选择1个UE |
-| 目标组UE数量变化 | 20 → 10 → 20 |
-| 核心网干预 | N3阻断、N3附加时延、N3随机丢包、N4阻断、N6阻断、停止UPF实例 |
-| N3附加时延 / 随机丢包 | 200 ms / 10% |
-| 首次计划开始 / 开始间隔 | 相对操作计划起点1,800 s / 900 s |
-| 核心网干预持续时间 | 120或180 s |
-| 接入侧干预 | gNB重启、UE仿真实例重建、目标组UE数量调整 |
-| 控制面统计配置周期 | 2 s |
-| 主机/接口、NF资源/状态、gNB/UE状态配置周期 | 5 s |
+| [A. Platform implementation and configuration](#appendix-a-platform-implementation-and-configuration) | Platform modules, intervention and recovery procedures, deployment, and collection settings |
+| [B. Data organization, fields, and examples](#appendix-b-data-organization-fields-and-examples) | Data products, the field dictionary, sample records, and derived metrics |
+| [C. Task construction](#appendix-c-task-construction) | Prediction inputs, core-network observations, task windows, and data splits |
+| [D. Evaluation settings and results](#appendix-d-evaluation-settings-and-results) | Model configurations, hyperparameters, random seeds, and result files |
 
-业务输入包括5GAD正常单UE记录（文献见正文）及在线游戏、办公和视频业务记录。输入记录给出协议、相对收发时间、方向及数据量，业务配置另外指定启动时间和运行时长。程序在UE侧客户端与DN侧服务器之间执行真实收发，路径经过gNB、N3、UPF及N6；客户端和服务器分别保存实际时间、数据量及完成、超时或失败结果。
+The examples illustrate the data formats; the full dataset is not included in this branch. See [data access](../DATA_ACCESS.md) for availability and [the repository overview](../README.md) for the platform appendices and source code maintained in a separate branch.
 
-操作目标、参数、计划开始时间和持续时间由配置指定，实际执行与恢复记录另存。每次运行注入72次核心网故障，相关操作结束并通过恢复检查后进入下一次故障。报文、日志及周期查询贯穿业务、干预和恢复阶段。表中时间间隔为配置值；各轮实际采样时间受查询耗时影响，随结果保存。2 s/5 s原生采集周期、1 s导出表格间隔和5 s任务观测间隔分别描述采集、导出与任务组织，不能互相等同。
+## Appendix A. Platform implementation and configuration
 
-### A.5 关联、核验与输出
+### A.1 Platform modules
 
-会话关联程序利用扩展SMF日志，在同次运行内按SUPI和PDU会话标识汇集记录，在有限时间窗口内合并，并结合UE地址、UPF和隧道信息关联网络与业务观测。缺少直接记录时，依据报文地址及部署配置补充关联，同时保留来源标记。
-
-回收程序将各主机的PCAP、日志与JSON/JSONL文件按运行标识归档，比较源端与接收端文件清单中的相对路径、大小及内容，通过后标记回收完成，并保存异常原因。数据处理程序按统计窗口整理观测，将故障执行、用户数量调整和恢复检查记录按时间对应到序列，保留原始记录与时间信息，随后检查完整性、字段覆盖和观测时间。最终产物包括时间序列、关联记录和包含配置、操作及质量信息的实验报告。
-
-## 附录B 数据组织、字段及样例
-
-### B.1 产物与关联信息
-
-| 产物 | 格式 | 主要内容与关联依据 |
+| Module in Fig. 1 | Implementation | Inputs and outputs |
 |---|---|---|
-| 原始报文 | PCAP | 接口报文及采集时间；结合来源、地址、会话与隧道信息 |
-| 网元与接入侧日志 | 文本、JSON/JSONL | 注册、会话、实例与控制面事件 |
-| 状态、资源及业务记录 | JSON/JSONL等原始文件 | 来源、实际时间、实例/主机/接口及收发结果 |
-| 操作与恢复记录 | 运行内结构化记录 | 目标、参数、计划/实际时间、执行和恢复结果 |
-| 关联记录 | JSONL | 用户、PDU会话、地址、UPF和隧道之间的关联及来源标记 |
-| 派生时间序列 | CSV | 按统计窗口组织的指标、标识、状态与有效性信息 |
-| 实验报告 | 报告及核验记录 | 配置、操作、恢复、完整性、字段覆盖与时间质量 |
+| ① Traffic generation | Executes TCP/UDP traffic from protocol, relative timing, direction, and data-volume records; binds the client to the UE TUN interface | Traffic records → actual transfer times, data volumes, and completion, timeout, or failure outcomes |
+| ② Experiment control | Prepares the network and traffic; controls UE count changes, UE recreation, gNB restarts, core-network faults, collection, and recovery checks | Configuration and operation plan → actual command start/end times, execution results, and recovery results |
+| ③ Multi-source collection | Collects packets, logs, management/container queries, and OS observations, retaining source, time, instance, and collection status | PCAP, text logs, and JSON/JSONL records |
+| ④ Data retrieval and archiving | Retrieves files across hosts and checks their completeness and contents before marking retrieval complete | Run-organized files and retrieval results |
+| ⑤ Data processing | Associates sessions, aligns and aggregates observations, and checks completeness and field coverage | CSV time series, JSONL association records, and experiment reports |
 
-以上是产物分类，不意味着每类原始记录共享一个统一JSON schema。原始字段名称、单位、类型、来源文件和可用性以data/field_dictionary.csv为准。
+The table below separates upstream software from platform integration, adaptations, and added programs. Implementation paths refer to the platform source snapshot, which is maintained in the separate platform appendix branch.
 
-### B.2 字段口径
-
-当前字典含400条定义，其中215条field_role为metric，其余185条为配置、状态、标识、标签或质量等字段。400条定义对应400个canonical_id、379个不同field_name，覆盖多种原始及派生产物，不等于单张表有400列。
-
-七个1 s导出表各81列，共611,777行。当前字典按字段名与81列表匹配可得到39个metric角色字段，实际是否可用还受ok、snapshot_only、replaced及capability_missing等状态影响。原稿“32项数值指标”的历史计数口径无法由当前材料恢复。正文保留可核验的表规模与代表指标，不再使用32项这一未恢复的历史子计数；39个metric角色字段也不等同于39个有效可用指标。
-
-5 s核心网观测表包含24项观测。已有核验显示其时间戳与1 s表可对齐，但部分同名字段在相同时间的值不相同，因此不能称为81字段表的简单降采样。详见data/schema_verification.json及source_notes/DATASET_GUIDE.md。
-
-### B.3 可直接查看的文件
-
-- data/field_dictionary.csv：完整400条字典，含field_name、field_role、entity、unit、value_type、source_artifact、availability和caveat等列。
-- data/timeseries_1s_sample.csv：现有D06的81列导出表表头与前20行，time字段严格相隔1 s；原值及缺失单元保持不变。
-- data/core_features_5s_sample.csv：现有D06核心网观测表前10行。
-- data/schema_verification.json：本地材料中已有的schema核验记录，本次未重新生成历史数据。
-
-样例中的缺失或不可用字段不应填成零。涉及用户/会话标识的关联使用运行范围及时间窗口，原始记录和来源标记同时保留。
-
-`source_notes/material_index.json` 记录复制来源、节选方式和1 s样例的源文件及样例SHA-256。该清单中的完整数据路径用于定位来源，不表示完整数据已经在线提供。小样例用于展示字段、时间和缺失格式，不能替代完整运行、任务输入或模型评测。
-
-### B.4 数据来源与派生率定义
-
-| 数据类别 | 原始来源 | 组织实体与典型观测 |
+| Component | Role | Implementation or output |
 |---|---|---|
-| 网络流量 | N3/N4/N6及SBI报文 | 业务流或接口；包数、字节数、上下行比特率及流持续时间 |
-| 信令与会话 | AMF/SMF日志、管理接口及协议报文 | UE、PDU会话与SMF/UPF映射；注册、会话建立和活跃会话统计 |
-| NF资源与状态 | 容器管理接口 | AMF、SMF、UPF、NRF、NSSF、UDM、UDR、AUSF、PCF及MongoDB；CPU、内存、就绪及重启记录 |
-| 主机与网卡 | 操作系统接口 | 主机或网络接口；CPU、内存、系统负载及累计收发计数 |
-| gNB与UE状态 | UERANSIM日志和状态查询 | gNB或UE；就绪数量、注册与会话状态 |
-| 应用收发 | UE侧客户端与DN侧服务器 | 业务传输；实际收发时间、数据量及完成、超时或失败结果 |
+| Upstream protocol implementations | free5GC network functions and UERANSIM access simulation | Registration, authentication, session management, and access simulation |
+| Deployment integration | Two DNN groups, SMF/UPF paths, containers, virtual machines, and instance mappings | Deployment and run configurations; settings summarized in [A.4](#a4-deployment-traffic-and-collection-settings) |
+| Traffic tools | Record-driven TCP/UDP traffic, UE TUN binding, and outcome recording | `tools/ue_tracer/trace_play_scenario_v11.py`, `scripts/continuous_traffic_runner.py`; client/server records |
+| Experiment control and recovery | Access operations, core-network fault timelines, recovery decisions, and failure handling | `scripts/scenario_timeline_runner.sh`, `scripts/online_recovery_checkpoint.py`; operation and recovery records |
+| Multi-source collection | Control-plane events, resources, instance state, and host/interface observations | `scripts/control_plane_collector.py`, `nf_state_collector.py`, `host_metrics_collector.py`, `ran_k3s_workload_collector.py` |
+| Data retrieval | Cross-host file retrieval, completeness checks, and run reports | `scripts/traffic_transfer_bundle.py`, `scripts/audit_scenario_one_run.py` |
+| Association and export | Session mapping, metric export, and field/quality checks | `scripts/export_session_map.py`, `scripts/export_v3_timeseries.py`, `scripts/dataset_schema.py` |
 
-以上观测与操作执行记录共同归档。派生率按以下定义计算：
+The platform extends SMF session logs to record user, session, address, and tunnel mappings. Network-function changes include local cleanup after failed release of an old session without removing an index that already points to a new session; SMF PFCP response matching and handling of sessions affected by UPF failure; AMF registration-state updates; NRF slice-identifier matching; and PCF numeric-type compatibility. These changes support continued operation and record association during interventions.
 
-1. 接口收发速率：相邻采样累计收发字节数的增量除以实际采样间隔，单位byte/s；采用bit/s展示时乘8。计算使用实际时间，不直接以配置周期代替。
-2. 注册与PDU会话建立成功率：分别以对应成功次数除以对应请求次数。两项统计的分子与分母保持相同对象与统计窗口。
-3. 业务完成率：统计窗口内成功传输次数占已结束传输总次数的比例；已结束的超时传输计入失败。
+Control-plane log collectors retain their read positions, parse appended content, and reset when a file is replaced or truncated. Resource records retain instance identifiers and collection status so that zero values can be distinguished from unavailable observations.
 
-实验配置、操作实际起止时间和恢复检查结果随数据保存，用于核查指标变化。来源记录不足、接口能力缺失或无有效观测时保留缺失/状态信息，不通过填零构造成功率或速率。
+### A.2 Interventions and recovery
 
-## 附录C 从运行记录到任务输入
+The access-side operations are UE count changes, UE recreation, and gNB restarts. The six core-network fault types are N3 blocking, added N3 delay, random N3 packet loss, N4 blocking, N6 blocking, and stopping a UPF instance. Planned operations and actual execution records are stored separately.
 
-### C.1 预测输入与81字段表
+Recovery removes the injected rules or restores the affected instance, waits for concurrent access-side operations to finish, and checks NF readiness, residual rules, gNB/UE counts, PDU connectivity, and traffic outcomes. Collection continues throughout intervention, recovery, and observation. A failed recovery check prevents subsequent faults from starting; it does not immediately stop all collection.
 
-两者使用同批运行的原始记录，但构造目标不同：81字段基础表描述平台导出的运行观测；预测输入另行按变量、历史窗口和未来目标构造，并分别保存。它不是直接把81列全部送入模型。当前材料的历史与目标数据分别组织为T1_history和T1_targets产物。
+The [archived recovery implementation](source_notes/recovery_constants.txt) uses two 60 s traffic windows, a minimum of 15 samples, a completion-rate threshold of 0.95, failure- and timeout-rate thresholds of 0.05 each, and a 120 s stability observation. These values describe the implementation; run-specific settings are recorded separately. `WINDOW_SECS`, `WINDOW_COUNT`, and `GUARD_SECS` are constants, separate from the configurable phase durations.
 
-输入区间为[c−60,c)，目标为[c+60,c+70)内有效目标值均值。N3目标为下行比特率，N6目标为流记录汇总的聚合比特率，CPU目标为宿主机利用率。N6不能改称接收端直接测得的逐秒吞吐量。SMA使用末10 s，PatchTST使用目标历史，XGBoost使用18个变量及有效性标记。
+### A.3 Completion and interruption
 
-### C.2 核心网24变量
+| Mechanism | Parameter or mode | Behavior |
+|---|---|---|
+| Phase duration | `--baseline-secs`, `--fault-secs`, `--recovery-secs` | Ends the configured phases, then stops collection and retrieves files according to the execution schedule |
+| Fault-plan completion | `--fault-plan FILE` | Proceeds to recovery observation and finalization after the timeline finishes |
+| Disk protection | `--min-free-gb` | Interrupts the main workflow and triggers cleanup when the local packet-capture watchdog fails its free-space check |
+| Recovery-check failure | Recovery checkpoint in `combined-only` mode | Stops subsequent faults while the main workflow continues recovery, retrieval, and reporting |
+| Manual interruption | Ctrl+C / SIGTERM | Records the cause and attempts cleanup and file retrieval |
+| Other stop criteria | No common entry-point option | Performance thresholds, sample count, total data volume, and a specified clock time are not general stop settings in this implementation |
 
-AMF、SMF和UPF的6个实例提供12项CPU/内存观测；宿主机提供4项资源观测；网络接口提供6项统计；两个UPF提供2项就绪状态。具体列名保存在configs/imputation.json的features和检测配置的feature_columns中，避免将字段名摘要误当作输入清单。
+In Fig. 1, *Collection settings*, *Collection control*, and *Recovery checks* refer to collection configuration, execution control, and recovery assessment, respectively.
 
-### C.3 任务构造与边界
+### A.4 Deployment, traffic, and collection settings
 
-| 任务 | 构造与评价 |
+An experiment combines network configuration, traffic configuration, an operation plan, and collection settings. Network configuration specifies component counts and locations, interface addresses, gNB/UE group mappings, DNNs, slice identifiers, and address pools. After UE registration and PDU-session establishment create the TUN interface, the traffic client binds to that interface and communicates with the DN application server. Changing UE or NF scale also requires corresponding address, instance-mapping, and run-check settings.
+
+The collection deployment uses three physical hosts and an Ethernet switch. free5GC v4.1.0 NF containers run in a K3s cluster spanning the 5GC host and its virtual machine. Two groups of AMF, SMF, and UPF instances are distributed between the host and virtual machine; the remaining NFs and MongoDB run on the host. UERANSIM v3.2.7 gNB/UE instances and the DN traffic server occupy the other two physical hosts. Each DNN group initially contains two gNBs and 20 UEs, with sessions managed by its SMF and traffic forwarded through its UPF. The groups share the DN server.
+
+| Setting | Value |
 |---|---|
-| 预测 | 60 s历史，间隔60 s，预测10 s均值；训练集估计预处理参数 |
-| 检测 | 连续运行；AE/TranAD使用12步序列；KAN-AD对12步取相邻差分得到11个时间点；RF使用窗口统计量。合并告警后与事件一对一匹配 |
-| 分类与关联目标识别 | 已知注入起点后60 s、12步观测；6种类型×2个目标UPF=12类；训练/验证/测试288/72/144样本 |
-| 缺失重建 | 300 s窗口、60个位置；随机20%或连续30/60/120 s；允许缺口前后观测，只对原本有效且被遮蔽值评分 |
+| 5GC host | 8 threads; 62.45 GiB K3s-allocatable memory |
+| 5GC virtual machine | 2 vCPUs; 5.79 GiB K3s-allocatable memory; runs on the 5GC host |
+| UE/gNB host | 32 threads; 128 GiB memory |
+| DN traffic server | 20 threads; 64 GiB memory |
+| gNBs / initial UEs / DNNs | 4 / 40 / 2 |
+| NF types / instances | 9 / 12, excluding MongoDB |
+| Transport protocols / traffic UEs | TCP and UDP / one selected UE per DNN |
+| Target-group UE count | 20 → 10 → 20 |
+| Core-network interventions | N3 blocking, added N3 delay, random N3 loss, N4 blocking, N6 blocking, and UPF stop |
+| Added N3 delay / random loss | 200 ms / 10% |
+| First planned start / start interval | 1,800 s after the operation-plan origin / 900 s |
+| Core-network intervention duration | 120 or 180 s |
+| Access-side interventions | gNB restart, UE recreation, and target-group UE count change |
+| Configured control-plane statistics period | 2 s |
+| Configured host/interface, NF resource/state, and gNB/UE state period | 5 s |
 
-七次运行按D01–D04、D05、D06–D07对应训练、验证、测试。D06/D07此前已被访问，本次属于固定划分下的后验评估。分类使用已知注入起点，不能等同于告警自动触发的在线定位。
+Traffic inputs include normal single-UE records from 5GAD, cited in the paper, and online-game, office, and video traffic records. Each input specifies protocol, relative send/receive timing, direction, and data volume; traffic configuration also specifies start time and duration. Actual transfers traverse the UE client, gNB, N3, UPF, N6, and DN server. Client and server logs record actual times, data volumes, and completion, timeout, or failure outcomes.
 
-## 附录D 评测配置、参数和结果索引
+Configuration specifies each operation's target, parameters, planned start, and duration; actual execution and recovery outcomes are stored separately. Each run includes 72 core-network faults, with subsequent faults following completion of related operations and successful recovery checks. Packet, log, and periodic-query collection spans traffic, intervention, and recovery. Actual sampling times are recorded because query duration can affect timing. The 2 s/5 s collection periods, 1 s exported table interval, and 5 s task-observation interval describe different stages of data organization.
 
-### D.1 配置来源
+### A.5 Session association and outputs
 
-configs/保留现有材料的实际配置和选择记录。prediction_selection.json提供已完成的候选选择记录；prediction_design_spec.yaml是设计规格，不能单独当作已执行的训练日志。检测JSON包含实际训练批次的参数；classification.json和imputation.json提供对应任务配置。文件存在、保存结果一致与历史运行身份绑定是不同证据，现有材料尚未完成全部历史结果与运行身份的绑定。
+Session association groups extended SMF records within a run by SUPI and PDU-session identifier, merges them within a bounded time window, and uses UE addresses, UPFs, and tunnel information to associate network and traffic observations. When direct records are unavailable, packet addresses and deployment configuration provide fallback associations with source markers retained.
 
-### D.2 主要参数
+PCAP, log, and JSON/JSONL files are retrieved into run-specific directories. Retrieval checks compare source and destination file lists and contents and record failures. Processing then aggregates observations into statistical windows and aligns fault execution, UE count changes, and recovery checks by time, retaining the original records and timestamps. Outputs include time series, association records, and reports covering configuration, operations, recovery, completeness, field coverage, and timing quality.
 
-| 模型/任务 | 配置摘要 |
-|---|---|
-| PatchTST预测 | d_model=64，heads=4，layers=2，d_ff=128，patch_len=12，stride=6，dropout=0.1；学习率按目标选择，详见下表 |
-| XGBoost预测 | n_estimators=500，learning_rate=0.04，min_child_weight=3，subsample=0.9，colsample_bytree=0.9；max_depth按目标选择 |
-| 正常数据拟合检测 | 最大50 epochs，patience=8，effective batch=128；具体优化器和学习率以各实际训练JSON为准 |
-| KAN-AD适配版 | Adam，lr=0.003，StepLR(5,0.75)；逐变量差分预测误差评分 |
-| TranAD适配版 | AdamW，lr=0.001，weight_decay=0.0001；两阶段重构误差均值评分 |
-| 监督RF检测 | 160 trees，max_depth=12，min_samples_leaf=20，class_weight=balanced_subsample，max_features=sqrt（随附seed17记录） |
-| LSTM/TCN分类 | width=64，dropout=0.1；LSTM两层；TCN两块、dilations=[1,2]、kernel=3；batch=32，AdamW，lr=0.001，最大50 epochs，patience=8 |
-| RF分类 | 500 trees，min_samples_leaf=2，max_features=sqrt，max_depth=None |
-| SAITS-H/M重建 | d_model=64，d_ffn=128，heads=4，d_k=d_v=16，每个DMSA块两层，dropout=0.1，batch=64，AdamW，lr=0.001，weight_decay=0.0001，最大50 epochs，patience=8 |
+## Appendix B. Data organization, fields, and examples
 
-预测候选选择记录：
+### B.1 Data products
 
-| 目标 | 模型 | 所选超参数 | 模型结构 |
-|---|---|---|---|
-| host_cpu | PatchTST | {"lr": 0.0003} | {"d_model": 64, "n_heads": 4, "e_layers": 2, "d_ff": 128, "patch_len": 12, "stride": 6, "dropout": 0.1} |
-| host_cpu | XGBoost | {"max_depth": 6} | {"n_estimators": 500, "learning_rate": 0.04, "min_child_weight": 3, "subsample": 0.9, "colsample_bytree": 0.9} |
-| n3_downlink | PatchTST | {"lr": 0.0003} | {"d_model": 64, "n_heads": 4, "e_layers": 2, "d_ff": 128, "patch_len": 12, "stride": 6, "dropout": 0.1} |
-| n3_downlink | XGBoost | {"max_depth": 6} | {"n_estimators": 500, "learning_rate": 0.04, "min_child_weight": 3, "subsample": 0.9, "colsample_bytree": 0.9} |
-| n6_aggregate | PatchTST | {"lr": 0.0003} | {"d_model": 64, "n_heads": 4, "e_layers": 2, "d_ff": 128, "patch_len": 12, "stride": 6, "dropout": 0.1} |
-| n6_aggregate | XGBoost | {"max_depth": 6} | {"n_estimators": 500, "learning_rate": 0.04, "min_child_weight": 3, "subsample": 0.9, "colsample_bytree": 0.9} |
-
-预测输出文件使用seed42/43/44；检测、分类和重建材料使用seed17/29/43；重建mask seeds为101/202/303。正文只统一报告三个种子，不将不同任务的种子编号混为一套。
-
-检测在带标签验证集上按0.1次/h和1次/h选择阈值，测试时固定；同时报告事件召回率与实际误报率。SAITS-H/M结构、参数量、训练轮数和掩码安排一致，各自按验证误差选取模型。
-
-### D.3 与正文结果的关系
-
-source_notes/RESULTS_MAP.md保存现有材料的结果入口与检查步骤索引，其中路径相对于完整实验材料包。本附录只带配置、字典与小样例，不包含完整数据、模型权重或训练环境。同仓已有材料保留模型和保存结果；完整数据集仍待外部下载入口补充，实际可执行范围以仓库根目录DATA_ACCESS.md为准。现有包的历史身份与部分数据版本绑定仍有缺口；本轮保留正文结果数值，没有用新运行替换历史结果。
-
-### D.4 当前附录与既有材料的分工
-
-下列相对链接按本目录置于仓库根目录下 `manuscript_supplement/` 时组织。论文源码包中本目录单独存在时，同仓扩展链接需要配套材料；本目录内的字典、样例和配置仍可直接查看。
-
-| 当前正文附录 | 本目录提供 | 同仓已有更完整材料 |
+| Product | Format | Contents and association information |
 |---|---|---|
-| A 平台实现与配置 | 五项开发内容、实现性质、流程、恢复规则、完整采集配置 | [平台说明](../data_machine/docs/PLATFORM_GUIDE.md)；源码快照仍不发布 |
-| B 数据与格式 | 字段口径、真实小样例、来源与派生率 | [数据访问范围](../DATA_ACCESS.md)、[输入清单](../manifests/input_manifest.csv)；清单不等于数据已可下载 |
-| C 任务输入 | 四任务的输入摘要与科学边界 | [详细任务构造（原D.3）](../appendix/D3_data_construction.md) |
-| D 模型和结果 | 本次正文使用的配置、参数与材料映射 | [模型参数（原E.1）](../appendix/E1_models_hyperparameters.md)、[结果对应（原E.2）](../appendix/E2_results_correspondence.md)、[复现指南（原E.3）](../appendix/E3_reproduction.md) |
-| 来源与访问 | 样例来源及当前修订说明 | [结果映射](../PAPER_RESULT_MAP.md)、[来源关系](../appendix/LINEAGE.md)、[发布状态](../PUBLICATION_STATUS.md) |
+| Packet captures | PCAP | Interface packets and capture times; associated through source, address, session, and tunnel information |
+| NF and access-side logs | Text, JSON/JSONL | Registration, sessions, instances, and control-plane events |
+| State, resource, and traffic records | JSON/JSONL and other raw records | Source, actual time, instance/host/interface, and transfer outcomes |
+| Operation and recovery records | Structured records within each run | Targets, parameters, planned/actual times, and execution/recovery outcomes |
+| Association records | JSONL | User, PDU-session, address, UPF, and tunnel mappings with source markers |
+| Derived time series | CSV | Windowed metrics, identifiers, state, and validity information |
+| Experiment reports | Reports and check records | Configuration, operations, recovery, completeness, field coverage, and timing quality |
 
-本次压缩正文与附录调整由新的正文配套目录承接；既有模型、结果、输入合同和检查回执保留原目录。匿名入口的目录列表与文件下载需单独核验；GitHub提交不代表匿名同步完成。实物占位图须在最终投稿前换成真实照片；恢复检查内部窗口和稳定观察时长的参数化需在实现中单独完成。
+These product categories do not share a single JSON schema. Field names, units, types, source artifacts, and availability are described in the [field dictionary](data/field_dictionary.csv).
+
+### B.2 Field definitions and table dimensions
+
+The dictionary contains **400 definitions: 215 metrics and 185 configuration, state, identifier, label, quality, or other fields**. It contains 400 `canonical_id` values and 379 distinct `field_name` values across raw and derived products; it is not the schema of a single 400-column table.
+
+The seven 1 s exported tables each contain **81 columns**, totaling **611,777 rows**. Matching these columns to the dictionary yields 39 fields with the `metric` role. Availability also depends on states such as `ok`, `snapshot_only`, `replaced`, and `capability_missing`; the role count does not imply that all 39 metrics are usable in every record.
+
+The 5 s core-network observations contain **24 variables**. Their timestamps can be aligned with the 1 s tables, but some same-named fields have different values at the same time. The 5 s observations therefore are not a direct downsampling of the 81-column tables. The **18-variable prediction input** is also constructed separately from the raw records, as described in [C.1](#c1-prediction-inputs). See the [dataset guide](source_notes/DATASET_GUIDE.md) and [schema comparison](data/schema_verification.json) for details.
+
+### B.3 Examples and dictionary
+
+| File | Contents |
+|---|---|
+| [Field dictionary](data/field_dictionary.csv) | All 400 definitions, including `field_name`, `field_role`, `entity`, `unit`, `value_type`, `source_artifact`, `availability`, and `caveat` |
+| [1 s time-series sample](data/timeseries_1s_sample.csv) | Header and first 20 rows of the D06 81-column table, with 1 s spacing and recorded missing values |
+| [5 s core-network sample](data/core_features_5s_sample.csv) | First 10 rows of the D06 core-network observations |
+
+Missing or unavailable observations should not be replaced with zero. User/session associations use run scope and time windows, with source markers retained. These small examples illustrate fields, timing, and missing-value representation; they are not complete task inputs.
+
+### B.4 Observation sources and derived metrics
+
+| Category | Source | Entities and representative observations |
+|---|---|---|
+| Network traffic | N3/N4/N6 and SBI packets | Flows or interfaces; packets, bytes, uplink/downlink bitrates, and flow duration |
+| Signaling and sessions | AMF/SMF logs, management interfaces, and protocol packets | UE/PDU sessions and SMF/UPF mappings; registration, session establishment, and active-session statistics |
+| NF resources and state | Container management interfaces | AMF, SMF, UPF, NRF, NSSF, UDM, UDR, AUSF, PCF, and MongoDB; CPU, memory, readiness, and restarts |
+| Hosts and interfaces | OS interfaces | CPU, memory, system load, and cumulative interface send/receive counters |
+| gNB and UE state | UERANSIM logs and state queries | Readiness counts, registration state, and session state |
+| Application transfers | UE clients and DN servers | Actual transfer times, data volumes, and completion, timeout, or failure outcomes |
+
+Derived rates use the following definitions:
+
+1. **Interface send/receive rate:** the increment in cumulative bytes divided by the actual interval between samples, in byte/s; multiply by eight for bit/s. Configured sampling periods do not replace actual elapsed time.
+2. **Registration and PDU-session establishment success rates:** successful operations divided by corresponding requests, using the same entities and statistical windows for numerator and denominator.
+3. **Traffic completion rate:** successful transfers divided by all terminated transfers in the window; terminated timeouts count as failures.
+
+Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates.
+
+## Appendix C. Task construction
+
+### C.1 Prediction inputs
+
+The 81-column platform tables and prediction inputs use raw records from the same runs but serve different purposes. Prediction histories and targets are constructed separately as `T1_history` and `T1_targets` products.
+
+For anchor time `c`, the history is `[c−60,c)` and the target is the mean of valid values in `[c+60,c+70)`. Targets are N3 downlink bitrate, N6 aggregate bitrate from flow records, and host CPU utilization. The N6 target is not a directly measured per-second receiver throughput. SMA uses the final 10 s; PatchTST uses target history; XGBoost uses 18 variables and their validity indicators.
+
+### C.2 Core-network observations
+
+The 24 variables comprise 12 CPU/memory measurements from six AMF, SMF, and UPF instances; four host-resource measurements; six interface statistics; and readiness indicators for two UPFs. Exact column lists are provided in the `features` field of the [imputation configuration](configs/imputation.json) and the `feature_columns` field of the [detection configuration](configs/detection_AE_seed43.json).
+
+### C.3 Windows, splits, and evaluation scope
+
+| Task | Construction and evaluation |
+|---|---|
+| Prediction | 60 s history, 60 s gap, and a 10 s target mean; preprocessing parameters estimated from training data |
+| Fault detection | Continuous-run evaluation; AE/TranAD use 12-step sequences; KAN-AD takes adjacent differences to obtain 11 time points; RF uses window statistics. Merged alarms are matched one-to-one with events |
+| Fault classification and associated-target identification | 12 observations during the 60 s after a known injection start; six fault types × two target UPFs = 12 classes; 288/72/144 training/validation/test samples |
+| Metric imputation | 300 s windows with 60 positions; random 20% masking or continuous 30/60/120 s gaps; observations before and after a gap are available, and only originally valid, artificially masked values are scored |
+
+D01–D04 form the training set, D05 the validation set, and D06–D07 the test set. D06/D07 had previously been accessed, so the reported analysis is post hoc under a fixed split. Classification assumes known injection starts; it does not evaluate alarm-triggered online localization. Imputation evaluates artificial missingness in offline windows.
+
+See [detailed task construction](../appendix/D3_data_construction.md) for field lists, preprocessing, sample selection, and evaluation rules.
+
+## Appendix D. Evaluation settings and results
+
+### D.1 Configuration files
+
+| File | Purpose |
+|---|---|
+| [Prediction selection](configs/prediction_selection.json) | Selected configurations from the completed candidate comparison |
+| [Prediction design specification](configs/prediction_design_spec.yaml) | Design settings; execution and selection details are provided separately |
+| [AE detection](configs/detection_AE_seed43.json), [KAN-AD detection](configs/detection_KAN_AD_seed43.json), [TranAD detection](configs/detection_TranAD_adapted_v2_seed43.json), [RF detection](configs/detection_RF_seed17.json) | Task-specific training configurations |
+| [Classification](configs/classification.json) | Classification inputs and model settings |
+| [Imputation](configs/imputation.json) | Imputation variables, masking, and model settings |
+| [Task protocol](configs/task_protocol.json) | Shared task and evaluation settings |
+
+### D.2 Main hyperparameters
+
+| Model/task | Configuration |
+|---|---|
+| PatchTST prediction | `d_model=64`, `heads=4`, `layers=2`, `d_ff=128`, `patch_len=12`, `stride=6`, `dropout=0.1`; selected learning rates below |
+| XGBoost prediction | `n_estimators=500`, `learning_rate=0.04`, `min_child_weight=3`, `subsample=0.9`, `colsample_bytree=0.9`; selected depths below |
+| Detection models fitted on normal data | Maximum 50 epochs, `patience=8`, effective batch size 128; optimizer and learning rate in the linked configurations |
+| Adapted KAN-AD | Adam, `lr=0.003`, `StepLR(5, 0.75)`; per-variable differenced prediction-error scores |
+| Adapted TranAD | AdamW, `lr=0.001`, `weight_decay=0.0001`; mean two-stage reconstruction-error scores |
+| Supervised RF detection | 160 trees, `max_depth=12`, `min_samples_leaf=20`, `class_weight=balanced_subsample`, `max_features=sqrt`; seed-17 configuration linked above |
+| LSTM/TCN classification | `width=64`, `dropout=0.1`; two LSTM layers; two TCN blocks with `dilations=[1,2]` and `kernel=3`; batch size 32, AdamW, `lr=0.001`, maximum 50 epochs, `patience=8` |
+| RF classification | 500 trees, `min_samples_leaf=2`, `max_features=sqrt`, `max_depth=None` |
+| SAITS-H/M imputation | `d_model=64`, `d_ffn=128`, `heads=4`, `d_k=d_v=16`, two layers per DMSA block, `dropout=0.1`, batch size 64, AdamW, `lr=0.001`, `weight_decay=0.0001`, maximum 50 epochs, `patience=8` |
+
+Selected prediction settings use the architectures listed above:
+
+| Target | PatchTST learning rate | XGBoost maximum depth |
+|---|---|---|
+| `host_cpu` | 0.0003 | 6 |
+| `n3_downlink` | 0.0003 | 6 |
+| `n6_aggregate` | 0.0003 | 6 |
+
+Prediction uses seeds **42/43/44**; detection, classification, and imputation use **17/29/43**. Imputation mask seeds are **101/202/303**.
+
+Detection thresholds are selected on labeled validation data at false-alarm budgets of 0.1/h and 1/h, then fixed for testing. Both event recall and actual false-alarm rates are reported. SAITS-H/M share architecture, parameter count, training budget, and masking arrangements; each selects its model using validation error.
+
+Full model adaptations, training and selection rules, and environment details are in [model hyperparameters](../appendix/E1_models_hyperparameters.md).
+
+### D.3 Results and reproduction
+
+| Resource | Contents |
+|---|---|
+| [Paper result map](../PAPER_RESULT_MAP.md) | Links between reported results and result files |
+| [Detailed result correspondence](../appendix/E2_results_correspondence.md) | Tables, figures, and supplementary comparisons |
+| [Reproduction guide](../appendix/E3_reproduction.md) | Saved-result calculations, inference replay, and training instructions |
+| [Data access](../DATA_ACCESS.md) | Available inputs and data required for each reproduction step |
+
+The repository includes saved models and evaluation results. Full-data inference and training require the complete task inputs described in the reproduction guide; the small samples in this directory demonstrate formats only.

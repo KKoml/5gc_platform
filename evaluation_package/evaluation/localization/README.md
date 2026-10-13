@@ -1,15 +1,19 @@
-# Known-start fault-type and associated-target classification
+# Fault Classification and Associated-Target Identification
 
-The included source run evaluates a 12-class joint label: six recorded injection mechanisms crossed with two associated UPFs. The window is the 12-step observation following a known injection start. The result is controlled-target classification; it does not predict an unknown onset or establish causal root cause.
+The task classifies observations from the first 60 s after a known injection start. Twelve joint classes combine six fault types with two associated UPF targets. Location refers to the UPF or its associated path.
 
-The package includes the classification/training/evaluation source, 288/72/144 train/validation/test sample contract, feature whitelist and class labels, prepared input windows, 15 fitted model artifacts, per-sample class probabilities, and result tables. LSTM/TCN use 24 numeric channels plus 24 validity channels; the random-forest variants retain their distinct 24-variable, 10-variable, and ready/missingness-only inputs. All three seeds and the lower-scoring ablations are preserved.
+The fixed split contains 288 training, 72 validation, and 144 test cases. LSTM and TCN use 12-step sequences with 24 variables and validity indicators. Random forests use window statistics, with comparisons between 24 variables, 10 variables, and readiness/missingness-only inputs. Models use seeds 17, 29, and 43.
 
-`metrics/SUMMARY.csv`, `audit/RESULT_VERIFICATION.json`, and `tracker.json` are included for the report formatter. The included checkpoint replay compared probabilities for all 15 models across the 612 fixed windows: all predicted classes matched; max probability difference was 2.22e-16; all 24 paper-facing metric cells matched within 2.22e-16. The role-resolution helper also passed three accepted and eight rejected cases. A new full package-only fit completed all five classifiers × seeds 17/29/43 and generated 1,800 grouped metric rows after the test freeze.
+## Materials
 
-Every one of the 15 model/seed rows matches the current paper evidence for fault-type accuracy, associated-target accuracy, joint accuracy, and macro-F1 with maximum absolute error `1.12e-16`. The metric result is therefore independently traceable to an executed local classifier source.
+| Path | Contents |
+| --- | --- |
+| [Source code](code/) | Sample preparation, model training, and evaluation |
+| [Configuration](config.json) | Task settings and model parameters |
+| [Fitted models](models/) | Model artifacts for the classifiers and input comparisons |
+| [Result tables](metrics/) | Fault-type, associated-target, and joint classification metrics |
+| [Summary](metrics/SUMMARY.csv) | Aggregated results used to describe the main comparisons |
 
-## Data-dependent preparation
+The [figure directory](../../../paper_figures/) contains the summary data and plotting programs for Figure 5. See [task construction](../../../appendix/D3_data_construction.md) for class definitions and window rules, and [model parameters](../../../appendix/E1_models_hyperparameters.md) for the complete settings.
 
-The included `cache/windows.npz` and `data_contract/` support inspection of prepared cases and saved outputs. Full preparation requires the task package supplied through `DGATE_LOCALIZATION_DATA_PACKAGE`. The copied code uses this reviewer-configurable path in place of the author-machine path. A small legacy model-source reference is bundled under `legacy_reference/` for model provenance checks.
-
-The result is a later additional fixed-split evaluation. Its record keeps a previously documented Core24h role conflict and the explicit resolution: Core24h remains supplementary-only, with no training cases. The D01–D07 paper split remains 288 training, 72 D05 validation, and 144 D06/D07 test cases. D06/D07 had been accessed previously and are not blind tests. The copied source freeze refers to the later source run; its code hashes do not describe the path-adapted release code. The new training helper emits a separate freeze for each fresh run. Neither the exact historical paper run nor the original figure generator is confirmed.
+These results assume a known injection start; they evaluate classification rather than unknown-onset detection. Full task inputs and prepared windows are not included in this branch. Inference and training require the data described in [Data access](../../../DATA_ACCESS.md) and the [evaluation instructions](../../../appendix/E3_reproduction.md).

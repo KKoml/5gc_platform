@@ -1,15 +1,16 @@
-# D-GATE anonymous-review materials (data-machine candidate)
+# Data Documentation
 
-Status: local candidate package only; not an anonymous public repository and not published externally.
+The following materials describe the collected observations, field definitions, and task data used in the evaluation.
 
-- platform/source_snapshot/ — selected platform source files from one clean pinned tree, with no Git history.
-- dataset/task_data/ — task-ready data and metadata; relative paths and per-file hashes.
-- dataset/metadata/ — the current 400-entry platform dictionary and 1 s table index; historical paper-version identity is unverified.
-- dataset/samples/ — one explicitly labeled sample for reader validation.
-- manifests/data_files.csv and manifests/platform_files.csv — file sizes, SHA-256 and role.
-- docs/PLATFORM_GUIDE.md and docs/DATASET_GUIDE.md — component classes, usage and access status.
+| Material | Description |
+| --- | --- |
+| [Dataset guide](docs/DATASET_GUIDE.md) | Data organization, observation tables, and field availability |
+| [Platform guide](docs/PLATFORM_GUIDE.md) | Platform components and data-processing context |
+| [Field dictionary](../manuscript_supplement/data/field_dictionary.csv) | Definitions, units, sources, and availability for 400 fields |
+| [1 s example](../manuscript_supplement/data/timeseries_1s_sample.csv) | Twenty rows from the 81-column platform export |
+| [5 s example](../manuscript_supplement/data/core_features_5s_sample.csv) | Ten rows containing 24 core observations plus run and time information |
+| [Task construction](../appendix/D3_data_construction.md) | Input variables, windows, labels, and preprocessing for the four tasks |
 
-All paths in this package are local files. Full original platform runs remain at the data machine and are listed only. There is no verified external data location; reviewer access remains a 待配置数据位置.
+The examples illustrate the formats; full datasets are not included. See [Data access](../DATA_ACCESS.md) for the available material and data requirements.
 
-- dataset/timeseries_1s/ — seven full 81-column platform exports and their coverage reports.
-- docs/LOCAL_COMPLETION_REPORT.md — local completion results and remaining release blockers.
+The 1 s export and 5 s task observations are separate products. Their shared timestamps do not imply that the latter is a direct resampling of the former.

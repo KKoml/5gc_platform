@@ -1,10 +1,20 @@
-# Completed network-metric imputation experiment
+# Network Metric Imputation
 
-This path-configured copy preserves prepared windows, fixed masks, checkpoints, predictions and metrics. DGATE_DATASET_ROOT is a 待配置数据位置 and must point to dataset/task_data for source-table loading.
+This task reconstructs artificially masked UPF interface receive/transmit bitrates and host CPU utilization. Each window spans 300 s at 5 s resolution. Missingness is either 20% random masking or a continuous gap of 30, 60, or 120 s.
 
-- Saved-result table aggregation: run python3 verify_paper_tables.py from evaluation/.
-- Full saved-result audit: run python3 code/audit.py from evaluation/imputation; it reads prepared inputs and saved predictions/checkpoints and may run substantial inference.
-- Evaluation from saved windows: code/experiment.py evaluate after configuring the dataset path.
-- From-scratch fit: use the combined-package command in `RUN_GUIDE.md`. A full six-checkpoint bundle-only fresh fit and post-freeze evaluation was executed; the run is recorded in `evaluation/verification/results/new_training/RETRAINING_VERIFICATION.json`. It is a new local run and does not replace the included paper-result artifacts.
+The comparisons include the training-set median, forward fill, linear interpolation, target-history SAITS-H, and multivariate SAITS-M. Evaluation uses only originally valid target values that were masked. Related interface or host-resource variables are masked together, and offline reconstruction can use observations on both sides of each gap.
 
-The paper reports D06/D07 only. Completed supplementary slots remain identified in the full result ledger.
+## Materials
+
+| Path | Contents |
+| --- | --- |
+| [Source code](code/) | Masking, model training, and evaluation |
+| [Configuration](metadata/config.json) | Features, architecture, optimization, and masking settings |
+| [Results](results/) | MAE summaries and comparisons by run, target, and missingness condition |
+| [Main comparisons](results/main_comparison.csv) | SAITS-H/M and statistical baseline comparisons |
+
+Table IV reports the two test runs, D06 and D07. SAITS training uses seeds 17, 29, and 43; the three fixed mask seeds are 101, 202, and 303. Results are averaged over masks and training seeds, then equally over the two runs.
+
+Use the [evaluation overview](../README.md) to aggregate the saved table. [Task construction](../../../appendix/D3_data_construction.md) and [model parameters](../../../appendix/E1_models_hyperparameters.md) give the detailed masking and model settings.
+
+Full prepared windows, masks, and preprocessing inputs are not included in this branch. Calculations from individual predictions, inference, and training require those files; see [Data access](../../../DATA_ACCESS.md) and the [evaluation instructions](../../../appendix/E3_reproduction.md).

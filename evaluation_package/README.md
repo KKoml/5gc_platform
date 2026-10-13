@@ -1,9 +1,16 @@
-# D-GATE Evaluation package
+# AI Task Evaluation
 
-Status: local anonymous-review candidate, not uploaded. This is the Evaluation subtree of the combined top-level package. Read `../README.md` and `../RUN_GUIDE.md` from the package root.
+This directory contains code, model configurations, fitted models, and saved results for the four tasks evaluated in the paper.
 
-The package includes matching later task code, configurations, saved results/checkpoints, the table-level task data, full current 1 s exports, and the separate T1 predictor inputs required to rebuild the previously omitted tensor cache. `docs/ASSEMBLY_REPORT.md` maps paper figures/tables to these materials; `docs/VERIFICATION.md` records actual replay results and limits.
+| Task | Contents |
+| --- | --- |
+| [Network performance prediction](evaluation/prediction/README.md) | SMA, PatchTST, and XGBoost results, including input comparisons |
+| [Fault detection](evaluation/detection/README.md) | Autoencoder, adapted KAN-AD, adapted TranAD, and supervised random forest |
+| [Fault classification](evaluation/localization/README.md) | LSTM, TCN, and random-forest classification of fault types and associated targets |
+| [Network metric imputation](evaluation/imputation/README.md) | Statistical baselines and SAITS-H/M under artificial missingness |
 
-`evaluation/verification/results/new_training/RETRAINING_VERIFICATION.json` records four separately named local training-flow checks. These new post-paper runs do not replace the historical result files; complete logs and new checkpoints remain outside the release package.
+For the shared protocol and table-generation entry point, start with the [evaluation overview](evaluation/README.md). Detailed descriptions cover [task inputs](../appendix/D3_data_construction.md), [model hyperparameters](../appendix/E1_models_hyperparameters.md), and [result aggregation](../appendix/E2_results_correspondence.md).
 
-No reviewer URL is embedded. The current field dictionary and 1 s exports have not been established as the exact historical versions behind the manuscript. Historical execution identity remains unconfirmed even where saved outputs and inference match exactly.
+## Using the materials
+
+Saved metric tables can be read and aggregated directly. Inference, training, and some calculations from individual predictions require the full task inputs, which are not yet available for download. See [Data access](../DATA_ACCESS.md) and the [evaluation instructions](../appendix/E3_reproduction.md) for the requirements of each step.
