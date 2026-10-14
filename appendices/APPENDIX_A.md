@@ -1,3 +1,5 @@
+> Historical platform-detail document. For the latest manuscript-bound A–D supplement and source-free detail, use the current review branch linked from the repository README. No platform source is distributed at this branch tip.
+
 # Appendix A. Platform implementation and deployment
 
 This appendix documents the Core/data-machine contribution against the supplied manuscript (`manifests/BUILD_CONTEXT.json` records its SHA-256). The collection implementation is pinned to `dffa0226d406235017f26a28c50ec59a304840ff`. It does not include model architecture, training hyperparameters, model weights or evaluation results produced by the separate experiment machine. Later UE ownership interfaces, new per-UE 1 s collectors and business prevalidation are not evidence for the historical W1 collection.
@@ -11,7 +13,7 @@ This appendix documents the Core/data-machine contribution against the supplied 
 | Core orchestration | K3s/Kubernetes, Core physical host plus VM worker | Exact historical K3s package version is not established by the available run provenance. Do not substitute today's installed version. |
 | Access orchestration | Separate K3s runtime on the gNB/UE physical host | Host-side orchestration and in-pod client execution are separate roles. |
 | Packet capture/decoding | Capture tools and tshark invoked by the archived scripts | Historical executable versions are not recorded in the provided version evidence; list them as unknown. |
-| Traffic generator | `trace_play_scenario_v11.py`, pinned file hash in `manifests/SOURCE_FILES.csv` | Real newly generated transport bytes follow trace timing/size. This is not original-content replay. |
+| Traffic generator | `trace_play_scenario_v11.py`, pinned file hash in `manifests/IMPLEMENTATION_REFERENCES.csv` | Real newly generated transport bytes follow trace timing/size. This is not original-content replay. |
 | Go build declaration | `go 1.24` in the pinned SMF module and `golang:1.24` Dockerfile | Build specification, not independent evidence of the historical binary toolchain. |
 | Offline processing | Pinned per-program SHA-256; later repair program has its own source hash | The collection commit, current dictionary and later task builders have separate versions. |
 | gtp5g and container/database runtime | Dependencies of UPF/K3s/MongoDB images | Historical kernel/module/package versions are not confirmed. Image digests are provided where recorded. |
@@ -34,7 +36,7 @@ Addresses in the publication copy are consistently mapped to documentation netwo
 
 ## A.3 Development correspondence
 
-The six-column [development correspondence table](../tables/PLATFORM_DEVELOPMENT_MAP.csv) specifies module, open-source basis, addition/adaptation, problem, inputs/outputs and exact implementation path. Open-source network protocols, Linux packet impairment and packet-capture facilities are distinguished from the platform's experiment lifecycle and data engineering. Files referenced there reside under `platform/source/`.
+The six-column [development correspondence table](../tables/PLATFORM_DEVELOPMENT_MAP.csv) specifies module, open-source basis, addition/adaptation, problem, inputs/outputs and exact implementation path. Open-source network protocols, Linux packet impairment and packet-capture facilities are distinguished from the platform's experiment lifecycle and data engineering. Implementation locations refer to the private audited checkout; source files have been withdrawn from this branch tip.
 
 The SMF extension, not expanded in Figure 1, writes the `SessionMap PDU session context` record at establishment and modification. It includes stage, SUPI, PDU session ID, DNN, UE IP, UPF identity/PFCP address, uplink/downlink/local TEIDs and RAN address/downlink TEID. [Real log excerpts](../samples/W1-D06/nf/smf-gold-sessionmap.log) and [associated records](../samples/W1-D06/derived/session_map.jsonl) demonstrate the source and parser output with consistent anonymous identifiers. The parser does not create identity merely from a row number or IP address.
 

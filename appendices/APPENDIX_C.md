@@ -1,3 +1,5 @@
+> Historical platform-detail document. For the latest manuscript-bound A–D supplement and source-free detail, use the current review branch linked from the repository README. No platform source is distributed at this branch tip.
+
 # Appendix C. Data organization, formats and coverage
 
 ## C.1 Run organization and the six data categories

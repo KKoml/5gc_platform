@@ -1,3 +1,5 @@
+> Historical platform-detail document. For the latest manuscript-bound A–D supplement and source-free detail, use the current review branch linked from the repository README. No platform source is distributed at this branch tip.
+
 # Appendix B. Configuration and execution control
 
 ## B.1 Configuration carriers and actual settings
