@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
+  <title id="title">D-GATE: from controlled 5G experiments to offline AI evaluation</title>
+  <desc id="desc">A simplified view of the paper architecture. Experiment control manages traffic, network interventions and recovery in a UE/gNB, free5GC and DN network. Multi-source collection, retrieval, session association, alignment and quality checks produce tables, associated records and reports. Prepared task inputs support performance prediction, fault detection, known-start fault classification and artificial-mask metric imputation.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto-start-reverse"><path d="M0 0L7 3.5L0 7Z" fill="#536a78"/></marker>
+    <marker id="dataArrow" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7Z" fill="#c26b45"/></marker>
+    <marker id="recordArrow" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#c26b45"/></marker>
+    <style>
+      text {font-family:Arial,"Nimbus Sans",sans-serif;fill:#203443}
+      .heading {font-size:22px;font-weight:700}
+      .label {font-size:18px;font-weight:700}
+      .body {font-size:17px}
+      .note {font-size:15px;fill:#526575}
+      .edge {fill:none;stroke:#536a78;stroke-width:2;marker-end:url(#arrow)}
+      .data {fill:none;stroke:#c26b45;stroke-width:2.6;marker-end:url(#dataArrow)}
+      .icon {fill:none;stroke:#3a5876;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </defs>
+  <rect width="1200" height="460" rx="14" fill="#f6f8fa"/>
+  <g id="controlled-experiments">
+    <rect x="22" y="22" width="454" height="366" rx="10" fill="white" stroke="#d7e0e7"/>
+    <text x="43" y="58" class="heading">Controlled 5G experiments</text>
+    <rect x="43" y="82" width="412" height="66" rx="6" fill="#e6ecdf"/>
+    <text x="249" y="109" class="label" text-anchor="middle">Experiment control</text>
+    <text x="249" y="133" class="body" text-anchor="middle">Traffic · Interventions · Recovery checks</text>
+    <rect x="43" y="193" width="412" height="142" rx="7" fill="#eaf0f8"/>
+    <g id="access-network">
+      <rect x="70" y="218" width="22" height="36" rx="3" class="icon"/>
+      <path d="M78 249h6M112 250l9-24 9 24M115 241h12M109 220q-8 9 0 18M133 220q8 9 0 18" class="icon"/>
+      <circle cx="121" cy="220" r="3.5" fill="#3a5876"/>
+      <text x="104" y="281" class="label" text-anchor="middle">UE / gNB</text>
+      <text x="104" y="307" class="note" text-anchor="middle">UERANSIM</text>
+    </g>
+    <g id="core-network">
+      <rect x="224" y="215" width="49" height="16" rx="3" class="icon"/>
+      <rect x="224" y="237" width="49" height="16" rx="3" class="icon"/>
+      <path d="M232 223h3m6 0h23M232 245h3m6 0h23" class="icon"/>
+      <text x="249" y="281" class="label" text-anchor="middle">5G core</text>
+      <text x="249" y="307" class="note" text-anchor="middle">free5GC</text>
+    </g>
+    <g id="data-network">
+      <rect x="377" y="214" width="34" height="40" rx="3" class="icon"/>
+      <path d="M385 223h18m-18 8h18m-18 14h3" class="icon"/>
+      <text x="394" y="281" class="label" text-anchor="middle">DN server</text>
+      <text x="394" y="307" class="note" text-anchor="middle">TCP / UDP</text>
+    </g>
+    <path id="n3-traffic" d="M145 236H215" class="edge" marker-start="url(#arrow)"/>
+    <path id="n6-traffic" d="M282 236H368" class="edge" marker-start="url(#arrow)"/>
+    <text x="175" y="224" class="note" text-anchor="middle">N3</text>
+    <text x="324" y="224" class="note" text-anchor="middle">N6</text>
+    <rect id="execution-records" x="43" y="348" width="412" height="28" rx="5" fill="#faeade"/>
+    <text x="249" y="367" class="note" text-anchor="middle">Execution records and recovery outcomes</text>
+  </g>
+  <g id="collection-and-processing">
+    <rect x="518" y="22" width="302" height="366" rx="10" fill="white" stroke="#d7e0e7"/>
+    <text x="539" y="58" class="heading">Collect and prepare</text>
+    <rect x="539" y="82" width="260" height="76" rx="6" fill="#e6ecdf"/>
+    <text x="669" y="111" class="label" text-anchor="middle">Multi-source collection</text>
+    <text x="669" y="139" class="body" text-anchor="middle">Packets · Logs · State</text>
+    <rect id="processing" x="539" y="187" width="260" height="94" rx="6" fill="#f1f5ed"/>
+    <text x="669" y="212" class="body" text-anchor="middle">Retrieve and verify</text>
+    <text x="669" y="239" class="body" text-anchor="middle">Associate sessions</text>
+    <text x="669" y="266" class="body" text-anchor="middle">Align and check quality</text>
+    <rect x="539" y="311" width="260" height="59" rx="6" fill="#faeade"/>
+    <text x="669" y="336" class="label" text-anchor="middle">Tables · Records · Reports</text>
+    <text x="669" y="358" class="note" text-anchor="middle">Task-specific input construction</text>
+  </g>
+  <g id="offline-evaluation">
+    <rect x="864" y="22" width="314" height="366" rx="10" fill="white" stroke="#d7e0e7"/>
+    <text x="885" y="58" class="heading">Offline AI evaluation</text>
+    <path d="M885 158H1157M885 230H1157M885 302H1157" stroke="#e0e7ec"/>
+    <g id="prediction"><text x="885" y="112" class="label">Performance prediction</text><text x="885" y="139" class="note">Historical observations → targets</text></g>
+    <g id="detection"><text x="885" y="184" class="label">Fault detection</text><text x="885" y="211" class="note">Detection from collected observations</text></g>
+    <g id="classification"><text x="885" y="256" class="label">Fault classification</text><text x="885" y="283" class="note">Known start · Type and target</text></g>
+    <g id="imputation"><text x="885" y="328" class="label">Metric imputation</text><text x="885" y="355" class="note">Artificial masks · Reconstruction</text></g>
+  </g>
+  <g id="workflow-connections">
+    <!-- Dashed control; solid orange records/data. Endpoints meet module boundaries. -->
+    <path id="control-to-network" d="M249 148V193" class="edge" stroke-dasharray="5 5"/>
+    <path id="control-to-records" d="M43 115H32V362H43" class="data" style="marker-end:url(#recordArrow)"/>
+    <path id="network-to-collection" d="M455 264H486V120H539" class="data"/>
+    <path id="records-to-processing" d="M455 362H506V212H539" class="data"/>
+    <path id="collection-to-processing" d="M669 158V187" class="data"/>
+    <path id="processing-to-outputs" d="M669 281V311" class="data"/>
+    <!-- A shared routing spine fans out task-specific inputs to every evaluation task. -->
+    <path id="task-input-spine" d="M799 341H844V120" fill="none" stroke="#c26b45" stroke-width="2.6"/>
+    <path id="input-to-prediction" d="M844 120H877" class="data"/>
+    <path id="input-to-detection" d="M844 192H877" class="data"/>
+    <path id="input-to-classification" d="M844 264H877" class="data"/>
+    <path id="input-to-imputation" d="M844 341H877" class="data"/>
+    <circle cx="844" cy="192" r="3" fill="#c26b45"/>
+    <circle cx="844" cy="264" r="3" fill="#c26b45"/>
+    <circle cx="844" cy="341" r="3" fill="#c26b45"/>
+  </g>
+  <text x="43" y="429" class="body">Platform descriptions</text>
+  <text x="348" y="429" class="body">Linked run examples</text>
+  <text x="647" y="429" class="body">Prepared datasets</text>
+  <text x="927" y="429" class="body">Code and saved results</text>
+  <circle cx="317" cy="423" r="2.5" fill="#a1afb8"/><circle cx="616" cy="423" r="2.5" fill="#a1afb8"/><circle cx="896" cy="423" r="2.5" fill="#a1afb8"/>
+</svg>
