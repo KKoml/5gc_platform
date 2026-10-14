@@ -1,0 +1,68 @@
+{
+  "version": 1.1,
+  "name": "5GAD_Game_Google_Attack_Scenario",
+  "description": "基于ue_tracer目录结构的流量回放剧本",
+  "defaults": {
+    "start_offset": 0,
+    "resample": true,
+    "random_seed": 20260713,
+    "server_acceptors": 4,
+    "server_workers": 6144,
+    "server_admission": 12288
+  },
+  "schedule": [
+    {
+      "id": "main_5gad_1ue",
+      "role": "main",
+      "kind": "normal",
+      "start_offset": 0,
+      "source": {
+        "type": "dir",
+        "path": "all_data/5GAD/5GAD-normal/5GAD-1ue"
+      }
+    },
+    {
+      "id": "aux_online_gaming",
+      "role": "aux",
+      "kind": "normal",
+      "start_offset": 0,
+      "source": {
+        "type": "dir",
+        "path": "all_data/5G聚合游戏/Global/Online_gaming"
+      },
+      "controls": [
+        {
+          "type": "pause",
+          "time": 10.0,
+          "duration": 10.0
+        },
+        {
+          "type": "skip",
+          "time": 700.0,
+          "duration": 100.0
+        }
+      ]
+    },
+    {
+      "id": "aux_google_attack",
+      "role": "aux",
+      "kind": "attack",
+      "start_offset": 15.0,
+      "source": {
+        "type": "random_pool",
+        "total_count": 80,
+        "resample": true,
+        "pools": [
+          {
+            "path": "all_data/fgnet-main/dataset/Office/900-1000s",
+            "percentage": 20
+          },
+          {
+            "path": "all_data/fgnet-main/dataset/Video/80-90s",
+            "percentage": 80
+          }
+        ]
+      }
+    }
+  ]
+}

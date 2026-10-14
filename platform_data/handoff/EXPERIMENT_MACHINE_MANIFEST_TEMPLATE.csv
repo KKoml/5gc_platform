@@ -1,0 +1,1 @@
+run_id,artifact_relative_path,artifact_sha256,time_start,time_end,grid_secs,fields,mask_fields,producer_relative_path,producer_version,producer_sha256,source_relative_paths,source_sha256,ordered_transformations,split,normalizer_fit_scope,provision,cloud_url

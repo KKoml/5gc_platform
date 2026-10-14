@@ -1,0 +1,7 @@
+figure1_name,source_patterns,table1_alias
+Network traffic,pcap/;derived/*flows*;derived/*timeseries*,Network traffic
+Signaling and sessions,nf/;events/control-plane.jsonl;derived/session_map.jsonl,Signaling and sessions
+NF resources and state,metrics/nf-resource.jsonl;metrics/nf-state.jsonl;metrics/k8s-pod-*.jsonl,NF resources and state
+Host / interface statistics,metrics/host-resource.jsonl;metrics/interface-resource.jsonl,Host / interface statistics
+gNB and UE status,ran/;events/ran-*.jsonl;metrics/ran-*.jsonl,gNB and UE status
+Application transfers,traffic/;ran/traffic-clients/,Application transfers

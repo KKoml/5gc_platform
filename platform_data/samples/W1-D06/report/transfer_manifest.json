@@ -1,0 +1,1711 @@
+{
+  "expected_required_ids": [
+    "core-b-upf-gold",
+    "ran-artifacts",
+    "ran-client-segment-gold-initial-0001",
+    "ran-client-segment-gold-post-b01-p02-n3-block-gold-ran-0004",
+    "ran-client-segment-gold-post-b01-p06-n3-loss-gold-ran-0005",
+    "ran-client-segment-gold-post-b01-p08-n4-block-gold-ran-0003",
+    "ran-client-segment-gold-post-b01-p12-upf-stop-gold-ran-0002",
+    "ran-client-segment-gold-post-b02-p02-n3-block-gold-ran-0009",
+    "ran-client-segment-gold-post-b02-p06-n3-loss-gold-ran-0006",
+    "ran-client-segment-gold-post-b02-p08-n4-block-gold-ran-0008",
+    "ran-client-segment-gold-post-b02-p12-upf-stop-gold-ran-0007",
+    "ran-client-segment-gold-post-b03-p02-n3-block-gold-ran-0013",
+    "ran-client-segment-gold-post-b03-p06-n3-loss-gold-ran-0010",
+    "ran-client-segment-gold-post-b03-p08-n4-block-gold-ran-0012",
+    "ran-client-segment-gold-post-b03-p12-upf-stop-gold-ran-0011",
+    "ran-client-segment-gold-post-b04-p02-n3-block-gold-ran-0014",
+    "ran-client-segment-gold-post-b04-p06-n3-loss-gold-ran-0015",
+    "ran-client-segment-gold-post-b04-p08-n4-block-gold-ran-0017",
+    "ran-client-segment-gold-post-b04-p12-upf-stop-gold-ran-0016",
+    "ran-client-segment-gold-post-b05-p02-n3-block-gold-ran-0019",
+    "ran-client-segment-gold-post-b05-p06-n3-loss-gold-ran-0020",
+    "ran-client-segment-gold-post-b05-p08-n4-block-gold-ran-0018",
+    "ran-client-segment-gold-post-b05-p12-upf-stop-gold-ran-0021",
+    "ran-client-segment-gold-post-b06-p02-n3-block-gold-ran-0023",
+    "ran-client-segment-gold-post-b06-p06-n3-loss-gold-ran-0024",
+    "ran-client-segment-gold-post-b06-p08-n4-block-gold-ran-0022",
+    "ran-client-segment-gold-post-b06-p12-upf-stop-gold-ran-0025",
+    "ran-client-segment-silver-initial-0001",
+    "ran-client-segment-silver-post-b01-p03-n3-delay-silver-ran-0004",
+    "ran-client-segment-silver-post-b01-p05-n3-loss-silver-ran-0002",
+    "ran-client-segment-silver-post-b01-p09-n6-block-silver-ran-0003",
+    "ran-client-segment-silver-post-b01-p11-upf-stop-silver-ran-0005",
+    "ran-client-segment-silver-post-b02-p03-n3-delay-silver-ran-0008",
+    "ran-client-segment-silver-post-b02-p05-n3-loss-silver-ran-0006",
+    "ran-client-segment-silver-post-b02-p09-n6-block-silver-ran-0007",
+    "ran-client-segment-silver-post-b02-p11-upf-stop-silver-ran-0009",
+    "ran-client-segment-silver-post-b03-p03-n3-delay-silver-ran-0013",
+    "ran-client-segment-silver-post-b03-p05-n3-loss-silver-ran-0011",
+    "ran-client-segment-silver-post-b03-p09-n6-block-silver-ran-0012",
+    "ran-client-segment-silver-post-b03-p11-upf-stop-silver-ran-0010",
+    "ran-client-segment-silver-post-b04-p03-n3-delay-silver-ran-0014",
+    "ran-client-segment-silver-post-b04-p05-n3-loss-silver-ran-0016",
+    "ran-client-segment-silver-post-b04-p09-n6-block-silver-ran-0017",
+    "ran-client-segment-silver-post-b04-p11-upf-stop-silver-ran-0015",
+    "ran-client-segment-silver-post-b05-p03-n3-delay-silver-ran-0019",
+    "ran-client-segment-silver-post-b05-p05-n3-loss-silver-ran-0021",
+    "ran-client-segment-silver-post-b05-p09-n6-block-silver-ran-0018",
+    "ran-client-segment-silver-post-b05-p11-upf-stop-silver-ran-0020",
+    "ran-client-segment-silver-post-b06-p03-n3-delay-silver-ran-0024",
+    "ran-client-segment-silver-post-b06-p05-n3-loss-silver-ran-0022",
+    "ran-client-segment-silver-post-b06-p09-n6-block-silver-ran-0023",
+    "ran-client-segment-silver-post-b06-p11-upf-stop-silver-ran-0025",
+    "traffic-artifacts"
+  ],
+  "finalize_errors": [],
+  "remote_cleanup": {
+    "performed": false,
+    "policy": "disabled"
+  },
+  "run_id": "W1-D06",
+  "schema_version": "scenario-one-transfer.v1",
+  "status": "verified",
+  "transfers": {
+    "core-b-upf-gold": {
+      "attempts": 1,
+      "bytes": 2247346305,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/core-b-upf.json",
+          "sha256": "fb74cb98ca6cbf2f1c4cf67855893d0f34671cce34cb170e63ed4ac7c01b126c",
+          "size": 594
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 293,
+      "destination": "pcap/remote-upf-gold",
+      "inventory_file_sha256": "94a38e3fb75979fc34653661ad88644ec3b9339024d05d6cf092f042f3e23150",
+      "inventory_path": "report/transfers/core-b-upf-gold/remote_inventory.json",
+      "inventory_sha256": "2d29036333b916e8065f90b218797349dc2df68e433fc07a89ffb904720b7a94",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/tmp/free5gc-s1-captures/W1-D06/upf-gold",
+        "ssh_target": "experiment@192.0.2.31",
+        "type": "ssh"
+      },
+      "source_role": "core-b",
+      "status": "verified",
+      "transfer_id": "core-b-upf-gold",
+      "verified": true
+    },
+    "ran-artifacts": {
+      "attempts": 1,
+      "bytes": 315819,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-artifacts.json",
+          "sha256": "2d99afefecca38ccc985e662cd90c58017a48fb8fdf05e7b7616c3745e93c752",
+          "size": 1337
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/verified",
+      "inventory_file_sha256": "67052c9d20bbafdab605dcb83810c486a7a51c17cf6f071eddbc7c0b2a5b767e",
+      "inventory_path": "report/transfers/ran-artifacts/remote_inventory.json",
+      "inventory_sha256": "6e4b08c00880bac961d6a1b41b2e3616be3f7757503841e2be9e2efe64817f32",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/tmp/scenario-one/W1-D06",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-artifacts",
+      "verified": true
+    },
+    "ran-client-segment-gold-initial-0001": {
+      "attempts": 1,
+      "bytes": 23523301,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-initial-0001.json",
+          "sha256": "de2821dd7c0acb57b8e8abf3768ed721f4d24be21af82660b7033370cd1cc9a8",
+          "size": 560
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 9,
+      "destination": "ran/traffic-clients/stats/gold/initial-0001",
+      "inventory_file_sha256": "894c3b2ac37a13a7e65b69c08acd2d79e2a4a3412be0f9ab39f85d53013c2f25",
+      "inventory_path": "report/transfers/ran-client-segment-gold-initial-0001/remote_inventory.json",
+      "inventory_sha256": "35ac51fb0db57a1f287cdc007fed88a94b98069604ccacc4e5a864cc9b256c4f",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/initial-0001",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-initial-0001",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b01-p02-n3-block-gold-ran-0004": {
+      "attempts": 1,
+      "bytes": 15862049,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b01-p02-n3-block-gold-ran-0004.json",
+          "sha256": "2c1d1f73ef0b923c930039051943e59f7eefe55be494413792623020a29c99e8",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b01-p02-n3-block-gold-ran-0004",
+      "inventory_file_sha256": "901dc6dede7d65c20a59241bb17179586db23370fc95f51e150842491851115d",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b01-p02-n3-block-gold-ran-0004/remote_inventory.json",
+      "inventory_sha256": "252cf6a5019b099f2bff04c90830c9d3ce2991e8c3e1b4445702aafb719753f9",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b01-p02-n3-block-gold-ran-0004",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b01-p02-n3-block-gold-ran-0004",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b01-p06-n3-loss-gold-ran-0005": {
+      "attempts": 1,
+      "bytes": 7270439,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b01-p06-n3-loss-gold-ran-0005.json",
+          "sha256": "da9a0a4ef337d5e87a5be7cea941e6063338feb4eda0766e4f25c35553f751c4",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b01-p06-n3-loss-gold-ran-0005",
+      "inventory_file_sha256": "7ecda3a14cd7ff9caa6f7d2c361d4ec1aaa8f1ae43a05a23e5d03d5e885ef954",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b01-p06-n3-loss-gold-ran-0005/remote_inventory.json",
+      "inventory_sha256": "f372dcdad925cd09b6f5a3b3ec6f41831cb870e5fffca977a96b097fad6d890d",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b01-p06-n3-loss-gold-ran-0005",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b01-p06-n3-loss-gold-ran-0005",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b01-p08-n4-block-gold-ran-0003": {
+      "attempts": 1,
+      "bytes": 8832411,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b01-p08-n4-block-gold-ran-0003.json",
+          "sha256": "cd28e99592849d157a78753e04073c2e3b2d2e48dccd45052a50e79b0ae9c628",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b01-p08-n4-block-gold-ran-0003",
+      "inventory_file_sha256": "ec3d5e4c25db15e5ec2c664d8d837bbc100dd4ef39c9197398295effb3e3139e",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b01-p08-n4-block-gold-ran-0003/remote_inventory.json",
+      "inventory_sha256": "72be9f0630fa3a7c106c998065ecc6a1590b162c7314f469258e4c1d055a2ade",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b01-p08-n4-block-gold-ran-0003",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b01-p08-n4-block-gold-ran-0003",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b01-p12-upf-stop-gold-ran-0002": {
+      "attempts": 1,
+      "bytes": 17768676,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b01-p12-upf-stop-gold-ran-0002.json",
+          "sha256": "ae3dc1d3ea5e47b54ba6229c056907e00c0c8639ab400c0adb12057ebd0450c8",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b01-p12-upf-stop-gold-ran-0002",
+      "inventory_file_sha256": "32aced22b8622c301aabd91a8300efb8fd311cbbd5af7f710f217da1ae2a8f42",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b01-p12-upf-stop-gold-ran-0002/remote_inventory.json",
+      "inventory_sha256": "de71f4d3234e3ad88a2a6cd4067ae8841085b498a7979a417b08f78e037034ea",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b01-p12-upf-stop-gold-ran-0002",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b01-p12-upf-stop-gold-ran-0002",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b02-p02-n3-block-gold-ran-0009": {
+      "attempts": 1,
+      "bytes": 25073190,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b02-p02-n3-block-gold-ran-0009.json",
+          "sha256": "a86a409779a31d78b2e29cb284efddd99ea4e8378a8c35f09bc01f8e37b5cf15",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 13,
+      "destination": "ran/traffic-clients/stats/gold/post-b02-p02-n3-block-gold-ran-0009",
+      "inventory_file_sha256": "f4f7130fe3fcdf105e167e52640ca931576004dfe41bb8d2c8ca5cbae38c4760",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b02-p02-n3-block-gold-ran-0009/remote_inventory.json",
+      "inventory_sha256": "cfa5bac1183d684abf1d4963b90340a5658edbd6f1fb31c23b3d9a29f7d41829",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b02-p02-n3-block-gold-ran-0009",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b02-p02-n3-block-gold-ran-0009",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b02-p06-n3-loss-gold-ran-0006": {
+      "attempts": 1,
+      "bytes": 13748755,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b02-p06-n3-loss-gold-ran-0006.json",
+          "sha256": "8cdd8706d0da7ed98c65c949953eb0bc38b5ffdbdfb164b1d478392a9e24f61d",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b02-p06-n3-loss-gold-ran-0006",
+      "inventory_file_sha256": "c6f42be9b2a7f3d3dcb5c009713fa7b119e44220c8faddf1f108941dd34cf159",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b02-p06-n3-loss-gold-ran-0006/remote_inventory.json",
+      "inventory_sha256": "9dcdd40766274ab6afca5974664fc9f530fa55598a1b933247db5095202c9403",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b02-p06-n3-loss-gold-ran-0006",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b02-p06-n3-loss-gold-ran-0006",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b02-p08-n4-block-gold-ran-0008": {
+      "attempts": 1,
+      "bytes": 8669802,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b02-p08-n4-block-gold-ran-0008.json",
+          "sha256": "0b7f6dc651984d7e82d80abdc49c03ab52d2a5c4bc2a6f86530af1539e9be195",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b02-p08-n4-block-gold-ran-0008",
+      "inventory_file_sha256": "e00145a6f938b81f5af2cba276d4734213884c2189edc17a4ab531da595b88f3",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b02-p08-n4-block-gold-ran-0008/remote_inventory.json",
+      "inventory_sha256": "3fe63a2711564441d6ccb39fe60ad8cf78b8907a1c56dd4bc17dda6f83ade60e",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b02-p08-n4-block-gold-ran-0008",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b02-p08-n4-block-gold-ran-0008",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b02-p12-upf-stop-gold-ran-0007": {
+      "attempts": 1,
+      "bytes": 20325922,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b02-p12-upf-stop-gold-ran-0007.json",
+          "sha256": "dd2c4ae59d2a3c94480c1bf460e422a0fc470a55cf2cad5a3b22d1c732739c2a",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b02-p12-upf-stop-gold-ran-0007",
+      "inventory_file_sha256": "c5bf2eae3cd07057e918a440f127b38153d7d4439eff3549751e7e1d98b878e5",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b02-p12-upf-stop-gold-ran-0007/remote_inventory.json",
+      "inventory_sha256": "dc13ea971f2601eeb3785407765d3258f6d0e693cb428c0984a3ab9235f549e1",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b02-p12-upf-stop-gold-ran-0007",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b02-p12-upf-stop-gold-ran-0007",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b03-p02-n3-block-gold-ran-0013": {
+      "attempts": 1,
+      "bytes": 8688906,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b03-p02-n3-block-gold-ran-0013.json",
+          "sha256": "90d3fa95a8bd07d4ad9907596493bd36df1cce656b083ba5ef260d3fee1311bf",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b03-p02-n3-block-gold-ran-0013",
+      "inventory_file_sha256": "84f7afbc1ebd658951ffc2fa7a87396f7d0836ba003eaf7a4d121472736db645",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b03-p02-n3-block-gold-ran-0013/remote_inventory.json",
+      "inventory_sha256": "79ec30efa2b48e1ef8798a52a2a6d8edfaa118f49b035264d80a2e004ad5e7e6",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b03-p02-n3-block-gold-ran-0013",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b03-p02-n3-block-gold-ran-0013",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b03-p06-n3-loss-gold-ran-0010": {
+      "attempts": 1,
+      "bytes": 7270495,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b03-p06-n3-loss-gold-ran-0010.json",
+          "sha256": "fd5dc2a62c2a93a5278a71588f7d6cae56d3e49d6db75b7f087a7e3bb7476e36",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b03-p06-n3-loss-gold-ran-0010",
+      "inventory_file_sha256": "14aedb25b64efd20caabd951c84150288616a07eafe9a8fa4eba6121970d39ff",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b03-p06-n3-loss-gold-ran-0010/remote_inventory.json",
+      "inventory_sha256": "69b3cf5040249f9362b1e6354e1e86590848cd030a0721c11683d594f31a5e03",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b03-p06-n3-loss-gold-ran-0010",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b03-p06-n3-loss-gold-ran-0010",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b03-p08-n4-block-gold-ran-0012": {
+      "attempts": 1,
+      "bytes": 8780807,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b03-p08-n4-block-gold-ran-0012.json",
+          "sha256": "ec6fe6afee78ca99c8c329075dc9f20348786e6a766caa953df79ec09f6d5abc",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b03-p08-n4-block-gold-ran-0012",
+      "inventory_file_sha256": "12546d6fd91a39f1a925d2fcd42fae877838ee53387ffb270e08fbbf9c66ab5f",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b03-p08-n4-block-gold-ran-0012/remote_inventory.json",
+      "inventory_sha256": "22f788ffcc3a0dae0c80d4d68d14b8a82e7db68f37da3178af0a73b5c654604a",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b03-p08-n4-block-gold-ran-0012",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b03-p08-n4-block-gold-ran-0012",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b03-p12-upf-stop-gold-ran-0011": {
+      "attempts": 1,
+      "bytes": 26756450,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b03-p12-upf-stop-gold-ran-0011.json",
+          "sha256": "669751e7a145a4eacc445a0c925dbc11a695f0168126cb4a89f5670960d415bf",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b03-p12-upf-stop-gold-ran-0011",
+      "inventory_file_sha256": "aa481f7ba9a08d2c2ecb8aedd1fe74e8769a8aff0d538993288a2bfbb428dc57",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b03-p12-upf-stop-gold-ran-0011/remote_inventory.json",
+      "inventory_sha256": "fb031c757663e613e64bb443b79eb744118e967277dd395dfed8afae4c425d14",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b03-p12-upf-stop-gold-ran-0011",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b03-p12-upf-stop-gold-ran-0011",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b04-p02-n3-block-gold-ran-0014": {
+      "attempts": 1,
+      "bytes": 16956980,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b04-p02-n3-block-gold-ran-0014.json",
+          "sha256": "2877ab6cdb3024bad73511646471a89420b33aab83f6f26c2a306890de003f29",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b04-p02-n3-block-gold-ran-0014",
+      "inventory_file_sha256": "7430742cae38a13da76a2f896ccb582d36aa2d2fd7919c216bdd29c46b79f7c5",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b04-p02-n3-block-gold-ran-0014/remote_inventory.json",
+      "inventory_sha256": "42988c6a65420511975d2a14a42d9227f99947e605493d6897946f3b3530e7dc",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b04-p02-n3-block-gold-ran-0014",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b04-p02-n3-block-gold-ran-0014",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b04-p06-n3-loss-gold-ran-0015": {
+      "attempts": 1,
+      "bytes": 6740037,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b04-p06-n3-loss-gold-ran-0015.json",
+          "sha256": "95c693940a3d2c1007a74abd4cfee50ee8e4cf2babb086db05fac30b026cb4a0",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b04-p06-n3-loss-gold-ran-0015",
+      "inventory_file_sha256": "23825e2ca6bb7f8914f2a7de7069dc008379fd97d04833f3b26833184f3517db",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b04-p06-n3-loss-gold-ran-0015/remote_inventory.json",
+      "inventory_sha256": "6814403cf237db0223459dd78aef6dbde137e7e59e67f0ff4a41d06bb30bd444",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b04-p06-n3-loss-gold-ran-0015",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b04-p06-n3-loss-gold-ran-0015",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b04-p08-n4-block-gold-ran-0017": {
+      "attempts": 1,
+      "bytes": 11423599,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b04-p08-n4-block-gold-ran-0017.json",
+          "sha256": "d2f026f4159f7948fe6ad0beccd09913a2a1efe7e01074c8a0d4d8df553cef1a",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b04-p08-n4-block-gold-ran-0017",
+      "inventory_file_sha256": "1b750713b138e55138e68e50caec722af573fc2c5ae847ce0d5354dd96eef5e9",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b04-p08-n4-block-gold-ran-0017/remote_inventory.json",
+      "inventory_sha256": "5c7b281b0c17daf1e846aaaf30094008d743433a860dcaa567c2b014ebd36715",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b04-p08-n4-block-gold-ran-0017",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b04-p08-n4-block-gold-ran-0017",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b04-p12-upf-stop-gold-ran-0016": {
+      "attempts": 1,
+      "bytes": 23313549,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b04-p12-upf-stop-gold-ran-0016.json",
+          "sha256": "1808f1320acdceb5c81128e46d8323b5b18b5bbfc0836f7bd7fd19719a4f0640",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b04-p12-upf-stop-gold-ran-0016",
+      "inventory_file_sha256": "c146fb01b64b22358bb90f9d1fba921474d3095ba398befcc0eb114093b5baa1",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b04-p12-upf-stop-gold-ran-0016/remote_inventory.json",
+      "inventory_sha256": "0a2c250e3574ddd14f61ed62c64254a032cf4765e8822c662f770c5e837bb6da",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b04-p12-upf-stop-gold-ran-0016",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b04-p12-upf-stop-gold-ran-0016",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b05-p02-n3-block-gold-ran-0019": {
+      "attempts": 1,
+      "bytes": 17005013,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b05-p02-n3-block-gold-ran-0019.json",
+          "sha256": "10dcc5875247a9a0ac89360bbea78c9423fd7378343ba40602690c2d2c8d78e9",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b05-p02-n3-block-gold-ran-0019",
+      "inventory_file_sha256": "3f8734ec897cc90fd8b01f24400c1f42f70599d18c1985b36023192c7d00f744",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b05-p02-n3-block-gold-ran-0019/remote_inventory.json",
+      "inventory_sha256": "4918e42ffbf4603adc14275de96a7bfaeb009b793da366834fb33f6f7cb99c8e",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b05-p02-n3-block-gold-ran-0019",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b05-p02-n3-block-gold-ran-0019",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b05-p06-n3-loss-gold-ran-0020": {
+      "attempts": 1,
+      "bytes": 7416700,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b05-p06-n3-loss-gold-ran-0020.json",
+          "sha256": "a04e1059847a9e4114bdc368603831ce5bafeb37463fdd942e165c375e25c576",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b05-p06-n3-loss-gold-ran-0020",
+      "inventory_file_sha256": "17dd096c8a0fd085217f36cc71a2ecdd2df869ec40f1afebaad25dee3278f28e",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b05-p06-n3-loss-gold-ran-0020/remote_inventory.json",
+      "inventory_sha256": "d38c08ae685c1a64723f9124f0420fd5323537c5d4e02f50cae51a43d7ed0f9c",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b05-p06-n3-loss-gold-ran-0020",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b05-p06-n3-loss-gold-ran-0020",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b05-p08-n4-block-gold-ran-0018": {
+      "attempts": 1,
+      "bytes": 8775928,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b05-p08-n4-block-gold-ran-0018.json",
+          "sha256": "d3da0a3fab99c1c96b1836a17dbbd7177e808740b2b92b624ff4d2ee5b4e2c52",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b05-p08-n4-block-gold-ran-0018",
+      "inventory_file_sha256": "f889c2e87b9496630599c5e124f5e2c6764048346e967962613d7bf5c2a11d30",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b05-p08-n4-block-gold-ran-0018/remote_inventory.json",
+      "inventory_sha256": "fa26039b376591c8014e698a0d48c35d7aab147881e71185da484db00674f740",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b05-p08-n4-block-gold-ran-0018",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b05-p08-n4-block-gold-ran-0018",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b05-p12-upf-stop-gold-ran-0021": {
+      "attempts": 1,
+      "bytes": 31441810,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b05-p12-upf-stop-gold-ran-0021.json",
+          "sha256": "7ccc8709a9092ba392cf2db8378327cffcd01dbe34776707ff25cc210b88caa5",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 13,
+      "destination": "ran/traffic-clients/stats/gold/post-b05-p12-upf-stop-gold-ran-0021",
+      "inventory_file_sha256": "d9585a5c934fed44f1ec700ac40f1e980df37ccb4a083ec839404c0af35d3e4f",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b05-p12-upf-stop-gold-ran-0021/remote_inventory.json",
+      "inventory_sha256": "1b50120e58ff8382ecc0000b5e9642b07572fb0b65118799a77127b4403cf171",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b05-p12-upf-stop-gold-ran-0021",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b05-p12-upf-stop-gold-ran-0021",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b06-p02-n3-block-gold-ran-0023": {
+      "attempts": 1,
+      "bytes": 17077040,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b06-p02-n3-block-gold-ran-0023.json",
+          "sha256": "ea71c2c997c0fdfbe4031a5fb662aa4a97cec359990f104f29275af2bbf60ecc",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 10,
+      "destination": "ran/traffic-clients/stats/gold/post-b06-p02-n3-block-gold-ran-0023",
+      "inventory_file_sha256": "bd052c05ed9c0e780dd47d5c433b4ad8bbec91d44fb090e4775fa53aa8b44721",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b06-p02-n3-block-gold-ran-0023/remote_inventory.json",
+      "inventory_sha256": "3c659a6d53c22bb085f506f0061ba361fa7a399c44bfea9893a8ff976de019a7",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b06-p02-n3-block-gold-ran-0023",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b06-p02-n3-block-gold-ran-0023",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b06-p06-n3-loss-gold-ran-0024": {
+      "attempts": 1,
+      "bytes": 7838622,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b06-p06-n3-loss-gold-ran-0024.json",
+          "sha256": "f9ff7844614f9ab83d23b11f34b6b483df4d4692e23134a7dc0937cb8c19afe3",
+          "size": 626
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b06-p06-n3-loss-gold-ran-0024",
+      "inventory_file_sha256": "e39a63ce1dc9c894da312e1874541d3bcca7bb1510c2c0198511c26e8d2696f4",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b06-p06-n3-loss-gold-ran-0024/remote_inventory.json",
+      "inventory_sha256": "d51239433859f7581cd70dd7db296e3194511c7e38246cd849956dbf8495b0a2",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b06-p06-n3-loss-gold-ran-0024",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b06-p06-n3-loss-gold-ran-0024",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b06-p08-n4-block-gold-ran-0022": {
+      "attempts": 1,
+      "bytes": 11216297,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b06-p08-n4-block-gold-ran-0022.json",
+          "sha256": "2b831186383908369d4dc0ca5091add7d41813b22c489835fa37674d7ae4f3c2",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/gold/post-b06-p08-n4-block-gold-ran-0022",
+      "inventory_file_sha256": "50a7ecf1bfc02ceff76ba621b51204e4899cf1528f87947a27cf93e949dfc148",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b06-p08-n4-block-gold-ran-0022/remote_inventory.json",
+      "inventory_sha256": "a04cf77135f25f34120b76695bf82a8cfcca234623891ece0799c9948d05f735",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b06-p08-n4-block-gold-ran-0022",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b06-p08-n4-block-gold-ran-0022",
+      "verified": true
+    },
+    "ran-client-segment-gold-post-b06-p12-upf-stop-gold-ran-0025": {
+      "attempts": 1,
+      "bytes": 71028705,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-gold-post-b06-p12-upf-stop-gold-ran-0025.json",
+          "sha256": "0406eed75f540c43007ce36d52e82cd721dc176727023fae9e75a739800eadc3",
+          "size": 629
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 41,
+      "destination": "ran/traffic-clients/stats/gold/post-b06-p12-upf-stop-gold-ran-0025",
+      "inventory_file_sha256": "fd325f430357eea454ffbdd1785268e75861447d443a49972fe5499e5a891499",
+      "inventory_path": "report/transfers/ran-client-segment-gold-post-b06-p12-upf-stop-gold-ran-0025/remote_inventory.json",
+      "inventory_sha256": "dcc9a8aa9fcdef41ff265bcd597cf44f2574be1039335a1304b3ae3ff1257820",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/gold/post-b06-p12-upf-stop-gold-ran-0025",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-gold-post-b06-p12-upf-stop-gold-ran-0025",
+      "verified": true
+    },
+    "ran-client-segment-silver-initial-0001": {
+      "attempts": 1,
+      "bytes": 28926489,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-initial-0001.json",
+          "sha256": "ece87ec071fc8301497dfef6de481c7a73d9852131cd07e4b189053e73bafbd3",
+          "size": 567
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 11,
+      "destination": "ran/traffic-clients/stats/silver/initial-0001",
+      "inventory_file_sha256": "d2e382c5b0c5b902b6ea2f4994dc5affa30eb6588fab862015761d07f0e421ea",
+      "inventory_path": "report/transfers/ran-client-segment-silver-initial-0001/remote_inventory.json",
+      "inventory_sha256": "ca8c065891768a9c6a8c0760b31afd385f63f4a4a9596fd1863f6f1d75848d66",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/initial-0001",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-initial-0001",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b01-p03-n3-delay-silver-ran-0004": {
+      "attempts": 1,
+      "bytes": 8105248,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b01-p03-n3-delay-silver-ran-0004.json",
+          "sha256": "4dae87e988fb8404d1eb57a1007fd79dfafa3c00853bab44f81a2509d6113979",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b01-p03-n3-delay-silver-ran-0004",
+      "inventory_file_sha256": "c29da6662b610934b2b1c1a37c3cc4b5206967952578e6ea43093328be851d80",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b01-p03-n3-delay-silver-ran-0004/remote_inventory.json",
+      "inventory_sha256": "ed78dbac49d343bf0b6ca0c5d7b074e76c8baedc5e0bb121a89c2ceb32cd0d67",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b01-p03-n3-delay-silver-ran-0004",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b01-p03-n3-delay-silver-ran-0004",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b01-p05-n3-loss-silver-ran-0002": {
+      "attempts": 1,
+      "bytes": 7973708,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b01-p05-n3-loss-silver-ran-0002.json",
+          "sha256": "e7518ca29b141f7058d9862075909d5b584d48af15ea81f8e69ddd66d0b08ec1",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b01-p05-n3-loss-silver-ran-0002",
+      "inventory_file_sha256": "38897525cba827e474ad17c989f2fcd2bf8d5357ff1ad9c9b762e5c13693c263",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b01-p05-n3-loss-silver-ran-0002/remote_inventory.json",
+      "inventory_sha256": "280d46beb16936b3c38fbf12ee9ce232866054a4daa24eab1ea234c1fa41b802",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b01-p05-n3-loss-silver-ran-0002",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b01-p05-n3-loss-silver-ran-0002",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b01-p09-n6-block-silver-ran-0003": {
+      "attempts": 1,
+      "bytes": 7809762,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b01-p09-n6-block-silver-ran-0003.json",
+          "sha256": "22496500400a23a80a854d49de1a9d2508f27fd44c9f5ee4a08345f24ab1256c",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b01-p09-n6-block-silver-ran-0003",
+      "inventory_file_sha256": "48fcb1d2154e5e95947028f136ec743a20acdbb80cc5bc4d5fc4e731624892ff",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b01-p09-n6-block-silver-ran-0003/remote_inventory.json",
+      "inventory_sha256": "fa8d3fa83eb38ef3846dac0f514310fbf96acc08121dacbf800e2b7cda79e02b",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b01-p09-n6-block-silver-ran-0003",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b01-p09-n6-block-silver-ran-0003",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b01-p11-upf-stop-silver-ran-0005": {
+      "attempts": 1,
+      "bytes": 43818742,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b01-p11-upf-stop-silver-ran-0005.json",
+          "sha256": "1ad5e31f09cebfd45d534329d9d6eaf1ddd572169aa5a115949cee0c7ad31221",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 16,
+      "destination": "ran/traffic-clients/stats/silver/post-b01-p11-upf-stop-silver-ran-0005",
+      "inventory_file_sha256": "c28e4f173f0eb07ed5ba0acd1d0f95c7f048b5cb9143d7b92a15efe9bc61813d",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b01-p11-upf-stop-silver-ran-0005/remote_inventory.json",
+      "inventory_sha256": "e690d5e160cd8bd0997adea8dfb7cbf19447a27bc5d1d0350e937e2ede9c7220",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b01-p11-upf-stop-silver-ran-0005",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b01-p11-upf-stop-silver-ran-0005",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b02-p03-n3-delay-silver-ran-0008": {
+      "attempts": 1,
+      "bytes": 8554917,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b02-p03-n3-delay-silver-ran-0008.json",
+          "sha256": "70f9cdbd28599db42241ae44fa66879652aae9af9d355e9543fd20009f3fe629",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b02-p03-n3-delay-silver-ran-0008",
+      "inventory_file_sha256": "b03f14f31b9ae4d2de85ca2f2250315d608d12a42df730fe9b1c105510d08184",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b02-p03-n3-delay-silver-ran-0008/remote_inventory.json",
+      "inventory_sha256": "b2c895bc9ce6c342c60ef63b4fc11788211198402677eed4278b9a05e2bbc266",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b02-p03-n3-delay-silver-ran-0008",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b02-p03-n3-delay-silver-ran-0008",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b02-p05-n3-loss-silver-ran-0006": {
+      "attempts": 1,
+      "bytes": 7779762,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b02-p05-n3-loss-silver-ran-0006.json",
+          "sha256": "e8d1b7127cd6fca588bdda0de7d9722eb01cff4f3dfbbf57eea570d9776d002d",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b02-p05-n3-loss-silver-ran-0006",
+      "inventory_file_sha256": "b22eb1936748ddc9cb5da45b3153405b6af71a327520641765b26ffb566805c4",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b02-p05-n3-loss-silver-ran-0006/remote_inventory.json",
+      "inventory_sha256": "123a52e5a75c19cc149350b94e06f40ffb07e369bbb035482b898690be7d1582",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b02-p05-n3-loss-silver-ran-0006",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b02-p05-n3-loss-silver-ran-0006",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b02-p09-n6-block-silver-ran-0007": {
+      "attempts": 1,
+      "bytes": 7525458,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b02-p09-n6-block-silver-ran-0007.json",
+          "sha256": "92ff95a7888fbc111bf61c8f67b6589981e6d90063feb61242b87869e2bf3cd5",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b02-p09-n6-block-silver-ran-0007",
+      "inventory_file_sha256": "54979d2be809f657c88b3fa08cc82501bf453200d2e473dbde55a37cf6478cb9",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b02-p09-n6-block-silver-ran-0007/remote_inventory.json",
+      "inventory_sha256": "d4f3d308e7df8256841a55dd37dd9503cd33150bc138962f844d5181d446d837",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b02-p09-n6-block-silver-ran-0007",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b02-p09-n6-block-silver-ran-0007",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b02-p11-upf-stop-silver-ran-0009": {
+      "attempts": 1,
+      "bytes": 8441670,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b02-p11-upf-stop-silver-ran-0009.json",
+          "sha256": "9f836743d4c2341011c8972302ebb19a2d148682d5b473c6eddc9165b8095604",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b02-p11-upf-stop-silver-ran-0009",
+      "inventory_file_sha256": "26dd8e69b52257db6b6be22b0cdb39bb28a205f98f6c58672856b9cef0ab88ea",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b02-p11-upf-stop-silver-ran-0009/remote_inventory.json",
+      "inventory_sha256": "30c8a6d48a218afb8405f32cda5756807ab1adb63c4de8ee7930932ee6cf2550",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b02-p11-upf-stop-silver-ran-0009",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b02-p11-upf-stop-silver-ran-0009",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b03-p03-n3-delay-silver-ran-0013": {
+      "attempts": 1,
+      "bytes": 7525466,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b03-p03-n3-delay-silver-ran-0013.json",
+          "sha256": "afb05b9e837005254a5d13fe26734fd05d626744f1758097b54bd41b5c8b175e",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b03-p03-n3-delay-silver-ran-0013",
+      "inventory_file_sha256": "83c45971c04bf5f9c9a7b33ef500b9cc115e9d49d2b0ae1e9226d216952f9e86",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b03-p03-n3-delay-silver-ran-0013/remote_inventory.json",
+      "inventory_sha256": "fb3e318fcd9ecc5f53db48ed6f4d37d277d18f1d1e1f7f4a1e092339038797d3",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b03-p03-n3-delay-silver-ran-0013",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b03-p03-n3-delay-silver-ran-0013",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b03-p05-n3-loss-silver-ran-0011": {
+      "attempts": 1,
+      "bytes": 16138450,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b03-p05-n3-loss-silver-ran-0011.json",
+          "sha256": "acf66f0faadf5ccf09be761f5358e01ec5a6fa44372ecf5ea5546440454df494",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b03-p05-n3-loss-silver-ran-0011",
+      "inventory_file_sha256": "3e45eedab88175ffc7e897ac57d90b41b0b7971186a2b6be10526bce4f2826da",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b03-p05-n3-loss-silver-ran-0011/remote_inventory.json",
+      "inventory_sha256": "e3753a1295d30cc9a3d99b0d5cd122c37050b7fd96201fa6a5f9a8f2c585f17b",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b03-p05-n3-loss-silver-ran-0011",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b03-p05-n3-loss-silver-ran-0011",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b03-p09-n6-block-silver-ran-0012": {
+      "attempts": 1,
+      "bytes": 7543008,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b03-p09-n6-block-silver-ran-0012.json",
+          "sha256": "a44424d3ace5f25dd2db6e7047c87173a9d7fb7c085edb6663ed9d97afeed581",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b03-p09-n6-block-silver-ran-0012",
+      "inventory_file_sha256": "426f79a9229a22efaa8cf1677290c88a4b471a95ba0b666df85d845547f70ac2",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b03-p09-n6-block-silver-ran-0012/remote_inventory.json",
+      "inventory_sha256": "087e33551d4fca0b0c963ab82ad3ca86c7dba322131a65b9bfa45bbbaa09e072",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b03-p09-n6-block-silver-ran-0012",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b03-p09-n6-block-silver-ran-0012",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b03-p11-upf-stop-silver-ran-0010": {
+      "attempts": 1,
+      "bytes": 26099518,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b03-p11-upf-stop-silver-ran-0010.json",
+          "sha256": "2e2240e716c7bce925f2a9d3200d935088f7cb909b8f2a1b3550a708128c1349",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 13,
+      "destination": "ran/traffic-clients/stats/silver/post-b03-p11-upf-stop-silver-ran-0010",
+      "inventory_file_sha256": "841de97571a94d89a3417e0c95fc4d7196a6690f2ab8d0f31c12d41f7871aee8",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b03-p11-upf-stop-silver-ran-0010/remote_inventory.json",
+      "inventory_sha256": "7bf5e172da0c191b02320fa8a7d2f5e8d1ec7da73973ae75c44fc1192f800c73",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b03-p11-upf-stop-silver-ran-0010",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b03-p11-upf-stop-silver-ran-0010",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b04-p03-n3-delay-silver-ran-0014": {
+      "attempts": 1,
+      "bytes": 8529690,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b04-p03-n3-delay-silver-ran-0014.json",
+          "sha256": "3e21a04ea513ae674d7bcdf795066f2f29bc915a77844601be2ac717b4b72630",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b04-p03-n3-delay-silver-ran-0014",
+      "inventory_file_sha256": "75a416583316689034d102ef02cc0654b48374f787cd54a91c97f34614530c56",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b04-p03-n3-delay-silver-ran-0014/remote_inventory.json",
+      "inventory_sha256": "fab2a6fdaa9c4b1bc36c2a311857b8a891033cc81e20293de64feda369efa82f",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b04-p03-n3-delay-silver-ran-0014",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b04-p03-n3-delay-silver-ran-0014",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b04-p05-n3-loss-silver-ran-0016": {
+      "attempts": 1,
+      "bytes": 8333334,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b04-p05-n3-loss-silver-ran-0016.json",
+          "sha256": "9102057252a466fd61cc1ce47209b9853e8ab54d6a24ce1de0f46bcd931ef1a8",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b04-p05-n3-loss-silver-ran-0016",
+      "inventory_file_sha256": "4854a318963330b0d18a9c1105ded65bf64e67932c642fce30500f6505484999",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b04-p05-n3-loss-silver-ran-0016/remote_inventory.json",
+      "inventory_sha256": "364e356d45b27e6320263ad0c8b726b0107588d63274c9a0fa6f8cd08a5d8f02",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b04-p05-n3-loss-silver-ran-0016",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b04-p05-n3-loss-silver-ran-0016",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b04-p09-n6-block-silver-ran-0017": {
+      "attempts": 1,
+      "bytes": 13974887,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b04-p09-n6-block-silver-ran-0017.json",
+          "sha256": "c6bc4be275a8f335104d4c19a8a9ebb3e2d13faf5ccf8ff1e71567398d34e4a2",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b04-p09-n6-block-silver-ran-0017",
+      "inventory_file_sha256": "70177cae46f9719a82df6374823c911c94210b62324c52519f3a8b7429a97d51",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b04-p09-n6-block-silver-ran-0017/remote_inventory.json",
+      "inventory_sha256": "76faf800a3074e4c10b3b1d63a13fde74b821a94188b24233597df5722418c5a",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b04-p09-n6-block-silver-ran-0017",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b04-p09-n6-block-silver-ran-0017",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b04-p11-upf-stop-silver-ran-0015": {
+      "attempts": 1,
+      "bytes": 25432626,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b04-p11-upf-stop-silver-ran-0015.json",
+          "sha256": "ec65380a821c39ec2ab0c2c9be4d1036f136f4283c518c5b12124fae110bc761",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 13,
+      "destination": "ran/traffic-clients/stats/silver/post-b04-p11-upf-stop-silver-ran-0015",
+      "inventory_file_sha256": "6af281080c8bcf33624c8284ac85d4a12db0d289340b0dc910e32f6933fb8d00",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b04-p11-upf-stop-silver-ran-0015/remote_inventory.json",
+      "inventory_sha256": "e7342c9b109f2f29ea02caeaf72a38c9d3cd99588ee364e7dc24d6e88b898129",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b04-p11-upf-stop-silver-ran-0015",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b04-p11-upf-stop-silver-ran-0015",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b05-p03-n3-delay-silver-ran-0019": {
+      "attempts": 1,
+      "bytes": 8195653,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b05-p03-n3-delay-silver-ran-0019.json",
+          "sha256": "1ced5ea61403b80de947b71a97401b2824b94d0b7f270c841c6a380d2609e9af",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b05-p03-n3-delay-silver-ran-0019",
+      "inventory_file_sha256": "b9da1edae11119a0c8dc6016a9fcf08e49103e4be1b9bc27b92ce7da1edca36f",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b05-p03-n3-delay-silver-ran-0019/remote_inventory.json",
+      "inventory_sha256": "23751d165928bc75a6568e3dc7480d1af7db036f0d2263db9fd0d37a3aa766ab",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b05-p03-n3-delay-silver-ran-0019",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b05-p03-n3-delay-silver-ran-0019",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b05-p05-n3-loss-silver-ran-0021": {
+      "attempts": 1,
+      "bytes": 8399723,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b05-p05-n3-loss-silver-ran-0021.json",
+          "sha256": "d57dbbdefc50d8725478cacce07bd9f516a4a0228bf270eec87e812896e772e7",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b05-p05-n3-loss-silver-ran-0021",
+      "inventory_file_sha256": "7eae842e5a6e7c7181cbce8e8fa7ff324b1c99809ddc74b8cde27754bce67a84",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b05-p05-n3-loss-silver-ran-0021/remote_inventory.json",
+      "inventory_sha256": "1a49e2989dc2e77fbfe60d3d6ef663b8ba6dfedba644045e41fdd681c869ce6b",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b05-p05-n3-loss-silver-ran-0021",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b05-p05-n3-loss-silver-ran-0021",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b05-p09-n6-block-silver-ran-0018": {
+      "attempts": 1,
+      "bytes": 7504478,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b05-p09-n6-block-silver-ran-0018.json",
+          "sha256": "7ea9d6f6d87a8d8fb20dd6de49fd479ba6a814b0e1849d3ce7d2f29b91e8d0c4",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b05-p09-n6-block-silver-ran-0018",
+      "inventory_file_sha256": "2f7a6aae2488ba19e19d5ef64636c9d1a6beea102734e4d8c584449599fa9025",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b05-p09-n6-block-silver-ran-0018/remote_inventory.json",
+      "inventory_sha256": "5dce181171241702646f4a32a04d407cb66cacb4364a34a101640d3ccaad1dc7",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b05-p09-n6-block-silver-ran-0018",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b05-p09-n6-block-silver-ran-0018",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b05-p11-upf-stop-silver-ran-0020": {
+      "attempts": 1,
+      "bytes": 26251935,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b05-p11-upf-stop-silver-ran-0020.json",
+          "sha256": "e4568222b6b4b90b3c31b3f2863a2361c1c50280221d7a3f4960209d44cbb2b9",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 13,
+      "destination": "ran/traffic-clients/stats/silver/post-b05-p11-upf-stop-silver-ran-0020",
+      "inventory_file_sha256": "c3c1252fd2d23ae2da95dca41d54805070ffde036cc74cd11ba6a71375a0c670",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b05-p11-upf-stop-silver-ran-0020/remote_inventory.json",
+      "inventory_sha256": "7e1238a60ce4c6d542fa3504f91ffcfc69b40d22986acb74b574a4abd9ceef6f",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b05-p11-upf-stop-silver-ran-0020",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b05-p11-upf-stop-silver-ran-0020",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b06-p03-n3-delay-silver-ran-0024": {
+      "attempts": 1,
+      "bytes": 8374970,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b06-p03-n3-delay-silver-ran-0024.json",
+          "sha256": "18fe78e7d163877d4e9285a053ce635bfb3e571f271e09d8254aea1b917a4a04",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b06-p03-n3-delay-silver-ran-0024",
+      "inventory_file_sha256": "0e3bff96d8236e5299c455f66e3b30155bb82e3f7f2a17332afdb270352e7049",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b06-p03-n3-delay-silver-ran-0024/remote_inventory.json",
+      "inventory_sha256": "274bcf256297aad12540c93a40733a96f9f4920635b8a733bfd562ff45d2a14e",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b06-p03-n3-delay-silver-ran-0024",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b06-p03-n3-delay-silver-ran-0024",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b06-p05-n3-loss-silver-ran-0022": {
+      "attempts": 1,
+      "bytes": 8312607,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b06-p05-n3-loss-silver-ran-0022.json",
+          "sha256": "3f18c8139aa6604844aeeaeaecddb3018b668997ae718074aeee0266f263609d",
+          "size": 639
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b06-p05-n3-loss-silver-ran-0022",
+      "inventory_file_sha256": "df47c600dd827343f174763288bfde2540f5d8826ca11c343a3b8ada5bfe5b35",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b06-p05-n3-loss-silver-ran-0022/remote_inventory.json",
+      "inventory_sha256": "e0b2e97cd2b83a5b662b44e6ce0404604c9256cde29dd039ebd0265396bcb322",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b06-p05-n3-loss-silver-ran-0022",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b06-p05-n3-loss-silver-ran-0022",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b06-p09-n6-block-silver-ran-0023": {
+      "attempts": 1,
+      "bytes": 13962746,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b06-p09-n6-block-silver-ran-0023.json",
+          "sha256": "98816c2baf4840e9ee6b6d0d3aa29fac75223f608cc27333da49ac8391077709",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 7,
+      "destination": "ran/traffic-clients/stats/silver/post-b06-p09-n6-block-silver-ran-0023",
+      "inventory_file_sha256": "727ebf9498e76449db61fd30c908845050434a23eb4a2e40300e0e23183c056c",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b06-p09-n6-block-silver-ran-0023/remote_inventory.json",
+      "inventory_sha256": "5f57a2ff9bce9fcb735fd3af1800f6ac036ce9f823147a9a6c4fad0de9f46b4b",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b06-p09-n6-block-silver-ran-0023",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b06-p09-n6-block-silver-ran-0023",
+      "verified": true
+    },
+    "ran-client-segment-silver-post-b06-p11-upf-stop-silver-ran-0025": {
+      "attempts": 1,
+      "bytes": 93697014,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/ran-client-segment-silver-post-b06-p11-upf-stop-silver-ran-0025.json",
+          "sha256": "50c04fd4d83ca050728193b091bbc05504e1af0a2cb58bff25ff3f787159bc3a",
+          "size": 642
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 49,
+      "destination": "ran/traffic-clients/stats/silver/post-b06-p11-upf-stop-silver-ran-0025",
+      "inventory_file_sha256": "f467d4804647d3f5a92c0875e65fe4b3087bef3ba12c24e3b50c5d1b248ab36c",
+      "inventory_path": "report/transfers/ran-client-segment-silver-post-b06-p11-upf-stop-silver-ran-0025/remote_inventory.json",
+      "inventory_sha256": "4647121a6af43c0f04574c3247e44ed098b2ea4302a147513abf171fbb3650de",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/home/experiment/ue_tracer/runs/W1-D06/silver/post-b06-p11-upf-stop-silver-ran-0025",
+        "ssh_target": "experiment@192.0.2.40",
+        "type": "ssh"
+      },
+      "source_role": "ran",
+      "status": "verified",
+      "transfer_id": "ran-client-segment-silver-post-b06-p11-upf-stop-silver-ran-0025",
+      "verified": true
+    },
+    "traffic-artifacts": {
+      "attempts": 1,
+      "bytes": 4214,
+      "closed_evidence": [
+        {
+          "path": "/mnt/free5gc_experiments/W1-D06/report/transfer-closed/traffic-artifacts.json",
+          "sha256": "08bb37f4c64dcf67ec19f140d7d12a95b38942b549ef2b341f13ab4a0cb9a693",
+          "size": 2083
+        }
+      ],
+      "commit": "atomic_rename",
+      "count": 5,
+      "destination": "traffic/verified",
+      "inventory_file_sha256": "0a5111eb937e1c11192859c77092c69ad7ad5f8588a7a2314b178d7b18b4ae24",
+      "inventory_path": "report/transfers/traffic-artifacts/remote_inventory.json",
+      "inventory_sha256": "37e88e932b427986ee87b2b09f002a87d1d90f280f57ce74dc6610bcfcd4f2cc",
+      "remote_cleanup": {
+        "performed": false,
+        "policy": "disabled"
+      },
+      "required": true,
+      "source": {
+        "root": "/tmp/scenario-one-traffic/W1-D06/transfer-bundle",
+        "ssh_target": "experiment@192.0.2.20",
+        "type": "ssh"
+      },
+      "source_role": "traffic",
+      "status": "verified",
+      "transfer_id": "traffic-artifacts",
+      "verified": true
+    }
+  },
+  "verified": true
+}

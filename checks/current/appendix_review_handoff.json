@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "manifest": "manifests/core_handoff.csv",
+      "entries": 123,
+      "provided_hash_mismatches": []
+    },
+    {
+      "manifest": "manifests/prediction_handoff.csv",
+      "entries": 14,
+      "provided_hash_mismatches": []
+    },
+    {
+      "prediction_manifest_entries": 14,
+      "provided_hash_mismatches": []
+    },
+    {
+      "core24_order_and_names_match_across_core_candidate_final_feature_set_detection_imputation": true,
+      "variables": 24
+    },
+    {
+      "dictionary_definitions": 400,
+      "dictionary_metric_roles": 215,
+      "base_columns": 81,
+      "canonical_v3_metric_roles": 36,
+      "cross_domain_metric_name_overlaps": 39,
+      "other_domain_only_metric_overlaps": [
+        "gold_ue_count",
+        "silver_ue_count",
+        "ue_count"
+      ]
+    },
+    {
+      "prediction_D06_history_header": [
+        "run_id",
+        "slot",
+        "split",
+        "task",
+        "window_id",
+        "anchor_c",
+        "anchor_epoch",
+        "cutoff_rule",
+        "history_position",
+        "history_row_index",
+        "history_row_timestamp",
+        "history_row_epoch",
+        "n3_uplink_bitrate_bps",
+        "n3_downlink_bitrate_bps",
+        "n6_bitrate_bps",
+        "cp_pdu_session_success_rate",
+        "cp_pdu_session_failure_count",
+        "end_to_end_rtt_ms",
+        "jitter_ms",
+        "packet_loss_rate",
+        "cp_active_session_count",
+        "cp_pending_session_count",
+        "cp_pdu_session_request_count",
+        "registration_success_rate",
+        "registration_failure_count",
+        "registration_request_count",
+        "n4_bitrate_bps",
+        "host_cpu_pct",
+        "host_mem_used_pct",
+        "host_loadavg_1",
+        "n3_uplink_bitrate_bps__missing",
+        "n3_downlink_bitrate_bps__missing",
+        "n6_bitrate_bps__missing",
+        "cp_pdu_session_success_rate__missing",
+        "cp_pdu_session_failure_count__missing",
+        "end_to_end_rtt_ms__missing",
+        "jitter_ms__missing",
+        "packet_loss_rate__missing",
+        "cp_active_session_count__missing",
+        "cp_pending_session_count__missing",
+        "cp_pdu_session_request_count__missing",
+        "registration_success_rate__missing",
+        "registration_failure_count__missing",
+        "registration_request_count__missing",
+        "n4_bitrate_bps__missing",
+        "host_cpu_pct__missing",
+        "host_mem_used_pct__missing",
+        "host_loadavg_1__missing",
+        "anchor_phase_600_cos",
+        "anchor_phase_600_sin",
+        "anchor_phase_900_cos",
+        "anchor_phase_900_sin",
+        "schedule_anchor_row_days"
+      ],
+      "history_file_sha256": "9df84e76aa5b836753b2816c9176f49d4b7750b3834511ad55d08b19132df690",
+      "18_variable_contract_reference": "appendix/D3_data_construction.md; evaluation_package/evaluation/prediction/src/data.py"
+    }
+  ],
+  "historical_paper_execution_identity": "unconfirmed in contributed manifests; not upgraded by these file checks",
+  "models_retrained_or_platform_started": false
+}

@@ -1,27 +1,11 @@
-Source: data_machine/platform/source_snapshot/scripts/online_recovery_checkpoint.py
-
-25: TRAFFIC_SNAPSHOT_SCHEMA_VERSION = "scenario-one-traffic-snapshot.v1"
-26: WINDOW_SECS = 60.0
-27: WINDOW_COUNT = 2
-28: MIN_SAMPLES = 15
-29: COMPLETION_THRESHOLD = 0.95
-30: FAILURE_THRESHOLD = 0.05
-31: TIMEOUT_THRESHOLD = 0.05
-32: CHECKPOINT_SCHEMA_VERSION = "scenario-one-online-recovery-checkpoint.v1"
-33: CHECKPOINT_KEYS = {
-34:     "schema_version",
-35:     "accepted",
-36:     "run_id",
-37:     "overlap_group",
-38:     "fault_ids",
-39:     "sequence_indices",
-40:     "checks",
-41:     "stop_reason",
-42: }
-43: SAFE_RUN_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$")
-44: SAFE_GROUP = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.-]*$")
-45: READY_TIMEOUT_SECS = 45.0
-46: TRAFFIC_ANCHOR_TIMEOUT_SECS = 60.0
-47: POLL_INTERVAL_SECS = 5.0
-48: GUARD_SECS = 120.0
-49: OUTPUT_MARGIN_SECS = 15.0
+Recovery parameter evidence (documentary summary; no platform source excerpt)
+Implementation reference: scripts/online_recovery_checkpoint.py
+Collection revision: dffa0226d406235017f26a28c50ec59a304840ff
+Window duration: 60 s
+Required consecutive windows: 2
+Minimum terminal transfers per window/tier: 15
+Minimum completion fraction: 0.95
+Maximum failure fraction: 0.05
+Maximum timeout fraction: 0.05
+Stability guard: 120 s
+Exact run results: platform_data/samples/W1-D06/events/recovery_checkpoints.jsonl

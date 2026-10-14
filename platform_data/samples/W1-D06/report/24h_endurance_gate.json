@@ -1,0 +1,91 @@
+{
+  "accepted": true,
+  "checks": [
+    {
+      "accepted": true,
+      "detail": {
+        "requested_hours": 24.0,
+        "target_hours": 24.0
+      },
+      "name": "endurance.target_hours"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "expected_duration_secs": 86400
+      },
+      "name": "endurance.expected_duration"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "enabled": true,
+        "manifest": "pcap/capture-manifest.jsonl",
+        "rotate_secs": 300.0,
+        "rotate_size_mb": 512.0,
+        "snaplen": 256
+      },
+      "name": "endurance.capture_rotation_enabled"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "covered_secs": 87253.0,
+        "expected_duration_secs": 86400
+      },
+      "name": "endurance.health_coverage"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "low_disk_samples": 0,
+        "min_free_bytes": 85899345920
+      },
+      "name": "endurance.disk_free_80gib"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "missing": []
+      },
+      "name": "endurance.capture_families"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "bad_segments": [],
+        "count": 0
+      },
+      "name": "endurance.capture_segments"
+    },
+    {
+      "accepted": true,
+      "detail": {
+        "collector_alive_count": 1,
+        "collector_alive_gaps": [
+          {
+            "allowed_secs": 360.0,
+            "collector_evidence": {
+              "dead_samples": 0,
+              "health_samples": 2748,
+              "matched_samples": 2748,
+              "missing_samples": 0,
+              "pids": [
+                4101028
+              ]
+            },
+            "family": "sbi-http",
+            "gap_secs": 1490.0
+          }
+        ],
+        "count": 0,
+        "gaps": []
+      },
+      "name": "endurance.capture_segment_gaps"
+    }
+  ],
+  "endurance_target_hours": 24.0,
+  "gate": "24h_endurance",
+  "generated_at": "2026-08-08T01:21:24.414097Z",
+  "reasons": []
+}

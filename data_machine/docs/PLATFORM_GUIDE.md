@@ -15,7 +15,7 @@ The source tree contains no Git history. It is a selected source snapshot, not a
 
 ## Static/offline checks
 
-From platform/source_snapshot, the recorded checks run Python syntax compilation in memory and bash -n on shell scripts. Dataset reading and sample validation are offline. These checks do not start network functions.
+Historical private-source checks used in-memory Python syntax compilation and shell syntax checks. No collection-platform source snapshot is distributed in this review tree. Dataset reading and sample validation are offline. These checks do not start network functions.
 
 ## Runtime operations not executed
 

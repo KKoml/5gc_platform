@@ -55,4 +55,4 @@ python evaluation_package/evaluation/verification/train_imputation_from_bundle.p
 
 ## E.3.4　范围与访问限制
 
-当前仓库已提供1 s导出、400项字典、5 s任务表及上述评估输入，但未提供重建全部原始采集过程所需的完整日志、业务语料和部署材料；PCAP不在上传范围内。预测、24变量表与平台导出的未确认关系见 [LINEAGE.md](LINEAGE.md)。选定平台源码位于同仓库的 `codex/platform-data-appendices-20261007` 分支，路径为 `platform/source/`。仓库文件可用不等于论文匿名入口已同步可用。[RUN_GUIDE.md](../RUN_GUIDE.md)保留更细命令与既有验证范围。
+当前仓库已提供1 s导出、400项字典、5 s任务表及上述评估输入，但未提供重建全部原始采集过程所需的完整日志、业务语料和部署材料；PCAP不在上传范围内。预测、24变量表与平台导出的未确认关系见 [LINEAGE.md](LINEAGE.md)。平台实现、配置和关联样例现位于本分支 `platform_data/`；本审阅目录不包含采集平台源码。仓库文件可用不等于论文匿名入口已同步可用。[RUN_GUIDE.md](../RUN_GUIDE.md)保留更细命令与既有验证范围。

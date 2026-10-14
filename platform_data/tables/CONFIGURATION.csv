@@ -1,0 +1,24 @@
+scope,parameter,actual_saved_value,evidence_relative_path,interpretation
+network,core_mode,k8s;multi-worker,run_manifest.json,network snapshot
+network,ran_runtime,k3s,run_manifest.json,access snapshot
+network,initial_gNB_UE,4;40,config/runtime/fault-plan.json,simulated population
+network,NF_types_instances,9;12; plus database,config/runtime/k8s-topology.json,not 13 NF types
+network,DNN_groups,internet-silver;internet-gold,config/runtime/k8s-topology.json,twenty initial UEs per group
+network,core_workers,core-a;core-b,config/runtime/k8s-topology.json,manuscript describes host and its VM
+traffic,generating_UEs,one per DNN,run_manifest.json,forty UEs is not forty continuously traffic-generating UEs
+traffic,random_seed,20260713,traffic/config/scenario_vali1.json,actual file selection needs segment/source evidence
+traffic,random_pool,80; office 20%;video 80%;resample true,traffic/config/scenario_vali1.json,source references only; source corpus omitted
+traffic,server_admission,4 acceptors;6144 workers;12288 admission,traffic/config/scenario_vali1.json,configuration limits; not measured concurrency
+traffic,auxiliary_controls,pause 10s at t=10;skip 100s at t=700; random auxiliary offset=15s,traffic/config/scenario_vali1.json,item-relative times
+schedule,workload_secs,86400,config/runtime/fault-plan.json,planned duration
+schedule,first_start_interval,1800s;900s,config/runtime/fault-plan.json,"scheduled, not actual start time"
+schedule,duration,120s or 180s; see duration_by_target,config/runtime/fault-plan.json,do not apply one value to an entire family
+schedule,core_access_entries,72;72,config/runtime/fault-plan.json,288 start/end command results
+collection,control_plane_interval,2s,platform/source/scripts/core_collectors.sh,configured; actual query timestamps retained
+collection,host_NF_RAN_interval,5s,platform/source/scripts/core_collectors.sh,periodic source; not synchronized per-UE truth
+capture,rotation,300s;512MiB;snaplen256,run_manifest.json,some captured packets truncated
+recovery,business_windows,2x60s;minimum15;completion0.95;failure0.05;timeout0.05,platform/source/scripts/online_recovery_checkpoint.py,per tier; anchored to post-readiness cohort
+recovery,clean_guard,120s,platform/source/scripts/online_recovery_checkpoint.py,required before later intervention
+export,business_window,60s;minimum20,platform/source/scripts/export_model_timeseries_csv.py,base-table rule distinct from recovery rule
+export,base_grid,1s,report/v3_timeseries.csv,"output grid, not raw-source frequency"
+task_candidate,core24_grid,5s,handoff/CORE24_CANDIDATE_FEATURES.json,final experiment-machine input unverified

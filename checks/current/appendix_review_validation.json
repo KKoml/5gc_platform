@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "no_collection_platform_source_in_current_tree",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "reviewer_navigation_local_links",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "new_material_json_csv_structure",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "new_material_anonymous_identity_scan",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "new_material_credential_scan",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "33_same_run_provided_file_hashes",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "dictionary_400_215_and_base_81",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "seven_runs_611777_rows_81_columns",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "144_plan_entries_288_execution_results_72_linked_accepted_checkpoints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "440_real_base_sample_rows_81_columns_1s_same_run",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "latest_pdf_fingerprint_matches_both_contexts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "provided_final_task_handoff_hashes_and_core24_order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "evaluation_and_prepared_data_payloads_unchanged",
+      "passed": true,
+      "detail": [
+        "APPENDIX.html",
+        "APPENDIX.md",
+        "APPENDIX_NAVIGATION.md",
+        "CHECKS.md",
+        "DATA_ACCESS.md",
+        "PAPER_RESULT_MAP.md",
+        "PUBLICATION_STATUS.md",
+        "README.md",
+        "appendix/E3_reproduction.md",
+        "data_machine/docs/PLATFORM_GUIDE.md",
+        "manifests/core_handoff.csv",
+        "manuscript_supplement/README.md",
+        "manuscript_supplement/source_notes/recovery_constants.txt"
+      ]
+    },
+    {
+      "check": "obsolete_32_metric_candidate_not_in_review_tree",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "scope": "Current provided files, hashes and links; no platform execution, model fitting or manuscript modification; old Git history and anonymous access separate"
+}

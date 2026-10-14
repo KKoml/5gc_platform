@@ -1,0 +1,5 @@
+# Remaining evidence and delivery boundaries
+
+The experiment-machine inputs, exact feature lists, split assignments, numerical seeds, model settings and saved results are now present in the repository. See the [canonical C/D appendices](../manuscript_supplement/README.md) and [current handoff checks](../checks/current/appendix_review_handoff.json). Earlier Core-side candidate metadata is preserved as historical evidence rather than treated as the final task manifest.
+
+Still unresolved: historical-paper execution identity (the existing conversion manifests say `unconfirmed`); historical dictionary version/hash; missing historical package versions; third-party trace redistribution rights; full anonymous raw-data access; and verification that the anonymous mirror serves this reviewed revision. The private non-PCAP backup is complete but is not a public reviewer download. Prior source-containing Git commits remain; no history rewrite was performed. Editable figures/photos are optional additional material, not invented content.

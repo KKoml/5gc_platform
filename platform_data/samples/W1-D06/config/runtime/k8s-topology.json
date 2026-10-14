@@ -1,0 +1,36 @@
+{
+  "schema_version": "k8s-topology.v1",
+  "name": "multi-worker-amf-smf-upf",
+  "namespace": "free5gc",
+  "hosts": {
+    "core-a": {
+      "address": "192.0.2.30",
+      "management_address": "192.0.2.30",
+      "uplink_if": "enp0s31f6",
+      "roles": ["core", "k8s-worker"],
+      "node_selector": {"kubernetes.io/hostname": "core-host-a"}
+    },
+    "core-b": {
+      "address": "192.0.2.31",
+      "management_address": "192.0.2.31",
+      "uplink_if": "enp6s0",
+      "roles": ["core", "k8s-worker"],
+      "node_selector": {"kubernetes.io/hostname": "core-b"}
+    }
+  },
+  "instances": [
+    {"nf_type": "mongodb", "nf_id": "mongodb", "instance_id": "mongodb", "deployment": "mongodb", "host": "core-a", "host_network": false},
+    {"nf_type": "nrf", "nf_id": "nrf", "instance_id": "nrf", "deployment": "nrf", "host": "core-a", "host_network": false},
+    {"nf_type": "amf", "nf_id": "amf-a", "instance_id": "amf-a", "deployment": "amf-a", "host": "core-a", "host_network": true, "addresses": {"n2": "192.0.2.30", "sbi": "127.0.0.18"}, "ports": [{"name": "ngap", "protocol": "sctp", "port": 38412}]},
+    {"nf_type": "amf", "nf_id": "amf-b", "instance_id": "amf-b", "deployment": "amf-b", "host": "core-b", "host_network": true, "addresses": {"n2": "192.0.2.31", "sbi": "127.0.0.19"}, "ports": [{"name": "ngap", "protocol": "sctp", "port": 38412}]},
+    {"nf_type": "smf", "nf_id": "smf-silver", "instance_id": "smf-silver", "deployment": "smf-silver", "host": "core-a", "host_network": false, "dnn": ["internet-silver"]},
+    {"nf_type": "smf", "nf_id": "smf-gold", "instance_id": "smf-gold", "deployment": "smf-gold", "host": "core-b", "host_network": false, "dnn": ["internet-gold"]},
+    {"nf_type": "upf", "nf_id": "upf-silver", "instance_id": "upf-silver", "deployment": "upf-silver", "host": "core-a", "host_network": true, "addresses": {"n3": "192.0.2.30", "n4": "192.0.2.30", "n6": "192.0.2.20"}, "ports": [{"name": "gtpu", "protocol": "udp", "port": 2152}, {"name": "pfcp", "protocol": "udp", "port": 8805}], "gtp5g_device": "upfgtp-silver"},
+    {"nf_type": "upf", "nf_id": "upf-gold", "instance_id": "upf-gold", "deployment": "upf-gold", "host": "core-b", "host_network": true, "addresses": {"n3": "192.0.2.31", "n4": "192.0.2.31", "n6": "192.0.2.20"}, "ports": [{"name": "gtpu", "protocol": "udp", "port": 2152}, {"name": "pfcp", "protocol": "udp", "port": 8805}], "gtp5g_device": "upfgtp-gold"},
+    {"nf_type": "nssf", "nf_id": "nssf", "instance_id": "nssf", "deployment": "nssf", "host": "core-a", "host_network": false},
+    {"nf_type": "udm", "nf_id": "udm", "instance_id": "udm", "deployment": "udm", "host": "core-a", "host_network": false},
+    {"nf_type": "udr", "nf_id": "udr", "instance_id": "udr", "deployment": "udr", "host": "core-a", "host_network": false},
+    {"nf_type": "ausf", "nf_id": "ausf", "instance_id": "ausf", "deployment": "ausf", "host": "core-a", "host_network": false},
+    {"nf_type": "pcf", "nf_id": "pcf", "instance_id": "pcf", "deployment": "pcf", "host": "core-a", "host_network": false}
+  ]
+}

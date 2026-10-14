@@ -1,0 +1,8 @@
+{
+  "source_sha256": "7a95178e8b52bc29c45e13f8d9f64e29a6a9ad3bcfca13a97f4f733d8c46df4a",
+  "source_git_commit": "none recorded",
+  "version": "w1-future-leakage-fixed-task-views.v1",
+  "collection_commit": "dffa0226d406235017f26a28c50ec59a304840ff",
+  "identity_with_final_prediction_inputs": "Core-side reference program is not automatically identical to contributed experiment prepare_repaired.py; see root prediction_handoff.csv and historical identity boundary",
+  "delivery": "program reference and source hash only; source bytes omitted from review package"
+}

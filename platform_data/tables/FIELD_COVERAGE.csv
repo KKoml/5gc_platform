@@ -1,0 +1,568 @@
+run_id,field,status,source_file,source_column,source_scope,missing_reason,rows,present,coverage_ratio_recomputed,coverage_ratio_recorded,nonzero_present_ratio_recomputed
+W1-D01,time,ok,report/model_timeseries.csv,bucket_start,1s,,87435,87435,1.0,1.0,0.0
+W1-D01,run_id,ok,report/model_timeseries.csv,run_id,1s,,87435,87435,1.0,1.0,0.0
+W1-D01,session_id,ok,run_manifest.json,session_id,run,,87435,87435,1.0,1.0,0.0
+W1-D01,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87435,87435,1.0,1.0,0.9999885629324641
+W1-D01,scenario_type,ok,run_manifest.json,scenario_type,run,,87435,87435,1.0,1.0,0.0
+W1-D01,experiment_id,ok,run_manifest.json,experiment_id,run,,87435,87435,1.0,1.0,0.0
+W1-D01,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87435,10080,0.1152856407617087,0.115286,0.0
+W1-D01,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87435,87435,1.0,1.0,0.9999885629324641
+W1-D01,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87435,66042,0.7553268142048378,0.755327,1.0
+W1-D01,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87435,85173,0.9741293532338309,0.974129,1.0
+W1-D01,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87435,10080,0.1152856407617087,0.115286,0.0
+W1-D01,load_level,ok,run_manifest.json,load_level,run,,87435,87435,1.0,1.0,0.0
+W1-D01,ue_count,ok,run_manifest.json,ue_count,run,,87435,87435,1.0,1.0,1.0
+W1-D01,gnb_count,ok,run_manifest.json,gnb_count,run,,87435,87435,1.0,1.0,1.0
+W1-D01,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87435,87435,1.0,1.0,1.0
+W1-D01,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87435,87435,1.0,1.0,1.0
+W1-D01,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87435,87435,1.0,1.0,0.0
+W1-D01,topology_id,ok,run_manifest.json,topology_id,run,,87435,87435,1.0,1.0,0.0
+W1-D01,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87435,87410,0.9997140733116029,0.999714,0.0
+W1-D01,policy_version,ok,run_manifest.json,policy_version,run,,87435,87435,1.0,1.0,0.0
+W1-D01,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87435,14800,0.16926859953108023,0.169269,0.0
+W1-D01,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87435,87435,1.0,1.0,0.0
+W1-D01,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87435,87435,1.0,1.0,0.0
+W1-D01,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87435,10080,0.1152856407617087,0.115286,0.0
+W1-D01,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87435,14800,0.16926859953108023,0.169269,0.0
+W1-D01,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87435,10142,0.11599473894893349,0.115995,0.0
+W1-D01,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87435,14800,0.16926859953108023,0.169269,0.0
+W1-D01,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87435,10080,0.1152856407617087,0.115286,1.0
+W1-D01,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87435,87435,1.0,1.0,0.1152856407617087
+W1-D01,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87435,10080,0.1152856407617087,0.115286,1.0
+W1-D01,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87435,1800,0.020586721564590838,0.020587,1.0
+W1-D01,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87435,1800,0.020586721564590838,0.020587,1.0
+W1-D01,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87435,87435,1.0,1.0,0.0
+W1-D01,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87435,87435,1.0,1.0,0.16897123577514725
+W1-D01,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87435,184,0.002104420426602619,0.002104,0.9945652173913043
+W1-D01,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87435,87435,1.0,1.0,0.0
+W1-D01,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87435,87435,1.0,1.0,0.8917710299079316
+W1-D01,metrics_available,ok,report/*gate.json,metrics_available,derived,,87435,87435,1.0,1.0,0.9999771258649283
+W1-D01,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87435,87435,1.0,1.0,0.0
+W1-D01,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87435,0,0.0,0.0,
+W1-D01,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87435,0,0.0,0.0,
+W1-D01,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87435,0,0.0,0.0,
+W1-D01,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87435,0,0.0,0.0,
+W1-D01,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87435,0,0.0,0.0,
+W1-D01,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87435,86755,0.992222794075599,0.992223,1.0
+W1-D01,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87435,86755,0.992222794075599,0.992223,1.0
+W1-D01,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87435,86755,0.992222794075599,0.992223,0.9979021382052907
+W1-D01,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87435,87167,0.9969348659003832,0.996935,1.0
+W1-D01,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87435,0,0.0,0.0,
+W1-D01,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87435,0,0.0,0.0,
+W1-D01,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87435,87409,0.999702636244067,0.999703,1.0
+W1-D01,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87435,87435,1.0,1.0,0.9136272659690056
+W1-D01,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87435,66356,0.7589180534111054,0.758918,0.9035656157694858
+W1-D01,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87435,66356,0.7589180534111054,0.758918,0.9647507384411357
+W1-D01,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87435,66356,0.7589180534111054,0.758918,0.3675477726204111
+W1-D01,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87435,87222,0.9975639046148568,0.997564,0.999988535002637
+W1-D01,perf_upf_cpu_millicores,capability_missing,,,missing,,87435,87419,0.9998170069194259,0.999817,1.0
+W1-D01,perf_upf_memory_bytes,capability_missing,,,missing,,87435,87419,0.9998170069194259,0.999817,1.0
+W1-D01,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87435,87435,1.0,1.0,0.9997140733116029
+W1-D01,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87435,87435,1.0,1.0,0.0014525075770572425
+W1-D01,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87435,87435,1.0,1.0,0.999702636244067
+W1-D01,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87435,87409,0.999702636244067,0.999703,1.0
+W1-D01,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87435,87435,1.0,1.0,0.0
+W1-D01,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87435,87435,1.0,1.0,0.999702636244067
+W1-D01,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87435,22137,0.2531823640418597,0.253182,1.0
+W1-D01,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87435,87351,0.9990392863269858,0.999039,1.0
+W1-D01,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87435,87351,0.9990392863269858,0.999039,1.0
+W1-D01,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87435,31276,0.3577057242523017,0.357706,0.9546617214477555
+W1-D01,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87435,0,0.0,0.0,
+W1-D01,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87435,0,0.0,0.0,
+W1-D01,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87435,87433,0.9999771258649283,0.999977,1.0
+W1-D01,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87435,87433,0.9999771258649283,0.999977,1.0
+W1-D01,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87435,87433,0.9999771258649283,0.999977,1.0
+W1-D01,smf_cpu_pct,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,smf_rss_bytes,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,amf_cpu_pct,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,amf_rss_bytes,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,upf_health_state,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,upf_proc_alive,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,upf_pfcp_ok,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D01,smf_sbi_ok,capability_missing,,,missing,,87435,0,0.0,0.0,
+W1-D02,time,ok,report/model_timeseries.csv,bucket_start,1s,,87327,87327,1.0,1.0,0.0
+W1-D02,run_id,ok,report/model_timeseries.csv,run_id,1s,,87327,87327,1.0,1.0,0.0
+W1-D02,session_id,ok,run_manifest.json,session_id,run,,87327,87327,1.0,1.0,0.0
+W1-D02,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87327,87327,1.0,1.0,0.9999885487878892
+W1-D02,scenario_type,ok,run_manifest.json,scenario_type,run,,87327,87327,1.0,1.0,0.0
+W1-D02,experiment_id,ok,run_manifest.json,experiment_id,run,,87327,87327,1.0,1.0,0.0
+W1-D02,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87327,10080,0.11542821807688344,0.115428,0.0
+W1-D02,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87327,87327,1.0,1.0,0.9999885487878892
+W1-D02,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87327,66021,0.7560204747672541,0.75602,1.0
+W1-D02,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87327,85086,0.9743378336596928,0.974338,1.0
+W1-D02,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87327,10080,0.11542821807688344,0.115428,0.0
+W1-D02,load_level,ok,run_manifest.json,load_level,run,,87327,87327,1.0,1.0,0.0
+W1-D02,ue_count,ok,run_manifest.json,ue_count,run,,87327,87327,1.0,1.0,1.0
+W1-D02,gnb_count,ok,run_manifest.json,gnb_count,run,,87327,87327,1.0,1.0,1.0
+W1-D02,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87327,87327,1.0,1.0,1.0
+W1-D02,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87327,87327,1.0,1.0,1.0
+W1-D02,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87327,87327,1.0,1.0,0.0
+W1-D02,topology_id,ok,run_manifest.json,topology_id,run,,87327,87327,1.0,1.0,0.0
+W1-D02,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87327,87305,0.9997480733335623,0.999748,0.0
+W1-D02,policy_version,ok,run_manifest.json,policy_version,run,,87327,87327,1.0,1.0,0.0
+W1-D02,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87327,14280,0.16352330894225153,0.163523,0.0
+W1-D02,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87327,87327,1.0,1.0,0.0
+W1-D02,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87327,87327,1.0,1.0,0.0
+W1-D02,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87327,10080,0.11542821807688344,0.115428,0.0
+W1-D02,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87327,14280,0.16352330894225153,0.163523,0.0
+W1-D02,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87327,10142,0.11613819322775316,0.116138,0.0
+W1-D02,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87327,14280,0.16352330894225153,0.163523,0.0
+W1-D02,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87327,10080,0.11542821807688344,0.115428,1.0
+W1-D02,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87327,87327,1.0,1.0,0.11542821807688344
+W1-D02,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87327,10080,0.11542821807688344,0.115428,1.0
+W1-D02,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87327,1800,0.02061218179944347,0.020612,1.0
+W1-D02,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87327,1800,0.02061218179944347,0.020612,1.0
+W1-D02,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87327,87327,1.0,1.0,0.0
+W1-D02,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87327,87327,1.0,1.0,0.1632484798515923
+W1-D02,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87327,188,0.0021528278768307625,0.002153,0.9946808510638298
+W1-D02,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87327,87327,1.0,1.0,0.0
+W1-D02,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87327,87327,1.0,1.0,0.8984048461529653
+W1-D02,metrics_available,ok,report/*gate.json,metrics_available,derived,,87327,87327,1.0,1.0,0.9999885487878892
+W1-D02,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87327,87327,1.0,1.0,0.0
+W1-D02,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87327,0,0.0,0.0,
+W1-D02,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87327,0,0.0,0.0,
+W1-D02,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87327,0,0.0,0.0,
+W1-D02,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87327,0,0.0,0.0,
+W1-D02,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87327,0,0.0,0.0,
+W1-D02,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87327,86686,0.992659773036976,0.99266,1.0
+W1-D02,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87327,86686,0.992659773036976,0.99266,1.0
+W1-D02,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87327,86686,0.992659773036976,0.99266,0.998373439771128
+W1-D02,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87327,87070,0.9970570384875239,0.997057,1.0
+W1-D02,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87327,0,0.0,0.0,
+W1-D02,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87327,0,0.0,0.0,
+W1-D02,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87327,87304,0.9997366221214515,0.999737,1.0
+W1-D02,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87327,87326,0.9999885487878892,0.999989,0.9652909786317935
+W1-D02,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87327,65102,0.7454968108374271,0.745497,0.8992811280759424
+W1-D02,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87327,65102,0.7454968108374271,0.745497,0.9639335197075358
+W1-D02,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87327,65102,0.7454968108374271,0.745497,0.3619090043316642
+W1-D02,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87327,87122,0.9976525015172856,0.997653,1.0
+W1-D02,perf_upf_cpu_millicores,capability_missing,,,missing,,87327,87313,0.9998396830304488,0.99984,1.0
+W1-D02,perf_upf_memory_bytes,capability_missing,,,missing,,87327,87313,0.9998396830304488,0.99984,1.0
+W1-D02,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87327,87326,0.9999885487878892,0.999989,0.9997595217919062
+W1-D02,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87327,87326,0.9999885487878892,0.999989,0.0012596477566818587
+W1-D02,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87327,87326,0.9999885487878892,0.999989,0.9997480704486637
+W1-D02,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87327,87304,0.9997366221214515,0.999737,1.0
+W1-D02,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87327,87326,0.9999885487878892,0.999989,0.0
+W1-D02,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87327,87326,0.9999885487878892,0.999989,0.9997480704486637
+W1-D02,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87327,22947,0.2627709643065719,0.262771,1.0
+W1-D02,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87327,87250,0.9991182566674682,0.999118,1.0
+W1-D02,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87327,87250,0.9991182566674682,0.999118,1.0
+W1-D02,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87327,31578,0.3616063760349033,0.361606,0.9552853252264235
+W1-D02,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87327,0,0.0,0.0,
+W1-D02,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87327,0,0.0,0.0,
+W1-D02,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87327,87326,0.9999885487878892,0.999989,1.0
+W1-D02,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87327,87326,0.9999885487878892,0.999989,1.0
+W1-D02,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87327,87326,0.9999885487878892,0.999989,1.0
+W1-D02,smf_cpu_pct,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,smf_rss_bytes,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,amf_cpu_pct,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,amf_rss_bytes,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,upf_health_state,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,upf_proc_alive,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,upf_pfcp_ok,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D02,smf_sbi_ok,capability_missing,,,missing,,87327,0,0.0,0.0,
+W1-D03,time,ok,report/model_timeseries.csv,bucket_start,1s,,87400,87400,1.0,1.0,0.0
+W1-D03,run_id,ok,report/model_timeseries.csv,run_id,1s,,87400,87400,1.0,1.0,0.0
+W1-D03,session_id,ok,run_manifest.json,session_id,run,,87400,87400,1.0,1.0,0.0
+W1-D03,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87400,87400,1.0,1.0,0.9999885583524027
+W1-D03,scenario_type,ok,run_manifest.json,scenario_type,run,,87400,87400,1.0,1.0,0.0
+W1-D03,experiment_id,ok,run_manifest.json,experiment_id,run,,87400,87400,1.0,1.0,0.0
+W1-D03,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87400,10080,0.11533180778032037,0.115332,0.0
+W1-D03,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87400,87400,1.0,1.0,0.9999885583524027
+W1-D03,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87400,66022,0.7554004576659039,0.7554,1.0
+W1-D03,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87400,85158,0.9743478260869565,0.974348,1.0
+W1-D03,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87400,10080,0.11533180778032037,0.115332,0.0
+W1-D03,load_level,ok,run_manifest.json,load_level,run,,87400,87400,1.0,1.0,0.0
+W1-D03,ue_count,ok,run_manifest.json,ue_count,run,,87400,87400,1.0,1.0,1.0
+W1-D03,gnb_count,ok,run_manifest.json,gnb_count,run,,87400,87400,1.0,1.0,1.0
+W1-D03,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87400,87400,1.0,1.0,1.0
+W1-D03,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87400,87400,1.0,1.0,1.0
+W1-D03,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87400,87400,1.0,1.0,0.0
+W1-D03,topology_id,ok,run_manifest.json,topology_id,run,,87400,87400,1.0,1.0,0.0
+W1-D03,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87400,87376,0.9997254004576659,0.999725,0.0
+W1-D03,policy_version,ok,run_manifest.json,policy_version,run,,87400,87400,1.0,1.0,0.0
+W1-D03,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87400,14350,0.16418764302059496,0.164188,0.0
+W1-D03,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87400,87400,1.0,1.0,0.0
+W1-D03,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87400,87400,1.0,1.0,0.0
+W1-D03,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87400,10080,0.11533180778032037,0.115332,0.0
+W1-D03,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87400,14350,0.16418764302059496,0.164188,0.0
+W1-D03,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87400,10140,0.1160183066361556,0.116018,0.0
+W1-D03,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87400,14350,0.16418764302059496,0.164188,0.0
+W1-D03,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87400,10080,0.11533180778032037,0.115332,1.0
+W1-D03,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87400,87400,1.0,1.0,0.11533180778032037
+W1-D03,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87400,10080,0.11533180778032037,0.115332,1.0
+W1-D03,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87400,1800,0.020594965675057208,0.020595,1.0
+W1-D03,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87400,1800,0.020594965675057208,0.020595,1.0
+W1-D03,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87400,87400,1.0,1.0,0.0
+W1-D03,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87400,87400,1.0,1.0,0.163604118993135
+W1-D03,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87400,184,0.002105263157894737,0.002105,0.9945652173913043
+W1-D03,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87400,87400,1.0,1.0,0.0
+W1-D03,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87400,87400,1.0,1.0,0.8970137299771167
+W1-D03,metrics_available,ok,report/*gate.json,metrics_available,derived,,87400,87400,1.0,1.0,0.9999771167048055
+W1-D03,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87400,87400,1.0,1.0,0.0
+W1-D03,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87400,0,0.0,0.0,
+W1-D03,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87400,0,0.0,0.0,
+W1-D03,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87400,0,0.0,0.0,
+W1-D03,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87400,0,0.0,0.0,
+W1-D03,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87400,0,0.0,0.0,
+W1-D03,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87400,86732,0.9923569794050343,0.992357,1.0
+W1-D03,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87400,86732,0.9923569794050343,0.992357,1.0
+W1-D03,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87400,86732,0.9923569794050343,0.992357,0.997936171194023
+W1-D03,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87400,87150,0.9971395881006865,0.99714,1.0
+W1-D03,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87400,0,0.0,0.0,
+W1-D03,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87400,0,0.0,0.0,
+W1-D03,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87400,87376,0.9997254004576659,0.999725,1.0
+W1-D03,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87400,87400,1.0,1.0,0.9755034324942792
+W1-D03,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87400,65387,0.7481350114416476,0.748135,0.9001483475308547
+W1-D03,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87400,65387,0.7481350114416476,0.748135,0.964473060394268
+W1-D03,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87400,65387,0.7481350114416476,0.748135,0.3684371511156652
+W1-D03,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87400,87199,0.997700228832952,0.9977,0.9999885319785777
+W1-D03,perf_upf_cpu_millicores,capability_missing,,,missing,,87400,87393,0.9999199084668192,0.99992,1.0
+W1-D03,perf_upf_memory_bytes,capability_missing,,,missing,,87400,87393,0.9999199084668192,0.99992,1.0
+W1-D03,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87400,87400,1.0,1.0,0.9997254004576659
+W1-D03,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87400,87400,1.0,1.0,0.0013844393592677346
+W1-D03,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87400,87400,1.0,1.0,0.9997254004576659
+W1-D03,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87400,87376,0.9997254004576659,0.999725,1.0
+W1-D03,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87400,87400,1.0,1.0,0.0
+W1-D03,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87400,87400,1.0,1.0,0.9997254004576659
+W1-D03,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87400,25658,0.2935697940503432,0.29357,1.0
+W1-D03,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87400,87321,0.9990961098398169,0.999096,1.0
+W1-D03,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87400,87321,0.9990961098398169,0.999096,1.0
+W1-D03,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87400,31922,0.36524027459954234,0.36524,0.9568009523212831
+W1-D03,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87400,0,0.0,0.0,
+W1-D03,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87400,0,0.0,0.0,
+W1-D03,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87400,87398,0.9999771167048055,0.999977,1.0
+W1-D03,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87400,87398,0.9999771167048055,0.999977,1.0
+W1-D03,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87400,87398,0.9999771167048055,0.999977,1.0
+W1-D03,smf_cpu_pct,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,smf_rss_bytes,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,amf_cpu_pct,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,amf_rss_bytes,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,upf_health_state,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,upf_proc_alive,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,upf_pfcp_ok,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D03,smf_sbi_ok,capability_missing,,,missing,,87400,0,0.0,0.0,
+W1-D04,time,ok,report/model_timeseries.csv,bucket_start,1s,,87408,87408,1.0,1.0,0.0
+W1-D04,run_id,ok,report/model_timeseries.csv,run_id,1s,,87408,87408,1.0,1.0,0.0
+W1-D04,session_id,ok,run_manifest.json,session_id,run,,87408,87408,1.0,1.0,0.0
+W1-D04,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87408,87408,1.0,1.0,0.9999885593995973
+W1-D04,scenario_type,ok,run_manifest.json,scenario_type,run,,87408,87408,1.0,1.0,0.0
+W1-D04,experiment_id,ok,run_manifest.json,experiment_id,run,,87408,87408,1.0,1.0,0.0
+W1-D04,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87408,10080,0.11532125205930807,0.115321,0.0
+W1-D04,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87408,87408,1.0,1.0,0.9999885593995973
+W1-D04,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87408,66019,0.7552969979864543,0.755297,1.0
+W1-D04,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87408,85169,0.9743844956983343,0.974384,1.0
+W1-D04,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87408,10080,0.11532125205930807,0.115321,0.0
+W1-D04,load_level,ok,run_manifest.json,load_level,run,,87408,87408,1.0,1.0,0.0
+W1-D04,ue_count,ok,run_manifest.json,ue_count,run,,87408,87408,1.0,1.0,1.0
+W1-D04,gnb_count,ok,run_manifest.json,gnb_count,run,,87408,87408,1.0,1.0,1.0
+W1-D04,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87408,87408,1.0,1.0,1.0
+W1-D04,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87408,87408,1.0,1.0,1.0
+W1-D04,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87408,87408,1.0,1.0,0.0
+W1-D04,topology_id,ok,run_manifest.json,topology_id,run,,87408,87408,1.0,1.0,0.0
+W1-D04,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87408,87381,0.9996911037891268,0.999691,0.0
+W1-D04,policy_version,ok,run_manifest.json,policy_version,run,,87408,87408,1.0,1.0,0.0
+W1-D04,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87408,14289,0.16347473915431082,0.163475,0.0
+W1-D04,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87408,87408,1.0,1.0,0.0
+W1-D04,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87408,87408,1.0,1.0,0.0
+W1-D04,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87408,10080,0.11532125205930807,0.115321,0.0
+W1-D04,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87408,14289,0.16347473915431082,0.163475,0.0
+W1-D04,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87408,10140,0.11600768808347062,0.116008,0.0
+W1-D04,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87408,14289,0.16347473915431082,0.163475,0.0
+W1-D04,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87408,10080,0.11532125205930807,0.115321,1.0
+W1-D04,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87408,87408,1.0,1.0,0.11532125205930807
+W1-D04,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87408,10080,0.11532125205930807,0.115321,1.0
+W1-D04,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87408,1800,0.02059308072487644,0.020593,1.0
+W1-D04,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87408,1800,0.02059308072487644,0.020593,1.0
+W1-D04,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87408,87408,1.0,1.0,0.0
+W1-D04,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87408,87408,1.0,1.0,0.16316584294343767
+W1-D04,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87408,187,0.002139392275306608,0.002139,0.9946524064171123
+W1-D04,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87408,87408,1.0,1.0,0.0
+W1-D04,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87408,87408,1.0,1.0,0.8981557752150833
+W1-D04,metrics_available,ok,report/*gate.json,metrics_available,derived,,87408,87408,1.0,1.0,0.9999885593995973
+W1-D04,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87408,87408,1.0,1.0,0.0
+W1-D04,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87408,0,0.0,0.0,
+W1-D04,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87408,0,0.0,0.0,
+W1-D04,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87408,0,0.0,0.0,
+W1-D04,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87408,0,0.0,0.0,
+W1-D04,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87408,0,0.0,0.0,
+W1-D04,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87408,86727,0.9922089511257551,0.992209,1.0
+W1-D04,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87408,86727,0.9922089511257551,0.992209,1.0
+W1-D04,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87408,86727,0.9922089511257551,0.992209,0.998109008728539
+W1-D04,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87408,87153,0.9970826468973092,0.997083,1.0
+W1-D04,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87408,0,0.0,0.0,
+W1-D04,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87408,0,0.0,0.0,
+W1-D04,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87408,87380,0.9996796631887241,0.99968,1.0
+W1-D04,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87408,87408,1.0,1.0,0.9652663371773751
+W1-D04,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87408,66510,0.7609143327841845,0.760914,0.8992181626823034
+W1-D04,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87408,66510,0.7609143327841845,0.760914,0.96439633137874
+W1-D04,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87408,66510,0.7609143327841845,0.760914,0.36641106600511203
+W1-D04,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87408,87201,0.9976317957166392,0.997632,0.9999885322416028
+W1-D04,perf_upf_cpu_millicores,capability_missing,,,missing,,87408,87396,0.9998627127951675,0.999863,1.0
+W1-D04,perf_upf_memory_bytes,capability_missing,,,missing,,87408,87396,0.9998627127951675,0.999863,1.0
+W1-D04,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87408,87408,1.0,1.0,0.9996911037891268
+W1-D04,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87408,87408,1.0,1.0,0.001109738239062786
+W1-D04,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87408,87408,1.0,1.0,0.9996796631887241
+W1-D04,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87408,87380,0.9996796631887241,0.99968,1.0
+W1-D04,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87408,87408,1.0,1.0,0.0
+W1-D04,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87408,87408,1.0,1.0,0.9996796631887241
+W1-D04,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87408,22130,0.25318048691195316,0.25318,1.0
+W1-D04,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87408,87326,0.9990618707669778,0.999062,1.0
+W1-D04,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87408,87326,0.9990618707669778,0.999062,1.0
+W1-D04,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87408,32283,0.369336902800659,0.369337,0.9569123067868538
+W1-D04,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87408,0,0.0,0.0,
+W1-D04,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87408,0,0.0,0.0,
+W1-D04,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87408,87407,0.9999885593995973,0.999989,1.0
+W1-D04,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87408,87407,0.9999885593995973,0.999989,1.0
+W1-D04,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87408,87407,0.9999885593995973,0.999989,1.0
+W1-D04,smf_cpu_pct,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,smf_rss_bytes,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,amf_cpu_pct,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,amf_rss_bytes,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,upf_health_state,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,upf_proc_alive,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,upf_pfcp_ok,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D04,smf_sbi_ok,capability_missing,,,missing,,87408,0,0.0,0.0,
+W1-D05,time,ok,report/model_timeseries.csv,bucket_start,1s,,87403,87403,1.0,1.0,0.0
+W1-D05,run_id,ok,report/model_timeseries.csv,run_id,1s,,87403,87403,1.0,1.0,0.0
+W1-D05,session_id,ok,run_manifest.json,session_id,run,,87403,87403,1.0,1.0,0.0
+W1-D05,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87403,87403,1.0,1.0,0.9999885587451232
+W1-D05,scenario_type,ok,run_manifest.json,scenario_type,run,,87403,87403,1.0,1.0,0.0
+W1-D05,experiment_id,ok,run_manifest.json,experiment_id,run,,87403,87403,1.0,1.0,0.0
+W1-D05,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87403,10080,0.1153278491584957,0.115328,0.0
+W1-D05,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87403,87403,1.0,1.0,0.9999885587451232
+W1-D05,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87403,66015,0.7552944406942553,0.755294,1.0
+W1-D05,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87403,85168,0.974428795350274,0.974429,1.0
+W1-D05,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87403,10080,0.1153278491584957,0.115328,0.0
+W1-D05,load_level,ok,run_manifest.json,load_level,run,,87403,87403,1.0,1.0,0.0
+W1-D05,ue_count,ok,run_manifest.json,ue_count,run,,87403,87403,1.0,1.0,1.0
+W1-D05,gnb_count,ok,run_manifest.json,gnb_count,run,,87403,87403,1.0,1.0,1.0
+W1-D05,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87403,87403,1.0,1.0,1.0
+W1-D05,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87403,87403,1.0,1.0,1.0
+W1-D05,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87403,87403,1.0,1.0,0.0
+W1-D05,topology_id,ok,run_manifest.json,topology_id,run,,87403,87403,1.0,1.0,0.0
+W1-D05,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87403,87380,0.9997368511378328,0.999737,0.0
+W1-D05,policy_version,ok,run_manifest.json,policy_version,run,,87403,87403,1.0,1.0,0.0
+W1-D05,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87403,14341,0.1640790361886892,0.164079,0.0
+W1-D05,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87403,87403,1.0,1.0,0.0
+W1-D05,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87403,87403,1.0,1.0,0.0
+W1-D05,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87403,10080,0.1153278491584957,0.115328,0.0
+W1-D05,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87403,14341,0.1640790361886892,0.164079,0.0
+W1-D05,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87403,10140,0.1160143244511058,0.116014,0.0
+W1-D05,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87403,14341,0.1640790361886892,0.164079,0.0
+W1-D05,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87403,10080,0.1153278491584957,0.115328,1.0
+W1-D05,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87403,87403,1.0,1.0,0.1153278491584957
+W1-D05,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87403,10080,0.1153278491584957,0.115328,1.0
+W1-D05,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87403,1800,0.020594258778302805,0.020594,1.0
+W1-D05,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87403,1800,0.020594258778302805,0.020594,1.0
+W1-D05,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87403,87403,1.0,1.0,0.0
+W1-D05,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87403,87403,1.0,1.0,0.1634955321899706
+W1-D05,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87403,188,0.0021509559168449597,0.002151,0.9946808510638298
+W1-D05,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87403,87403,1.0,1.0,0.0
+W1-D05,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87403,87403,1.0,1.0,0.8973490612450373
+W1-D05,metrics_available,ok,report/*gate.json,metrics_available,derived,,87403,87403,1.0,1.0,0.9999771174902463
+W1-D05,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87403,87403,1.0,1.0,0.0
+W1-D05,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87403,0,0.0,0.0,
+W1-D05,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87403,0,0.0,0.0,
+W1-D05,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87403,0,0.0,0.0,
+W1-D05,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87403,0,0.0,0.0,
+W1-D05,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87403,0,0.0,0.0,
+W1-D05,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87403,86692,0.9918652677825704,0.991865,1.0
+W1-D05,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87403,86692,0.9918652677825704,0.991865,1.0
+W1-D05,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87403,86692,0.9918652677825704,0.991865,0.9981774558206062
+W1-D05,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87403,87153,0.9971396862807913,0.99714,1.0
+W1-D05,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87403,0,0.0,0.0,
+W1-D05,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87403,0,0.0,0.0,
+W1-D05,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87403,87379,0.999725409882956,0.999725,1.0
+W1-D05,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87403,87403,1.0,1.0,0.9653101152134366
+W1-D05,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87403,65144,0.7453291076965322,0.745329,0.8894756232346801
+W1-D05,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87403,65144,0.7453291076965322,0.745329,0.9603954316590937
+W1-D05,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87403,65144,0.7453291076965322,0.745329,0.36606594621147
+W1-D05,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87403,87202,0.9977003077697562,0.9977,0.9999885323731107
+W1-D05,perf_upf_cpu_millicores,capability_missing,,,missing,,87403,87394,0.9998970287061085,0.999897,1.0
+W1-D05,perf_upf_memory_bytes,capability_missing,,,missing,,87403,87394,0.9998970287061085,0.999897,1.0
+W1-D05,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87403,87403,1.0,1.0,0.9997368511378328
+W1-D05,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87403,87403,1.0,1.0,0.001372950585220187
+W1-D05,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87403,87403,1.0,1.0,0.999725409882956
+W1-D05,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87403,87379,0.999725409882956,0.999725,1.0
+W1-D05,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87403,87403,1.0,1.0,0.0
+W1-D05,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87403,87403,1.0,1.0,0.999725409882956
+W1-D05,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87403,22132,0.2532178529341098,0.253218,1.0
+W1-D05,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87403,87325,0.9991075821196069,0.999108,1.0
+W1-D05,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87403,87325,0.9991075821196069,0.999108,1.0
+W1-D05,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87403,31899,0.3649645893161562,0.364965,0.9556725916172921
+W1-D05,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87403,0,0.0,0.0,
+W1-D05,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87403,0,0.0,0.0,
+W1-D05,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87403,87401,0.9999771174902463,0.999977,1.0
+W1-D05,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87403,87401,0.9999771174902463,0.999977,1.0
+W1-D05,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87403,87401,0.9999771174902463,0.999977,1.0
+W1-D05,smf_cpu_pct,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,smf_rss_bytes,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,amf_cpu_pct,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,amf_rss_bytes,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,upf_health_state,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,upf_proc_alive,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,upf_pfcp_ok,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D05,smf_sbi_ok,capability_missing,,,missing,,87403,0,0.0,0.0,
+W1-D06,time,ok,report/model_timeseries.csv,bucket_start,1s,,87413,87413,1.0,1.0,0.0
+W1-D06,run_id,ok,report/model_timeseries.csv,run_id,1s,,87413,87413,1.0,1.0,0.0
+W1-D06,session_id,ok,run_manifest.json,session_id,run,,87413,87413,1.0,1.0,0.0
+W1-D06,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87413,87413,1.0,1.0,0.9999885600539965
+W1-D06,scenario_type,ok,run_manifest.json,scenario_type,run,,87413,87413,1.0,1.0,0.0
+W1-D06,experiment_id,ok,run_manifest.json,experiment_id,run,,87413,87413,1.0,1.0,0.0
+W1-D06,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87413,10080,0.11531465571482502,0.115315,0.0
+W1-D06,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87413,87413,1.0,1.0,0.9999885600539965
+W1-D06,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87413,66017,0.7552309153100797,0.755231,1.0
+W1-D06,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87413,85176,0.9744088407902715,0.974409,1.0
+W1-D06,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87413,10080,0.11531465571482502,0.115315,0.0
+W1-D06,load_level,ok,run_manifest.json,load_level,run,,87413,87413,1.0,1.0,0.0
+W1-D06,ue_count,ok,run_manifest.json,ue_count,run,,87413,87413,1.0,1.0,1.0
+W1-D06,gnb_count,ok,run_manifest.json,gnb_count,run,,87413,87413,1.0,1.0,1.0
+W1-D06,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87413,87413,1.0,1.0,1.0
+W1-D06,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87413,87413,1.0,1.0,1.0
+W1-D06,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87413,87413,1.0,1.0,0.0
+W1-D06,topology_id,ok,run_manifest.json,topology_id,run,,87413,87413,1.0,1.0,0.0
+W1-D06,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87413,87388,0.9997140013499136,0.999714,0.0
+W1-D06,policy_version,ok,run_manifest.json,policy_version,run,,87413,87413,1.0,1.0,0.0
+W1-D06,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87413,14354,0.16420898493359112,0.164209,0.0
+W1-D06,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87413,87413,1.0,1.0,0.0
+W1-D06,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87413,87413,1.0,1.0,0.0
+W1-D06,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87413,10080,0.11531465571482502,0.115315,0.0
+W1-D06,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87413,14354,0.16420898493359112,0.164209,0.0
+W1-D06,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87413,10140,0.11600105247503231,0.116001,0.0
+W1-D06,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87413,14354,0.16420898493359112,0.164209,0.0
+W1-D06,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87413,10080,0.11531465571482502,0.115315,1.0
+W1-D06,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87413,87413,1.0,1.0,0.11531465571482502
+W1-D06,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87413,10080,0.11531465571482502,0.115315,1.0
+W1-D06,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87413,1800,0.020591902806218754,0.020592,1.0
+W1-D06,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87413,1800,0.020591902806218754,0.020592,1.0
+W1-D06,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87413,87413,1.0,1.0,0.0
+W1-D06,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87413,87413,1.0,1.0,0.16376282703945638
+W1-D06,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87413,188,0.002150709848649514,0.002151,0.9946808510638298
+W1-D06,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87413,87413,1.0,1.0,0.0
+W1-D06,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87413,87413,1.0,1.0,0.8970176060768993
+W1-D06,metrics_available,ok,report/*gate.json,metrics_available,derived,,87413,87413,1.0,1.0,0.9999656801619896
+W1-D06,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87413,87413,1.0,1.0,0.0
+W1-D06,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87413,0,0.0,0.0,
+W1-D06,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87413,0,0.0,0.0,
+W1-D06,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87413,0,0.0,0.0,
+W1-D06,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87413,0,0.0,0.0,
+W1-D06,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87413,0,0.0,0.0,
+W1-D06,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87413,86743,0.9923352361776853,0.992335,1.0
+W1-D06,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87413,86743,0.9923352361776853,0.992335,1.0
+W1-D06,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87413,86743,0.9923352361776853,0.992335,0.9983629802981221
+W1-D06,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87413,87162,0.9971285735531328,0.997129,1.0
+W1-D06,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87413,0,0.0,0.0,
+W1-D06,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87413,0,0.0,0.0,
+W1-D06,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87413,87388,0.9997140013499136,0.999714,1.0
+W1-D06,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87413,87412,0.9999885600539965,0.999989,0.965313686907976
+W1-D06,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87413,66494,0.7606877695537277,0.760688,0.9003067945980089
+W1-D06,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87413,66494,0.7606877695537277,0.760688,0.9640869852919061
+W1-D06,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87413,66494,0.7606877695537277,0.760688,0.3716425542154179
+W1-D06,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87413,87209,0.9976662510152952,0.997666,0.9999885332935821
+W1-D06,perf_upf_cpu_millicores,capability_missing,,,missing,,87413,87407,0.9999313603239792,0.999931,1.0
+W1-D06,perf_upf_memory_bytes,capability_missing,,,missing,,87413,87407,0.9999313603239792,0.999931,1.0
+W1-D06,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87413,87412,0.9999885600539965,0.999989,0.9997254381549444
+W1-D06,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87413,87412,0.9999885600539965,0.999989,0.001189767995240928
+W1-D06,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87413,87412,0.9999885600539965,0.999989,0.9997254381549444
+W1-D06,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87413,87388,0.9997140013499136,0.999714,1.0
+W1-D06,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87413,87412,0.9999885600539965,0.999989,0.0
+W1-D06,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87413,87412,0.9999885600539965,0.999989,0.9997254381549444
+W1-D06,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87413,25740,0.2944642101289282,0.294464,1.0
+W1-D06,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87413,87333,0.9990848043197236,0.999085,1.0
+W1-D06,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87413,87333,0.9990848043197236,0.999085,1.0
+W1-D06,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87413,31294,0.3580016702321165,0.358002,0.9552629897104876
+W1-D06,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87413,0,0.0,0.0,
+W1-D06,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87413,0,0.0,0.0,
+W1-D06,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87413,87410,0.9999656801619896,0.999966,1.0
+W1-D06,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87413,87410,0.9999656801619896,0.999966,1.0
+W1-D06,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87413,87410,0.9999656801619896,0.999966,1.0
+W1-D06,smf_cpu_pct,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,smf_rss_bytes,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,amf_cpu_pct,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,amf_rss_bytes,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,upf_health_state,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,upf_proc_alive,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,upf_pfcp_ok,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D06,smf_sbi_ok,capability_missing,,,missing,,87413,0,0.0,0.0,
+W1-D07,time,ok,report/model_timeseries.csv,bucket_start,1s,,87391,87391,1.0,1.0,0.0
+W1-D07,run_id,ok,report/model_timeseries.csv,run_id,1s,,87391,87391,1.0,1.0,0.0
+W1-D07,session_id,ok,run_manifest.json,session_id,run,,87391,87391,1.0,1.0,0.0
+W1-D07,sample_index,ok,report/model_timeseries.csv,bucket_index,1s,,87391,87391,1.0,1.0,0.9999885571740798
+W1-D07,scenario_type,ok,run_manifest.json,scenario_type,run,,87391,87391,1.0,1.0,0.0
+W1-D07,experiment_id,ok,run_manifest.json,experiment_id,run,,87391,87391,1.0,1.0,0.0
+W1-D07,event_id,ok,events/fault_timeline.jsonl,event_id,event,,87391,10080,0.1153436852765159,0.115344,0.0
+W1-D07,seconds_from_session_start,ok,report/*gate.json,seconds_from_session_start,derived,,87391,87391,1.0,1.0,0.9999885571740798
+W1-D07,time_to_planned_start_sec,ok,events/fault_timeline.jsonl,time_to_planned_start_sec,event,,87391,66015,0.7553981531278965,0.755398,1.0
+W1-D07,time_since_last_fault_end_sec,ok,events/fault_timeline.jsonl,time_since_last_fault_end_sec,event,,87391,85156,0.9744252840681534,0.974425,1.0
+W1-D07,pre_state_status,ok,events/fault_timeline.jsonl,pre_state_status,event,,87391,10080,0.1153436852765159,0.115344,0.0
+W1-D07,load_level,ok,run_manifest.json,load_level,run,,87391,87391,1.0,1.0,0.0
+W1-D07,ue_count,ok,run_manifest.json,ue_count,run,,87391,87391,1.0,1.0,1.0
+W1-D07,gnb_count,ok,run_manifest.json,gnb_count,run,,87391,87391,1.0,1.0,1.0
+W1-D07,gold_ue_count,ok,run_manifest.json,gold_ue_count,run,,87391,87391,1.0,1.0,1.0
+W1-D07,silver_ue_count,ok,run_manifest.json,silver_ue_count,run,,87391,87391,1.0,1.0,1.0
+W1-D07,traffic_profile_id,ok,run_manifest.json,traffic_profile_id,run,,87391,87391,1.0,1.0,0.0
+W1-D07,topology_id,ok,run_manifest.json,topology_id,run,,87391,87391,1.0,1.0,0.0
+W1-D07,dnn_profile,ok,run_manifest.json,dnn_profile,run,,87391,87368,0.9997368150038334,0.999737,0.0
+W1-D07,policy_version,ok,run_manifest.json,policy_version,run,,87391,87391,1.0,1.0,0.0
+W1-D07,target_upf_id,ok,run_manifest.json,target_upf_id,run,,87391,14313,0.16378116739710039,0.163781,0.0
+W1-D07,planned_treatment_type,ok,events/fault_timeline.jsonl,planned_treatment_type,event,,87391,87391,1.0,1.0,0.0
+W1-D07,planned_fault_family,ok,events/fault_timeline.jsonl,planned_fault_family,event,,87391,87391,1.0,1.0,0.0
+W1-D07,planned_target_interface,ok,events/fault_timeline.jsonl,planned_target_interface,event,,87391,10080,0.1153436852765159,0.115344,0.0
+W1-D07,planned_target_ne,ok,events/fault_timeline.jsonl,planned_target_ne,event,,87391,14313,0.16378116739710039,0.163781,0.0
+W1-D07,planned_peer,ok,events/fault_timeline.jsonl,planned_peer,event,,87391,10150,0.11614468309093613,0.116145,0.0
+W1-D07,planned_instance,ok,events/fault_timeline.jsonl,planned_instance,event,,87391,14313,0.16378116739710039,0.163781,0.0
+W1-D07,planned_fault_duration_sec,ok,events/fault_timeline.jsonl,planned_fault_duration_sec,event,,87391,10080,0.1153436852765159,0.115344,1.0
+W1-D07,planned_fault_active,ok,events/fault_timeline.jsonl,planned_fault_active,event,,87391,87391,1.0,1.0,0.1153436852765159
+W1-D07,planned_start_offset_sec,ok,events/fault_timeline.jsonl,planned_start_offset_sec,event,,87391,10080,0.1153436852765159,0.115344,1.0
+W1-D07,planned_delay_ms,ok,events/fault_timeline.jsonl,planned_delay_ms,event,,87391,1800,0.020597086656520696,0.020597,1.0
+W1-D07,planned_loss_pct,ok,events/fault_timeline.jsonl,planned_loss_pct,event,,87391,1800,0.020597086656520696,0.020597,1.0
+W1-D07,observed_phase,ok,report/model_timeseries.csv,phase,1s,,87391,87391,1.0,1.0,0.0
+W1-D07,observed_fault_active,ok,report/model_timeseries.csv,fault_active,1s,,87391,87391,1.0,1.0,0.16349509674909316
+W1-D07,recovery_elapsed_sec,ok,report/*gate.json,recovery_elapsed_sec,derived,,87391,188,0.0021512512730143835,0.002151,0.9946808510638298
+W1-D07,data_quality_status,ok,report/*gate.json,data_quality_status,derived,,87391,87391,1.0,1.0,0.0
+W1-D07,is_valid_row,ok,report/*gate.json,is_valid_row,derived,,87391,87391,1.0,1.0,0.8977926788799762
+W1-D07,metrics_available,ok,report/*gate.json,metrics_available,derived,,87391,87391,1.0,1.0,0.9999771143481594
+W1-D07,is_filled_any,ok,report/*gate.json,is_filled_any,derived,,87391,87391,1.0,1.0,0.0
+W1-D07,source_age_max_sec,capability_missing,,,missing,source age is not present in current run artifacts,87391,0,0.0,0.0,
+W1-D07,source_age_cp_sec,capability_missing,,,missing,source age is not present in current run artifacts,87391,0,0.0,0.0,
+W1-D07,source_age_resource_sec,capability_missing,,,missing,source age is not present in current run artifacts,87391,0,0.0,0.0,
+W1-D07,source_age_ran_sec,capability_missing,,,missing,source age is not present in current run artifacts,87391,0,0.0,0.0,
+W1-D07,source_age_flow_sec,capability_missing,,,missing,source age is not present in current run artifacts,87391,0,0.0,0.0,
+W1-D07,OT,replaced,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87391,86713,0.9922417640260439,0.992242,1.0
+W1-D07,n3_uplink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,OT,derived,,87391,86713,0.9922417640260439,0.992242,1.0
+W1-D07,n3_downlink_bitrate_bps,ok,derived/n3-gtpu-*_timeseries.csv,rx_bytes,derived,,87391,86713,0.9922417640260439,0.992242,0.9981317680163297
+W1-D07,n6_bitrate_bps,ok,report/model_timeseries.csv,n6_bitrate_bps,1s,,87391,87146,0.9971965076495292,0.997197,1.0
+W1-D07,perf_upf_rx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87391,0,0.0,0.0,
+W1-D07,perf_upf_tx_bps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87391,0,0.0,0.0,
+W1-D07,cp_pdu_session_success_rate,ok,report/model_timeseries.csv,cp_pdu_session_success_rate,1s,,87391,87367,0.999725372177913,0.999725,1.0
+W1-D07,cp_pdu_session_failure_count,ok,report/model_timeseries.csv,cp_pdu_session_failure_count,1s,,87391,87391,1.0,1.0,0.9653053518096829
+W1-D07,end_to_end_rtt_ms,ok,report/model_timeseries.csv,ue_rtt_ms,1s,,87391,66079,0.756130493986795,0.75613,0.894837996943053
+W1-D07,jitter_ms,ok,report/model_timeseries.csv,ue_jitter_ms,1s,,87391,66079,0.756130493986795,0.75613,0.9636647043690129
+W1-D07,packet_loss_rate,ok,report/model_timeseries.csv,ue_loss_rate,1s,,87391,66079,0.756130493986795,0.75613,0.3777145537916736
+W1-D07,business_completion_rate,ok,report/model_timeseries.csv,service_completion_rate,1s,,87391,87194,0.997745763293703,0.997746,1.0
+W1-D07,perf_upf_cpu_millicores,capability_missing,,,missing,,87391,87381,0.9998855717407971,0.999886,1.0
+W1-D07,perf_upf_memory_bytes,capability_missing,,,missing,,87391,87381,0.9998855717407971,0.999886,1.0
+W1-D07,cp_active_session_count,ok,report/model_timeseries.csv,cp_active_session_count,1s,,87391,87391,1.0,1.0,0.9997368150038334
+W1-D07,cp_pending_session_count,ok,report/model_timeseries.csv,cp_pending_session_count,1s,,87391,87391,1.0,1.0,0.0009497545513840098
+W1-D07,cp_pdu_session_request_count,ok,report/model_timeseries.csv,cp_pdu_session_request_count,1s,,87391,87391,1.0,1.0,0.999725372177913
+W1-D07,registration_success_rate,ok,report/model_timeseries.csv,cp_registration_success_rate,1s,,87391,87367,0.999725372177913,0.999725,1.0
+W1-D07,registration_failure_count,ok,report/model_timeseries.csv,cp_registration_failure_count,1s,,87391,87391,1.0,1.0,0.0
+W1-D07,registration_request_count,ok,report/model_timeseries.csv,cp_registration_request_count,1s,,87391,87391,1.0,1.0,0.999725372177913
+W1-D07,ran_pdu_active_count,snapshot_only,report/model_timeseries.csv,ran_pdu_active_count,snapshot,,87391,23916,0.2736666247096383,0.273667,1.0
+W1-D07,ready_gnb_count,snapshot_only,report/model_timeseries.csv,ran_ready_gnb_count,snapshot,,87391,87314,0.9991189024041377,0.999119,1.0
+W1-D07,observed_ue_count,snapshot_only,report/model_timeseries.csv,ran_observed_ue_count,snapshot,,87391,87314,0.9991189024041377,0.999119,1.0
+W1-D07,n4_bitrate_bps,ok,derived/n4-pfcp-*_timeseries.csv,OT,derived,,87391,32163,0.36803561007426394,0.368036,0.9564717221652209
+W1-D07,perf_upf_rx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87391,0,0.0,0.0,
+W1-D07,perf_upf_tx_pps,capability_missing,,,missing,no non-empty v3-safe source in current artifacts,87391,0,0.0,0.0,
+W1-D07,host_cpu_pct,ok,report/model_timeseries.csv,host_cpu_pct,1s,,87391,87389,0.9999771143481594,0.999977,1.0
+W1-D07,host_mem_used_pct,ok,report/model_timeseries.csv,host_mem_used_pct,1s,,87391,87389,0.9999771143481594,0.999977,1.0
+W1-D07,host_loadavg_1,ok,report/model_timeseries.csv,host_loadavg_1,1s,,87391,87389,0.9999771143481594,0.999977,1.0
+W1-D07,smf_cpu_pct,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,smf_rss_bytes,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,amf_cpu_pct,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,amf_rss_bytes,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,upf_health_state,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,upf_proc_alive,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,upf_pfcp_ok,capability_missing,,,missing,,87391,0,0.0,0.0,
+W1-D07,smf_sbi_ok,capability_missing,,,missing,,87391,0,0.0,0.0,

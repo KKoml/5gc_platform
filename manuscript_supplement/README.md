@@ -1,6 +1,6 @@
 # D-GATE Supplementary Appendices
 
-These appendices describe the platform implementation, collection settings, data formats, task construction, and evaluation settings used in the D-GATE study. Detailed AI evaluation materials are linked alongside the corresponding sections. These A–D labels are the supplementary appendices cited by the current English manuscript. The [navigation guide](../APPENDIX_NAVIGATION.md) distinguishes them from the older detailed D.3/E series and the expanded platform-branch appendices.
+These appendices describe the platform implementation, collection settings, data formats, task construction, and evaluation settings used in the D-GATE study. These are the single A–D appendix labels cited by the latest English manuscript. [Navigation](../APPENDIX_NAVIGATION.md) links expanded platform evidence and detailed experiment records under this one series.
 
 | Appendix | Contents |
 |---|---|
@@ -9,7 +9,7 @@ These appendices describe the platform implementation, collection settings, data
 | [C. Task construction](#appendix-c-task-construction) | Prediction inputs, core-network observations, task windows, and data splits |
 | [D. Evaluation settings and results](#appendix-d-evaluation-settings-and-results) | Model configurations, hyperparameters, random seeds, and result files |
 
-Prepared AI task inputs and 1 s platform exports are included in this branch; [data access](../DATA_ACCESS.md) links the observations, indices, windows, masks, and preprocessing scales. PCAP files and the complete original log collection are not included. See [the repository overview](../README.md) for the platform appendices and source code maintained in a separate branch.
+Prepared AI task inputs and 1 s platform exports are included in this branch; [data access](../DATA_ACCESS.md) links the observations, indices, windows, masks, and preprocessing scales. PCAP files and the complete original log collection are not included. No collection-platform source code is included in this review tree. Platform code is reserved for release upon acceptance; model evaluation and offline task-data code are provided separately.
 
 ## Appendix A. Platform implementation and configuration
 
@@ -23,7 +23,7 @@ Prepared AI task inputs and 1 s platform exports are included in this branch; [d
 | ④ Data retrieval and archiving | Retrieves files across hosts and checks their completeness and contents before marking retrieval complete | Run-organized files and retrieval results |
 | ⑤ Data processing | Associates sessions, aligns and aggregates observations, and checks completeness and field coverage | CSV time series, JSONL association records, and experiment reports |
 
-The table below separates upstream software from platform integration, adaptations, and added programs. Implementation paths refer to the platform source snapshot, which is maintained in the separate platform appendix branch.
+The table below separates upstream software from platform integration, adaptations, and added programs. Implementation paths are documentary references to the audited private platform checkout. No platform source snapshot is included. The [six-column development map](../platform_data/tables/PLATFORM_DEVELOPMENT_MAP.csv) adds upstream basis, adaptation, problem, inputs/outputs and implementation locations; [implementation details](../platform_data/details/IMPLEMENTATION.md) establish deployment and version evidence.
 
 | Component | Role | Implementation or output |
 |---|---|---|
@@ -38,6 +38,8 @@ The table below separates upstream software from platform integration, adaptatio
 The platform extends SMF session logs to record user, session, address, and tunnel mappings. Network-function changes include local cleanup after failed release of an old session without removing an index that already points to a new session; SMF PFCP response matching and session error handling in the UPF; AMF registration-state updates; NRF slice-identifier matching; and PCF numeric-type compatibility. These changes support continued operation and record association during interventions.
 
 Control-plane log collectors retain their read positions, parse appended content, and reset when a file is replaced or truncated. Resource records retain instance identifiers and collection status so that zero values can be distinguished from unavailable observations.
+
+The [configuration/operation detail](../platform_data/details/CONFIGURATION.md), [saved values](../platform_data/tables/CONFIGURATION.csv), [nine operation families](../platform_data/tables/OPERATIONS.csv) and [linked real D06 examples](../platform_data/samples/W1-D06/README.md) retain actual targets, parameters, start/end records and undo/recovery evidence.
 
 ### A.2 Interventions and recovery
 
@@ -96,6 +98,8 @@ PCAP, log, and JSON/JSONL files are retrieved into run-specific directories. Ret
 
 ## Appendix B. Data organization, fields, and examples
 
+The [data-format/coverage detail](../platform_data/details/DATA_CONTRACT.md), [81-column dictionary](../platform_data/dictionaries/BASE_TABLE_81.csv), [unit audit](../platform_data/tables/UNIT_AUDIT.csv) and [provided-file manifest](../platform_data/manifests/PROVIDED_FILES.csv) distinguish complete anonymized files, samples and manifest-only source material.
+
 ### B.1 Data products
 
 | Product | Format | Contents and association information |
@@ -114,7 +118,7 @@ These product categories do not share a single JSON schema. Field names, units, 
 
 The dictionary contains **400 definitions: 215 metrics and 185 configuration, state, identifier, label, quality, or other fields**. It contains 400 `canonical_id` values and 379 distinct `field_name` values across raw and derived products; it is not the schema of a single 400-column table.
 
-The seven 1 s exported tables each contain **81 columns**, totaling **611,777 rows**. Matching these columns to the dictionary yields 39 fields with the `metric` role. Availability also depends on states such as `ok`, `snapshot_only`, `replaced`, and `capability_missing`; the role count does not imply that all 39 metrics are usable in every record.
+The seven 1 s exported tables each contain **81 columns**, totaling **611,777 rows**. Matching by field name across all dictionary domains finds 39 metric-name overlaps; this is not an entity-specific role assignment. Restricting to the canonical `v3.*` definitions yields 36 metric-role columns. The three additional name overlaps (`ue_count`, `gold_ue_count`, `silver_ue_count`) have configuration roles in the base product and metric roles in other domains. [Scope audit](../platform_data/tables/DICTIONARY_SCOPE_AUDIT.csv) preserves those definitions. Availability also depends on states such as `ok`, `snapshot_only`, `replaced`, and `capability_missing`; the role count does not imply that all metric-name overlaps are usable in every record.
 
 The 5 s core-network observations contain **24 variables**. Their timestamps can be aligned with the 1 s tables, but some same-named fields have different values at the same time. The 5 s observations therefore are not a direct downsampling of the 81-column tables. The **18-variable prediction input** is also constructed separately from the raw records, as described in [C.1](#c1-prediction-inputs). See the [dataset guide](source_notes/DATASET_GUIDE.md) and [schema comparison](data/schema_verification.json) for details.
 
@@ -135,8 +139,8 @@ Missing or unavailable observations should not be replaced with zero. User/sessi
 | Network traffic | N3/N4/N6 and SBI packets | Flows or interfaces; packets, bytes, uplink/downlink bitrates, and flow duration |
 | Signaling and sessions | AMF/SMF logs, management interfaces, and protocol packets | UE/PDU sessions and SMF/UPF mappings; registration, session establishment, and active-session statistics |
 | NF resources and state | Container management interfaces | AMF, SMF, UPF, NRF, NSSF, UDM, UDR, AUSF, PCF, and MongoDB; CPU, memory, readiness, and restarts |
-| Hosts and interfaces | OS interfaces | CPU, memory, system load, and cumulative interface send/receive counters |
-| gNB and UE state | UERANSIM logs and state queries | Readiness counts, registration state, and session state |
+| Host / interface statistics | OS interfaces | CPU, memory, system load, and cumulative interface send/receive counters |
+| gNB and UE status | UERANSIM logs and state queries | Readiness counts, registration state, and session state |
 | Application transfers | UE clients and DN servers | Actual transfer times, data volumes, and completion, timeout, or failure outcomes |
 
 Derived rates use the following definitions:
@@ -148,6 +152,8 @@ Derived rates use the following definitions:
 Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates.
 
 ## Appendix C. Task construction
+
+[Processing detail](../platform_data/details/PROCESSING.md) and [lineage table](../platform_data/tables/PROCESSING_LINEAGE.csv) document session association, original timestamps, asynchronous alignment, aggregation and quality. [Current handoff checks](../checks/current/appendix_review_handoff.json) bind the contributed input hashes and 24-feature order. These checks do not certify the still-unconfirmed historical-paper execution identity.
 
 ### C.1 Prediction inputs
 

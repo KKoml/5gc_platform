@@ -1,11 +1,9 @@
-# Supplementary Material Availability
+# Publication and access status
 
-The `main` branch includes the paper appendices, field dictionary, prepared AI datasets, 1 s platform exports, task indices, windows, masks, preprocessing scales, evaluation code, fitted models, and saved results. Start with the [repository overview](README.md) or [data access](DATA_ACCESS.md).
+This review branch brings the current English A–D supplement, expanded platform/data descriptions, anonymized linked examples and the existing experiment datasets/configurations/results into one tree. The manuscript PDF SHA-256 matches `manifests/english_manuscript.json` and `platform_data/manifests/BUILD_CONTEXT.json`.
 
-PCAP files are excluded. The complete set of original logs and raw collection records is not included. Expanded platform documentation, run examples, and selected platform source are maintained on the `codex/platform-data-appendices-20261007` branch.
+No collection-platform source is present in this tree. Evaluation and offline task-data code are retained; platform implementation paths/version/hashes are documentary references. The earlier platform branch and historical commits may retain previously published code. This update does not rewrite history, delete branches or change repository visibility.
 
-The [anonymous review entry](https://anonymous.4open.science/r/5gc_platform-1FEA/) has not been verified for this update. Availability in the private GitHub repository does not establish that the anonymous entry has synchronized or that its files can be downloaded.
+Prepared 1 s/5 s/prediction inputs are present. Complete original non-PCAP logs and the current traffic corpus have an owner-private Drive backup; anonymous raw access and third-party corpus redistribution rights remain unverified. PCAP is excluded.
 
-This update adds the prepared data and related documentation. It does not report new training, checkpoint inference, or experimental results.
-
-The 2026-10-14 documentation synchronization aligns the result index and appendix navigation with the current English six-page manuscript. It does not change datasets, model files, or evaluation code and does not verify anonymous-entry synchronization.
+The paper’s anonymous route is a reader entrance, not a Git push URL. Current anonymous file retrieval/mirror revision must be verified separately after publication. Local hash/schema/link checks and a successful Git push do not alone establish that the mirror exposes these files. See the current release check report and external readback record.

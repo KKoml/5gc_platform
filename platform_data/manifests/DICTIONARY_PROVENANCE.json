@@ -1,0 +1,18 @@
+{
+  "source_sha256": "5e2c7f957d630f79627218f881286197ea4518be9bc60850ef268ce4a3f50b50",
+  "source_version": "kpi-dictionary/v2; current working-copy dictionary",
+  "entries": 400,
+  "roles": {
+    "identifier": 24,
+    "label": 14,
+    "metric": 215,
+    "configuration": 47,
+    "state": 26,
+    "quality": 53,
+    "event": 3,
+    "dimension": 17,
+    "evidence": 1
+  },
+  "historical_manuscript_dictionary_identity": "UNVERIFIED",
+  "english_view_rule": "Identifiers, role, unit, type, availability and source fields retained. Display labels are mechanical, not new scientific definitions. Original caveats retained in source evidence, which is in its original language."
+}

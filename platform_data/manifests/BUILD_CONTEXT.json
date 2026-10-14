@@ -1,0 +1,14 @@
+{
+  "collection_commit": "dffa0226d406235017f26a28c50ec59a304840ff",
+  "manuscript_sha256": "38e24951f077d924e4842bd748f944400e11db14b76f953a16c074b24f066c3d",
+  "language": "English",
+  "selected_sample_run": "W1-D06",
+  "original_data_changed": false,
+  "network_or_fault_execution": false,
+  "raw_cloud_location": "private owner backup completed; anonymous raw access not established",
+  "experiment_machine_task_manifests": "provided in current repository; provided hashes and feature order checked; historical execution identity unconfirmed",
+  "publication_branch": "codex/appendix-review-20261014",
+  "manuscript_title": "A Controlled 5G Core Data Generation Platform for AI Task Evaluation",
+  "manuscript_version": "owner-supplied latest English manuscript, 2026-10-14",
+  "platform_source_in_review_package": false
+}
