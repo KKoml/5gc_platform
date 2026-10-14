@@ -1,0 +1,235 @@
+{
+  "edition": "English six-page manuscript with funding and Chapter IV appendix pointer",
+  "documentation_synced_on": "2026-10-14",
+  "pages_including_references": 6,
+  "pdf_filename": "D_GATE_English_with_author.pdf",
+  "pdf_sha256": "38e24951f077d924e4842bd748f944400e11db14b76f953a16c074b24f066c3d",
+  "source_zip_sha256": "4d5b3ea5bebbab229e0416a44fe607e7b00dc96c892b04a2cb695ea3ff55ffb0",
+  "current_labels": {
+    "fig:architecture": "1",
+    "alg:collection": "1",
+    "tab:data_categories": "I",
+    "subsec:dataset_setup": "\\mbox  {III-B",
+    "fig:deployment": "2",
+    "fig:physical_setup": "3",
+    "tab:prediction_results": "II",
+    "tab:detection_results": "III",
+    "tab:classification_results": "IV",
+    "tab:imputation_results": "V"
+  },
+  "source_files": [
+    {
+      "path": "IEEEtran.bst",
+      "sha256": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f"
+    },
+    {
+      "path": "IEEEtran.cls",
+      "sha256": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e9ba5cf7e809d9f542ccdd8b50f41fe1e45412e7e444a6cf59bc5578aa0b06c3"
+    },
+    {
+      "path": "figures/collection_algorithm.tex",
+      "sha256": "fa2910305ae5a66c2a40416e9b28b738fe44bf3a40153f49d7e3d97d3b30e086"
+    },
+    {
+      "path": "figures/deployment.pdf",
+      "sha256": "c4d351aa5cebb709cecd837e0ed192d6792a2051cfa389f300c9c8411847e8ee"
+    },
+    {
+      "path": "figures/detection_metrics.csv",
+      "sha256": "fbe376c8e2bd4a7b16134f47f27fcb1134c14daa5f614129b85a8b8a65832d46"
+    },
+    {
+      "path": "figures/fault_detection.pdf",
+      "sha256": "887a8b0b61f0ecb3ebb573706b33bae6c8e68ef16af8cd9faa1150ba30661f42"
+    },
+    {
+      "path": "figures/fault_detection.png",
+      "sha256": "aea481a8eb0f2dc30b77332c54772d3a5fba09e3dec4cfacf7ba82065f9c692d"
+    },
+    {
+      "path": "figures/fault_detection.svg",
+      "sha256": "b42ddac94b03d63444d5875cda7ccbf0f81f44b462c7f5f1cdec59e68ce8f366"
+    },
+    {
+      "path": "figures/fault_localization.pdf",
+      "sha256": "e24fb0d8b1734f9e55d34f7c9fed0700f73a7823dbedff63e2218cd575b79987"
+    },
+    {
+      "path": "figures/fault_localization.png",
+      "sha256": "9279767604b7f9c7f510c0f125180226aaf4460da465ec34f13a84e6d50a4e68"
+    },
+    {
+      "path": "figures/fault_localization.svg",
+      "sha256": "247b06b9fa5b89eea2ef72986782f0822847e814300f0190da617d2588d0002e"
+    },
+    {
+      "path": "figures/localization_display.csv",
+      "sha256": "469e8ac941c2cf8e9f9d82b329ef8ac0751c61238d599436e0f1e3d7f702a0d2"
+    },
+    {
+      "path": "figures/localization_metrics.csv",
+      "sha256": "284b8f2d88c0801f1731c96e6b2825c5df553acc9a77f743b72c2ac75e986200"
+    },
+    {
+      "path": "figures/physical_setup.pdf",
+      "sha256": "f6eaeeba97cbbad301743ce94c6ebc43f7f62c5fc13cc88424960b5184bf470b"
+    },
+    {
+      "path": "figures/physical_setup.png",
+      "sha256": "8c40a6b97edee32eeb7ffe1ed6379201af045be9df43237d7e8266b6c9136368"
+    },
+    {
+      "path": "figures/physical_setup_placeholder.pdf",
+      "sha256": "71397c6ff3eda5f3815330e7eae29fb48cf1d0f2f0a91ec6f799a10305e30e20"
+    },
+    {
+      "path": "figures/platform-architecture.pdf",
+      "sha256": "5e11350ce509e461785b2ae039f79836d2846f4644b699e451bf7406aabd8e8c"
+    },
+    {
+      "path": "figures/platform_float.tex",
+      "sha256": "504766d7aacad9f08ed0c94252b855f1e88e9959e9f314f05b23da098d3d043a"
+    },
+    {
+      "path": "figures/plot_detection.py",
+      "sha256": "45b5adf1c9983465c9b9bf144fa8396df2f5541ae9c9bdea0cce52e6118ac4c7"
+    },
+    {
+      "path": "figures/plot_localization.py",
+      "sha256": "818069c91fdd2815208e2d1b377de6a9f1019a31789235f7c87762f5ed7a37e7"
+    },
+    {
+      "path": "figures/source/FIGURE1_SOURCE.txt",
+      "sha256": "bd31a85efa342ab230633f9ffee132c130ff98a026d06dc1f1d4c1d1550532e4"
+    },
+    {
+      "path": "figures/source/FIGURE_IMPORT_README.md",
+      "sha256": "16ff400b0b028e7af3354dc22aed52b7fe9c456937321a031a3cdf47bee97b80"
+    },
+    {
+      "path": "figures/source/figure1_current.pptx",
+      "sha256": "7d46b253bf3cddd341958d5f3fc3d561e32903776fd833c795d7defa65c156a9"
+    },
+    {
+      "path": "figures/source/figure1_legacy_before_user_edits.drawio",
+      "sha256": "651bad885a306c5241592e3bb7f20a5428b161ab09ac5699f180e6b7e9435add"
+    },
+    {
+      "path": "figures/source/figure1_legacy_before_user_edits.svg",
+      "sha256": "d9f7b63262f63364c62a2e22880998592e2dbd40bfb5330481f0f6783126e1d1"
+    },
+    {
+      "path": "figures/source/physical-setup-original.pptx",
+      "sha256": "43699df0dbde61ba11eb4bac61e259d4569bf404bd72ce9568fba87e7ceb53f9"
+    },
+    {
+      "path": "figures/source/physical-setup.pptx",
+      "sha256": "9f2e5daf744b981085f06aca14add9129604d0b3597bef351517e973893cf78e"
+    },
+    {
+      "path": "figures/source/platform-architecture-compact.pptx",
+      "sha256": "56ae7630c9dbc68886c269219378a83f4cd6c93d5ae0aa33713e9d7c8ee29221"
+    },
+    {
+      "path": "figures/source/platform-deployment-original.pptx",
+      "sha256": "c99533e7fec22b1d4a6e014f89a052faa22076bb4097b01ef59b60473150ece5"
+    },
+    {
+      "path": "figures/source/platform-deployment.pptx",
+      "sha256": "68859b036706ca465a098435e856b9bdb469e43eb435d016ba7c00bf4e6408ab"
+    },
+    {
+      "path": "figures/source/plot_fonts/LICENSE.txt",
+      "sha256": "e4593eea6be55531c930388446f950ce97b5c730f5bc5dfd0167489402e91de4"
+    },
+    {
+      "path": "figures/source/plot_fonts/LiberationSerif-Bold.ttf",
+      "sha256": "446a4421f297698427170fd7db20e59169a4188baaaf940e9bea58af6341a723"
+    },
+    {
+      "path": "figures/source/plot_fonts/LiberationSerif-Regular.ttf",
+      "sha256": "29d12439831b7f59194efec85872f24f54eff05738933f9a860220d2abff88ba"
+    },
+    {
+      "path": "figures/source/plot_fonts/PROVENANCE.md",
+      "sha256": "e0a3c6bb22e5dac06077d4caaa3ddb298a8e86cf510436af61b9842c05c57355"
+    },
+    {
+      "path": "figures/source/plot_qa/audit_panel_alignment.py",
+      "sha256": "43958e6b49d897f326ff64e73cbed0bf057e17c06533b5b57d3dededf8111e76"
+    },
+    {
+      "path": "figures/source/plot_qa/vector_hatching.py",
+      "sha256": "c1b3b36287ac960be098ffd7257a1ef19d786243abb28b9720ba4a51a19caffb"
+    },
+    {
+      "path": "latexmkrc",
+      "sha256": "1c3d98a650675c4b7d3744f5df60fe78d83d235ba91785986ede5b37fbe60dc6"
+    },
+    {
+      "path": "main.tex",
+      "sha256": "a06f3b75fbef51fd89ac599c17442a8434559846c7571f6924c26cc5da132323"
+    },
+    {
+      "path": "main_with_photo.tex",
+      "sha256": "a27b1d47527bd2a5f4a8c3aac6a84d45b2d037de5d197565aadc3aa6d7d7488c"
+    },
+    {
+      "path": "manuscript.tex",
+      "sha256": "d5b25e950a6a051d9a2426faddb651ff23079be42d0081672f0452f705933fc4"
+    },
+    {
+      "path": "math_commands.tex",
+      "sha256": "3fc4f1ddb7b92980382794d88637ce81a7ed153f574ad6fe4e48e5c246296049"
+    },
+    {
+      "path": "preamble.tex",
+      "sha256": "d5e59ad781e9c9d5db12ef6b38bc486ecc8057ab87d276dd8d4edfd27fb1ab84"
+    },
+    {
+      "path": "references.bib",
+      "sha256": "7e99f6746cc0f5a5b0caa34d2b766ac56d21705f0e4d0a1e204c424a4bca254d"
+    },
+    {
+      "path": "sections/0_abstract.tex",
+      "sha256": "8b10ac0eeb63d2d437e612ba9ad9870dcf4b8a8ecd011dc171a02783a336bdf4"
+    },
+    {
+      "path": "sections/1_introduction.tex",
+      "sha256": "e777dae96b57a3a94c27ad909efe4db8e0d73a6534d113d46977a19c37f5e192"
+    },
+    {
+      "path": "sections/2_background_related.tex",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "sections/3_testbed.tex",
+      "sha256": "64101e7c6a2801670b07fd76ab2cf22888b9252ec1959577300965f9b7cef80a"
+    },
+    {
+      "path": "sections/4_data_benchmark.tex",
+      "sha256": "fbf88d90c7c5d820e424cd07d32bc5aea7940009294a6123426230a53aa965bc"
+    },
+    {
+      "path": "sections/5_evaluation_protocol.tex",
+      "sha256": "35e43bd887ec5f0b11f116819441287f753cc49d2a3f81d5c0586b39863263f2"
+    },
+    {
+      "path": "sections/6_conclusion.tex",
+      "sha256": "f29988b503403fcb227d3dd628c3ca7a1c1595246ef1b9ec507ce8aecbc072cd"
+    },
+    {
+      "path": "supplementary_photo.tex",
+      "sha256": "b24e2188aaceec75f8df842bebc5c4215e7d2e4402479340bde7fe1b7f1ce429"
+    }
+  ],
+  "historical_manifests_preserved": [
+    "paper_baseline.json",
+    "compressed_manuscript.json"
+  ],
+  "scope": "Document correspondence only; not proof of historical experiment identity. Paper, figure, dataset, model and evaluation-code payloads were not changed or uploaded in this update."
+}

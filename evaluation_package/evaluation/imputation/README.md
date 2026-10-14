@@ -16,7 +16,7 @@ The comparisons include the training-set median, forward fill, linear interpolat
 | [Results](results/) | MAE summaries and comparisons by run, target, and missingness condition |
 | [Main comparisons](results/main_comparison.csv) | SAITS-H/M and statistical baseline comparisons |
 
-Table IV reports the two test runs, D06 and D07. SAITS training uses seeds 17, 29, and 43; the three fixed mask seeds are 101, 202, and 303. Results are averaged over masks and training seeds, then equally over the two runs.
+Table V reports the two test runs, D06 and D07. SAITS training uses seeds 17, 29, and 43; the three fixed mask seeds are 101, 202, and 303. Results are averaged over masks and training seeds, then equally over the two runs.
 
 Use the [evaluation overview](../README.md) to aggregate the saved table. [Task construction](../../../appendix/D3_data_construction.md) and [model parameters](../../../appendix/E1_models_hyperparameters.md) give the detailed masking and model settings.
 

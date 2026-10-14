@@ -10,7 +10,7 @@ This task evaluates alarms over complete test runs. Autoencoder, adapted KAN-AD,
 | [Detection indices](../../../data_machine/dataset/task_data/tasks/FD_detection/) | Detection samples and time-window indices |
 | [Normal-only models](normal_only/) | Code, configurations, fitted models, scores, and metrics for autoencoder, KAN-AD, and TranAD |
 | [Supervised random forest](supervised_rf/) | Code, configurations, fitted models, thresholds, and saved outputs for the supervised baseline |
-| [Figure data and plotting](../../../paper_figures/) | Summary data and plotting programs for Figure 4 |
+| [Figure data and plotting](../../../paper_figures/) | Summary data supporting current Table III; plotting programs retain the earlier figure presentation |
 
 ## Evaluation protocol
 

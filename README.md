@@ -21,10 +21,10 @@ This repository provides experiment descriptions, field definitions, prepared da
 
 | Task | Code and settings | Paper output |
 | --- | --- | --- |
-| Network performance prediction | [Prediction](evaluation_package/evaluation/prediction/README.md) | Table III |
-| Fault detection | [Detection](evaluation_package/evaluation/detection/README.md) | Figure 4 |
-| Fault classification and associated-target identification | [Classification](evaluation_package/evaluation/localization/README.md) | Figure 5 |
-| Network metric imputation | [Imputation](evaluation_package/evaluation/imputation/README.md) | Table IV |
+| Network performance prediction | [Prediction](evaluation_package/evaluation/prediction/README.md) | Table II |
+| Fault detection | [Detection](evaluation_package/evaluation/detection/README.md) | Table III |
+| Fault classification and associated-target identification | [Classification](evaluation_package/evaluation/localization/README.md) | Table IV |
+| Network metric imputation | [Imputation](evaluation_package/evaluation/imputation/README.md) | Table V |
 
 Detailed descriptions are available for [task construction](appendix/D3_data_construction.md), [model parameters](appendix/E1_models_hyperparameters.md), and [result aggregation](appendix/E2_results_correspondence.md).
 
@@ -33,3 +33,5 @@ Detailed descriptions are available for [task construction](appendix/D3_data_con
 The prepared AI inputs and 1 s platform exports are included in `main`, together with task indices, prepared windows, fixed masks, and preprocessing scales. [Data access](DATA_ACCESS.md) links each data product to its evaluation use. PCAP files are excluded, and the complete collection of original logs and raw records is not included. The provided data support the documented evaluation workflow; regenerating every derived product from raw collection records requires additional source material.
 
 Expanded English platform and data appendices, run examples, and selected platform source are available on the `codex/platform-data-appendices-20261007` branch, under `appendices/`, `samples/`, and `platform/source/`.
+
+For the numbering used by the current six-page English manuscript and the expanded platform branch, see the [appendix navigation guide](APPENDIX_NAVIGATION.md). The current manuscript fingerprint is recorded [here](manifests/english_manuscript.json); earlier manuscript fingerprints are retained as historical records.

@@ -16,7 +16,7 @@ SMA averages the last 10 s of valid target observations. PatchTST uses target hi
 | [Model runs](outputs/jobs/) | Candidate and selected models, configurations, and saved outputs |
 | [Metrics](outputs/metrics_long.csv) | Results by target, model, run, and seed |
 
-## Table III and input comparisons
+## Table II and input comparisons
 
 For each seed, MAE is averaged equally over D06 and D07. The table reports the mean and sample standard deviation across seeds 42, 43, and 44; SMA requires no fitting. Bitrates are reported in Mbit/s and CPU errors in percentage points.
 

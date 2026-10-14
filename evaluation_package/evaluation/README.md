@@ -6,10 +6,10 @@ The evaluation covers four offline tasks using a fixed split of complete runs: D
 
 | Task | Main materials | Reported result |
 | --- | --- | --- |
-| [Prediction](prediction/README.md) | Model settings, selected models, and saved prediction metrics | Table III: MAE for N3 downlink bitrate, N6 aggregate bitrate, and host CPU utilization |
-| [Detection](detection/README.md) | Normal-only and supervised models, thresholds, and event metrics | Figure 4: event recall and false alarms per hour |
-| [Classification](localization/README.md) | Sequence models, random forests, and input comparisons | Figure 5: fault-type, associated-target, and joint accuracy |
-| [Imputation](imputation/README.md) | Statistical baselines, SAITS-H/M, and missingness comparisons | Table IV: MAE under random and continuous missingness |
+| [Prediction](prediction/README.md) | Model settings, selected models, and saved prediction metrics | Table II: MAE for N3 downlink bitrate, N6 aggregate bitrate, and host CPU utilization |
+| [Detection](detection/README.md) | Normal-only and supervised models, thresholds, and event metrics | Table III: event recall and false alarms per hour |
+| [Classification](localization/README.md) | Sequence models, random forests, and input comparisons | Table IV: fault-type, associated-target, and joint accuracy |
+| [Imputation](imputation/README.md) | Statistical baselines, SAITS-H/M, and missingness comparisons | Table V: MAE under random and continuous missingness |
 
 ## Read or aggregate the saved results
 
@@ -19,7 +19,7 @@ The [paper result index](../../PAPER_RESULT_MAP.md) links each table and figure 
 python3 verify_paper_tables.py
 ```
 
-The [figure directory](../../paper_figures/) contains the detection and classification summary data and plotting programs. These table and figure summaries do not require the full task datasets.
+The [figure directory](../../paper_figures/) contains the detection and classification summary data and plotting programs. The plots retain the earlier figure presentation; the current English manuscript reports detection and classification in Tables III and IV. Aggregating the saved summaries does not require the full task datasets.
 
 ## Task inputs and further evaluation
 

@@ -1,6 +1,6 @@
 # D-GATE Supplementary Appendices
 
-These appendices describe the platform implementation, collection settings, data formats, task construction, and evaluation settings used in the D-GATE study. Detailed AI evaluation materials are linked alongside the corresponding sections.
+These appendices describe the platform implementation, collection settings, data formats, task construction, and evaluation settings used in the D-GATE study. Detailed AI evaluation materials are linked alongside the corresponding sections. These A–D labels are the supplementary appendices cited by the current English manuscript. The [navigation guide](../APPENDIX_NAVIGATION.md) distinguishes them from the older detailed D.3/E series and the expanded platform-branch appendices.
 
 | Appendix | Contents |
 |---|---|
@@ -35,7 +35,7 @@ The table below separates upstream software from platform integration, adaptatio
 | Data retrieval | Cross-host file retrieval, completeness checks, and run reports | `scripts/traffic_transfer_bundle.py`, `scripts/audit_scenario_one_run.py` |
 | Association and export | Session mapping, metric export, and field/quality checks | `scripts/export_session_map.py`, `scripts/export_v3_timeseries.py`, `scripts/dataset_schema.py` |
 
-The platform extends SMF session logs to record user, session, address, and tunnel mappings. Network-function changes include local cleanup after failed release of an old session without removing an index that already points to a new session; SMF PFCP response matching and handling of sessions affected by UPF failure; AMF registration-state updates; NRF slice-identifier matching; and PCF numeric-type compatibility. These changes support continued operation and record association during interventions.
+The platform extends SMF session logs to record user, session, address, and tunnel mappings. Network-function changes include local cleanup after failed release of an old session without removing an index that already points to a new session; SMF PFCP response matching and session error handling in the UPF; AMF registration-state updates; NRF slice-identifier matching; and PCF numeric-type compatibility. These changes support continued operation and record association during interventions.
 
 Control-plane log collectors retain their read positions, parse appended content, and reset when a file is replaced or truncated. Resource records retain instance identifiers and collection status so that zero values can be distinguished from unavailable observations.
 

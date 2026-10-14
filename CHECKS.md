@@ -28,3 +28,7 @@
 - 1 s样例经源表逐单元核对，为81列、20行、1 s间隔；旧标错的5 s样例未继续作为1 s例子使用。
 - 字段字典含400条定义、215条metric；32项历史口径问题留在附录说明。
 - 本次仅做材料、路径和文件一致性检查；未重新运行历史实验或训练。匿名访问仍受GitHub App权限阻挡。
+
+## 2026-10-14 documentation synchronization
+
+Current English-manuscript labels and the physical-photo description supersede the older display references above. The current mapping and historical-label correspondence are in `PAPER_RESULT_MAP.md` and `manifests/paper_result_map.csv`; the fingerprint is in `manifests/english_manuscript.json`. This update checks document correspondence, links and payload hashes; it does not rerun the earlier experiment checks.
