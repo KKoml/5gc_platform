@@ -18,3 +18,5 @@ The prediction builder uses source records available before the history cutoff. 
 The Core24 example and prediction-view summary document platform-side data products. Their correspondence to the final AI input files has not been established. The final task definitions, windowing, masks, splits, and training-set preprocessing are described in `appendix/D3_data_construction.md` on the `main` branch; see the [AI evaluation directory guide](../experiment-machine/README.md).
 
 Small examples are available in [W1-D06](../samples/W1-D06/README.md). Reconstructing complete inputs requires the full source records and the corresponding task builders.
+
+Prepared task inputs and their file hashes are now available on main under the paths listed in `DATA_ACCESS.md`, `manifests/dataset_files.csv`, and `manifests/input_manifest.csv`. Their upload does not establish the unresolved correspondence between this branch's Core24 example or repaired-view summary and the final task inputs. The full raw-data download gap above concerns reconstruction from collection records, not availability of the prepared evaluation inputs.

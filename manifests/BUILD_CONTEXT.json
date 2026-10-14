@@ -7,5 +7,11 @@
   "network_or_fault_execution": false,
   "raw_cloud_location": "pending owner upload",
   "experiment_machine_task_manifests": "pending separate upload",
-  "publication_branch": "codex/platform-data-appendices-20261007"
+  "publication_branch": "codex/platform-data-appendices-20261007",
+  "publication_status_update": {
+    "date": "2026-10-14",
+    "prepared_task_inputs": "Uploaded on main; see DATA_ACCESS.md, manifests/dataset_files.csv and manifests/input_manifest.csv.",
+    "original_pending_field": "experiment_machine_task_manifests records the original assembly state; it is retained as history, not current upload status.",
+    "source_relationships": "Unresolved Core-side example to final-input correspondence is unchanged."
+  }
 }

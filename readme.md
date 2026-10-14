@@ -24,3 +24,7 @@ These examples are not the complete dataset. Full original runs, packet captures
 [Platform source](platform/source/) contains selected modules for experiment control, data collection, fault injection, recovery checks, and data processing, together with selected network-function implementations. Running the platform requires the deployment dependencies and local configuration described in [Appendix A](appendices/APPENDIX_A.md). See the [license and attribution notes](licenses/NOTICE.md).
 
 AI task construction, model settings, saved models, and evaluation results are available on this repository's `main` branch under `appendix/` and `evaluation_package/`. The [AI evaluation directory guide](experiment-machine/README.md) lists the relevant paths.
+
+## Current manuscript and appendix numbering
+
+The current English six-page paper cites the A–D series in `main/manuscript_supplement/README.md`. This platform branch uses A for implementation/deployment, B for configuration/control, C for data organization, and D.1–D.2 for processing. See `APPENDIX_NAVIGATION.md` on main for the correspondence. Main also now includes the prepared AI datasets and input contracts; this branch's raw-data download gaps do not mean those prepared inputs are absent.

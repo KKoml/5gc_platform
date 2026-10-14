@@ -19,3 +19,7 @@ The appendices describe the D-GATE platform, experiment configuration, collected
 ## AI tasks and evaluation
 
 Appendix D.3 and Appendix E are available on the `main` branch under `appendix/`, alongside the code, saved models, and results in `evaluation_package/`. See the [AI evaluation directory guide](../experiment-machine/README.md) for the file paths.
+
+## Relation to the current English manuscript
+
+The A–D labels cited by the paper refer to `manuscript_supplement/README.md` on main. In that series, A covers platform implementation and configuration, B covers fields and examples, C covers task construction, and D covers evaluation settings and results. This branch retains the expanded platform numbering shown above. Use `APPENDIX_NAVIGATION.md` on main to move between the series.
