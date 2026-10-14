@@ -10,3 +10,7 @@ evaluation_package/evaluation/prediction/cache/
 *.pcap.gz
 *.pcapng.gz
 *.cap.gz
+
+# Collection-platform implementation is withheld from this repository.
+/platform/source/
+/data_machine/platform/
