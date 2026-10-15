@@ -178,6 +178,11 @@
       "path": "README.md",
       "previous_sha256": "53244b0acd826c268f20191959ed50bad1c5b311dc64d378a85f9050dd93e973",
       "english_revision_sha256": "9ce4add082efe519712dfae4c6adca3a8ab871bbbd18499d1e471e9ae7d84cc8"
+    },
+    {
+      "path": "readme.md",
+      "previous_sha256": "20349438d11956b266770662aad2a48c798613e7478b3aab9b86d67284a58c57",
+      "english_revision_sha256": "9ce4add082efe519712dfae4c6adca3a8ab871bbbd18499d1e471e9ae7d84cc8"
     }
   ],
   "validation": {
@@ -190,5 +195,6 @@
     "JSON_numeric_fields_unchanged": true,
     "rewritten_document_relative_links_valid": true,
     "inference_or_training_run": false
-  }
+  },
+  "anonymous_readme_entry": "The anonymous viewer selects lowercase readme.md by default. Both README filenames contain the same complete English entry."
 }
