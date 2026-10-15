@@ -1,1 +1,1 @@
-修复重跑完成单元 88/90。每单元要求 D06/D07 全部样本输出。N6/流计时 ARIMA 缺少合法长上下文；其他失败见 branch_failures.json 和 jobs。四字段前缀修复不等于全部遥测实时可用性证明。测试为此前已访问的后验测试。英文表及逐样本输出已保存，未修改论文。
+Repaired rerun completed 88/90 units. Each unit requires outputs for every D06/D07 sample. N6/flow-timing ARIMA lacks valid long context; other failures are in branch_failures.json and jobs. Four-field prefix repair does not establish real-time availability of all telemetry. Tests are previously accessed post hoc tests. English tables and per-sample outputs are saved; the manuscript was not modified.

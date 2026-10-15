@@ -1,18 +1,18 @@
-# Appendix E.2　完整结果与论文对应
+# Appendix E.2 — Full results and correspondence with the paper
 
-使用正文 TeX 标签，通过 `PAPER_RESULT_MAP.md`、`manifests/paper_result_map.csv` 和 `result_files.csv` 定位输入、配置、训练记录、保存结果及统计/绘图程序。当前论文版本与历史执行的身份绑定仍未确认；数值和已定位执行的产物对应具有证据，不能扩展为历史身份已闭合。
+Use the paper's TeX labels, `PAPER_RESULT_MAP.md`, `manifests/paper_result_map.csv`, and `result_files.csv` to locate inputs, configurations, training records, saved results, and statistics/plotting programs. The link between the paper revision and the historical execution remains unconfirmed. Numerical agreement and correspondence with identified execution artifacts do not establish historical run identity.
 
-| 任务 | 保留的完整结果 | 正文汇总规则 |
+| Task | Full results retained | Paper aggregation rule |
 |---|---|---|
-| 预测 | `prediction/outputs/metrics_long.csv` 共1,000指标行，含额外模型/目标/输入对照；逐样本预测和冻结索引 | 每种子先等权平均D06/D07 MAE，再算三种子均值及样本SD(ddof=1)；SMA无训练随机性，比特率换为Mbit/s |
-| 检测 | 九个正常拟合模型/种子记录，D05/test得分与阈值；监督RF六个种子/预算测试行；完整预算0.1/1.0 | 合并两次完整主测试运行，144主事件、40.53有效正常小时；各种子先算事件指标，再均值/样本SD。FAR为报警段数/正常小时，不是逐点FP比例 |
-| 已知起点识别 | `localization/metrics/ALL_METRICS.csv` 共1,800分组指标行；15训练记录/概率文件；混淆与对照 | 合并144测试例，每联合类12例；每种子算联合/类型/关联目标准确率及宏F1，再均值/样本SD；保留FL10、ReadyMask对照 |
-| 缺失重建 | `imputation/results/metrics.csv` 共12,636指标行；54保存预测文件、真值、固定掩码及逐掩码/逐模型种子统计 | 运行内先平均101/202/303掩码，SAITS再平均17/29/43模型种子，最后等权平均D06/D07；仅遮盖且原有效的目标点计分 |
+| Forecasting | 1,000 metric rows in `prediction/outputs/metrics_long.csv`, including additional models/targets/input controls; per-sample predictions and frozen indices | First average D06/D07 MAE equally within each seed, then compute the three-seed mean and sample SD (ddof=1); SMA has no training randomness; bitrate is reported in Mbit/s |
+| Detection | Nine normal-only model/seed records, D05/test scores and thresholds; six supervised-RF seed/budget test rows; both 0.1/1.0 budgets | Pool the two complete main test runs: 144 main events and 40.53 valid normal hours; compute event metrics per seed, then mean/sample SD. FAR is alarm segments per normal hour, not pointwise FP proportion |
+| Known-start classification | 1,800 grouped metric rows in `localization/metrics/ALL_METRICS.csv`; 15 training records/probability files; confusion matrices and controls | Pool 144 test cases, 12 per joint class; compute joint/type/associated-target accuracy and macro-F1 per seed, then mean/sample SD; retain FL10 and ReadyMask controls |
+| Imputation | 12,636 metric rows in `imputation/results/metrics.csv`; 54 saved prediction files, ground truth, fixed masks, and per-mask/per-model-seed statistics | Within each run, average mask seeds 101/202/303, then SAITS model seeds 17/29/43, then equally average D06/D07; score only artificially hidden, originally valid target points |
 
-表中路径相对 `evaluation_package/evaluation/`。逐模型配置、选中轮数及验证分数见 `fit_records.csv` 与 `selected_prediction_models.csv`；复制的原记录保留候选/失败/跳过状态。没有用新结果替换历史保存结果。
+Paths in the table are relative to `evaluation_package/evaluation/`. Model settings, selected epochs, and validation scores are in `fit_records.csv` and `selected_prediction_models.csv`. Copied original records retain candidate/failed/skipped statuses. New results have not replaced historical saved results.
 
-完整材料保留时间计划对照的强表现、正常拟合检测方法不足10%的召回、监督RF与正常拟合制度差异，以及SAITS-M在两次运行的RX随机缺失下退化。记录中D05与测试划分分离不改变D06/D07已访问事实；后续RF优化也不能称为盲测。
+Full materials retain the strong time-schedule control, below-10% recall of normal-only detection methods, the supervision difference between RF and normal-only methods, and SAITS-M degradation for RX random missingness in both runs. Separating D05 from the test split does not undo prior access to D06/D07; subsequent RF optimization is not blind testing.
 
-本次从保存预测重算15个分类模型/种子行（60指标）、54个重建预测文件的全部12,636指标行；正常拟合检测重做D05阈值标定及六个均值/SD工作点摘要；预测重算200个MAE、正文九组均值/SD和54输入对照值。回执见 `checks/current/`。`verification/results/` 中检查点重放及新训练记录来自2026-10-03，是保留的既有验证，不是本次重新执行。
+The saved-output audit recomputed 15 classification model/seed rows (60 metrics), all 12,636 metric rows from 54 imputation prediction files, D05 thresholds and six mean/SD operating-point summaries for normal-only detection, and 200 forecast MAEs, nine paper mean/SD groups, and 54 input-control values. Receipts are in `checks/current/`. Checkpoint-replay and fresh-training records in `verification/results/` date from 2026-10-03; they are retained earlier verification, not executions performed during the English documentation update.
 
-当前英文六页稿将预测、检测、分类与定位、缺失重建分别列为表II、III、IV、V；图1–3分别为架构、部署和实物平台照片。旧检测/识别图及绘图程序作为补充材料保留，其文件和保存结果未改，不应再用旧图号定位当前正文。当前标签、结果入口及旧标签对照见 PAPER_RESULT_MAP.md 和 manifests/paper_result_map.csv；当前英文稿指纹见 manifests/english_manuscript.json。架构/部署/实物图不绑定模型训练记录。旧稿“32数值指标”的历史口径差异继续保留于 LINEAGE.md，当前英文稿未使用该子计数。
+The current six-page English paper reports forecasting, detection, classification/localization, and imputation in Tables II, III, IV, and V. Figures 1–3 show architecture, deployment, and the physical platform. Legacy detection/classification plots and their programs remain supplementary artifacts, with unchanged files and saved results; their old figure numbers do not identify current paper figures. Current labels, result entry points, and legacy-label correspondence are in PAPER_RESULT_MAP.md and manifests/paper_result_map.csv; the English manuscript fingerprint is in manifests/english_manuscript.json. Architecture/deployment/physical-platform figures have no model-training binding. The historical scope discrepancy for “32 numerical indicators” remains documented in LINEAGE.md; the current English paper does not use that subtotal.

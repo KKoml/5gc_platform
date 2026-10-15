@@ -1,7 +1,7 @@
 {
   "version": 1.1,
   "name": "5GAD_Game_Google_Attack_Scenario",
-  "description": "基于ue_tracer目录结构的流量回放剧本",
+  "description": "Traffic replay scenario based on the ue_tracer directory layout. The 5G_aggregated_gaming path is an English alias for the original external corpus directory; map it to your local corpus before use. Workload-input corpora are not bundled.",
   "defaults": {
     "start_offset": 0,
     "resample": true,
@@ -28,7 +28,7 @@
       "start_offset": 0,
       "source": {
         "type": "dir",
-        "path": "all_data/5G聚合游戏/Global/Online_gaming"
+        "path": "all_data/5G_aggregated_gaming/Global/Online_gaming"
       },
       "controls": [
         {

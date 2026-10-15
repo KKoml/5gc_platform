@@ -14,5 +14,6 @@
     "evidence": 1
   },
   "historical_manuscript_dictionary_identity": "UNVERIFIED",
-  "english_view_rule": "Identifiers, role, unit, type, availability and source fields retained. Display labels are mechanical, not new scientific definitions. Original caveats retained in source evidence, which is in its original language."
+  "english_view_rule": "Identifiers, roles, units, types, availability, and source fields are retained. Descriptions and caveats in the source-evidence copy were translated into English on 2026-10-15. The original source hash remains source_sha256; the translated copy has a separate published hash.",
+  "published_sha256": "e9023b03991eb7e5f4e96e532c9ad85a09fed1a808205513e992c4739993ca02"
 }

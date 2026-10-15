@@ -71,18 +71,22 @@
   ],
   "pdf_files": [
     {
-      "path": "D_GATE_开发贡献修订版.pdf",
-      "sha256": "a82cc9b4b53018d61a5a620536aaaaf0738442ff6fec4200048186a37b157544"
+      "path": "D_GATE_platform_contribution_revision.pdf",
+      "sha256": "a82cc9b4b53018d61a5a620536aaaaf0738442ff6fec4200048186a37b157544",
+      "path_representation": "English display alias for the historical non-English filename; not a bundled file. Original content hash retained."
     },
     {
-      "path": "正文主要修改高亮版.pdf",
-      "sha256": "6807f8299f7112d2b33d26f41ab91f28e4699179aba21a8a79c902c893d1f065"
+      "path": "main_text_changes_highlighted.pdf",
+      "sha256": "6807f8299f7112d2b33d26f41ab91f28e4699179aba21a8a79c902c893d1f065",
+      "path_representation": "English display alias for the historical non-English filename; not a bundled file. Original content hash retained."
     },
     {
-      "path": "正文修改对照.pdf",
-      "sha256": "6b5bdbe8098af2f421c62f2c71252925b41c42a8f3e1c4050a83bde8e84f783f"
+      "path": "main_text_revision_comparison.pdf",
+      "sha256": "6b5bdbe8098af2f421c62f2c71252925b41c42a8f3e1c4050a83bde8e84f783f",
+      "path_representation": "English display alias for the historical non-English filename; not a bundled file. Original content hash retained."
     }
   ],
   "anonymous_entry": "https://anonymous.4open.science/r/5gc_platform-1FEA/",
-  "historical_run_identity": "unconfirmed"
+  "historical_run_identity": "unconfirmed",
+  "documentation_note": "Historical Chinese manuscript baseline; language describes that manuscript, not the English repository documentation. The current English paper is recorded in english_manuscript.json."
 }

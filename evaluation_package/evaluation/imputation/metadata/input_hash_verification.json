@@ -1609,9 +1609,12 @@
   },
   {
     "path": "metadata/EXPERIMENT_KPI_DICTIONARY.csv",
-    "expected": "c414fe6b2225d6387f5c5ddd3a2dd12342a919bec60b14e5880975326b829538",
-    "actual": "c414fe6b2225d6387f5c5ddd3a2dd12342a919bec60b14e5880975326b829538",
-    "ok": true
+    "expected": "77a85c7f03fe3ab352370fc56d74e3daeaadaa3c8b5decd392061a868022063d",
+    "actual": "77a85c7f03fe3ab352370fc56d74e3daeaadaa3c8b5decd392061a868022063d",
+    "ok": true,
+    "historical_expected": "c414fe6b2225d6387f5c5ddd3a2dd12342a919bec60b14e5880975326b829538",
+    "historical_actual": "c414fe6b2225d6387f5c5ddd3a2dd12342a919bec60b14e5880975326b829538",
+    "documentation_revision": "2026-10-15: reviewer-copy English dictionary hash checked; historical source hashes retained separately; no model execution"
   },
   {
     "path": "metadata/FEATURE_COVERAGE_BY_RUN.csv",

@@ -1,12 +1,12 @@
-# Appendix E.3　复现指南
+# Appendix E.3 — Reproduction guide
 
-**数据与运行入口：** 本仓库已包含[平台时间序列表与5 s任务数据](../data_machine/dataset/README.md)、[预测历史与目标](../prediction_inputs/README.md)、[预测索引](../evaluation_package/evaluation/prediction/outputs/indices/)、[分类窗口](../evaluation_package/evaluation/localization/cache/)，以及插补的[窗口数据](../evaluation_package/evaluation/imputation/data/)、[人工掩码](../evaluation_package/evaluation/imputation/masks/)和[训练尺度](../evaluation_package/evaluation/imputation/metadata/scales.npz)。运行前仍需安装下述软件依赖。PCAP明确排除，完整原始采集日志和业务输入语料未随包提供；具体范围见[数据访问说明](../DATA_ACCESS.md)。
+**Data and entry points:** This repository includes [platform time-series tables and 5 s task data](../data_machine/dataset/README.md), [forecast histories and targets](../prediction_inputs/README.md), [forecast indices](../evaluation_package/evaluation/prediction/outputs/indices/), [classification windows](../evaluation_package/evaluation/localization/cache/), and imputation [window data](../evaluation_package/evaluation/imputation/data/), [artificial masks](../evaluation_package/evaluation/imputation/masks/), and [training scales](../evaluation_package/evaluation/imputation/metadata/scales.npz). Install the dependencies below before execution. PCAP is explicitly excluded; complete raw collection logs and workload-input corpora are not included. See [data access](../DATA_ACCESS.md).
 
-从材料根目录先执行 `sha256sum -c SHA256SUMS.txt`。运行时使用独立可写副本：部分既有验证程序会写 `evaluation_package/evaluation/verification/results/`，预测推理临时建立cache。保留封存副本和原实验。本包的表级入口不需要原实验目录或原始PCAP。
+First run `sha256sum -c SHA256SUMS.txt` from the repository root. Use a separate writable copy for execution: some verification programs write to `evaluation_package/evaluation/verification/results/`, and forecast inference creates a temporary cache. Preserve the archived copy and original experiments. Table-level entry points do not require the original experiment directories or raw PCAP.
 
-在隔离环境安装 `evaluation_package/evaluation/verification/requirements-replay.txt`。神经推理另安装与历史记录匹配且适合本机的PyTorch/CUDA；不声称CPU推理已验证。本次统计环境见 `checks/current/environment.json`。检查点推理前应检查GPU和当前实验占用。本次仅重算统计，不启动新训练。
+Install `evaluation_package/evaluation/verification/requirements-replay.txt` in an isolated environment. Neural inference additionally requires PyTorch/CUDA matching the historical record and suitable for the local machine; CPU inference has not been verified. The saved-statistic audit environment is in `checks/current/environment.json`. Check GPU availability and active experiments before checkpoint inference. The documentation update itself does not launch inference or training.
 
-## E.3.1　保存结果重算：无需推理
+## E.3.1 — Recompute saved results without inference
 
 ```bash
 cd evaluation_package/evaluation
@@ -18,9 +18,9 @@ python tools/recompute_detection_saved.py
 python evaluation_package/evaluation/verification/verify_data_package.py
 ```
 
-输入：保存预测/索引；D05/test检测得分、阈值和事件记录；分类概率/标签；重建真值/预测、训练尺度；当前1秒导出/字典和5秒表。输出：控制台回执、预测 `outputs/T1_SAVED_OUTPUT_RECOMPUTATION.json`、既有 `verification/results/` 回执、新 `checks/current/saved_metrics.json` 与 classification_recomputed.csv。本次确认统计数值、被检查的数据合同和分别记载的来源哈希，不执行模型推理，不证明历史身份。
+Inputs include saved predictions/indices; D05/test detection scores, thresholds, and events; classification probabilities/labels; imputation truth/predictions and training scales; and current 1 s exports/dictionaries and 5 s tables. Outputs include console receipts, forecast `outputs/T1_SAVED_OUTPUT_RECOMPUTATION.json`, receipts under `verification/results/`, and `checks/current/saved_metrics.json` and classification_recomputed.csv. These checks establish numerical agreement, the data contracts actually checked, and separately recorded source hashes. They do not perform inference or establish historical run identity.
 
-## E.3.2　检查点推理
+## E.3.2 — Checkpoint inference
 
 ```bash
 python evaluation_package/evaluation/verification/replay_prediction_checkpoints.py
@@ -30,11 +30,11 @@ python evaluation_package/evaluation/verification/replay_localization_checkpoint
 python evaluation_package/evaluation/verification/replay_imputation_checkpoints.py
 ```
 
-输入：预测历史/目标与尺度、任务表/索引、拟合预处理、模型权重和固定人工掩码；输出到既有verification/results，预测退出后删除临时cache，重建使用临时目录。保留的2026-10-03回执覆盖54个预测模型/数据组合、九个正常拟合及三个RF检测检查点、15分类模型、六SAITS模型与54预测文件。这是既有实际验证，本次不重新执行推理。每个程序记录数值容差和标识/掩码/决策的精确检查；既有神经检查使用CUDA，CPU未验证。重放证明检查点可解释随包输出，不等于历史论文运行身份。
+Inputs are forecast histories/targets and scales, task tables/indices, fitted preprocessing, weights, and fixed artificial masks. Outputs go to verification/results. Forecasting removes its temporary cache on exit; imputation uses a temporary directory. Retained receipts from 2026-10-03 cover 54 forecast model/data combinations, nine normal-only and three RF detection checkpoints, 15 classification models, six SAITS models, and 54 prediction files. This is previously executed verification, not inference rerun for the documentation update. Each program records numerical tolerances and exact identifier/mask/decision checks. Earlier neural checks used CUDA; CPU is unverified. Replay shows that checkpoints explain bundled outputs, not that the historical paper run has been identified.
 
-## E.3.3　从头训练：提供入口，本次不执行
+## E.3.3 — Train from scratch using separate run directories
 
-选择材料树之外的新空目录。入口记录 `NEW_RUN_MANIFEST.json`，不覆盖随包检查点与结果。
+Choose a new empty directory outside the material tree. Entry points write `NEW_RUN_MANIFEST.json` without overwriting bundled checkpoints or results.
 
 ```bash
 python evaluation_package/evaluation/verification/train_prediction_t1_from_bundle.py \
@@ -47,12 +47,12 @@ python evaluation_package/evaluation/verification/train_imputation_from_bundle.p
   --run-dir ../new-runs/offline-imputation
 ```
 
-预测只读D01—D05拟合/选择，另支持n3_downlink、n6_aggregate及PatchTST、TimeFilter。正常拟合检测支持AE、KAN-AD、TranAD及17/29/43；`--skip-test`在D05后停止。监督RF原入口为 `detection/supervised_rf/code/pilot.py`，配套protocol保留，但未验证独立便携的RF从头训练wrapper，已验证入口是检查点重放。分类训练五变体×三种子后冻结评测；重建先准备掩码、训练M/H×三种子再冻结评测。
+Forecast fitting/selection reads only D01–D05; n3_downlink, n6_aggregate, PatchTST, and TimeFilter are also supported. Normal-only detection supports AE, KAN-AD, TranAD, and seeds 17/29/43; `--skip-test` stops after D05. The original supervised-RF entry point is `detection/supervised_rf/code/pilot.py`, with its protocol retained. A standalone portable RF training wrapper has not been verified; checkpoint replay is the verified entry point. Classification trains five variants × three seeds before frozen evaluation. Imputation prepares masks, trains M/H × three seeds, then performs frozen evaluation.
 
-既有2026-10-03隔离训练回执仅覆盖host_cpu/XGBoost三种子、AE17、15分类模型及六SAITS模型；不等于所有预测/检测模型全量从头训练已验证。它们属于论文后新运行，不替换原结果。本次未启动任何训练。
+Retained isolated-training receipts from 2026-10-03 cover only three host_cpu/XGBoost seeds, AE17, 15 classification models, and six SAITS models. They do not verify fresh training of every forecast/detection model. These are post-paper runs and do not replace original results. No training is launched for this documentation revision.
 
-绘图入口（在可写副本中运行）为 `python paper_figures/plot_detection.py` 和 `python paper_figures/plot_localization.py`，读取相邻CSV并生成相邻PDF/SVG/PNG。本次从这些程序重绘两张图，在1500像素尺度与当前正文图逐像素完全相同；PDF时间元数据不要求一致。
+Supplementary plotting entry points are `python paper_figures/plot_detection.py` and `python paper_figures/plot_localization.py`, run in a writable copy. They read adjacent CSV files and produce adjacent PDF/SVG/PNG files. The earlier audit reproduced these two plots with pixel-identical rendering at 1500 pixels against the then-current manuscript plots; PDF time metadata need not match. These are legacy supplementary evaluation plots, not Figures 1–3 of the current English paper.
 
-## E.3.4　范围与访问限制
+## E.3.4 — Scope and access limitations
 
-当前仓库已提供1 s导出、400项字典、5 s任务表及上述评估输入，但未提供重建全部原始采集过程所需的完整日志、业务语料和部署材料；PCAP不在上传范围内。预测、24变量表与平台导出的未确认关系见 [LINEAGE.md](LINEAGE.md)。平台实现、配置和关联样例现位于本分支 `platform_data/`；本审阅目录不包含采集平台源码。仓库文件可用不等于论文匿名入口已同步可用。[RUN_GUIDE.md](../RUN_GUIDE.md)保留更细命令与既有验证范围。
+The repository provides 1 s exports, the 400-entry dictionary, 5 s task tables, and evaluation inputs listed above. It does not provide all logs, workload corpora, and deployment materials needed to reconstruct the complete original collection process; PCAP is excluded. Unresolved relationships among forecast inputs, 24-variable tables, and platform exports are documented in [LINEAGE.md](LINEAGE.md). Platform documentation, configuration evidence, and associated samples are under `platform_data/`; the review tree does not contain the collection-platform source code. Repository availability does not establish synchronization or readability of the anonymous entry. [RUN_GUIDE.md](../RUN_GUIDE.md) provides additional commands and the scope of prior verification.

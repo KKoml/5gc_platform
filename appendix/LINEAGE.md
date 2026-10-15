@@ -1,24 +1,24 @@
-# 来源关系、转换记录与证据边界
+# Lineage, transformations, and evidence boundaries
 
-本次直接读取当前论文、原实验、core机来源文件和既有记录后整理。没有修改正文，没有启动采集、故障注入、检查点推理或新训练。
+This record summarizes the earlier direct audit of manuscript files, original experiments, Core-host source files, and retained records. That audit did not modify the manuscript or launch collection, fault injection, checkpoint inference, or new training. The English documentation update preserves these historical findings.
 
-| 核查对象 | 本次结果 | 能支持的结论 |
+| Audit object | Recorded result | Supported conclusion |
 |---|---|---|
-| 预测训练来源锁 | 323/323原文件与记录哈希相符 | 当前原执行源码/配置锁仍匹配；不是论文历史绑定 |
-| 五组任务权重副本 | 87/87与原目录字节相同：预测54、正常检测9、监督检测3、识别15、SAITS6 | 权重复制完整，不代表历史正文一定来自该执行 |
-| 预测输入 | 14个原CSV与gzip副本比较；标识一致替换，时间、缺失标记、顺序保留；浮点CSV往返差异单列 | 原修复输入到审稿输入的关系明确；格式/匿名转换前后独立哈希 |
-| core任务来源 | 108/108当前源文件哈希与转换记录相符 | 来源包与当前记录相符；实际私人路径及运行映射在审稿副本外保留 |
-| core原5秒观测到匿名副本 | 11张表除run_id外所有字段逐表完全相同 | 标识匿名化未改变这些观测表数值与时间 |
-| core导出/覆盖/字典来源 | 15/15原文件当前哈希与记录相符 | 当前7组导出及字典来源成立，历史版本身份仍未确认 |
-| 1秒表与5秒表 | 同槽位有精确UTC交集，但CPU/内存/load同时间值不完全相同 | 不能把5秒表称为现有1秒表的直接重采样 |
-| 当前论文评测图 | 当前两张PDF与新paper_figures副本相同、与旧审稿副本不同；当前绘图来源已定位，见回执 | 证明当前图版和定位的绘图来源；不认证最初历史实验身份 |
+| Forecast training source lock | 323/323 original files matched recorded hashes | Current source/configuration locks match the identified execution; this is not a historical paper binding |
+| Weight copies for five task groups | 87/87 byte-identical to original directories: 54 forecasting, 9 normal-only detection, 3 supervised detection, 15 classification, 6 SAITS | Weights were copied intact; this does not establish that the historical paper used that execution |
+| Forecast inputs | 14 original CSVs compared with gzip copies; consistent identifier replacement; time, masks, and ordering retained; floating-point CSV round-trip differences recorded separately | Repaired-source to reviewer-input lineage is documented, with separate hashes before/after formatting and anonymization |
+| Core task sources | 108/108 current source hashes matched transformation records | Source package matches current records; actual private paths and run mappings remain outside the reviewer copy |
+| Original Core 5 s observations to anonymous copies | All fields except run_id matched exactly in 11 tables | Identifier anonymization preserved observation values and times |
+| Core export/coverage/dictionary sources | 15/15 current original-file hashes matched records | Sources of the current seven export groups and dictionary are established; historical version identity remains unconfirmed |
+| 1 s versus 5 s tables | Same-slot exact UTC intersections exist, but CPU/memory/load values at shared times are not identical | The 5 s tables cannot be described as direct resampling of the current 1 s tables |
+| Evaluation plots at the time of audit | Two manuscript PDFs matched the new paper_figures copies and differed from older reviewer copies; plotting sources were located in the receipts | Establishes those plot versions and their identified sources, not original historical experiment identity; these plots are supplementary to the current English paper |
 
-`manifests/core_handoff.csv` 为每个core输入分列原哈希、当前原哈希、core转换哈希和审稿副本哈希。路径以来源包中的逻辑别名表达，避免泄露原始私人运行名；完整实际路径映射仅留本机private审计目录。`prediction_handoff.csv` 列原修复CSV和审稿gzip副本、转换规则及字段往返误差。`input_manifest.csv`补充字段/形状、时间范围、当前程序哈希；这些表通过相对路径连接。中间格式或标识经过变换，哈希不同是预期状态。
+`manifests/core_handoff.csv` separately records original hashes, current-original hashes, Core-conversion hashes, and reviewer-copy hashes for each Core input. Paths use source-package logical aliases to avoid disclosing private run names. Complete actual-path mappings are retained only in the local private audit directory. `prediction_handoff.csv` lists original repaired CSVs, reviewer gzip copies, transformation rules, and field-level round-trip errors. `input_manifest.csv` adds fields/shapes, time ranges, and program hashes. Relative paths connect these records. Hash differences are expected after format or identifier transformations. The later English documentation revision is recorded separately in `manifests/english_documentation_revision.json`; historical source hashes are retained.
 
-预测原CSV经浮点读取/重写时存在少量float64往返差异；本次检查使用包既有标签往返界限rtol=2e−15、atol=2e−8原单位，逐字段最大差异保存在prediction_handoff.csv。没有把这种关系写成逐字节一致。变换后输入的现有检查点重放属于先前2026-10-03记录，本次不重放。
+Reading and rewriting original forecast CSVs introduced small float64 round-trip differences. The audit used the package's existing label tolerances, rtol=2e−15 and atol=2e−8 in original units. Maximum differences per field are recorded in prediction_handoff.csv. This relationship is not described as byte identity. Existing replay of transformed inputs belongs to the earlier 2026-10-03 records; no replay is performed for this documentation update.
 
-当前1秒表总计611,777行、81字段；400条字典定义含215项metric定义；映射到当前81字段schema的metric字段有39个，各运行其中25为ok、1为replaced、3为snapshot_only、10为capability_missing。它们的计数范围不同，均不能直接证明正文“32项数值指标”的历史口径。当前六页正文不再使用这一未恢复的子计数，历史口径缺口仍显式保留。
+Current 1 s tables total 611,777 rows and 81 fields. The 400-entry dictionary contains 215 metric definitions; 39 metric fields map to the current 81-field schema. Per run, 25 are ok, 1 replaced, 3 snapshot_only, and 10 capability_missing. These scopes differ and none independently recovers the historical “32 numerical indicators” subtotal. The current six-page paper no longer uses that unresolved subtotal; the historical scope gap remains explicit.
 
-原5秒数据构造与论文预测输入有共同运行别名，但列集合、采样尺度和原始测量定义不同。来源程序/协议能说明已保存视图的处理规则，不能证明存在唯一的18变量→24变量→81字段转换链。已有预测前缀修复仅覆盖它声明的四字段，其他测量源的原生采样/在线可用性未重新认证。另从core取回 `task_data/code/build_package.py` 原任务包投影程序，保持原字节、可检查特征投影与索引构造规则；它需要原封存transfer包，不能据此声称从原始遥测生成5秒表已可复现。完整原始采集报告/PCAP不随包提供，不声称从零重新生成整个平台导出。
+Original 5 s construction and forecast inputs share run aliases but differ in column sets, sampling scales, and measurement definitions. Source programs/protocols explain processing rules for saved views; they do not establish a unique 18-variable→24-variable→81-field transformation chain. The forecast prefix repair covers only its four declared fields; native sampling and online availability of other sources were not recertified. The original task-package projection program `task_data/code/build_package.py` was retrieved from Core without byte changes, exposing projection and index-construction rules. It requires the original archived transfer package and does not establish reproducible generation of 5 s tables from raw telemetry. Complete raw collection reports/PCAP are not bundled; regeneration of all platform exports from scratch is not claimed.
 
-历史论文身份尚缺共同记录，把论文修订、执行ID、程序版本、输入清单、检查点及当时环境绑定。当前文件hash、数值相同、原机器仍在或检查点重放成功，都不能单独补上这条绑定。D06/D07是已访问后验测试；任何新运行只能作为另外编号的复现验证，不能覆盖历史保存值。
+Historical paper identity still lacks a common record binding the manuscript revision, execution ID, program version, input manifest, checkpoints, and contemporaneous environment. Current hashes, numerical agreement, continued availability of the original machine, or successful replay alone do not supply that binding. D06/D07 are previously accessed post hoc tests. New runs must be separately identified reproduction checks and must not overwrite historical saved values.

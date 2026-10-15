@@ -1,10 +1,10 @@
-# 完整数值表
+# Full numerical tables
 
-均值 ± 样本标准差，三个随机种子；不是三次独立物理采集。百分数指标以 % 显示，MRR除外。
+Mean ± sample standard deviation over three random seeds, not three independent physical collections. Metrics are percentages (%) except MRR.
 
 ## validation
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 66.20 ± 3.21 | 65.51 ± 5.46 | 86.11 ± 4.81 | 0.78 ± 0.02 | 66.20 ± 3.21 | 67.59 ± 4.46 | 67.64 ± 5.40 | 91.67 ± 1.39 |
 | TCN | 69.44 ± 2.41 | 67.62 ± 1.33 | 93.06 ± 2.41 | 0.82 ± 0.01 | 69.44 ± 2.41 | 68.98 ± 2.89 | 67.29 ± 3.19 | 94.44 ± 0.00 |
@@ -14,7 +14,7 @@
 
 ## test
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 47.69 ± 2.44 | 46.28 ± 1.38 | 84.03 ± 4.81 | 0.67 ± 0.03 | 47.69 ± 2.44 | 49.77 ± 3.28 | 47.49 ± 2.75 | 88.66 ± 3.56 |
 | TCN | 56.71 ± 2.63 | 56.02 ± 1.71 | 87.27 ± 1.75 | 0.73 ± 0.01 | 56.71 ± 2.63 | 59.72 ± 3.61 | 58.69 ± 3.34 | 96.99 ± 0.40 |
@@ -24,7 +24,7 @@
 
 ## D06
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 53.70 ± 4.88 | 51.24 ± 3.29 | 85.19 ± 7.13 | 0.70 ± 0.04 | 53.70 ± 4.88 | 55.56 ± 6.36 | 53.45 ± 6.86 | 92.13 ± 4.24 |
 | TCN | 60.19 ± 2.89 | 57.38 ± 2.55 | 89.35 ± 1.60 | 0.76 ± 0.01 | 60.19 ± 2.89 | 63.89 ± 4.17 | 62.73 ± 4.40 | 99.07 ± 1.60 |
@@ -34,7 +34,7 @@
 
 ## D07
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 41.67 ± 0.00 | 39.18 ± 0.75 | 82.87 ± 3.50 | 0.63 ± 0.02 | 41.67 ± 0.00 | 43.98 ± 0.80 | 41.20 ± 1.03 | 85.19 ± 2.89 |
 | TCN | 53.24 ± 3.50 | 52.37 ± 2.54 | 85.19 ± 2.12 | 0.71 ± 0.02 | 53.24 ± 3.50 | 55.56 ± 4.17 | 54.49 ± 3.80 | 94.91 ± 0.80 |
@@ -44,7 +44,7 @@
 
 ## external_validation
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 46.30 ± 3.21 | 43.87 ± 4.46 | 74.54 ± 1.60 | 0.63 ± 0.02 | 46.30 ± 3.21 | 53.70 ± 5.61 | 52.20 ± 6.45 | 80.56 ± 4.17 |
 | TCN | 48.15 ± 3.21 | 44.06 ± 3.47 | 75.93 ± 2.89 | 0.65 ± 0.01 | 48.15 ± 3.21 | 52.31 ± 4.01 | 52.41 ± 4.48 | 87.04 ± 5.61 |
@@ -54,7 +54,7 @@
 
 ## supplementary_only
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 11.11 ± 4.81 | 5.04 ± 6.46 | 33.33 ± 4.17 | 0.30 ± 0.05 | 11.11 ± 4.81 | 16.67 ± 0.00 | 4.88 ± 0.21 | 54.17 ± 7.22 |
 | TCN | 13.89 ± 4.81 | 5.08 ± 3.48 | 36.11 ± 4.81 | 0.33 ± 0.03 | 13.89 ± 4.81 | 16.67 ± 0.00 | 6.41 ± 2.85 | 62.50 ± 12.50 |
@@ -64,7 +64,7 @@
 
 ## diagnostic_holdout
 
-| 模型 | 联合Top1 % | 联合Macro-F1 % | Top3 % | MRR | Balanced Acc % | 机制Acc % | 机制Macro-F1 % | 作用点Acc % |
+| Model | Joint Top1 % | Joint Macro-F1 % | Top3 % | MRR | Balanced Acc % | Mechanism Acc % | Mechanism Macro-F1 % | Associated-target Acc % |
 |---|---|---|---|---|---|---|---|---|
 | LSTM | 41.67 ± 7.22 | 47.22 ± 9.62 | 87.50 ± 0.00 | 0.65 ± 0.05 | 41.67 ± 7.22 | 37.50 ± 0.00 | 49.84 ± 6.05 | 91.67 ± 7.22 |
 | TCN | 66.67 ± 7.22 | 75.00 ± 0.00 | 100.00 ± 0.00 | 0.83 ± 0.04 | 66.67 ± 7.22 | 66.67 ± 7.22 | 78.57 ± 4.12 | 100.00 ± 0.00 |
@@ -72,11 +72,11 @@
 | RF_FL10 | 62.50 ± 0.00 | 66.67 ± 0.00 | 87.50 ± 0.00 | 0.78 ± 0.00 | 62.50 ± 0.00 | 62.50 ± 0.00 | 70.00 ± 0.00 | 87.50 ± 0.00 |
 | ReadyMaskRF | 50.00 ± 0.00 | 50.00 ± 0.00 | 66.67 ± 14.43 | 0.62 ± 0.03 | 50.00 ± 0.00 | 50.00 ± 0.00 | 50.00 ± 0.00 | 75.00 ± 0.00 |
 
-## test：网络/停机及逐机制
+## test: network/shutdown and per-mechanism results
 
-所有排名仍在完整12类中计算；本表分层Macro-F1仅平均真值有支持的类别，错误预测到其他类仍计入漏检。
+All rankings consider the full 12 classes. Stratified macro-F1 averages only classes supported by ground truth; predictions into other classes still count as misses.
 
-| 模型 | 真值子集 | 联合Top1 % | 联合Macro-F1 % | 机制Acc % | 作用点Acc % |
+| Model | Ground-truth subset | Joint Top1 % | Joint Macro-F1 % | Mechanism Acc % | Associated-target Acc % |
 |---|---|---|---|---|---|
 | LSTM | instance-stop | 69.44 ± 4.81 | 81.41 ± 3.55 | 63.89 ± 12.73 | 100.00 ± 0.00 |
 | LSTM | n3-block | 66.67 ± 7.22 | 76.55 ± 7.75 | 61.11 ± 14.63 | 91.67 ± 7.22 |
@@ -114,11 +114,11 @@
 | TCN | n6-block | 33.33 ± 11.02 | 45.79 ± 14.47 | 33.33 ± 11.02 | 95.83 ± 4.17 |
 | TCN | network | 49.72 ± 3.37 | 50.60 ± 2.86 | 53.33 ± 4.41 | 96.39 ± 0.48 |
 
-## external_validation：网络/停机及逐机制
+## external_validation: network/shutdown and per-mechanism results
 
-所有排名仍在完整12类中计算；本表分层Macro-F1仅平均真值有支持的类别，错误预测到其他类仍计入漏检。
+All rankings consider the full 12 classes. Stratified macro-F1 averages only classes supported by ground truth; predictions into other classes still count as misses.
 
-| 模型 | 真值子集 | 联合Top1 % | 联合Macro-F1 % | 机制Acc % | 作用点Acc % |
+| Model | Ground-truth subset | Joint Top1 % | Joint Macro-F1 % | Mechanism Acc % | Associated-target Acc % |
 |---|---|---|---|---|---|
 | LSTM | instance-stop | 91.67 ± 8.33 | 95.15 ± 5.01 | 86.11 ± 17.35 | 100.00 ± 0.00 |
 | LSTM | n3-block | 52.78 ± 12.73 | 63.01 ± 10.74 | 47.22 ± 9.62 | 94.44 ± 4.81 |
@@ -156,11 +156,11 @@
 | TCN | n6-block | 36.11 ± 9.62 | 42.14 ± 3.11 | 41.67 ± 16.67 | 80.56 ± 12.73 |
 | TCN | network | 39.44 ± 3.85 | 37.26 ± 3.16 | 44.44 ± 4.81 | 85.00 ± 6.01 |
 
-## supplementary_only：网络/停机及逐机制
+## supplementary_only: network/shutdown and per-mechanism results
 
-所有排名仍在完整12类中计算；本表分层Macro-F1仅平均真值有支持的类别，错误预测到其他类仍计入漏检。
+All rankings consider the full 12 classes. Stratified macro-F1 averages only classes supported by ground truth; predictions into other classes still count as misses.
 
-| 模型 | 真值子集 | 联合Top1 % | 联合Macro-F1 % | 机制Acc % | 作用点Acc % |
+| Model | Ground-truth subset | Joint Top1 % | Joint Macro-F1 % | Mechanism Acc % | Associated-target Acc % |
 |---|---|---|---|---|---|
 | LSTM | instance-stop | 25.00 ± 43.30 | 24.44 ± 42.34 | 33.33 ± 57.74 | 66.67 ± 28.87 |
 | LSTM | n3-block | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 50.00 ± 0.00 |
@@ -198,11 +198,11 @@
 | TCN | n6-block | 0.00 ± 0.00 | 0.00 ± 0.00 | 0.00 ± 0.00 | 50.00 ± 0.00 |
 | TCN | network | 13.33 ± 5.77 | 6.83 ± 5.09 | 16.67 ± 5.77 | 60.00 ± 10.00 |
 
-## diagnostic_holdout：网络/停机及逐机制
+## diagnostic_holdout: network/shutdown and per-mechanism results
 
-所有排名仍在完整12类中计算；本表分层Macro-F1仅平均真值有支持的类别，错误预测到其他类仍计入漏检。
+All rankings consider the full 12 classes. Stratified macro-F1 averages only classes supported by ground truth; predictions into other classes still count as misses.
 
-| 模型 | 真值子集 | 联合Top1 % | 联合Macro-F1 % | 机制Acc % | 作用点Acc % |
+| Model | Ground-truth subset | Joint Top1 % | Joint Macro-F1 % | Mechanism Acc % | Associated-target Acc % |
 |---|---|---|---|---|---|
 | LSTM | instance-stop | 16.67 ± 14.43 | 22.22 ± 19.25 | 16.67 ± 14.43 | 100.00 ± 0.00 |
 | LSTM | n3-block | 66.67 ± 14.43 | 72.22 ± 19.25 | 58.33 ± 14.43 | 83.33 ± 14.43 |

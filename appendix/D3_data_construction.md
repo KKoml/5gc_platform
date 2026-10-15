@@ -1,14 +1,14 @@
-# Appendix D.3　四类任务的数据构造
+# Appendix D.3 — Data construction for the four tasks
 
-本附录对应中文平台修订稿，依据实际配置、任务索引、训练记录和保存结果整理。论文版本及参与核验的正文、图表文件哈希见 `manifests/paper_baseline.json`。附录单独交付，不修改正文。数值对应、检查点解释保存输出、历史论文运行身份分别记录：前两者的已有证据不能代替最后一项。
+This technical appendix was compiled against the historical Chinese platform revision from configurations, task indices, training records, and saved results. Its manuscript and figure hashes are recorded in `manifests/paper_baseline.json`. For the current English paper and Appendices A–D, see [the navigation guide](../APPENDIX_NAVIGATION.md). Numerical agreement, checkpoint replay of saved outputs, and the identity of the historical paper run are separate evidence questions; the first two do not establish the third.
 
-主划分为 D01—D04 训练、D05 验证与模型/阈值选择、D06—D07 已访问过的后验测试。七个标识代表七次独立执行，不是一条连续七天序列；窗口不跨运行。模型种子与人工掩码种子反映算法变化，不是平台独立重复。`validation_v4r6`、`supp_core24h`、`diagnostic5` 单列；`development_excluded` 不进入正文主测试。旧 `task_data/provenance/SOURCE_PROTOCOL.json` 中名为 T1 的 5 s 任务不是本论文预测任务，不能混用。
+D01–D04 are training runs; D05 is used for validation and model/threshold selection; D06–D07 are previously accessed, post hoc test runs. These identifiers denote seven independent executions, not seven consecutive days. Windows never cross runs. Model and artificial-mask seeds represent algorithmic variation, not independent platform repetitions. `validation_v4r6`, `supp_core24h`, and `diagnostic5` are reported separately; `development_excluded` is excluded from the main paper test. The 5 s task named T1 in the legacy `task_data/provenance/SOURCE_PROTOCOL.json` is not the forecasting task in this paper.
 
-## D.3.1　网络性能预测
+## D.3.1 — Network performance forecasting
 
-实际输入为 `prediction_inputs/D01` 至 `D07/` 中的 `T1_history.csv.gz`、`T1_targets.csv.gz`，以及 `evaluation_package/evaluation/prediction/outputs/indices/` 中按目标与运行冻结的 Parquet 索引。截止点 c 的历史为 [c−60,c)，60 个 1 s 位置，窗口步长 60 s；经过 [c,c+60) 的间隔，目标为 [c+60,c+70) 内有效目标值均值。十个目标桶至少八个有效。目标表保留候选样本有效性和计数；模型实际样本集合由冻结索引决定。未来目标有效性只用于评测资格，不作为输入。
+Inputs are `T1_history.csv.gz` and `T1_targets.csv.gz` under `prediction_inputs/D01` through `D07/`, with target/run-specific frozen Parquet indices under `evaluation_package/evaluation/prediction/outputs/indices/`. At cutoff c, history covers [c−60,c), with 60 one-second positions and a 60 s window stride. After the gap [c,c+60), the target is the mean of valid target values in [c+60,c+70). At least eight of the ten target buckets must be valid. Target tables retain candidate eligibility and counts; frozen indices determine the samples actually used. Future target validity determines evaluation eligibility only and is not an input.
 
-18 个变量的精确顺序为：
+The exact order of the 18 variables is:
 
 ```text
 n3_uplink_bitrate_bps, n3_downlink_bitrate_bps, n6_bitrate_bps,
@@ -20,17 +20,17 @@ registration_failure_count, registration_request_count,
 n4_bitrate_bps, host_cpu_pct, host_mem_used_pct, host_loadavg_1
 ```
 
-每个变量附 `<field>__missing`，非有限值时为 1。`prediction/src/data.py:transform` 用训练通道中位数填补，再用训练均值/标准差标准化，得到 N×60×36 的数值与缺失标记张量。PatchTST 仅取目标历史 N×60×1；XGBoost 对 36 通道计算均值、总体标准差、最小值、最大值、最后值及 (末值−首值)/59，共 216 特征。SMA 仅使用历史末十个位置中的有效目标值。目标标准化参数来自训练目标观测；预测还原到原单位，比特率评测除以 10^6。
+Each variable has a `<field>__missing` indicator equal to 1 for nonfinite values. `prediction/src/data.py:transform` imputes training-channel medians and standardizes with training means/standard deviations, producing an N×60×36 tensor of values and missingness indicators. PatchTST uses only N×60×1 target history. XGBoost computes the mean, population standard deviation, minimum, maximum, last value, and (last−first)/59 for each of 36 channels, giving 216 features. SMA averages valid target values in the final ten history positions. Target scaling is fitted to observed training targets. Predictions are restored to original units; bitrate evaluation divides by 10^6.
 
-正文三个目标为 `n3_downlink_bitrate_bps`、`n6_bitrate_bps`、`host_cpu_pct`。完整结果另保留 `end_to_end_rtt_ms`，其语义是原来源定义的流 RTT 代理，不能改称 UE 到 DN 的端到端实测 RTT。N6 是流记录定义的聚合量，不等于已核实的逐秒接收吞吐。配置仍将部分原生采样间隔、保持规则和在线可用性列为未知。本输入来自后续四字段前缀修复视图；截止点检查不能自动证明所有原始测量都具有严格在线因果可用性。
+The three paper targets are `n3_downlink_bitrate_bps`, `n6_bitrate_bps`, and `host_cpu_pct`. Full results also retain `end_to_end_rtt_ms`, a source-defined flow RTT proxy, not a verified UE-to-DN end-to-end RTT measurement. N6 is a flow-record aggregate, not verified per-second received throughput. Native sampling intervals, hold rules, and online availability remain unknown for some sources. These inputs come from the later four-field prefix-repaired view; cutoff checks alone do not establish strictly causal online availability of every original measurement.
 
-输入对照包括目标历史与缺失标记、时间计划及仅缺失标记。时间计划为行位置/86400，加 600、900 s 周期的正弦/余弦；对照复用主 XGBoost 在 D05 选择的超参数。N6 时间计划对照表现接近多变量模型的结果保留。`verification/replay_prediction_checkpoints.py` 检查顺序、时间和缺失标记；CSV 标签往返允许 2e−8 原单位加 2e−15 相对误差。预测历史不是从本包现有 81 字段表重新生成的。
+Input controls use target history plus missingness indicators, the time schedule, or missingness indicators alone. The time schedule consists of row position/86400 and sine/cosine terms with 600 and 900 s periods. Controls reuse the main XGBoost hyperparameters selected on D05. The strong N6 time-schedule control, close to the multivariate model, is retained. `verification/replay_prediction_checkpoints.py` checks ordering, time, and missingness indicators; CSV label round trips allow 2e−8 absolute error in original units plus 2e−15 relative error. Forecast histories were not regenerated from the 81-field tables in this package.
 
-## D.3.2　故障检测
+## D.3.2 — Fault detection
 
-实际观测为 `data_machine/dataset/task_data/data/<run>/core_features_5s.parquet`，样本由 `tasks/FD_detection/index.parquet` 绑定，事件及资格由 episodes、EVENT_EVALUABILITY 和 `metadata/protocol.json` 约束。每个样本为零基行区间 [start_row,stop_row) 的 12 个 5 s 截止点，最后点为评分锚点。`eligible` 包含时间、范围和总体有效观测比例至少 0.8 的资格要求；原表保留 NaN，有限值状态形成有效性标记。旧 `is_valid_row` 不是通用资格规则。
+Observations are `data_machine/dataset/task_data/data/<run>/core_features_5s.parquet`; `tasks/FD_detection/index.parquet` binds samples, while episodes, EVENT_EVALUABILITY, and `metadata/protocol.json` constrain events and eligibility. Each sample spans the zero-based row interval [start_row,stop_row), containing 12 five-second cutoffs; the last cutoff is the scoring anchor. `eligible` includes time/range checks and an overall valid-observation fraction of at least 0.8. Original tables retain NaN; finite values define validity indicators. The legacy `is_valid_row` is not a universal eligibility rule.
 
-检测、执行后的识别及缺失重建使用以下 24 变量：
+Detection, post-intervention classification, and imputation use these 24 variables:
 
 ```text
 amf-a__cpu_millicores, amf-b__cpu_millicores,
@@ -50,28 +50,28 @@ core-if-upfgtp-silver__tx_errors_delta,
 upf-silver__ready, upf-gold__ready
 ```
 
-正常数据拟合模型使用恰好 55,196 个 `eligible ∧ split=train ∧ normal_train_window` 的 D01—D04 窗口，整个历史排除已记录活动、恢复排除期和前导操作。预处理用同一训练子集的中位数填补及中位数/IQR 缩放；IQR 为零时退到训练标准差，再退到 1。已观测 Ready 保持 0/1，缺失 Ready 填补后有效标记仍为 0。AE/TranAD 使用数值和有效标记；KAN-AD 的损失与评分使用有效标记。只有有效数值通道贡献重建误差，缺失标记不参与误差项。
+Normal-only models use exactly 55,196 D01–D04 windows satisfying `eligible ∧ split=train ∧ normal_train_window`. Entire histories exclude recorded activity, recovery exclusion periods, and preparatory operations. Preprocessing uses medians and median/IQR scaling from this same subset; a zero IQR falls back to the training standard deviation, then 1. Observed Ready values remain 0/1; imputed missing Ready values retain validity 0. AE/TranAD use values and validity indicators; KAN-AD uses validity in loss and scoring. Only valid numerical channels contribute reconstruction error; indicators do not contribute to that error term.
 
-监督 RF 使用全部合格训练窗口及注入正标签，复用训练预处理，计算每变量末值、均值、标准差、末减首、末三点均值减首三点均值、有效比例和末点有效标记，共 168 特征，拟合66,069个训练窗口（7,705阳性）。这是监督方式不同的后验优化，不能包装为正常拟合方法的同条件替代。标签表示记录的干预活动，不是独立认证的业务损害真值。运行标识、时间、操作、标签和计划元数据不进入模型。
+Supervised RF uses all eligible training windows and injection-positive labels, reusing training preprocessing. For each variable it computes the last value, mean, standard deviation, last−first, final-three mean−first-three mean, valid fraction, and final-point validity: 168 features. It fits 66,069 training windows (7,705 positive). This is post hoc optimization under different supervision, not an equivalent normal-only alternative. Labels denote recorded interventions, not independently certified service-impact ground truth. Run identifiers, timestamps, operations, labels, and schedule metadata are excluded from model inputs.
 
-D05 按 0.1 或 1 次误报/h 标定阈值。超过阈值的连续有效报警点组成段；无效、阴性或缺点打断段，间隔超过 7.5 s 也打断。段起点为首个阳性有效截止点，按确定顺序在 [事件起点,事件终点) 一对一匹配。正常暴露按每个合格且已评分的正常点计 5 s；无效点不贡献分母。不进行点调整或测试分数归一化，验证目标不代表测试误报率必然达标。保留低召回、漏报与无报警工作点。
+D05 calibrates thresholds at 0.1 or 1 false alarms/h. Consecutive valid above-threshold points form alarm segments; invalid, negative, or missing points break segments, as do gaps exceeding 7.5 s. A segment starts at its first valid positive cutoff and is matched one-to-one in deterministic order within [event start,event end). Normal exposure counts 5 s per eligible, scored normal point; invalid points do not enter the denominator. There is no point adjustment or test-score normalization. A validation budget does not guarantee the same test false-alarm rate. Low recall, misses, and no-alarm operating points are retained.
 
-## D.3.3　已知注入起点的类型与关联目标识别
+## D.3.3 — Fault type and associated-target classification at known injection starts
 
-`tasks/FL_localization/index.parquet` 将事件绑定到上述观测；`localization/data_contract/` 保存特征白名单、类序、样本索引、窗口边界、事件处置和覆盖记录。已知记录起点 s 后取 (s,s+60 s] 内 12 个 5 s 截止点，有效观测比例至少 0.5。本任务不检测 s。主训练/验证/测试为 288/72/144 例，每个联合类分别 24/6/12 例。四个 delay+loss 复合事件保留为闭集指标范围外；`supp_core24h` 单列补充，不能用于训练。
+`tasks/FL_localization/index.parquet` binds events to the observations above. `localization/data_contract/` records feature whitelists, class order, sample indices, window boundaries, event handling, and coverage. Given the recorded start s, each sample contains 12 five-second cutoffs in (s,s+60 s], with a valid-observation fraction of at least 0.5. This task does not detect s. Main train/validation/test counts are 288/72/144, with 24/6/12 examples per joint class. Four compound delay+loss events remain outside closed-set metrics. `supp_core24h` is supplementary and cannot be used for training.
 
-六种机制为 n3-block、n3-delay、n3-loss、n4-block、n6-block、instance-stop，与 upf-silver/upf-gold 交叉形成 12 类，类序见配置。联合类取十二概率最大项；类型与关联目标分别对另一维度求和后取最大项，平局使用固定类序。关联目标表示注入 UPF 或关联路径，不是独立证明的因果根因。
+Six mechanisms—n3-block, n3-delay, n3-loss, n4-block, n6-block, and instance-stop—cross with upf-silver/upf-gold to form 12 classes, ordered in the configuration. Joint prediction takes the maximum of twelve probabilities. Type and associated-target predictions marginalize over the other dimension before taking the maximum; ties follow the fixed class order. The associated target denotes the injected UPF or associated path, not an independently established causal root cause.
 
-预处理仅拟合 288 个训练例的 3,456 个时间位置：有效值中位数填补、中位数/IQR 缩放，标准差→1 回退；Ready 中心 0、尺度 1；保留有限值掩码。LSTM/TCN 输入 N×12×48。RF_24 使用均值、标准差、最小、最大、末值、末减首及有效比例，共 168 特征；RF_FL10 按 `feature_whitelists.json` 取 SMF/UPF CPU、内存和就绪十变量，共 70 特征。ReadyMaskRF 使用两个 Ready 的统计及完整掩码和掩码均值，共324特征。所有对照保持同一病例集合与配置，不用旧 FL10/FL6 计划替代实际的 24 变量联合识别任务。
+Preprocessing is fitted only to the 3,456 time positions in 288 training examples: valid-value medians, median/IQR scaling, and standard-deviation→1 fallback. Ready has center 0 and scale 1; finite-value masks are retained. LSTM/TCN inputs are N×12×48. RF_24 computes mean, standard deviation, minimum, maximum, last value, last−first, and valid fraction, giving 168 features. RF_FL10 uses the ten SMF/UPF CPU, memory, and readiness variables in `feature_whitelists.json`, giving 70 features. ReadyMaskRF uses statistics of the two Ready variables, the full mask, and mask means, giving 324 features. Controls share the same examples and configurations. Legacy FL10/FL6 plans do not replace the actual 24-variable joint-classification task.
 
-## D.3.4　离线缺失重建
+## D.3.4 — Offline missing-value reconstruction
 
-`imputation/data/<slot>.npz` 保存 raw、original_valid、time、phase、delta；`metadata/window_index.csv` 绑定到 5 s 任务表。先按连续 5 s 时间段分段，再构造 60 位置（300 s）窗口，训练步长 12 位置，评测步长 60；遇到时间缺口重新分段，不填补不足窗口的尾部。均值、标准差、中位数和变化分层阈值仅由 D01—D04 计算。上述 24 变量中目标下标 16 为 RX，17 为 TX，12 为 CPU。
+`imputation/data/<slot>.npz` stores raw, original_valid, time, phase, and delta; `metadata/window_index.csv` binds windows to the 5 s task tables. Continuous five-second segments are identified first, then divided into 60-position (300 s) windows with a 12-position training stride and a 60-position evaluation stride. Time gaps restart segmentation; incomplete tails are discarded. Means, standard deviations, medians, and variation-stratification thresholds are computed from D01–D04 only. Among the 24 variables above, target indices 16, 17, and 12 denote RX, TX, and CPU.
 
-固定 `masks/<slot>.npz` 中人工时间掩码维度为 N×3目标×4条件×3掩码种子×60。Random20 无放回选 12 个位置；gap30/60/120 连续遮去 6/12/24 位置，两侧至少各留 6 位置。接口目标同时遮去通道 16—21，CPU 同时遮去 12—15，降低同组变量直接泄露。原缺失始终不可见；仅人工遮去且原本有限的目标值计分。H 将所有非目标变量标为不可见，但仍用相同 24 通道结构；M 保留其他有效观测。缺失位置填训练均值，标准化后为零，另传有效标记。
+Fixed artificial masks in `masks/<slot>.npz` have shape N×3 targets×4 conditions×3 mask seeds×60. Random20 selects 12 positions without replacement. gap30/60/120 hide 6/12/24 consecutive positions, leaving at least 6 positions on each side. Interface targets simultaneously hide channels 16–21; CPU hides channels 12–15, reducing direct within-group leakage. Originally missing values remain invisible; scoring includes only artificially hidden, originally finite target values. H hides all nontarget variables while retaining the 24-channel structure; M retains other valid observations. Missing positions receive training means, becoming zero after standardization, with validity indicators passed separately.
 
-每训练窗口每轮随机查询一个目标/条件，目标及条件均匀抽样，M/H 共用窗口顺序和遮盖计划。模型种子为 17/29/43；固定评测掩码种子为 101/202/303。训练中位数、前向填补（首部退到训练中位数）、窗口内双向线性插值使用相同目标/掩码。保存原始预测，所有方法的报告预测下界为零。D05 选择检查点后才评测其他运行。phase 的恢复标记是记录排除期代理，不代表认证的物理恢复。缺口两侧观测可用，因此是人工缺失下的离线重建。两次主运行 RX 随机缺失下 M 均略逊 H，该负面结果保留。
+Each training window queries one uniformly sampled target/condition per epoch. M/H share window order and masking plans. Model seeds are 17/29/43; fixed evaluation-mask seeds are 101/202/303. Training-median filling, forward filling (leading gaps fall back to training medians), and bidirectional within-window linear interpolation use the same targets/masks. Raw predictions are saved; reported predictions for all methods are clipped below at zero. Other runs are evaluated only after checkpoint selection on D05. Recovery phase labels proxy recorded exclusion periods, not certified physical recovery. Observations on both sides of a gap are available, so this is offline reconstruction under artificial missingness. M slightly underperforms H for RX random missingness in both main test runs; this negative result is retained.
 
-## D.3.5　core 交接与未确认关系
+## D.3.5 — Core handoff and unresolved lineage
 
-`manifests/input_manifest.csv` 给出实际文件相对路径、SHA-256、行数或数组形状、字段/类型、时间范围、运行别名、处理程序及程序哈希。`core_handoff.csv` 分列转换前与转换后哈希，并注明压缩、格式变换、标识匿名化或路径元数据删除；不同格式不要求同哈希。`LINEAGE.md` 记录本次来源复查及缺口。当前 1 s 导出、预测修复历史和 24 变量 5 s 表是分别版本化的视图，同槽位同时间不是转换证据，不能猜测补齐。
+`manifests/input_manifest.csv` lists actual relative paths, SHA-256 hashes, row counts or array shapes, fields/types, time ranges, run aliases, processing programs, and program hashes. `core_handoff.csv` separates pre/post-transformation hashes and records compression, format conversion, identifier anonymization, or path-metadata removal. Different formats need not share a hash. [LINEAGE.md](LINEAGE.md) records source checks and remaining gaps. Current 1 s exports, repaired forecast histories, and 24-variable 5 s tables are separately versioned views. Matching slots and timestamps are not evidence of a transformation chain.

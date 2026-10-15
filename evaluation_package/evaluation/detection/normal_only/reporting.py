@@ -610,20 +610,20 @@ def _event_ledger(data: PackageData) -> pd.DataFrame:
 
 
 def _write_tracker(metrics: pd.DataFrame, summary: pd.DataFrame, fit_count: int) -> None:
-    text = f"""# Core 故障实验执行追踪
+    text = f"""# Core fault experiment execution tracker
 
-- 状态：冻结范围内训练与离线评价完成
-- 更新时间：{now()}
-- 训练/控制拟合：{fit_count} 个（其中深度拟合严格为 30 个）
-- 主深度拟合：27；FL 六列 TCN 消融：3
-- D05 工作点：0.1 次误报/小时（主）与 1 次/小时（补充），逐模型逐 seed 冻结
-- 测试角色：D06–D07 为既有 test 复评，不称全新盲测；V4、Core24h、diagnostic、baseline2h 分开
-- 窗口/事件逐行结果：见各 `fits/*/predictions` 与 `fits/*/evaluation`
-- 聚合结果：`metrics/ALL_METRICS.csv`、`metrics/THREE_SEED_SUMMARY.csv`
-- 事件闭合：`event_matches/EVENT_LEDGER_621.csv` 与 `event_matches/ALL_BINARY_EVENT_RESULTS.parquet`
-- FP 结论边界：只评价相对记录起点的可预测性；物理生效时间和命令到日志延迟未认证
+- Status: training and offline evaluation within the frozen scope completed
+- Updated: {now()}
+- Training/control fits: {fit_count} (exactly 30 deep-model fits)
+- Main deep fits: 27; FL six-column TCN ablation: 3
+- D05 operating points: 0.1 false alarms/hour (main) and 1/hour (supplementary), frozen per model and seed
+- Test roles: D06–D07 reevaluate previously accessed tests, not new blind tests; V4, Core24h, diagnostic, and baseline2h remain separate
+- Per-window/event results: `fits/*/predictions` and `fits/*/evaluation`
+- Aggregate results: `metrics/ALL_METRICS.csv`, `metrics/THREE_SEED_SUMMARY.csv`
+- Event accounting: `event_matches/EVENT_LEDGER_621.csv` and `event_matches/ALL_BINARY_EVENT_RESULTS.parquet`
+- FP scope: evaluates predictability relative to recorded starts only; physical onset and command-to-log delay are unverified
 
-本 tracker 记录实际完成状态，不把训练计划或未运行配置记作结果。
+This tracker records actual completion, not training plans or unexecuted configurations as results.
 """
     stamped = ROOT / "tracker" / f"EXPERIMENT_TRACKER_{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}.md"
     stamped.write_text(text)
@@ -640,11 +640,11 @@ def _fmt(value: object) -> str:
 
 def _write_final_report(seed_summary: pd.DataFrame, ablation: pd.DataFrame) -> Path:
     roles = {
-        "test": "D06–D07既有test复评",
-        "external_validation": "V4外部",
-        "supplementary_only": "Core24h补充",
-        "diagnostic_holdout": "diagnostic诊断",
-        "development_only": "baseline2h开发",
+        "test": "D06–D07 previously accessed test reevaluation",
+        "external_validation": "V4 external validation",
+        "supplementary_only": "Core24h supplementary",
+        "diagnostic_holdout": "diagnostic holdout",
+        "development_only": "baseline2h development",
     }
     primary = seed_summary.loc[
         ~seed_summary["control"].astype(bool)
@@ -656,20 +656,20 @@ def _write_final_report(seed_summary: pd.DataFrame, ablation: pd.DataFrame) -> P
         )
     ].copy()
     lines = [
-        "# Core故障三任务冻结实验结果",
+        "# Frozen Core fault experiments across three tasks",
         "",
-        f"生成时间：{now()}。本文件由实际训练和逐事件评价产物汇总，不把计划项记作已完成。",
+        f"Generated: {now()}. This report summarizes actual training and per-event evaluation artifacts; planned items are not counted as completed.",
         "",
-        "## 完成状态",
+        "## Completion status",
         "",
-        "- 已完成：27个主深度拟合、3个FL六列TCN拟合；IF/RF/LR三seed；FL六列RF三seed；5个独立控制。",
-        "- 失败：0（仅在全部队列依赖成功后生成本报告）。",
-        "- 未执行：新故障注入、补采、线上部署、物理生效时间认证、自然故障泛化实验。",
-        "- D06–D07是已使用过的test复评，不是全新盲测；所有run角色分开报告。",
+        "- Completed: 27 main deep fits, 3 FL six-column TCN fits; three seeds each for IF/RF/LR and FL six-column RF; 5 separate controls.",
+        "- Failed: 0 (this report is generated only after all queue dependencies succeed).",
+        "- Not executed: new fault injection, additional collection, online deployment, physical-onset certification, or natural-fault generalization experiments.",
+        "- D06–D07 reevaluate previously used tests, not new blind tests; all run roles are reported separately.",
         "",
-        "## 三seed主结果（主工作点0.1次误报/小时）",
+        "## Three-seed main results (main operating point: 0.1 false alarms/hour)",
         "",
-        "|任务|模型|角色|全部main事件召回/Top-1|合格main事件召回/BalAcc|AUPRC/Macro-F1|实际误报/h|延迟或相对记录起点提前秒|",
+        "|Task|Model|Role|All main-event recall/Top-1|Eligible main-event recall/BalAcc|AUPRC/Macro-F1|Actual false alarms/h|Delay or lead time relative to recorded start (s)|",
         "|---|---|---|---:|---:|---:|---:|---:|",
     ]
     for row in primary.sort_values(["task", "model", "split"]).to_dict("records"):
@@ -696,11 +696,11 @@ def _write_final_report(seed_summary: pd.DataFrame, ablation: pd.DataFrame) -> P
         )
     lines.extend([
         "",
-        "0.1/h是目标预算，不等于每个有限D05样本都能精确落在0.1；逐模型阈值文件同时记录实际误报数、有效小时、实际误报/h和1/h补充工作点。",
+        "0.1/h is a target budget; finite D05 samples need not attain exactly 0.1. Per-model threshold files also record actual false-alarm counts, valid hours, actual false alarms/h, and the supplementary 1/h operating point.",
         "",
-        "## FL六列→十列配对消融",
+        "## Paired FL six-to-ten-column ablation",
         "",
-        "|模型|角色|事件数|十列Top-1|六列Top-1|配对差值|事件bootstrap 95% CI|",
+        "|Model|Role|Events|Ten-column Top-1|Six-column Top-1|Paired difference|Event bootstrap 95% CI|",
         "|---|---|---:|---:|---:|---:|---:|",
     ])
     for row in ablation.sort_values(["model", "split"]).to_dict("records"):
@@ -712,18 +712,18 @@ def _write_final_report(seed_summary: pd.DataFrame, ablation: pd.DataFrame) -> P
         )
     lines.extend([
         "",
-        "## 证据与边界",
+        "## Evidence and boundaries",
         "",
-        "- FD统计、插补和缩放只拟合55,196个干净正常训练窗；AE按最后一步有效标准化数值残差平方均值评分，全缺失最后步不评分。",
-        "- TranAD结果来自明确标记的 `TranAD_adapted_v2`，保留双解码自条件机制，但不声称论文数值精确复现；KAN-AD使用固定作者源码与共享单变量适配。",
-        "- FL标签是受控注入作用点或关联路径，不是完整自然根因发现；612个原病例保持不变。",
-        "- FP只表示相对 `faults.jsonl` 记录起点的可预测性。记录起点不是认证的物理首次生效点；未核实历史命令/物理生效证据前，不称物理故障前兆或真实物理提前量。",
-        "- gNB/UE动作只是用户行为背景，不是Core故障标签、定位对象或主输入。W1共同执行行为可能混杂，不能作随机化因果解释。",
-        "- Ready/mask-only、常数和运行计时控制在 `metrics/CONTROL_RESULTS.csv` 中独立报告，不进入主结果；正式主模型仍按合同使用各自的Ready与mask通道。",
-        "- 数值数据只有本地保守可用时间，中央到达时间未认证；本实验不证明线上部署有效性或自然故障泛化。",
-        "- 三个seed是初始化/训练重复；重叠窗口、run和seed均不当作独立物理实验。",
+        "- FD statistics, imputation, and scaling are fitted only to 55,196 clean normal training windows. AE scores the mean squared residual of valid standardized numerical values at the final step; entirely missing final steps are not scored.",
+        "- TranAD results use the explicitly labeled `TranAD_adapted_v2`, retaining dual-decoder self-conditioning without claiming exact numerical reproduction of the paper. KAN-AD uses pinned upstream source and a shared univariate adaptation.",
+        "- FL labels denote controlled injection targets or associated paths, not complete natural root-cause discovery. The original 612 cases remain unchanged.",
+        "- FP denotes predictability relative to starts recorded in `faults.jsonl`. Recorded starts are not certified physical first-onset times. Without verified historical command/physical-onset evidence, these results are not physical fault precursors or true physical lead times.",
+        "- gNB/UE actions are user-behavior background, not Core fault labels, localization targets, or main inputs. Jointly executed W1 behavior may confound results and does not support randomized causal interpretation.",
+        "- Ready/mask-only, constant, and run-timer controls are separately reported in `metrics/CONTROL_RESULTS.csv`, outside main results. Formal main models still use their contracted Ready and mask channels.",
+        "- Numerical data have only conservative local availability times; central arrival times are unverified. This experiment does not establish online deployment effectiveness or natural-fault generalization.",
+        "- Three seeds are initialization/training repetitions. Overlapping windows, runs, and seeds are not treated as independent physical experiments.",
         "",
-        "完整逐窗分数、逐事件匹配、D05阈值、混淆矩阵、分层指标和日志位于各 `fits/<job>/`；聚合表位于 `metrics/`。",
+        "Full per-window scores, per-event matches, D05 thresholds, confusion matrices, stratified metrics, and logs are under `fits/<job>/`; aggregate tables are under `metrics/`.",
         "",
     ])
     report = "\n".join(lines)

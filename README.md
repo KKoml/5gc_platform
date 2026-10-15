@@ -84,3 +84,5 @@ Dependencies, commands, and task-specific requirements are listed in the [reprod
 **Outside this review release:** collection-platform source code, PCAP files, the complete original log archive, and the complete traffic-input corpus. Platform implementation paths and hashes are documentary references; platform source is reserved for release upon acceptance.
 
 [Data availability](DATA_ACCESS.md) · [Detailed delivery scope](platform_data/DELIVERY_STATUS.md) · [Validation records](CHECKS.md) · [Anonymous access status](PUBLICATION_STATUS.md)
+
+All repository documentation and report text is provided in English. Legacy `_ZH` report filenames are retained for compatibility. See the [English revision record](manifests/english_documentation_revision.json) for translation scope and preserved historical hashes.

@@ -165,7 +165,7 @@ def finish(c):
  pd.DataFrame(expected).to_csv(OUT/'completion_matrix.csv',index=False)
  summary=dict(completed=sum(x['status']=='completed' for x in expected),expected=len(expected),known_blocked=['ARIMA:n6_aggregate','ARIMA:flow_rtt_proxy'],training_from_scratch=True,source_integrity_pass=True)
  d.json_write(OUT/'COMPLETION.json',summary)
- (OUT/'RUN_SUMMARY.md').write_text(f'修复重跑完成单元 {summary["completed"]}/{summary["expected"]}。每单元要求 D06/D07 全部样本输出。N6/流计时 ARIMA 缺少合法长上下文；其他失败见 branch_failures.json 和 jobs。四字段前缀修复不等于全部遥测实时可用性证明。测试为此前已访问的后验测试。英文表及逐样本输出已保存，未修改论文。\n')
+ (OUT/'RUN_SUMMARY.md').write_text(f'Repaired rerun completed {summary["completed"]}/{summary["expected"]} units. Each unit requires outputs for every D06/D07 sample. N6/flow-timing ARIMA lacks valid long context; other failures are in branch_failures.json and jobs. Four-field prefix repair does not establish real-time availability of all telemetry. Tests are previously accessed post hoc tests. English tables and per-sample outputs are saved; the manuscript was not modified.\n')
  with zipfile.ZipFile(d.ROOT/'PREFIXFIX_RESULTS_SMALL.zip','w',zipfile.ZIP_DEFLATED) as z:
   for folder in ['src','spec','outputs','third_party']:
    for p in (d.ROOT/folder).rglob('*'):

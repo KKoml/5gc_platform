@@ -37,12 +37,12 @@ pd.DataFrame(deltas).to_csv(R/'metrics/CONTROL_COMPARISONS.csv',index=False)
 def table(headers,rows):return '\n'.join(['| '+' | '.join(headers)+' |','|'+'|'.join(['---']*len(headers))+'|']+['| '+' | '.join(str(x) for x in row)+' |' for row in rows])
 def pm(row,metric,pct=True):
  scale=100 if pct else 1;return f'{getattr(row,metric+"_mean")*scale:.2f} ± {getattr(row,metric+"_std")*scale:.2f}'
-parts=['# 完整数值表','均值 ± 样本标准差，三个随机种子；不是三次独立物理采集。百分数指标以 % 显示，MRR除外。']
+parts=['# Full numerical tables','Mean ± sample standard deviation over three random seeds, not three independent physical collections. Metrics are percentages (%) except MRR.']
 for role in ['validation']+ROLES:
  g=summary[(summary.role==role)&(summary.stratum=='all')].set_index('model').loc[MODELS].reset_index()
- parts += [f'## {role}',table(['模型','联合Top1 %','联合Macro-F1 %','Top3 %','MRR','Balanced Acc %','机制Acc %','机制Macro-F1 %','作用点Acc %'],[[r.model,pm(r,'top1'),pm(r,'macro_f1'),pm(r,'top3'),pm(r,'mrr',False),pm(r,'balanced_accuracy'),pm(r,'mechanism_accuracy'),pm(r,'mechanism_macro_f1'),pm(r,'target_accuracy')] for r in g.itertuples()])]
+ parts += [f'## {role}',table(['Model','Joint Top1 %','Joint Macro-F1 %','Top3 %','MRR','Balanced Acc %','Mechanism Acc %','Mechanism Macro-F1 %','Associated-target Acc %'],[[r.model,pm(r,'top1'),pm(r,'macro_f1'),pm(r,'top3'),pm(r,'mrr',False),pm(r,'balanced_accuracy'),pm(r,'mechanism_accuracy'),pm(r,'mechanism_macro_f1'),pm(r,'target_accuracy')] for r in g.itertuples()])]
 for role in ['test','external_validation','supplementary_only','diagnostic_holdout']:
  g=summary[(summary.role==role)&summary.stratum.isin(['network','instance-stop']+MECH[:-1])]
- parts += [f'## {role}：网络/停机及逐机制', '所有排名仍在完整12类中计算；本表分层Macro-F1仅平均真值有支持的类别，错误预测到其他类仍计入漏检。',table(['模型','真值子集','联合Top1 %','联合Macro-F1 %','机制Acc %','作用点Acc %'],[[r.model,r.stratum,pm(r,'top1'),pm(r,'macro_f1'),pm(r,'mechanism_accuracy'),pm(r,'target_accuracy')] for r in g.itertuples()])]
+ parts += [f'## {role}: network/shutdown and per-mechanism results', 'All rankings consider the full 12 classes. Stratified macro-F1 averages only classes supported by ground truth; predictions into other classes still count as misses.',table(['Model','Ground-truth subset','Joint Top1 %','Joint Macro-F1 %','Mechanism Acc %','Associated-target Acc %'],[[r.model,r.stratum,pm(r,'top1'),pm(r,'macro_f1'),pm(r,'mechanism_accuracy'),pm(r,'target_accuracy')] for r in g.itertuples()])]
 (R/'reports/FULL_TABLES_ZH.md').write_text('\n\n'.join(parts))
 print('REPORT_TABLES_WRITTEN')

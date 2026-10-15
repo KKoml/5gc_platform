@@ -1,73 +1,73 @@
-# RCA_joint12：受控 Core 故障机制—作用点联合诊断结果
+# RCA_joint12: controlled Core fault mechanism and associated-target diagnosis
 
-任务状态：**15/15 个正式拟合成功，留出评价与结果重算完成**。此前输入角色阻塞已依据用户限定澄清解除；历史阻塞报告保存在 `audit/history_blocked/FINAL_REPORT_ZH.md`，原 `audit/BLOCKER.json` 和两份差异表原样保留。本报告不否认曾发生阻塞。
+Task status: **15/15 formal fits succeeded; held-out evaluation and result recomputation completed**. The earlier input-role blocker was resolved through the user-scoped clarification. The historical blocker report remains at `audit/history_blocked/FINAL_REPORT_ZH.md`; the original `audit/BLOCKER.json` and two discrepancy tables are retained unchanged. This report preserves the history of that blocker.
 
-## 1. 结论
+## 1. Conclusions
 
-**现有24列自采观测支持范围有限的机制—作用点联合诊断，证据超出了仅区分 Gold/Silver 路径；但不足以支持所有机制稳定可分或跨场景可靠诊断。** RF24在D06–D07联合Top-1为65.05%，V4为64.81%，高于相同12类任务的RF10和Ready/缺失对照。Core24h降至45.83%，两种深度模型在Core24h更明显退化。
+**The 24 collected observation columns support limited joint mechanism/associated-target diagnosis beyond distinguishing Gold/Silver paths, but do not establish stable separation of every mechanism or reliable diagnosis across settings.** RF24 joint Top-1 is 65.05% on D06–D07 and 64.81% on V4, exceeding RF10 and the Ready/missingness control on the same 12-class task. It falls to 45.83% on Core24h; both deep models degrade more substantially on Core24h.
 
-不是仅靠Ready/缺失获得全部成绩：ReadyMaskRF在上述三个角色的联合Top-1均为25%，RF24在完整12候选中评价网络故障子集时分别为58.06%、57.78%、35.00%，ReadyMaskRF的对应网络子集均为10%。但这些对照只能证明当前输入与模型组合存在额外区分信息，不能证明真实因果机制或排除用户行为混杂。
+Readiness/missingness alone does not explain all performance: ReadyMaskRF joint Top-1 is 25% in each of these three roles. For network-fault subsets ranked among all 12 candidates, RF24 achieves 58.06%, 57.78%, and 35.00%, versus 10% for ReadyMaskRF in each subset. These controls establish additional discriminative information in the current input/model combination; they do not establish causal mechanisms or exclude user-behavior confounding.
 
-路径识别强于机制区分：RF24在D06–D07的作用点边缘准确率100%，机制边缘准确率66.67%；Core24h分别为83.33%和45.83%。因此可写“受控场景下的联合诊断/候选排序可行性”，不应写“完整RCA问题已解决”。
+Path identification is stronger than mechanism discrimination: RF24 marginal associated-target accuracy is 100% on D06–D07 and mechanism accuracy is 66.67%; the corresponding Core24h values are 83.33% and 45.83%. These results support feasibility of joint diagnosis/candidate ranking in controlled settings, not a solution to the full RCA problem.
 
-## 2. 任务、标签与角色合同
+## 2. Task, labels, and role contract
 
-正式任务是“给定记录起点后固定60秒观测、以实际注入记录为标签的机制—作用点联合诊断/根因候选排序”。6种机制依次为n3-block、n3-delay、n3-loss、n4-block、n6-block、instance-stop，每种依次为upf-silver、upf-gold，共12类。网络机制对应Silver/Gold关联路径，并不全部是UPF软件内部故障。fault_id只生成标签与审计，未输入模型。
+The formal task is joint mechanism/associated-target diagnosis or root-cause candidate ranking from a fixed 60 s observation after a known recorded start, labeled by actual injection records. The 6 mechanisms are ordered n3-block, n3-delay, n3-loss, n4-block, n6-block, and instance-stop; each has upf-silver then upf-gold, giving 12 classes. Network mechanisms refer to Silver/Gold-associated paths, not exclusively internal UPF software faults. fault_id is used only for labels and audit, never as model input.
 
-源机验证过的delay/loss映射按 `source_verified_rule_received_in_prompt` 保存；本机未访问原始faults.jsonl。原 `source_marked_inferred` 等质量标记继续保留，未提升为独立业务损伤因果真值。
+The delay/loss mapping verified on the source machine is recorded as `source_verified_rule_received_in_prompt`; the local audit did not access the original faults.jsonl. Existing quality flags such as `source_marked_inferred` remain unchanged and are not upgraded to independently established causal ground truth for service damage.
 
-- 训练：D01–D04共288，每类24；验证D05共72，每类6。
-- 固定既有划分追加复评：D06–D07共144，每类12，逐日各72。历史上已访问，不是新盲测，也不是日历前向划分。
-- V4外部验证72，每类6；Core24h补充闭集24，每类2，另4个delay+loss复合病例；diagnostic5共8。
-- 612病例=608闭集+4复合；完整621台账另有8个AMF/SMF stop和1个V4 prelude排除。baseline2h未加入训练。
+- Training: 288 D01–D04 cases, 24 per class; validation: 72 D05 cases, 6 per class.
+- Additional reevaluation under the fixed existing split: 144 D06–D07 cases, 12 per class, 72 per run. These runs were previously accessed; this is neither new blind testing nor a chronological forward split.
+- V4 external validation: 72 cases, 6 per class; Core24h supplementary closed set: 24 cases, 2 per class, plus 4 compound delay+loss cases; diagnostic5: 8 cases.
+- 612 cases = 608 closed-set + 4 compound. The complete 621-entry ledger additionally excludes 8 AMF/SMF stop events and 1 V4 prelude. baseline2h is not used for training.
 
-Core24h唯一特殊run为 `supp_core24h`。保留source_episode_run_split=event_block_protocol，registry_split/index_split/effective_split=supplementary_only。该规则仅处理精确run、slot和值组合，36条台账/28个FL病例匹配；Core24h进入预处理或训练的病例数为0。所有其他不一致继续报错。详见 `data_contract/role_resolution.json` 与 `audit/BLOCKER_RELEASE.json`。
+The only special Core24h run is `supp_core24h`. source_episode_run_split=event_block_protocol is retained, while registry_split/index_split/effective_split=supplementary_only. The rule applies only to the exact run, slot, and value combination, matching 36 ledger entries/28 FL cases. Core24h contributes 0 cases to preprocessing fits or training. All other inconsistencies still raise errors. See `data_contract/role_resolution.json` and `audit/BLOCKER_RELEASE.json`.
 
-## 3. 输入、预处理与模型
+## 3. Inputs, preprocessing, and models
 
-直接复用原FL的[start_row,stop_row)12步×5秒窗口；每个病例只有一窗，无新增事前或事后数据。实际截点在记录起点之后、60秒以内，anchor为观察结束附近的锚点。612窗逐元素核验及时间边界见 `data_contract/window_boundaries.csv`。
+The original FL [start_row,stop_row) windows of 12 steps × 5 s are reused directly: one window per case, with no additional pre/post-event data. Actual cutoffs occur after the recorded start and within 60 s; the anchor lies near the observation end. Elementwise checks of all 612 windows and their time boundaries are in `data_contract/window_boundaries.csv`.
 
-主输入为FD_detection_24白名单的24个观测值和对应24个mask。最低窗口覆盖率71.53%，W1没有整窗全缺通道，固定0.5覆盖要求保留全部612病例。原始NaN保存在cache；仅从288个训练事件的观测值估计中位数插补、median/IQR缩放，零IQR回退训练标准差再回退1；Ready观测保留0/1，mask独立保留。训练样本ID、参数和覆盖均已保存。
+Main inputs are the 24 observations in the FD_detection_24 whitelist and their 24 masks. Minimum window coverage is 71.53%; W1 has no channel missing for an entire window. The fixed 0.5 coverage requirement retains all 612 cases. Raw NaN values remain in the cache. Median imputation and median/IQR scaling are fitted only to observed values from 288 training events; zero IQR falls back to training standard deviation, then 1. Observed Ready values remain 0/1, with separate masks. Training IDs, parameters, and coverage are saved.
 
-LSTM沿用两层width64；TCN沿用两个残差块、dilation1/2、kernel3，均dropout0.1，输出12类。交叉熵、AdamW lr0.001/weight_decay0.0001、batch32、最多50epoch。只用D05 Macro-F1早停，patience8；同分优先低验证损失，再优先早epoch。全部seed17/29/43共用同一配置。旧checkpoint未复用。
+LSTM uses two width-64 layers; TCN uses two residual blocks with dilations 1/2 and kernel 3. Both use dropout 0.1 and output 12 classes. Training uses cross-entropy, AdamW lr=0.001/weight_decay=0.0001, batch=32, and at most 50 epochs. Early stopping uses only D05 macro-F1 with patience 8, breaking ties by lower validation loss, then earlier epoch. Seeds 17/29/43 share the same configuration. Old checkpoints are not reused.
 
-RF24与RF10均提取各数值通道的均值、总体标准差、最小值、最大值、末值、末减首值及观测比例，宽度分别168/70。ReadyMaskRF只使用两个Ready值的同样6种统计、24列逐步mask和观测比例，共324维；没有CPU/内存/流量数值。三个RF变体均500树、min_samples_leaf2、max_features=sqrt、max_depth=None。没有网格搜索、过采样或复制病例。
+RF24 and RF10 extract each numerical channel's mean, population standard deviation, minimum, maximum, last value, last−first, and observed fraction, giving 168/70 features. ReadyMaskRF uses the same 6 value statistics for two Ready channels, stepwise masks for 24 columns, and observed fractions: 324 features, without CPU/memory/traffic values. All three RF variants use 500 trees, min_samples_leaf=2, max_features=sqrt, and max_depth=None. There is no grid search, oversampling, or case duplication.
 
-## 4. 主结果
+## 4. Main results
 
-下表为三个seed的均值±样本标准差，均按事件评价。seed不是独立物理采集重复，不据此给出泛化显著性。模型名称RF_24/RF_FL10对应RF24/RF10。
+Tables report three-seed means ± sample standard deviations, evaluated by event. Seeds are not independent physical collection repetitions and do not establish generalization significance. RF_24/RF_FL10 denote RF24/RF10.
 
-| 模型 | 评价集（病例数） | 联合 Top-1 % | 联合 Macro-F1 % |
+| Model | Evaluation set (cases) | Joint Top-1 % | Joint Macro-F1 % |
 |---|---|---|---|
-| LSTM | D06–D07 复评（144） | 47.69 ± 2.44 | 46.28 ± 1.38 |
-| TCN | D06–D07 复评（144） | 56.71 ± 2.63 | 56.02 ± 1.71 |
-| RF_24 | D06–D07 复评（144） | 65.05 ± 0.40 | 65.15 ± 0.42 |
-| RF_FL10 | D06–D07 复评（144） | 46.06 ± 0.40 | 44.19 ± 0.49 |
-| ReadyMaskRF | D06–D07 复评（144） | 25.00 ± 0.00 | 18.18 ± 0.00 |
-| LSTM | V4（72） | 46.30 ± 3.21 | 43.87 ± 4.46 |
-| TCN | V4（72） | 48.15 ± 3.21 | 44.06 ± 3.47 |
-| RF_24 | V4（72） | 64.81 ± 2.12 | 63.41 ± 2.75 |
-| RF_FL10 | V4（72） | 46.30 ± 0.80 | 44.87 ± 0.08 |
-| ReadyMaskRF | V4（72） | 25.00 ± 0.00 | 18.18 ± 0.00 |
-| LSTM | Core24h 闭集（24） | 11.11 ± 4.81 | 5.04 ± 6.46 |
-| TCN | Core24h 闭集（24） | 13.89 ± 4.81 | 5.08 ± 3.48 |
-| RF_24 | Core24h 闭集（24） | 45.83 ± 0.00 | 41.64 ± 1.15 |
-| RF_FL10 | Core24h 闭集（24） | 34.72 ± 2.41 | 28.61 ± 2.41 |
-| ReadyMaskRF | Core24h 闭集（24） | 25.00 ± 0.00 | 18.18 ± 0.00 |
+| LSTM | D06–D07 reevaluation (144) | 47.69 ± 2.44 | 46.28 ± 1.38 |
+| TCN | D06–D07 reevaluation (144) | 56.71 ± 2.63 | 56.02 ± 1.71 |
+| RF_24 | D06–D07 reevaluation (144) | 65.05 ± 0.40 | 65.15 ± 0.42 |
+| RF_FL10 | D06–D07 reevaluation (144) | 46.06 ± 0.40 | 44.19 ± 0.49 |
+| ReadyMaskRF | D06–D07 reevaluation (144) | 25.00 ± 0.00 | 18.18 ± 0.00 |
+| LSTM | V4 (72) | 46.30 ± 3.21 | 43.87 ± 4.46 |
+| TCN | V4 (72) | 48.15 ± 3.21 | 44.06 ± 3.47 |
+| RF_24 | V4 (72) | 64.81 ± 2.12 | 63.41 ± 2.75 |
+| RF_FL10 | V4 (72) | 46.30 ± 0.80 | 44.87 ± 0.08 |
+| ReadyMaskRF | V4 (72) | 25.00 ± 0.00 | 18.18 ± 0.00 |
+| LSTM | Core24h closed set (24) | 11.11 ± 4.81 | 5.04 ± 6.46 |
+| TCN | Core24h closed set (24) | 13.89 ± 4.81 | 5.08 ± 3.48 |
+| RF_24 | Core24h closed set (24) | 45.83 ± 0.00 | 41.64 ± 1.15 |
+| RF_FL10 | Core24h closed set (24) | 34.72 ± 2.41 | 28.61 ± 2.41 |
+| ReadyMaskRF | Core24h closed set (24) | 25.00 ± 0.00 | 18.18 ± 0.00 |
 
-W1均匀随机参考：联合Top-1=8.33%，Top-3=25%，机制准确率16.67%，作用点准确率50%。排序相同概率时严格按冻结类别顺序。随机参考不是额外训练模型。
+The W1 uniform-random reference is joint Top-1=8.33%, Top-3=25%, mechanism accuracy=16.67%, and associated-target accuracy=50%. Probability ties strictly follow the frozen class order. The random reference is not an additional trained model.
 
-RF24的排序与边缘分类结果如下（全部模型的相同指标和标准差见 `reports/FULL_TABLES_ZH.md`）。机制概率由同一12类概率对作用点求和；作用点概率对机制求和。边缘argmax可能与联合argmax分量不同，未拼接两个独立最优模型。
+RF24 ranking and marginal-classification results follow; corresponding metrics and standard deviations for every model are in `reports/FULL_TABLES_ZH.md`. Mechanism probabilities sum the same 12-class probabilities over associated targets; target probabilities sum over mechanisms. Marginal argmax can differ from components of the joint argmax. Two independently optimized models are not combined.
 
-| 评价集 | 联合 Top-3 % | MRR | 机制准确率 % | 机制 Macro-F1 % | 作用点准确率 % |
+| Evaluation set | Joint Top-3 % | MRR | Mechanism accuracy % | Mechanism Macro-F1 % | Associated-target accuracy % |
 |---|---|---|---|---|---|
-| D06–D07 复评（144） | 94.91 ± 1.06 | 0.7998 | 66.67 ± 0.00 | 66.07 ± 0.27 | 100.00 ± 0.00 |
-| V4（72） | 92.13 ± 0.80 | 0.7843 | 65.28 ± 2.41 | 64.46 ± 2.31 | 98.61 ± 0.00 |
-| Core24h 闭集（24） | 68.06 ± 2.41 | 0.6041 | 45.83 ± 0.00 | 38.03 ± 0.53 | 83.33 ± 0.00 |
+| D06–D07 reevaluation (144) | 94.91 ± 1.06 | 0.7998 | 66.67 ± 0.00 | 66.07 ± 0.27 | 100.00 ± 0.00 |
+| V4 (72) | 92.13 ± 0.80 | 0.7843 | 65.28 ± 2.41 | 64.46 ± 2.31 | 98.61 ± 0.00 |
+| Core24h closed set (24) | 68.06 ± 2.41 | 0.6041 | 45.83 ± 0.00 | 38.03 ± 0.53 | 83.33 ± 0.00 |
 
-逐日结果：
+Per-run results:
 
-| 模型 | D06 Top-1 % | D07 Top-1 % |
+| Model | D06 Top-1 % | D07 Top-1 % |
 |---|---|---|
 | LSTM | 53.70 ± 4.88 | 41.67 ± 0.00 |
 | TCN | 60.19 ± 2.89 | 53.24 ± 3.50 |
@@ -75,15 +75,15 @@ RF24的排序与边缘分类结果如下（全部模型的相同指标和标准�
 | RF_FL10 | 46.30 ± 0.80 | 45.83 ± 0.00 |
 | ReadyMaskRF | 25.00 ± 0.00 | 25.00 ± 0.00 |
 
-RF24在diagnostic5联合Top-1为95.83%±7.22%，Macro-F1为97.22%±4.81%。这里只含n3-block和instance-stop的4个有真值支持的联合类别、共8病例；Macro-F1只平均这4类，但仍在完整12类中预测。该小样本高分不能替代完整机制验证。逐项support保存在 `metrics/ALL_METRICS.csv`。
+On diagnostic5, RF24 joint Top-1 is 95.83%±7.22% and macro-F1 is 97.22%±4.81%. This subset contains only 4 supported joint classes from n3-block and instance-stop, totaling 8 cases. Macro-F1 averages these 4 classes, while prediction still considers all 12. High scores on this small subset do not replace full-mechanism validation. Per-item support is recorded in `metrics/ALL_METRICS.csv`.
 
-## 5. 对照与机制差异
+## 5. Controls and mechanism differences
 
-相对RF10，RF24联合Top-1在D06–D07提高18.98个百分点（相对41.21%）、V4提高18.52个百分点（40.00%）、Core24h提高11.11个百分点（32.00%）。这是同时扩充14个数值通道及其mask/比例后的整体收益，不能归因到某一个KPI。相对ReadyMaskRF则分别提高40.05、39.81、20.83个百分点。所有模型对照、逐seed配对差与相对变化见 `metrics/CONTROL_COMPARISONS.csv`。
+Relative to RF10, RF24 joint Top-1 increases by 18.98 percentage points on D06–D07 (41.21% relative), 18.52 points on V4 (40.00%), and 11.11 points on Core24h (32.00%). This is the combined effect of adding 14 numerical channels and their masks/fractions, not a gain attributable to one KPI. Gains over ReadyMaskRF are 40.05, 39.81, and 20.83 percentage points. All model comparisons, paired per-seed differences, and relative changes are in `metrics/CONTROL_COMPARISONS.csv`.
 
-RF24逐真实机制的联合识别结果如下；子集评价仍保留全部12个候选，不以已知真值先过滤候选。
+RF24 joint classification by true mechanism follows. Subset evaluation retains all 12 candidates rather than filtering candidates by the known truth.
 
-| 真实机制 | D06–D07 联合Top-1 % | V4 联合Top-1 % | Core24h 联合Top-1 % |
+| True mechanism | D06–D07 Joint Top-1 % | V4 Joint Top-1 % | Core24h Joint Top-1 % |
 |---|---|---|---|
 | n3-block | 65.28 ± 2.41 | 50.00 ± 0.00 | 50.00 ± 0.00 |
 | n3-delay | 34.72 ± 4.81 | 55.56 ± 4.81 | 25.00 ± 0.00 |
@@ -92,38 +92,38 @@ RF24逐真实机制的联合识别结果如下；子集评价仍保留全部12�
 | n6-block | 29.17 ± 0.00 | 19.44 ± 4.81 | 0.00 ± 0.00 |
 | instance-stop | 100.00 ± 0.00 | 100.00 ± 0.00 | 100.00 ± 0.00 |
 
-instance-stop和n4-block在这些固定评价病例上的联合Top-1均为100%；不能外推为任意运行中永远可分。n3-block、delay、loss和n6-block较弱，尤其Core24h的n3-loss和n6-block联合识别为0。两种深度模型Core24h机制边缘准确率均16.67%，表明其机制判别未稳定迁移。
+instance-stop and n4-block both achieve 100% joint Top-1 on these fixed evaluation cases; this does not establish universal separability across runs. n3-block, delay, loss, and n6-block are weaker, with Core24h n3-loss and n6-block joint recognition at 0. Both deep models have 16.67% marginal mechanism accuracy on Core24h, indicating that mechanism discrimination does not transfer stably.
 
-D06–D07的RF24主要机制混淆为n6-block→n3-delay、n3-delay→n6-block以及两者→n3-block。三个seed累计分别31、19、19/17次；这是同一批病例重复预测的计数，不是新增物理事件。Core24h常见网络机制被判为n4-block。六类边缘混淆矩阵及所有12×12联合混淆矩阵均在 `metrics/`。
+The main RF24 mechanism confusions on D06–D07 are n6-block→n3-delay, n3-delay→n6-block, and each→n3-block. Counts across three seeds are respectively 31, 19, and 19/17. These are repeated predictions of the same cases, not additional physical events. Core24h network mechanisms are often classified as n4-block. Six-class marginal and all 12×12 joint confusion matrices are in `metrics/`.
 
-## 6. 错误病例与观测
+## 6. Error cases and observations
 
-固定使用seed17、按每个真实联合类别的首个错误病例输出示例，不挑选最佳seed。`reports/ERROR_CASE_OBSERVATIONS.csv`包含所有模型的示例及24列观测均值/覆盖。
+Examples use fixed seed 17 and the first misclassified case in each true joint class, without selecting the best seed. `reports/ERROR_CASE_OBSERVATIONS.csv` includes examples for all models with means/coverage of the 24 observation columns.
 
-- D06 `b02_p03_n3_delay_silver_core`：真实n3-delay|upf-silver，RF24预测n6-block|upf-silver。窗口覆盖100%，两个Ready均为1，Silver tx_dropped_delta均值0，Silver接收速率均值约206,940.5 bps。此例不是缺失窗口或明显Ready停机，却发生机制混淆。
-- V4 `r01_p04_n3_delay_gold_core`：真实n3-delay|upf-gold，预测n6-block|upf-gold。窗口覆盖100%，两个Ready均为1，Silver接收速率均值约1,316,283.1 bps。Gold关联路径缺少对应接口观测，现有示例不能判定哪些信号缺失导致错误。
-- Core24h `r1_05_n3_delay_silver`：真实n3-delay|upf-silver，预测n3-block|upf-gold，机制与作用点均错。覆盖100%，两个Ready均为1，说明“无缺失”不等于“信息足够”。
+- D06 `b02_p03_n3_delay_silver_core`: truth n3-delay|upf-silver; RF24 predicts n6-block|upf-silver. Window coverage is 100%, both Ready values are 1, Silver tx_dropped_delta averages 0, and Silver RX rate averages approximately 206,940.5 bps. Mechanism confusion occurs without a missing window or obvious Ready-indicated shutdown.
+- V4 `r01_p04_n3_delay_gold_core`: truth n3-delay|upf-gold; prediction n6-block|upf-gold. Coverage is 100%, both Ready values are 1, and Silver RX rate averages approximately 1,316,283.1 bps. The Gold-associated path lacks corresponding interface observations; this example cannot determine which missing signals caused the error.
+- Core24h `r1_05_n3_delay_silver`: truth n3-delay|upf-silver; prediction n3-block|upf-gold. Both mechanism and associated target are wrong despite 100% coverage and both Ready values being 1. Complete coverage does not imply sufficient information.
 
-以上是错误和观测的并列描述，不是对错误原因的因果证明；未使用SHAP、重要性或注意力冒充因果解释。
+These descriptions place errors alongside observations; they are not causal explanations. SHAP, feature importance, or attention is not presented as causal evidence.
 
-## 7. 四个复合病例
+## 7. Four compound cases
 
-四个病例真实干预均为n3-delay+n3-loss，不属于12类。以下仅展示RF24固定seed17的前三候选；全部15个模型/seed的60条案例在 `reports/COMPOSITE_CASES.csv`，完整12概率仍保存。没有计算12类正确率或未知故障检测指标。
+All four true interventions are n3-delay+n3-loss, outside the 12 classes. Only the top three candidates from RF24 with fixed seed 17 are shown below. All 60 cases from 15 model/seed combinations are in `reports/COMPOSITE_CASES.csv`, with all 12 probabilities retained. No 12-class accuracy or unknown-fault detection metric is computed for these cases.
 
-| 复合病例 | 真实作用点 | RF24 seed17 的前三候选（概率） |
+| Compound case | True associated target | RF24 seed17 top three candidates (probabilities) |
 |---|---|---|
 | r1_07_n3_delay_loss_silver | upf-silver | n3-block|upf-gold (0.224238); n4-block|upf-gold (0.213567); n3-delay|upf-gold (0.181500) |
 | r1_08_n3_delay_loss_gold | upf-gold | n3-block|upf-gold (0.269781); n3-loss|upf-gold (0.193019); n3-delay|upf-gold (0.188633) |
 | r2_07_n3_delay_loss_silver | upf-silver | n4-block|upf-gold (0.254300); n3-block|upf-gold (0.193333); n3-delay|upf-gold (0.174729) |
 | r2_08_n3_delay_loss_gold | upf-gold | n3-block|upf-gold (0.256305); n3-loss|upf-gold (0.207640); n3-delay|upf-gold (0.164017) |
 
-## 8. 执行与核验
+## 8. Execution and verification
 
-训练前真实训练集smoke各取一例/类、共12病例。LSTM36步、TCN21步达到该小样本100%训练准确率，权重丢弃；这些数字仅验证可训练性，不是正式模型结果。正式拟合计数始终为15。
+Before training, a smoke check used one actual training example per class, totaling 12 cases. LSTM reached 100% training accuracy in 36 steps and TCN in 21; those weights were discarded. These figures establish trainability only, not formal model results. The formal fit count remains 15.
 
-首个LSTM实测3.097秒，39epoch、选31epoch，PyTorch峰值分配显存50,475,008字节，进程峰值RSS1,450,688 KiB。根据首次实测记录其余5个深度拟合估计15.48秒；RF当时耗时未知。实际15次拟合计时之和20.342秒，不包括数据检查、smoke、评价和报告；没有据此编造GPU小时。详细日志与tracker保存全部耗时、epoch和状态。
+The first LSTM took 3.097 s, ran 39 epochs, and selected epoch 31; PyTorch peak allocated GPU memory was 50,475,008 bytes and peak process RSS was 1,450,688 KiB. Based on that measurement, the remaining 5 deep fits were estimated at 15.48 s; RF duration was then unknown. Actual durations of all 15 fits sum to 20.342 s, excluding data checks, smoke checks, evaluation, and reporting. No GPU-hour claim is inferred from this total. Detailed logs and the tracker retain durations, epochs, and statuses.
 
-| 模型 | seed | 训练耗时秒 | 运行epoch | 选中epoch |
+| Model | seed | Training time (s) | Executed epochs | Selected epoch |
 |---|---|---|---|---|
 | LSTM | 17 | 3.097 | 39 | 31 |
 | LSTM | 29 | 0.603 | 15 | 7 |
@@ -131,41 +131,41 @@ D06–D07的RF24主要机制混淆为n6-block→n3-delay、n3-delay→n6-block�
 | TCN | 17 | 1.295 | 24 | 16 |
 | TCN | 29 | 1.082 | 23 | 15 |
 | TCN | 43 | 0.754 | 16 | 8 |
-| RF_24 | 17 | 1.270 | 0 | 不适用 |
-| RF_24 | 29 | 1.332 | 0 | 不适用 |
-| RF_24 | 43 | 1.302 | 0 | 不适用 |
-| RF_FL10 | 17 | 1.200 | 0 | 不适用 |
-| RF_FL10 | 29 | 1.321 | 0 | 不适用 |
-| RF_FL10 | 43 | 1.325 | 0 | 不适用 |
-| ReadyMaskRF | 17 | 1.285 | 0 | 不适用 |
-| ReadyMaskRF | 29 | 1.424 | 0 | 不适用 |
-| ReadyMaskRF | 43 | 1.252 | 0 | 不适用 |
+| RF_24 | 17 | 1.270 | 0 | N/A |
+| RF_24 | 29 | 1.332 | 0 | N/A |
+| RF_24 | 43 | 1.302 | 0 | N/A |
+| RF_FL10 | 17 | 1.200 | 0 | N/A |
+| RF_FL10 | 29 | 1.321 | 0 | N/A |
+| RF_FL10 | 43 | 1.325 | 0 | N/A |
+| ReadyMaskRF | 17 | 1.285 | 0 | N/A |
+| ReadyMaskRF | 29 | 1.424 | 0 | N/A |
+| ReadyMaskRF | 43 | 1.252 | 0 | N/A |
 
-`audit/FORMAL_START_FREEZE.json`记录smoke通过后的正式启动冻结，`audit/TEST_FREEZE.json`记录全部模型完成后的留出评价前冻结。配置、训练代码、模型和预处理哈希核验一致。
+`audit/FORMAL_START_FREEZE.json` records the formal start freeze after the smoke check; `audit/TEST_FREEZE.json` records the freeze after all models completed and before held-out evaluation. Configuration, training-code, model, and preprocessing hashes matched.
 
-第一次评价在保存分层指标支持类别时遇到numpy.int64无法JSON序列化的实现错误。原冻结代码保留，修正副本 `code/pipeline_eval_v2.py`只将该标签列表转换为Python整数；差异、首轮失败日志和部分输出均保存于 `audit/EVALUATION_SERIALIZATION_FIX.json`、`audit/evaluation_attempt1/`。未变更预测数学定义、模型、超参数或seed，未重训，没有基于留出分数选择配置。
+The first evaluation encountered an implementation error when serializing numpy.int64 supported-class labels to JSON. Original frozen code is retained. The corrected `code/pipeline_eval_v2.py` only converts that label list to Python integers. The diff, first-attempt failure log, and partial outputs remain in `audit/EVALUATION_SERIALIZATION_FIX.json` and `audit/evaluation_attempt1/`. Prediction definitions, models, hyperparameters, and seeds did not change; there was no retraining or held-out-score-based configuration selection.
 
-最终使用独立NumPy混淆矩阵/排名算术重算全部1800行指标，最大差值1.11e-16；从15个保存模型重放9180个病例概率，最大差值2.22e-16。均值/样本标准差、support、排名、混淆矩阵、checkpoint选择及源包154哈希均通过。详见 `audit/RESULT_VERIFICATION.json`。这一独立算术检查不等于外部独立研究团队复现。
+Independent NumPy confusion-matrix/ranking arithmetic recomputed all 1800 metric rows, with maximum difference 1.11e-16; replay from 15 saved models covered 9180 case-probability outputs, with maximum difference 2.22e-16. Means/sample standard deviations, support, rankings, confusion matrices, checkpoint selection, and 154 source-package hashes all passed. See `audit/RESULT_VERIFICATION.json`. Independent arithmetic checking is not reproduction by an independent external research team.
 
-## 9. 局限与可写贡献
+## 9. Limitations and supported contribution
 
-1. Silver有接口速率/drop/error列，Gold没有对称接口列；观察能力不对称。模型中没有不存在的控制面错误计数或日志。
-2. W1的用户行为背景可能混杂；Core24h仅24个闭集病例，提供有限Core-only对照，其退化不能单独归因于模型、数据或背景中的某一项。
-3. 只有288个训练事件且沿用既有非盲划分。滑窗、随机seed和不同模型都不是新的物理采集重复。
-4. 模型已知记录起点并等待固定60秒后诊断；这里不验证自动检测故障起点，也不验证提前预测。旧检测器漏检不能被本实验分数掩盖。
-5. 没有独立证明每次干预产生业务损伤，没有验证自然未知故障、完整因果链、开放集拒识或端到端自动RCA。
+1. Silver has interface rate/drop/error columns; Gold lacks symmetric interface columns. Observability is asymmetric. Models do not receive unavailable control-plane error counters or logs.
+2. W1 user behavior may confound results. Core24h has only 24 closed-set cases and provides a limited Core-only control; its degradation cannot be attributed solely to the model, data, or background.
+3. There are only 288 training events under an existing nonblind split. Sliding windows, random seeds, and different models are not new physical collection repetitions.
+4. Models know the recorded start and wait a fixed 60 s before diagnosis. This task does not verify automatic onset detection or advance prediction. These scores do not compensate for missed events in the earlier detector.
+5. Service damage from every intervention has not been independently established. Natural unknown faults, complete causal chains, open-set rejection, and end-to-end automatic RCA are not verified.
 
-可采用的贡献表述：平台自采Core观测在既定受控干预场景下支持机制—关联路径联合诊断及候选排序；24列观测相比原10列和Ready/缺失对照提供额外区分信息，但机制混淆及跨角色迁移限制仍明显。当前证据不止于路径定位，也不能泛化为完整可靠的根因分析能力。
+Supported contribution: platform-collected Core observations support joint mechanism/associated-path diagnosis and candidate ranking under the specified controlled interventions. The 24-column observations provide additional discriminative information over the original 10 columns and Ready/missingness control, while mechanism confusion and transfer across roles remain substantial limitations. The evidence extends beyond path localization but does not establish complete, reliable root-cause analysis.
 
-## 10. 产物入口
+## 10. Artifact entry points
 
-本目录：`evaluation/localization/`。
+Directory: `evaluation/localization/`.
 
-- `config.json`、`README.md`、`code/`：冻结配置、环境与重跑方法。
-- `data_contract/sample_index.csv`、`event_disposition_621.csv`：新标签、四类角色字段和完整事件去向。
-- `data_contract/feature_whitelists.json`、`coverage.csv`、`fit_sample_ids.json`：输入白名单、覆盖与拟合范围。
-- `models/`、`logs/`、`tracker.json`：15组模型、训练日志、预处理参数及正式状态。
-- `predictions/`：每组612病例的12概率、全部排名、预测/真值、配置/模型身份，含4复合案例。
-- `metrics/ALL_METRICS.csv`、`SUMMARY.csv`、`CONTROL_COMPARISONS.csv`、混淆矩阵：全部逐seed/逐run/分层指标。
-- `reports/FULL_TABLES_ZH.md`、`ERROR_CASE_OBSERVATIONS.csv`、`COMPOSITE_CASES.csv`：完整数值与案例。
-- `audit/RESULT_VERIFICATION.json`、各冻结回执和历史阻塞/解除记录：核验链条。
+- `config.json`, `README.md`, `code/`: frozen settings, environment, and rerun instructions.
+- `data_contract/sample_index.csv`, `event_disposition_621.csv`: revised labels, four role fields, and complete event disposition.
+- `data_contract/feature_whitelists.json`, `coverage.csv`, `fit_sample_ids.json`: input whitelists, coverage, and fitting scope.
+- `models/`, `logs/`, `tracker.json`: 15 model sets, training logs, preprocessing parameters, and formal status.
+- `predictions/`: 12 probabilities, complete rankings, predictions/truth, and configuration/model identity for 612 cases per set, including 4 compound cases.
+- `metrics/ALL_METRICS.csv`, `SUMMARY.csv`, `CONTROL_COMPARISONS.csv`, confusion matrices: all per-seed/per-run/stratified metrics.
+- `reports/FULL_TABLES_ZH.md`, `ERROR_CASE_OBSERVATIONS.csv`, `COMPOSITE_CASES.csv`: full numerical results and cases.
+- `audit/RESULT_VERIFICATION.json`, freeze receipts, and historical blocker/release records: verification chain.

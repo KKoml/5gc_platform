@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-15",
+  "base_revision": "7dedf9a3194274bc83faf603876903acc57a7232",
+  "scope": "English documentation, descriptive dictionary cells, report text and matching comparison headers; current-copy manifests refreshed",
+  "measurement_values_changed": false,
+  "model_execution_performed": false,
+  "historical_source_hashes": "Retained in source/lock/receipt records. TRAINING_SOURCE_LOCK.json records the original training source; translated reporting text changes the current source hash and is not a new historical training lock.",
+  "legacy_filenames": "Names ending in _ZH are retained for compatibility; their document text and generated prose are English.",
+  "external_path_alias": "The sample scenario uses 5G_aggregated_gaming as an English alias for an external corpus directory. Adapt this alias to the local corpus; the corpus is not bundled.",
+  "historical_manuscript_aliases": "paper_baseline.json uses explicitly labeled English display aliases for three historical non-English PDF filenames; hashes are unchanged.",
+  "files": [
+    {
+      "path": "PAPER_RESULT_MAP.md",
+      "previous_sha256": "ff5a5fda613de4d95da489b4115a12fa55834f65ce13a64438f8220d3e972867",
+      "english_revision_sha256": "01908b173228e18458561581a5e0e950a69c6dc70a383867edf19e6a0de092ce"
+    },
+    {
+      "path": "appendix/D3_data_construction.md",
+      "previous_sha256": "fa9c3b03f1156947325b74b0a4f936cd00e42a0a78fe748becb314d56079aa8b",
+      "english_revision_sha256": "3b3c3d15fee7d54199925d52b83071951e6f3228b62078e57f1771055c7babdb"
+    },
+    {
+      "path": "appendix/E1_models_hyperparameters.md",
+      "previous_sha256": "68725ffc6377437f9de4db36016d6b83ac66c5fe0b2516a6abcb51c906b55a72",
+      "english_revision_sha256": "907eef6dda3d6b13e1a140c3519b69803f42ee30f6effb08047e26b5e2deaefa"
+    },
+    {
+      "path": "appendix/E2_results_correspondence.md",
+      "previous_sha256": "514807352892158b4b14e825f4e4977bd90db35b7cee44b11b2b985d5546f200",
+      "english_revision_sha256": "b94a41775c426eb4514d4402283ad8380958c1caf4623d1cbf6ed5bb6c1111f3"
+    },
+    {
+      "path": "appendix/E3_reproduction.md",
+      "previous_sha256": "07a6b3b2bccfc01bcd2663481538bd397a6a93da12c99c1b6c1534177953885d",
+      "english_revision_sha256": "b4f364cd96207904a05eacdbd935e70dff41009fe157091db234c3ba6e310c3a"
+    },
+    {
+      "path": "appendix/LINEAGE.md",
+      "previous_sha256": "dd9a1645d93fa1b50b9757ea7742f9e7e66ea805956dc196a99f4a1baa0e2da5",
+      "english_revision_sha256": "019d2d5ce1ef5998fd18dc3584539c141ae4da86d957a2272d311469d2a39535"
+    },
+    {
+      "path": "data_machine/dataset/metadata/PLATFORM_FIELD_DICTIONARY_400.csv",
+      "previous_sha256": "5e2c7f957d630f79627218f881286197ea4518be9bc60850ef268ce4a3f50b50",
+      "english_revision_sha256": "e9023b03991eb7e5f4e96e532c9ad85a09fed1a808205513e992c4739993ca02"
+    },
+    {
+      "path": "data_machine/dataset/task_data/metadata/EXPERIMENT_KPI_DICTIONARY.csv",
+      "previous_sha256": "c414fe6b2225d6387f5c5ddd3a2dd12342a919bec60b14e5880975326b829538",
+      "english_revision_sha256": "77a85c7f03fe3ab352370fc56d74e3daeaadaa3c8b5decd392061a868022063d"
+    },
+    {
+      "path": "evaluation_package/docs/RESULTS_MAP.md",
+      "previous_sha256": "e8fc9237ded77a8d93a51da867acdee657a553096c83b451f2653687443d8850",
+      "english_revision_sha256": "2fe4a12a2acda35fe7560e911374ab4c5fc6da3ffb3b1280169b552b66d3b379"
+    },
+    {
+      "path": "evaluation_package/evaluation/detection/normal_only/reporting.py",
+      "previous_sha256": "d4a22ab49a6103655b2261eab97a000982482d0eecec6b2c0f1b613ea3d18bd4",
+      "english_revision_sha256": "819c3d82278b30298dc4fa9748ba697bf399133235039a9f264c0656a7634da6"
+    },
+    {
+      "path": "evaluation_package/evaluation/evidence/imputation/source_group_ledger.csv",
+      "previous_sha256": "fad4f5fb9a9b128264273bcecee89f743513ed96d1af8bff4f481d1b3a898a88",
+      "english_revision_sha256": "418b2964e0d8dfd0e5906795a23c0c012d61bc01d2166f04df539c2fb2311695"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/code/audit_derived.py",
+      "previous_sha256": "d3979e7165d7357617c92332e0542de3fdfdeed8f616b350514ad79ea37c5adf",
+      "english_revision_sha256": "05f6679caeba74a0d8099a754afedb5e5e6181e813949aec587b44fda51f84e6"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/code/freeze.py",
+      "previous_sha256": "0036b2ededf8f5ae2dcda9cc1ed5e6261d4b548109e06b4dbbed67e3cc074ffa",
+      "english_revision_sha256": "a1267805d6c410283511f8387be4680d642781d0b86c075f43d5ca6c581c6184"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/code/report.py",
+      "previous_sha256": "3f32bfa261f6a2602db3b9b2c92baf0043791574d18da1d3bf09267bc4ec7ab7",
+      "english_revision_sha256": "a69f0aa0813f013f5a3cc1a7390e7c2a2a7e72d573dcad1c9e23749249674893"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/code/source_audit.py",
+      "previous_sha256": "d14ddee24677d3488b7170f5dcd891525b369be3bde878955d612a3772ff4a18",
+      "english_revision_sha256": "bbaf2c1b89a4f020a88680b25c2e0a40f952d6b9e6a387532f7deb024ddb0b0a"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/metadata/input_hash_verification.json",
+      "previous_sha256": "ea5ddb6e91fbaf40590233d815c3818e464b2da872313316ce0cf7ab375e0223",
+      "english_revision_sha256": "f4b9eca45136359fc43a30b8b7fcb42b1cfde771d3801f7f342fa72d99c10305"
+    },
+    {
+      "path": "evaluation_package/evaluation/imputation/results/main_comparison.csv",
+      "previous_sha256": "69a413e555027198532ca32bd43a54f1701de88fb028c9fa9c419b6bc8a276fe",
+      "english_revision_sha256": "512c8b8ae35b29705a82cc99984323a2e8e46d99ce533525d293dc70b9a15b69"
+    },
+    {
+      "path": "evaluation_package/evaluation/localization/code/final_report.py",
+      "previous_sha256": "fea09290ce3e2303fbdff37ba2a77f705c5e9b49c3ed45d791c0ff8d6c700753",
+      "english_revision_sha256": "700b5218b05dd1e62258d63a4f105ec14b1d7cbc3af9c9d76d01156b250f72ba"
+    },
+    {
+      "path": "evaluation_package/evaluation/localization/code/report_results.py",
+      "previous_sha256": "b1b2b204ab15209e49c846473f9ea11dad4aa551e0cccf3eebe65830249408e7",
+      "english_revision_sha256": "68af7a83daf0cf991f5d28c6c18affbe76b08fc7f231f544b3772010ff2978f2"
+    },
+    {
+      "path": "evaluation_package/evaluation/localization/reports/FINAL_REPORT_ZH.md",
+      "previous_sha256": "3a160d9dfb1e0a3eb13c8738203a0a2e4412be89389d03368a854c7804ba75db",
+      "english_revision_sha256": "44c1c1c14546dccc4d643fbc626e928b82c04e69e6d46932bcbf682ab65fb6c2"
+    },
+    {
+      "path": "evaluation_package/evaluation/localization/reports/FULL_TABLES_ZH.md",
+      "previous_sha256": "69ab8660f3355338a2edff9503dc37d8689c5f51f81aa7ce66f39babaeb9d03a",
+      "english_revision_sha256": "b8320fc83d88fec7ee1af44fffa02bd0c7035ef946b0936332778debbe32a694"
+    },
+    {
+      "path": "evaluation_package/evaluation/prediction/outputs/RUN_SUMMARY.md",
+      "previous_sha256": "ef4405b6b0cdc50f3707d64cd79782599aa249da64bd9d86495291db6c08a814",
+      "english_revision_sha256": "3c79013a2eec31bdbd7a728f24b1a3ed726a7049c903935b71e2b34638bf9016"
+    },
+    {
+      "path": "evaluation_package/evaluation/prediction/src/repaired_run.py",
+      "previous_sha256": "cd341928982d006bb1577c822bb4bbdb9a83310bc658c067cbcad1aad5ee01b4",
+      "english_revision_sha256": "a0190314939bb92cfa986bac9d74a20883213b191ae2317c4f5e853915602638"
+    },
+    {
+      "path": "manifests/core_handoff.csv",
+      "previous_sha256": "1a1b6eb5820fc3d9eb1d0aa13b475564d3de667b21c9462afec3b877a8dbdc83",
+      "english_revision_sha256": "79bfdf5e3137fd9af2f2f4742daaeb4dffcff49b391e3e56acd6698375b0e4c8"
+    },
+    {
+      "path": "manifests/paper_baseline.json",
+      "previous_sha256": "f30668bd713089eb32b9a667edb23f580e08533826ac8ddd504fc58fc2534ffc",
+      "english_revision_sha256": "db40a1b15b66eaaf9cfd2f1665c9f1faabb6a695f75edbd17a0bd3f622b81ee2"
+    },
+    {
+      "path": "manifests/paper_result_map.csv",
+      "previous_sha256": "4a38a360d07f710264decbe2ce8255cb0405b6e89323ffab4dde79992abd59be",
+      "english_revision_sha256": "45b6c57a2393991d7c4ac231ccb4dcc6da3d0f574501d1bd4529a84b966a7d5e"
+    },
+    {
+      "path": "manuscript_supplement/data/field_dictionary.csv",
+      "previous_sha256": "5e2c7f957d630f79627218f881286197ea4518be9bc60850ef268ce4a3f50b50",
+      "english_revision_sha256": "e9023b03991eb7e5f4e96e532c9ad85a09fed1a808205513e992c4739993ca02"
+    },
+    {
+      "path": "manuscript_supplement/source_notes/RESULTS_MAP.md",
+      "previous_sha256": "e8fc9237ded77a8d93a51da867acdee657a553096c83b451f2653687443d8850",
+      "english_revision_sha256": "2fe4a12a2acda35fe7560e911374ab4c5fc6da3ffb3b1280169b552b66d3b379"
+    },
+    {
+      "path": "platform_data/OPEN_ITEMS.md",
+      "previous_sha256": "1afe5555b8be0878f0598f5d6b78aedf3a8cae252fa5bb1ab3567b726c1082ba",
+      "english_revision_sha256": "d2a7c9cbf7b59933ecbfe80bbbfb36f97674048b701daeb71ced502af0c5e778"
+    },
+    {
+      "path": "platform_data/evidence/PLATFORM_DICTIONARY_SOURCE.csv",
+      "previous_sha256": "5e2c7f957d630f79627218f881286197ea4518be9bc60850ef268ce4a3f50b50",
+      "english_revision_sha256": "e9023b03991eb7e5f4e96e532c9ad85a09fed1a808205513e992c4739993ca02"
+    },
+    {
+      "path": "platform_data/manifests/DICTIONARY_PROVENANCE.json",
+      "previous_sha256": "9062b1133a40c5567a1355005c59d3749ed3878701487131667d8ae44da95afe",
+      "english_revision_sha256": "b8ac32dc098a6cd76b1d3f125580755800f6c5b28c5e2725f69c3fe1576c3958"
+    },
+    {
+      "path": "platform_data/manifests/PROVIDED_FILES.csv",
+      "previous_sha256": "571fa11f9759fe48e62b7dfb10d3f6568f529c08ba71f8d6db946ac3488899e4",
+      "english_revision_sha256": "e1f35807741ffbad93b6fdabed155f59ac0537cea94d8cf12041ed371c541b92"
+    },
+    {
+      "path": "platform_data/samples/W1-D06/traffic/config/scenario_vali1.json",
+      "previous_sha256": "579f5f7b7eb038e59247aeb5d732fbe1c647532ff3ddbe69bfadaec7bc289fd1",
+      "english_revision_sha256": "6143318606e691ff4345cdc428ec938bc6a4c110aa2d1d47abd930b4e8db64f5"
+    },
+    {
+      "path": "README.md",
+      "previous_sha256": "53244b0acd826c268f20191959ed50bad1c5b311dc64d378a85f9050dd93e973",
+      "english_revision_sha256": "9ce4add082efe519712dfae4c6adca3a8ab871bbbd18499d1e471e9ae7d84cc8"
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "text_files_scanned": 836,
+    "chinese_text_hits": 0,
+    "python_files_with_equivalent_nontext_AST": 8,
+    "translated_CSV_nonlanguage_cells_unchanged": true,
+    "classification_report_numeric_tokens_preserved_per_line": true,
+    "JSON_numeric_fields_unchanged": true,
+    "rewritten_document_relative_links_valid": true,
+    "inference_or_training_run": false
+  }
+}

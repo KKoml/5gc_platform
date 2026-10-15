@@ -15,14 +15,14 @@ def audit_derived():
     for r in main.itertuples():
         q=s[(s.slot==r.slot)&(s.target==r.target)&(s.condition==r.condition)].set_index('method');assert np.allclose([r.M,r.H,r.linear,r.ffill,r.median],[q.loc[x].mae for x in ['M','H','linear','ffill','median']]);wins.append(r.M<min(r.linear,r.ffill,r.median));cross.append(r.M<r.H)
     # Verify the booleans as well as displayed numbers.
-    assert np.array_equal(main['M优于线性'],main.M<main.linear);assert np.array_equal(main['M优于H'],main.M<main.H);assert np.array_equal(main['M优于三基线'],wins)
+    assert np.array_equal(main['M_better_linear'],main.M<main.linear);assert np.array_equal(main['M_better_H'],main.M<main.H);assert np.array_equal(main['M_better_all_baselines'],wins)
     c=json.load(open(ROOT/'results/CONCLUSION.json'));assert c['main_cells']==24;assert c['M_better_linear']==int((main.M<main.linear).sum());assert c['M_better_all_baselines']==sum(wins)
-    names=['Silver接收比特率','Silver发送比特率','宿主机CPU'];conds=['随机20%','连续30秒','连续60秒','连续120秒'];both=[];extra=[]
+    names=['Silver RX bitrate','Silver TX bitrate','Host CPU'];conds=['Random20','Gap30s','Gap60s','Gap120s'];both=[];extra=[]
     for t in range(3):
         for cond in range(4):
             q=main[(main.target==t)&(main.condition==cond)];assert len(q)==2
-            if q['M优于三基线'].all():both.append(f'{names[t]}／{conds[cond]}')
-            if q['M优于H'].all():extra.append(f'{names[t]}／{conds[cond]}')
+            if q['M_better_all_baselines'].all():both.append(f'{names[t]} / {conds[cond]}')
+            if q['M_better_H'].all():extra.append(f'{names[t]} / {conds[cond]}')
     assert c['both_runs_better_all']==both and c['both_runs_M_better_H']==extra
     allmetrics=pd.read_csv(ROOT/'results/metrics.csv');change=allmetrics[(allmetrics.slot.isin(['D06','D07']))&(allmetrics.stratification=='change')&(allmetrics.stratum=='high')];hh=change.groupby(['slot','target','condition','method']).mae.mean().unstack();assert c['high_change_M_better_linear']==int((hh.M<hh.linear).sum());assert c['high_change_M_better_linear_and_H']==int(((hh.M<hh.linear)&(hh.M<hh.H)).sum())
     for fname,strat in [('phase_summary.csv','phase'),('change_summary.csv','change')]:
