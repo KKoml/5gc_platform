@@ -16,7 +16,7 @@
 
 *Overview adapted from Fig. 1 of the paper, with the four evaluation tasks added. Collection capabilities and released materials are distinguished below.*
 
-**This repository contains the appendix and supplementary materials for the above paper.** The materials include platform descriptions, linked run examples, prepared datasets, evaluation code, model settings, and saved results.
+The materials include platform descriptions, linked run examples, prepared datasets, evaluation code, model settings, and saved results.
 
 D-GATE combines configurable traffic, network interventions, recovery checks, and multi-source observations in a 5G core testbed.
 
