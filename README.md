@@ -6,11 +6,19 @@
 </p>
 
 <p align="center">
+  <a href="https://drive.google.com/drive/folders/1cQTv0CbireblU9055l0rPhgnDDDSwLyJ"><strong>Original data download</strong></a> ·
   <a href="manuscript_supplement/README.md">Appendices A–D</a> ·
   <a href="DATA_ACCESS.md">Datasets</a> ·
   <a href="PAPER_RESULT_MAP.md">Paper results</a> ·
   <a href="RUN_GUIDE.md">Reproduction</a>
 </p>
+
+> [!IMPORTANT]
+> **[Download original experiment data — Google Drive](https://drive.google.com/drive/folders/1cQTv0CbireblU9055l0rPhgnDDDSwLyJ)**
+>
+> Public read-only access to the W1-D01–W1-D07 original non-PCAP records, derived data, and reports.
+> **[Seven-run archives](https://drive.google.com/drive/folders/18-NN0UprWCM-R42Ng0YITkkxZnrGWN14) · [Download and restore instructions](https://drive.google.com/file/d/15TNAxdYwus_3pCS2KRWLzte3bO69S5WQ/view) · [Package index and checksums](https://drive.google.com/drive/folders/1ltfF2pHkPVJ3OV1Eb0Iml3Ir3Bicwaub)**
+> PCAP/PCAPNG captures are excluded.
 
 ![D-GATE overview: controlled traffic and interventions in a 5G experimental network, multi-source collection and processing, and prepared inputs for four offline AI evaluation tasks.](assets/readme-overview.png)
 
@@ -39,12 +47,15 @@ The release includes **D01–D07** platform exports and prepared task inputs. Th
 
 | To inspect… | Open… |
 | :--- | :--- |
+| Original experiment records, derived data, and reports | **[Download W1-D01–W1-D07 archives](https://drive.google.com/drive/folders/18-NN0UprWCM-R42Ng0YITkkxZnrGWN14)** · [Archive index and checksums](https://drive.google.com/drive/folders/1ltfF2pHkPVJ3OV1Eb0Iml3Ir3Bicwaub) |
 | Table formats and field meanings | [1 s sample](manuscript_supplement/data/timeseries_1s_sample.csv) · [5 s sample](manuscript_supplement/data/core_features_5s_sample.csv) · [Field dictionary](manuscript_supplement/data/field_dictionary.csv) |
 | One run’s configuration, events, and recovery records | [Linked D06 examples](platform_data/samples/W1-D06/README.md) |
 | Included exports and task inputs | [Platform exports and task data](data_machine/README.md) · [Prediction histories and targets](prediction_inputs/README.md) |
 | Windows, indices, masks, and preprocessing scales | [Data access and file locations](DATA_ACCESS.md) |
 
 The 1 s exports, 5 s observations, and prediction tables are separate products. Their construction and documented relationships are described in [Appendix C](manuscript_supplement/README.md#appendix-c-task-construction) and the [lineage record](appendix/LINEAGE.md).
+
+To restore an original-data package, download every part listed for that package in `00_Readme_And_Manifests/DRIVE_PACKAGE_INDEX.json`. Large archives use ordered 90 MiB chunks. Follow the [archive instructions](https://drive.google.com/file/d/15TNAxdYwus_3pCS2KRWLzte3bO69S5WQ/view) to verify SHA-256 checksums and restore into a new empty directory; the supplied `restore_package.py` helper requires Python 3.12 or newer.
 
 ## Inspect the four evaluation tasks
 
@@ -81,7 +92,9 @@ Dependencies, commands, and task-specific requirements are listed in the [reprod
 
 **Included:** appendices, field dictionaries, configurations and linked samples, prepared task inputs, evaluation and offline task-data code, fitted models, and saved outputs.
 
-**Outside this review release:** collection-platform source code, PCAP files, the complete original log archive, and the complete traffic-input corpus. Platform implementation paths and hashes are documentary references; platform source is reserved for release upon acceptance.
+**External original-data archive:** the [public Google Drive folder](https://drive.google.com/drive/folders/1cQTv0CbireblU9055l0rPhgnDDDSwLyJ) contains the seven-run non-PCAP records, derived products and reports, the current traffic-input corpus, and a separate review package. These archives are downloaded separately from this repository. Third-party traffic-corpus redistribution rights and exact historical W1 input identity remain unverified.
+
+**Outside this repository:** collection-platform source code and PCAP files. Platform implementation paths and hashes are documentary references; platform source is reserved for release upon acceptance. Historical source archives and transfer-test files are retained separately in private storage.
 
 [Data availability](DATA_ACCESS.md) · [Detailed delivery scope](platform_data/DELIVERY_STATUS.md) · [Validation records](CHECKS.md) · [Anonymous access status](PUBLICATION_STATUS.md)
 
