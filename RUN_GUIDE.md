@@ -19,7 +19,15 @@ The first command compares saved paper-table aggregates. The second recomputes p
 python evaluation_package/evaluation/verification/verify_data_package.py
 ```
 
-This streams all seven compressed 1 s tables, checks each full schema, row total, UTC one-second grid, coverage reports, field dictionary counts, and the 5 s task tables. It records that same-timestamp host values are not elementwise identical; it does not claim a 1 s-to-5 s resampling lineage.
+This streams all seven compressed 1 s tables, checks each full schema, row total, UTC one-second grid, coverage reports, the archived 400-entry platform catalog counts, and the 5 s task tables. It records that same-timestamp host values are not elementwise identical; it does not claim a 1 s-to-5 s resampling lineage.
+
+Check the current W1-specific dictionary separately, without loading the large source tables:
+
+```bash
+python tools/build_w1_dictionary.py --check
+```
+
+This compares a deterministic rebuild from the bundled sanitized evidence to the published dictionary, screening crosswalk, summary and 81-column compatibility dictionary. It does not run collection or change source data.
 
 ## 3. Replay saved checkpoints
 

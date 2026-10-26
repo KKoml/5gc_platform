@@ -4,7 +4,7 @@ This repository provides appendix materials for **Operational Data Collection an
 
 | Current paper item | Bundled evidence | Scope |
 |---|---|---|
-| Table I: data categories | [400-entry field dictionary](../../manuscript_supplement/data/field_dictionary.csv) and [data package](../../data_machine/dataset/README.md) | Current category definitions; historical dictionary version remains unconfirmed |
+| Table I: data categories | [W1-specific field dictionary](../../manuscript_supplement/data/field_dictionary.csv) and [data package](../../data_machine/dataset/README.md) | Current category definitions; historical dictionary version remains unconfirmed |
 | Section III-B: dataset setup | [1 s exports and 5 s task package](../../data_machine/dataset/README.md) | Seven 1 s exports contain 611,777 rows and 81 fields; the 24-variable task view has separate lineage |
 | Table II: forecasting | [Forecast inputs](../../prediction_inputs/README.md), frozen indices, saved predictions, and fit records under evaluation_package/evaluation/prediction | 60 s history; D01–D04 fitting, D05 selection, D06/D07 post hoc testing |
 | Table III: detection | Saved scores, thresholds, event records, and supervised-RF comparisons under evaluation_package/evaluation/detection | Normal-only and supervised regimes are distinguished; legacy detection plots remain supplementary |

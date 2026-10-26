@@ -1,0 +1,102 @@
+{
+  "schema_version": "w1-field-dictionary/v1",
+  "scope": "accepted W1 D01-D07; frozen original-run artifacts only",
+  "counting_unit": "canonical field definition across source artifacts/entities/granularities; not independent measured numeric dimensions",
+  "legacy_screened_rows": 400,
+  "retained_field_definitions": 277,
+  "retained_by_role": {
+    "configuration": 38,
+    "dimension": 16,
+    "event": 4,
+    "evidence": 1,
+    "identifier": 22,
+    "label": 13,
+    "metric": 141,
+    "quality": 29,
+    "state": 13
+  },
+  "retained_by_evidence_class": {
+    "config": 38,
+    "derived": 62,
+    "direct": 78,
+    "parser": 17,
+    "report": 82
+  },
+  "retained_by_verification_level": {
+    "complete quality-gate JSON: nonempty field_coverage object per run": 1,
+    "complete structured JSON": 15,
+    "complete structured JSON; first 2000 data rows plus last up to 2000 rows from final 2 MiB": 2,
+    "first 2000 JSON records plus last up to 2000 records from final 2 MiB": 5,
+    "first 2000 JSON records plus last up to 2000 records from final 2 MiB; first 2000 data rows plus last up to 2000 rows from final 2 MiB": 1,
+    "first 2000 data rows plus last up to 2000 rows from final 2 MiB": 30,
+    "first 300 JSON records": 18,
+    "first 300 data rows": 6,
+    "full_export_scan": 60,
+    "full_small_manifest_scan": 1,
+    "one complete retained N6 fault-state JSON per run; phase-specific nested values": 3,
+    "one initial rotated stats file per tier; complete top-level and summary; flows sampled first 300": 3,
+    "one retained nested health sample per run; positive value presence only": 3,
+    "sample_up_to_1000_records_per_run": 129
+  },
+  "screening_decisions": {
+    "exclude": 118,
+    "merge_alias": 5,
+    "retain": 277
+  },
+  "screening_support": {
+    "alias": 5,
+    "all_empty": 12,
+    "composite_template": 1,
+    "field_family_template": 7,
+    "invalid_aggregation": 2,
+    "later_capability": 46,
+    "legacy_proxy": 5,
+    "no_producer": 3,
+    "not_supported": 22,
+    "observed": 272,
+    "observed_metadata_bug": 2,
+    "observed_sparse_snapshot": 1,
+    "observed_workload_projection": 2,
+    "placeholder": 4,
+    "unverified_semantics": 1,
+    "wrong_runtime": 15
+  },
+  "compatibility_columns": 81,
+  "compatibility_nonempty_columns_per_run": {
+    "D01": 64,
+    "D02": 64,
+    "D03": 64,
+    "D04": 64,
+    "D05": 64,
+    "D06": 64,
+    "D07": 64
+  },
+  "export_rows_per_run": {
+    "D01": 87435,
+    "D02": 87327,
+    "D03": 87400,
+    "D04": 87408,
+    "D05": 87403,
+    "D06": 87413,
+    "D07": 87391
+  },
+  "export_rows_total": 611777,
+  "evidence_count_note": "verified_nonempty_count counts listed evidence source records under verification_level, potentially across several stated representations. Zero, false and empty structured lists can be recorded values; nonempty is not independent validity. Sample counts must not be presented as full-stream coverage or distinct physical events.",
+  "known_limits": [
+    "Retained definitions include configuration, identifiers, labels, states, evidence and quality as well as metrics.",
+    "A source field and its exported aggregation can both be retained because their entity/granularity differ; never sum their counts as independent signals.",
+    "The historical 81-column CSV schema is preserved, including empty fields, legacy proxies and aliases.",
+    "N3 uplink-labelled field contains total captured traffic in both directions; OT is its exact alias.",
+    "CP rates are percentages; request/success/failure counters are cumulative parser counts.",
+    "UPF CPU/memory exist despite historical missing-source coverage metadata; Pod cost is not complete kernel forwarding cost.",
+    "Sparse RAN log snapshots do not establish continuous full-day per-UE state.",
+    "Retrospective flow-derived metrics can use future packets and are not online-safe at their assigned first-seen buckets.",
+    "Business observations come from representative sender UEs per tier, not all 40 UEs."
+  ],
+  "validation": {
+    "legacy_rows_accounted_for": true,
+    "compatibility_schema_preserved": true,
+    "required_evidence_metadata_present": true,
+    "original_run_data_modified": false
+  }
+}

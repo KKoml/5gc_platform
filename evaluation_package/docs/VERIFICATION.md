@@ -1,5 +1,7 @@
 # Verification record
 
+> Historical scope: the 400/215 dictionary counts and earlier validation statements below describe the legacy platform catalog. For the current W1 dictionary and every screening decision, use the [W1 screening guide](../../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md). This dictionary update preserves the original tables and saved evaluation results.
+
 ## Recomputed paper results and checkpoint replay
 
 | Task | Executed check | Observed result |

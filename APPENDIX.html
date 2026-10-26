@@ -291,8 +291,8 @@
 </table>
 <p>These product categories do not share a single JSON schema. Field names, units, types, source artifacts, and availability are described in the <a href="manuscript_supplement/data/field_dictionary.csv">field dictionary</a>.</p>
 <h3 id="b2-field-definitions-and-table-dimensions">B.2 Field definitions and table dimensions</h3>
-<p>The dictionary contains <strong>400 definitions: 215 metrics and 185 configuration, state, identifier, label, quality, or other fields</strong>. It contains 400 <code>canonical_id</code> values and 379 distinct <code>field_name</code> values across raw and derived products; it is not the schema of a single 400-column table.</p>
-<p>The seven 1 s exported tables each contain <strong>81 columns</strong>, totaling <strong>611,777 rows</strong>. Matching by field name across all dictionary domains finds 39 metric-name overlaps; this is not an entity-specific role assignment. Restricting to the canonical <code>v3.*</code> definitions yields 36 metric-role columns. The three additional name overlaps (<code>ue_count</code>, <code>gold_ue_count</code>, <code>silver_ue_count</code>) have configuration roles in the base product and metric roles in other domains. <a href="platform_data/tables/DICTIONARY_SCOPE_AUDIT.csv">Scope audit</a> preserves those definitions. Availability also depends on states such as <code>ok</code>, <code>snapshot_only</code>, <code>replaced</code>, and <code>capability_missing</code>; the role count does not imply that all metric-name overlaps are usable in every record.</p>
+<p>The <strong>W1-specific dictionary contains 277 retained definitions</strong>, selected from the legacy 400-entry platform capability catalog using the seven accepted W1 runs. Entries include observations, configuration, identifiers, state, labels and quality evidence; they are not independent numerical features. The <a href="platform_data/dictionaries/W1_DICTIONARY_GUIDE.md">screening guide</a> documents evidence levels and corrected semantics, and the <a href="platform_data/dictionaries/W1_FIELD_SCREENING_400.csv">400-entry crosswalk</a> records every original decision. Later business-prevalidation capabilities, bare-metal-only fields, unobserved placeholders and unresolved definitions do not enter the W1 main dictionary.</p>
+<p>The seven 1 s exported tables each retain <strong>81 columns</strong>, totaling <strong>611,777 rows</strong>. A fresh full-table scan found 64 columns with at least one nonempty cell and 17 entirely empty columns in every run; nonempty cells do not establish independent or online-valid measurements. The <a href="platform_data/dictionaries/BASE_TABLE_81.csv">81-column compatibility dictionary</a> retains every original column and its W1 support decision. The earlier <a href="platform_data/tables/DICTIONARY_SCOPE_AUDIT.csv">scope audit</a> uses the legacy catalog: 36 canonical V3 metric roles and 39 cross-domain metric-name overlaps. Those are historical role counts, not retained W1 feature counts. Original coverage statuses are preserved even where the new evidence review identifies an incorrect provenance label.</p>
 <p>The 5 s core-network observations contain <strong>24 variables</strong>. Their timestamps can be aligned with the 1 s tables, but some same-named fields have different values at the same time. The 5 s observations therefore are not a direct downsampling of the 81-column tables. The <strong>18-variable prediction input</strong> is also constructed separately from the raw records, as described in <a href="#c1-prediction-inputs">C.1</a>. See the <a href="manuscript_supplement/source_notes/DATASET_GUIDE.md">dataset guide</a> and <a href="manuscript_supplement/data/schema_verification.json">schema comparison</a> for details.</p>
 <h3 id="b3-examples-and-dictionary">B.3 Examples and dictionary</h3>
 <table>
@@ -305,7 +305,7 @@
 <tbody>
 <tr>
 <td><a href="manuscript_supplement/data/field_dictionary.csv">Field dictionary</a></td>
-<td>All 400 definitions, including <code>field_name</code>, <code>field_role</code>, <code>entity</code>, <code>unit</code>, <code>value_type</code>, <code>source_artifact</code>, <code>availability</code>, and <code>caveat</code></td>
+<td>277 evidence-supported W1 definitions with corrected meanings, units, actual source fields, evidence level, verified runs, native granularity and scope limits</td>
 </tr>
 <tr>
 <td><a href="manuscript_supplement/data/timeseries_1s_sample.csv">1 s time-series sample</a></td>
@@ -363,7 +363,7 @@
 <p>Derived rates use the following definitions:</p>
 <ol>
 <li><strong>Interface send/receive rate:</strong> the increment in cumulative bytes divided by the actual interval between samples, in byte/s; multiply by eight for bit/s. Configured sampling periods do not replace actual elapsed time.</li>
-<li><strong>Registration and PDU-session establishment success rates:</strong> successful operations divided by corresponding requests, using the same entities and statistical windows for numerator and denominator.</li>
+<li><strong>Registration and PDU-session establishment success rates:</strong> 100 times cumulative successes divided by cumulative requests, in percent over the collector lifecycle. Request/failure counters are cumulative, not per-second window counts; resets require explicit handling.</li>
 <li><strong>Traffic completion rate:</strong> successful transfers divided by all terminated transfers in the window; terminated timeouts count as failures.</li>
 </ol>
 <p>Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates.</p>
@@ -544,3 +544,4 @@
 </tbody>
 </table>
 <p>The repository includes saved models, evaluation results, and the prepared inputs described in the reproduction guide. Inference and training also require the specified runtime dependencies; this data update does not report new model runs. The small samples in this directory remain available for quickly inspecting the formats.</p></body></html>
+

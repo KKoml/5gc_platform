@@ -10,7 +10,7 @@ The following materials describe the collected observations, field definitions, 
 | [Prediction inputs](../prediction_inputs/README.md) | Prediction histories and target tables for D01–D07 |
 | [Dataset guide](docs/DATASET_GUIDE.md) | Data organization, observation tables, and field availability |
 | [Platform guide](docs/PLATFORM_GUIDE.md) | Platform components and data-processing context |
-| [Field dictionary](../manuscript_supplement/data/field_dictionary.csv) | Definitions, units, sources, and availability for 400 fields |
+| [W1-specific field dictionary](../manuscript_supplement/data/field_dictionary.csv) | 277 retained W1 definitions with source evidence and corrected semantics; [screening rules](../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md) |
 | [1 s example](../manuscript_supplement/data/timeseries_1s_sample.csv) | Twenty rows from the 81-column platform export |
 | [5 s example](../manuscript_supplement/data/core_features_5s_sample.csv) | Ten rows containing 24 core observations plus run and time information |
 | [Task construction](../appendix/D3_data_construction.md) | Input variables, windows, labels, and preprocessing for the four tasks |

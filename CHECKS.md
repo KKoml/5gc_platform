@@ -1,7 +1,15 @@
-# Current review checks
+# Review checks
 
-This source-free review edition is tied to the latest English manuscript SHA-256. [Current handoff checks](checks/current/appendix_review_handoff.json) independently recompute the provided input hashes, compare the 24-variable name/order, and distinguish 36 canonical V3 metric roles from 39 cross-domain metric-name overlaps. The 14 prediction input hashes match their contributed manifest. Two README handoff entries contained earlier navigation hashes; their provided hashes are refreshed with old hashes and revision reasons retained, without changing data.
+## W1 dictionary screening, 2026-10-26
 
-[Review validation](checks/current/appendix_review_validation.json) covers links, SHA-256, JSON/CSV structure, absence of collection-platform code, dictionary counts and same-run plan/execution/recovery linkage. Existing [data-schema checks](checks/current/data_schema_verification.json) and model/result receipts remain historical evidence; no inference, training, collection or fault injection is rerun for this documentation change.
+The current [W1 dictionary](manuscript_supplement/data/field_dictionary.csv) has 277 retained definitions. The [complete screening crosswalk](platform_data/dictionaries/W1_FIELD_SCREENING_400.csv) accounts for all 400 legacy IDs, and the [guide](platform_data/dictionaries/W1_DICTIONARY_GUIDE.md) distinguishes observations, context, offline products and unsupported historical columns. Full W1 base-table scans confirmed 611,777 rows, 81 columns and zero differences against the 567 published field-coverage records.
 
-New root and platform-data SHA256SUMS files describe the current review tree. Historical inventories/acceptance receipts describe their stated older versions and are not silently promoted to current checks. Historical-paper execution identity remains unconfirmed; full cloud-archive hash verification and complete archive restoration have not been performed. See [publication status](PUBLICATION_STATUS.md) for the access checks and remaining limits.
+```bash
+python tools/build_w1_dictionary.py --check
+```
+
+This check rebuilds dictionary metadata from sanitized evidence and compares the published outputs. It preserves the original 81-column data, coverage reports, task inputs, models and saved results. No collection or model execution forms part of the dictionary update.
+
+## Earlier review receipts
+
+The existing [handoff checks](checks/current/appendix_review_handoff.json), [review validation](checks/current/appendix_review_validation.json), [data-schema checks](checks/current/data_schema_verification.json), inventories and model/result receipts describe their recorded earlier versions. Their 400/215 counts refer to the archived platform catalog; they are not validation receipts for the new W1 dictionary. They have not been rewritten to match the new count. Historical-paper execution identity remains separate. See [publication status](PUBLICATION_STATUS.md) for access scope and remaining limits.

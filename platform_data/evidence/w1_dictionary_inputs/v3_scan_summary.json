@@ -1,0 +1,4596 @@
+{
+  "runs": [
+    {
+      "slot": "D01",
+      "actual_rows": 87435,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115286,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66042,
+          "actual_coverage_ratio": 0.755327,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85173,
+          "actual_coverage_ratio": 0.974129,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115286,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87410,
+          "actual_coverage_ratio": 0.999714,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14800,
+          "actual_coverage_ratio": 0.169269,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115286,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14800,
+          "actual_coverage_ratio": 0.169269,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10142,
+          "actual_coverage_ratio": 0.115995,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14800,
+          "actual_coverage_ratio": 0.169269,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115286,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115286,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020587,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020587,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 184,
+          "actual_coverage_ratio": 0.002104,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86755,
+          "actual_coverage_ratio": 0.992223,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86755,
+          "actual_coverage_ratio": 0.992223,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86755,
+          "actual_coverage_ratio": 0.992223,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87167,
+          "actual_coverage_ratio": 0.996935,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87409,
+          "actual_coverage_ratio": 0.999703,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 66356,
+          "actual_coverage_ratio": 0.758918,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 66356,
+          "actual_coverage_ratio": 0.758918,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 66356,
+          "actual_coverage_ratio": 0.758918,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87222,
+          "actual_coverage_ratio": 0.997564,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87419,
+          "actual_coverage_ratio": 0.999817,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87419,
+          "actual_coverage_ratio": 0.999817,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87409,
+          "actual_coverage_ratio": 0.999703,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87435,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 22137,
+          "actual_coverage_ratio": 0.253182,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87351,
+          "actual_coverage_ratio": 0.999039,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87351,
+          "actual_coverage_ratio": 0.999039,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 31276,
+          "actual_coverage_ratio": 0.357706,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87433,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87433,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87433,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D02",
+      "actual_rows": 87327,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115428,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66021,
+          "actual_coverage_ratio": 0.75602,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85086,
+          "actual_coverage_ratio": 0.974338,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115428,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87305,
+          "actual_coverage_ratio": 0.999748,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14280,
+          "actual_coverage_ratio": 0.163523,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115428,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14280,
+          "actual_coverage_ratio": 0.163523,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10142,
+          "actual_coverage_ratio": 0.116138,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14280,
+          "actual_coverage_ratio": 0.163523,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115428,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115428,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020612,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020612,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 188,
+          "actual_coverage_ratio": 0.002153,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87327,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86686,
+          "actual_coverage_ratio": 0.99266,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86686,
+          "actual_coverage_ratio": 0.99266,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86686,
+          "actual_coverage_ratio": 0.99266,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87070,
+          "actual_coverage_ratio": 0.997057,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87304,
+          "actual_coverage_ratio": 0.999737,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 65102,
+          "actual_coverage_ratio": 0.745497,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 65102,
+          "actual_coverage_ratio": 0.745497,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 65102,
+          "actual_coverage_ratio": 0.745497,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87122,
+          "actual_coverage_ratio": 0.997653,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87313,
+          "actual_coverage_ratio": 0.99984,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87313,
+          "actual_coverage_ratio": 0.99984,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87304,
+          "actual_coverage_ratio": 0.999737,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 22947,
+          "actual_coverage_ratio": 0.262771,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87250,
+          "actual_coverage_ratio": 0.999118,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87250,
+          "actual_coverage_ratio": 0.999118,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 31578,
+          "actual_coverage_ratio": 0.361606,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D03",
+      "actual_rows": 87400,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115332,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66022,
+          "actual_coverage_ratio": 0.7554,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85158,
+          "actual_coverage_ratio": 0.974348,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115332,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87376,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14350,
+          "actual_coverage_ratio": 0.164188,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115332,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14350,
+          "actual_coverage_ratio": 0.164188,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10140,
+          "actual_coverage_ratio": 0.116018,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14350,
+          "actual_coverage_ratio": 0.164188,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115332,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115332,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020595,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020595,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 184,
+          "actual_coverage_ratio": 0.002105,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86732,
+          "actual_coverage_ratio": 0.992357,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86732,
+          "actual_coverage_ratio": 0.992357,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86732,
+          "actual_coverage_ratio": 0.992357,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87150,
+          "actual_coverage_ratio": 0.99714,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87376,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 65387,
+          "actual_coverage_ratio": 0.748135,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 65387,
+          "actual_coverage_ratio": 0.748135,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 65387,
+          "actual_coverage_ratio": 0.748135,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87199,
+          "actual_coverage_ratio": 0.9977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87393,
+          "actual_coverage_ratio": 0.99992,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87393,
+          "actual_coverage_ratio": 0.99992,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87376,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87400,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 25658,
+          "actual_coverage_ratio": 0.29357,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87321,
+          "actual_coverage_ratio": 0.999096,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87321,
+          "actual_coverage_ratio": 0.999096,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 31922,
+          "actual_coverage_ratio": 0.36524,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87398,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87398,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87398,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D04",
+      "actual_rows": 87408,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115321,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66019,
+          "actual_coverage_ratio": 0.755297,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85169,
+          "actual_coverage_ratio": 0.974384,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115321,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87381,
+          "actual_coverage_ratio": 0.999691,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14289,
+          "actual_coverage_ratio": 0.163475,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115321,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14289,
+          "actual_coverage_ratio": 0.163475,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10140,
+          "actual_coverage_ratio": 0.116008,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14289,
+          "actual_coverage_ratio": 0.163475,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115321,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115321,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020593,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020593,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 187,
+          "actual_coverage_ratio": 0.002139,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86727,
+          "actual_coverage_ratio": 0.992209,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86727,
+          "actual_coverage_ratio": 0.992209,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86727,
+          "actual_coverage_ratio": 0.992209,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87153,
+          "actual_coverage_ratio": 0.997083,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87380,
+          "actual_coverage_ratio": 0.99968,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 66510,
+          "actual_coverage_ratio": 0.760914,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 66510,
+          "actual_coverage_ratio": 0.760914,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 66510,
+          "actual_coverage_ratio": 0.760914,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87201,
+          "actual_coverage_ratio": 0.997632,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87396,
+          "actual_coverage_ratio": 0.999863,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87396,
+          "actual_coverage_ratio": 0.999863,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87380,
+          "actual_coverage_ratio": 0.99968,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87408,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 22130,
+          "actual_coverage_ratio": 0.25318,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999062,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87326,
+          "actual_coverage_ratio": 0.999062,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 32283,
+          "actual_coverage_ratio": 0.369337,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87407,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87407,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87407,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D05",
+      "actual_rows": 87403,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115328,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66015,
+          "actual_coverage_ratio": 0.755294,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85168,
+          "actual_coverage_ratio": 0.974429,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115328,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87380,
+          "actual_coverage_ratio": 0.999737,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14341,
+          "actual_coverage_ratio": 0.164079,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115328,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14341,
+          "actual_coverage_ratio": 0.164079,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10140,
+          "actual_coverage_ratio": 0.116014,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14341,
+          "actual_coverage_ratio": 0.164079,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115328,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115328,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020594,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020594,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 188,
+          "actual_coverage_ratio": 0.002151,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86692,
+          "actual_coverage_ratio": 0.991865,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86692,
+          "actual_coverage_ratio": 0.991865,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86692,
+          "actual_coverage_ratio": 0.991865,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87153,
+          "actual_coverage_ratio": 0.99714,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87379,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 65144,
+          "actual_coverage_ratio": 0.745329,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 65144,
+          "actual_coverage_ratio": 0.745329,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 65144,
+          "actual_coverage_ratio": 0.745329,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87202,
+          "actual_coverage_ratio": 0.9977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87394,
+          "actual_coverage_ratio": 0.999897,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87394,
+          "actual_coverage_ratio": 0.999897,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87379,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87403,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 22132,
+          "actual_coverage_ratio": 0.253218,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87325,
+          "actual_coverage_ratio": 0.999108,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87325,
+          "actual_coverage_ratio": 0.999108,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 31899,
+          "actual_coverage_ratio": 0.364965,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87401,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87401,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87401,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D06",
+      "actual_rows": 87413,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115315,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66017,
+          "actual_coverage_ratio": 0.755231,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85176,
+          "actual_coverage_ratio": 0.974409,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115315,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87388,
+          "actual_coverage_ratio": 0.999714,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14354,
+          "actual_coverage_ratio": 0.164209,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115315,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14354,
+          "actual_coverage_ratio": 0.164209,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10140,
+          "actual_coverage_ratio": 0.116001,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14354,
+          "actual_coverage_ratio": 0.164209,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115315,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115315,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020592,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020592,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 188,
+          "actual_coverage_ratio": 0.002151,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87413,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86743,
+          "actual_coverage_ratio": 0.992335,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86743,
+          "actual_coverage_ratio": 0.992335,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86743,
+          "actual_coverage_ratio": 0.992335,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87162,
+          "actual_coverage_ratio": 0.997129,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87388,
+          "actual_coverage_ratio": 0.999714,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 66494,
+          "actual_coverage_ratio": 0.760688,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 66494,
+          "actual_coverage_ratio": 0.760688,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 66494,
+          "actual_coverage_ratio": 0.760688,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87209,
+          "actual_coverage_ratio": 0.997666,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87407,
+          "actual_coverage_ratio": 0.999931,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87407,
+          "actual_coverage_ratio": 0.999931,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87388,
+          "actual_coverage_ratio": 0.999714,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87412,
+          "actual_coverage_ratio": 0.999989,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 25740,
+          "actual_coverage_ratio": 0.294464,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87333,
+          "actual_coverage_ratio": 0.999085,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87333,
+          "actual_coverage_ratio": 0.999085,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 31294,
+          "actual_coverage_ratio": 0.358002,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87410,
+          "actual_coverage_ratio": 0.999966,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87410,
+          "actual_coverage_ratio": 0.999966,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87410,
+          "actual_coverage_ratio": 0.999966,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    },
+    {
+      "slot": "D07",
+      "actual_rows": 87391,
+      "column_count": 81,
+      "ot_n3_exact_string_mismatches": 0,
+      "fields": {
+        "time": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_start",
+          "missing_reason": ""
+        },
+        "run_id": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "run_id",
+          "missing_reason": ""
+        },
+        "session_id": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "session_id",
+          "missing_reason": ""
+        },
+        "sample_index": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "bucket_index",
+          "missing_reason": ""
+        },
+        "scenario_type": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "scenario_type",
+          "missing_reason": ""
+        },
+        "experiment_id": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "experiment_id",
+          "missing_reason": ""
+        },
+        "event_id": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115344,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "event_id",
+          "missing_reason": ""
+        },
+        "seconds_from_session_start": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "seconds_from_session_start",
+          "missing_reason": ""
+        },
+        "time_to_planned_start_sec": {
+          "actual_present_count": 66015,
+          "actual_coverage_ratio": 0.755398,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_to_planned_start_sec",
+          "missing_reason": ""
+        },
+        "time_since_last_fault_end_sec": {
+          "actual_present_count": 85156,
+          "actual_coverage_ratio": 0.974425,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "time_since_last_fault_end_sec",
+          "missing_reason": ""
+        },
+        "pre_state_status": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115344,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "pre_state_status",
+          "missing_reason": ""
+        },
+        "load_level": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "load_level",
+          "missing_reason": ""
+        },
+        "ue_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "ue_count",
+          "missing_reason": ""
+        },
+        "gnb_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gnb_count",
+          "missing_reason": ""
+        },
+        "gold_ue_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "gold_ue_count",
+          "missing_reason": ""
+        },
+        "silver_ue_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "silver_ue_count",
+          "missing_reason": ""
+        },
+        "traffic_profile_id": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "traffic_profile_id",
+          "missing_reason": ""
+        },
+        "topology_id": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "topology_id",
+          "missing_reason": ""
+        },
+        "dnn_profile": {
+          "actual_present_count": 87368,
+          "actual_coverage_ratio": 0.999737,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "dnn_profile",
+          "missing_reason": ""
+        },
+        "policy_version": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "policy_version",
+          "missing_reason": ""
+        },
+        "target_upf_id": {
+          "actual_present_count": 14313,
+          "actual_coverage_ratio": 0.163781,
+          "status": "ok",
+          "source_file": "run_manifest.json",
+          "source_column": "target_upf_id",
+          "missing_reason": ""
+        },
+        "planned_treatment_type": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_treatment_type",
+          "missing_reason": ""
+        },
+        "planned_fault_family": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_family",
+          "missing_reason": ""
+        },
+        "planned_target_interface": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115344,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_interface",
+          "missing_reason": ""
+        },
+        "planned_target_ne": {
+          "actual_present_count": 14313,
+          "actual_coverage_ratio": 0.163781,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_target_ne",
+          "missing_reason": ""
+        },
+        "planned_peer": {
+          "actual_present_count": 10150,
+          "actual_coverage_ratio": 0.116145,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_peer",
+          "missing_reason": ""
+        },
+        "planned_instance": {
+          "actual_present_count": 14313,
+          "actual_coverage_ratio": 0.163781,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_instance",
+          "missing_reason": ""
+        },
+        "planned_fault_duration_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115344,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_duration_sec",
+          "missing_reason": ""
+        },
+        "planned_fault_active": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_fault_active",
+          "missing_reason": ""
+        },
+        "planned_start_offset_sec": {
+          "actual_present_count": 10080,
+          "actual_coverage_ratio": 0.115344,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_start_offset_sec",
+          "missing_reason": ""
+        },
+        "planned_delay_ms": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020597,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_delay_ms",
+          "missing_reason": ""
+        },
+        "planned_loss_pct": {
+          "actual_present_count": 1800,
+          "actual_coverage_ratio": 0.020597,
+          "status": "ok",
+          "source_file": "events/fault_timeline.jsonl",
+          "source_column": "planned_loss_pct",
+          "missing_reason": ""
+        },
+        "observed_phase": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "phase",
+          "missing_reason": ""
+        },
+        "observed_fault_active": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "fault_active",
+          "missing_reason": ""
+        },
+        "recovery_elapsed_sec": {
+          "actual_present_count": 188,
+          "actual_coverage_ratio": 0.002151,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "recovery_elapsed_sec",
+          "missing_reason": ""
+        },
+        "data_quality_status": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "data_quality_status",
+          "missing_reason": ""
+        },
+        "is_valid_row": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_valid_row",
+          "missing_reason": ""
+        },
+        "metrics_available": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "metrics_available",
+          "missing_reason": ""
+        },
+        "is_filled_any": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/*gate.json",
+          "source_column": "is_filled_any",
+          "missing_reason": ""
+        },
+        "source_age_max_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_cp_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_resource_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_ran_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "source_age_flow_sec": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "source age is not present in current run artifacts"
+        },
+        "OT": {
+          "actual_present_count": 86713,
+          "actual_coverage_ratio": 0.992242,
+          "status": "replaced",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_uplink_bitrate_bps": {
+          "actual_present_count": 86713,
+          "actual_coverage_ratio": 0.992242,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "n3_downlink_bitrate_bps": {
+          "actual_present_count": 86713,
+          "actual_coverage_ratio": 0.992242,
+          "status": "ok",
+          "source_file": "derived/n3-gtpu-*_timeseries.csv",
+          "source_column": "rx_bytes",
+          "missing_reason": ""
+        },
+        "n6_bitrate_bps": {
+          "actual_present_count": 87146,
+          "actual_coverage_ratio": 0.997197,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "n6_bitrate_bps",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_bps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "cp_pdu_session_success_rate": {
+          "actual_present_count": 87367,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_success_rate",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_failure_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_failure_count",
+          "missing_reason": ""
+        },
+        "end_to_end_rtt_ms": {
+          "actual_present_count": 66079,
+          "actual_coverage_ratio": 0.75613,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_rtt_ms",
+          "missing_reason": ""
+        },
+        "jitter_ms": {
+          "actual_present_count": 66079,
+          "actual_coverage_ratio": 0.75613,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_jitter_ms",
+          "missing_reason": ""
+        },
+        "packet_loss_rate": {
+          "actual_present_count": 66079,
+          "actual_coverage_ratio": 0.75613,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ue_loss_rate",
+          "missing_reason": ""
+        },
+        "business_completion_rate": {
+          "actual_present_count": 87194,
+          "actual_coverage_ratio": 0.997746,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "service_completion_rate",
+          "missing_reason": ""
+        },
+        "perf_upf_cpu_millicores": {
+          "actual_present_count": 87381,
+          "actual_coverage_ratio": 0.999886,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "perf_upf_memory_bytes": {
+          "actual_present_count": 87381,
+          "actual_coverage_ratio": 0.999886,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "cp_active_session_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_active_session_count",
+          "missing_reason": ""
+        },
+        "cp_pending_session_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pending_session_count",
+          "missing_reason": ""
+        },
+        "cp_pdu_session_request_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_pdu_session_request_count",
+          "missing_reason": ""
+        },
+        "registration_success_rate": {
+          "actual_present_count": 87367,
+          "actual_coverage_ratio": 0.999725,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_success_rate",
+          "missing_reason": ""
+        },
+        "registration_failure_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_failure_count",
+          "missing_reason": ""
+        },
+        "registration_request_count": {
+          "actual_present_count": 87391,
+          "actual_coverage_ratio": 1.0,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "cp_registration_request_count",
+          "missing_reason": ""
+        },
+        "ran_pdu_active_count": {
+          "actual_present_count": 23916,
+          "actual_coverage_ratio": 0.273667,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_pdu_active_count",
+          "missing_reason": ""
+        },
+        "ready_gnb_count": {
+          "actual_present_count": 87314,
+          "actual_coverage_ratio": 0.999119,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_ready_gnb_count",
+          "missing_reason": ""
+        },
+        "observed_ue_count": {
+          "actual_present_count": 87314,
+          "actual_coverage_ratio": 0.999119,
+          "status": "snapshot_only",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "ran_observed_ue_count",
+          "missing_reason": ""
+        },
+        "n4_bitrate_bps": {
+          "actual_present_count": 32163,
+          "actual_coverage_ratio": 0.368036,
+          "status": "ok",
+          "source_file": "derived/n4-pfcp-*_timeseries.csv",
+          "source_column": "OT",
+          "missing_reason": ""
+        },
+        "perf_upf_rx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "perf_upf_tx_pps": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": "no non-empty v3-safe source in current artifacts"
+        },
+        "host_cpu_pct": {
+          "actual_present_count": 87389,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_cpu_pct",
+          "missing_reason": ""
+        },
+        "host_mem_used_pct": {
+          "actual_present_count": 87389,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_mem_used_pct",
+          "missing_reason": ""
+        },
+        "host_loadavg_1": {
+          "actual_present_count": 87389,
+          "actual_coverage_ratio": 0.999977,
+          "status": "ok",
+          "source_file": "report/model_timeseries.csv",
+          "source_column": "host_loadavg_1",
+          "missing_reason": ""
+        },
+        "smf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_cpu_pct": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "amf_rss_bytes": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_health_state": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_proc_alive": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "upf_pfcp_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        },
+        "smf_sbi_ok": {
+          "actual_present_count": 0,
+          "actual_coverage_ratio": 0.0,
+          "status": "capability_missing",
+          "source_file": "",
+          "source_column": "",
+          "missing_reason": ""
+        }
+      }
+    }
+  ]
+}

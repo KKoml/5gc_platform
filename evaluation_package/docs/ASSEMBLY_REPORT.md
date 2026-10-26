@@ -1,5 +1,7 @@
 # D-GATE anonymous-review materials: assembly and evidence map
 
+> Historical scope: the 400/215 dictionary counts and earlier validation statements below describe the legacy platform catalog. For the current W1 dictionary and every screening decision, use the [W1 screening guide](../../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md). This dictionary update preserves the original tables and saved evaluation results.
+
 **Status: local candidate; not uploaded or published.** The original manuscript and experiment-source trees were left untouched. The candidate contains task-ready, anonymized data; evaluation source; configurations; trained artifacts; saved per-sample predictions; table-level results; current 1 s exports; and bundle-only replay/training helpers. The private source-to-run mapping and detailed internal audit are not inside the candidate.
 
 ## Manuscript output map

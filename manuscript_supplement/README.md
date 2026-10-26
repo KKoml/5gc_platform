@@ -116,9 +116,9 @@ These product categories do not share a single JSON schema. Field names, units, 
 
 ### B.2 Field definitions and table dimensions
 
-The dictionary contains **400 definitions: 215 metrics and 185 configuration, state, identifier, label, quality, or other fields**. It contains 400 `canonical_id` values and 379 distinct `field_name` values across raw and derived products; it is not the schema of a single 400-column table.
+The **W1-specific dictionary contains 277 retained definitions**, selected from the legacy 400-entry platform capability catalog using the seven accepted W1 runs. Entries include observations, configuration, identifiers, state, labels and quality evidence; they are not independent numerical features. The [screening guide](../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md) documents evidence levels and corrected semantics, and the [400-entry crosswalk](../platform_data/dictionaries/W1_FIELD_SCREENING_400.csv) records every original decision. Later business-prevalidation capabilities, bare-metal-only fields, unobserved placeholders and unresolved definitions do not enter the W1 main dictionary.
 
-The seven 1 s exported tables each contain **81 columns**, totaling **611,777 rows**. Matching by field name across all dictionary domains finds 39 metric-name overlaps; this is not an entity-specific role assignment. Restricting to the canonical `v3.*` definitions yields 36 metric-role columns. The three additional name overlaps (`ue_count`, `gold_ue_count`, `silver_ue_count`) have configuration roles in the base product and metric roles in other domains. [Scope audit](../platform_data/tables/DICTIONARY_SCOPE_AUDIT.csv) preserves those definitions. Availability also depends on states such as `ok`, `snapshot_only`, `replaced`, and `capability_missing`; the role count does not imply that all metric-name overlaps are usable in every record.
+The seven 1 s exported tables each retain **81 columns**, totaling **611,777 rows**. A fresh full-table scan found 64 columns with at least one nonempty cell and 17 entirely empty columns in every run; nonempty cells do not establish independent or online-valid measurements. The [81-column compatibility dictionary](../platform_data/dictionaries/BASE_TABLE_81.csv) retains every original column and its W1 support decision. The earlier [scope audit](../platform_data/tables/DICTIONARY_SCOPE_AUDIT.csv) uses the legacy catalog: 36 canonical V3 metric roles and 39 cross-domain metric-name overlaps. Those are historical role counts, not retained W1 feature counts. Original coverage statuses are preserved even where the new evidence review identifies an incorrect provenance label.
 
 The 5 s core-network observations contain **24 variables**. Their timestamps can be aligned with the 1 s tables, but some same-named fields have different values at the same time. The 5 s observations therefore are not a direct downsampling of the 81-column tables. The **18-variable prediction input** is also constructed separately from the raw records, as described in [C.1](#c1-prediction-inputs). See the [dataset guide](source_notes/DATASET_GUIDE.md) and [schema comparison](data/schema_verification.json) for details.
 
@@ -126,7 +126,7 @@ The 5 s core-network observations contain **24 variables**. Their timestamps can
 
 | File | Contents |
 |---|---|
-| [Field dictionary](data/field_dictionary.csv) | All 400 definitions, including `field_name`, `field_role`, `entity`, `unit`, `value_type`, `source_artifact`, `availability`, and `caveat` |
+| [W1 field dictionary](data/field_dictionary.csv) | 277 evidence-supported definitions with corrected units and meanings, source paths/fields, verification level, verified runs, native granularity and scope limits |
 | [1 s time-series sample](data/timeseries_1s_sample.csv) | Header and first 20 rows of the D06 81-column table, with 1 s spacing and recorded missing values |
 | [5 s core-network sample](data/core_features_5s_sample.csv) | First 10 rows of the D06 core-network observations |
 
@@ -146,10 +146,10 @@ Missing or unavailable observations should not be replaced with zero. User/sessi
 Derived rates use the following definitions:
 
 1. **Interface send/receive rate:** the increment in cumulative bytes divided by the actual interval between samples, in byte/s; multiply by eight for bit/s. Configured sampling periods do not replace actual elapsed time.
-2. **Registration and PDU-session establishment success rates:** successful operations divided by corresponding requests, using the same entities and statistical windows for numerator and denominator.
+2. **Registration and PDU-session establishment success rates:** the frozen collector outputs `100 × cumulative successes / cumulative requests`, in percent over the collector lifecycle. Request/failure counters are cumulative, not per-second window counts; resets require explicit handling.
 3. **Traffic completion rate:** successful transfers divided by all terminated transfers in the window; terminated timeouts count as failures.
 
-Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates.
+Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates. Historical placeholders and misleading legacy proxies are identified in the screening crosswalk; their column names alone do not certify a valid observation.
 
 ## Appendix C. Task construction
 
@@ -229,3 +229,4 @@ Full model adaptations, training and selection rules, and environment details ar
 | [Data access](../DATA_ACCESS.md) | Available inputs and data required for each reproduction step |
 
 The repository includes saved models, evaluation results, and the prepared inputs described in the reproduction guide. Inference and training also require the specified runtime dependencies; this data update does not report new model runs. The small samples in this directory remain available for quickly inspecting the formats.
+

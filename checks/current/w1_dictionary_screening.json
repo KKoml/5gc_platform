@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-26",
+  "scope": "W1 dictionary metadata and documentation only",
+  "retained_definitions": 277,
+  "retained_metric_role_definitions": 141,
+  "legacy_decisions": {
+    "retain": 277,
+    "exclude": 118,
+    "merge_alias": 5
+  },
+  "compatibility_columns": 81,
+  "checks": {
+    "all_400_ids_accounted_for": true,
+    "required_evidence_metadata": true,
+    "no_later_or_baremetal_only_fields": true,
+    "all_dictionary_mirrors_identical": true,
+    "README_variants_identical": true,
+    "new_relative_links_resolve": true,
+    "changed_release_files_contain_no_private_site_or_identity_values": true
+  },
+  "new_broken_relative_links": [],
+  "private_value_hits": [],
+  "scope_limits": [
+    "Retained definitions are not independent numeric features.",
+    "Sample-based evidence is not full-stream coverage.",
+    "Original 81-column data, coverage reports, task inputs, saved results and historical validation receipts are unchanged.",
+    "No collection, packet decoding or model execution was performed for this metadata revision."
+  ]
+}

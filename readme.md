@@ -43,7 +43,7 @@ The supplement follows the paper’s **single A–D series**. Start with the sec
 
 ## Explore the data
 
-The release includes **D01–D07** platform exports and prepared task inputs. The **400-entry field dictionary** covers metrics and contextual fields across data products; each 1 s exported table has **81 columns**.
+The release includes **D01–D07** platform exports and prepared task inputs. The **W1-specific field dictionary contains 277 evidence-supported definitions** across observations and contextual records; this is not a count of independent numerical features. Each existing 1 s exported table retains **81 columns**. [Screening rules](platform_data/dictionaries/W1_DICTIONARY_GUIDE.md) and the [complete 400-entry crosswalk](platform_data/dictionaries/W1_FIELD_SCREENING_400.csv) explain retained, merged, excluded and unverified definitions.
 
 | To inspect… | Open… |
 | :--- | :--- |

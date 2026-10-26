@@ -1,9 +1,10 @@
 # Dictionary scope
 
-- [PLATFORM_FIELDS.csv](PLATFORM_FIELDS.csv): 400 cross-file definitions, 215 metric roles and 185 other roles. This is not a table with 400 simultaneously observed variables; historical-version identity remains separately documented.
-- [BASE_TABLE_81.csv](BASE_TABLE_81.csv): 81 columns in the existing 1 s base product, including identifiers, state, time and quality fields. There are 611,777 rows across seven runs; availability is in FIELD_COVERAGE.csv.
-- The 24-variable 5 s Core observations are a separate raw-stream-derived product. [Core-side source matching](../handoff/CORE24_SOURCE_MATCH.csv) is a source-stream mapping whose names/order match the provided final configurations; historical execution identity remains separate.
-- The contributed prediction input has its own exact 18-variable XGBoost scope and cutoff/target contract; it is not certified as direct base-table selection or resampling.
-- The earlier provisional 32-item subset is absent from this manuscript and from the current review index. No definition was changed to fit a count.
+- [W1 dictionary and screening rules](W1_DICTIONARY_GUIDE.md): 277 retained definitions supported by the seven accepted W1 runs, including observations and context; not independent numerical features.
+- [W1_FIELD_DICTIONARY.csv](W1_FIELD_DICTIONARY.csv) and [PLATFORM_FIELDS.csv](PLATFORM_FIELDS.csv): current machine-readable W1 definitions and display view.
+- [W1_FIELD_SCREENING_400.csv](W1_FIELD_SCREENING_400.csv): all 400 original IDs with decisions, reasons, aliases and evidence limits.
+- [BASE_TABLE_81.csv](BASE_TABLE_81.csv): the complete unchanged 81-column export contract, with W1 support decisions; 611,777 data rows across seven runs.
+- [Legacy source dictionary](../evidence/PLATFORM_DICTIONARY_SOURCE.csv): unchanged 400-entry platform capability inventory used by earlier scope/validation records.
+- The 24-variable 5 s Core task observations and the separately constructed prediction inputs keep their own lineage; a dictionary entry does not establish a direct selection/resampling relationship.
 
-Units and source availability override misleading names: host-interface `rx_bps`/`tx_bps` are byte/s in the frozen collector; task bitrates require explicit conversion. Preserve missingness and provenance. Original caveats are in [source dictionary evidence](../evidence/PLATFORM_DICTIONARY_SOURCE.csv).
+Read native granularity, actual evidence field/path, verification level and scope limits before using a field. See [unit audit](../tables/UNIT_AUDIT.csv) and [original coverage](../tables/FIELD_COVERAGE.csv).

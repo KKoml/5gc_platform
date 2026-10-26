@@ -1,6 +1,8 @@
 # Dataset guide
 
-> Archived guide for the complete local experiment package. Paths and full-data references below describe that archive, not the current publication tree. For the current 81-column 1 s sample (20 rows), 5 s sample (10 rows), and 400-entry dictionary, see [Appendix B](../README.md). Full datasets remain withheld; the repository access scope is defined in DATA_ACCESS.md.
+> Historical scope: the 400/215 dictionary counts and earlier validation statements below describe the legacy platform catalog. For the current W1 dictionary and every screening decision, use the [W1 screening guide](../../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md). This dictionary update preserves the original tables and saved evaluation results.
+
+> Archived guide for the complete local experiment package. Paths and full-data references below describe that archive, not the current publication tree. For the current 81-column 1 s sample (20 rows), 5 s sample (10 rows), and W1-specific screened dictionary, see [Appendix B](../README.md). Full datasets remain withheld; the repository access scope is defined in DATA_ACCESS.md.
 
 ## Main files
 

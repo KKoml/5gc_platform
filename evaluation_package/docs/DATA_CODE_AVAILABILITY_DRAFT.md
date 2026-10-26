@@ -1,5 +1,7 @@
 # Data and Code Availability statement draft
 
+> Historical scope: the 400/215 dictionary counts and earlier validation statements below describe the legacy platform catalog. For the current W1 dictionary and every screening decision, use the [W1 screening guide](../../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md). This dictionary update preserves the original tables and saved evaluation results.
+
 The code, task-ready processed data, model checkpoints, fixed evaluation inputs, and saved per-sample outputs used for the reported forecasting, anomaly-scoring/event-detection, known-injection-start classification, and offline imputation evaluations are provided in the anonymous-review artifact at **[insert the anonymous access link or submission-platform attachment reference]**. The archive includes run instructions, pinned Python dependencies, third-party notices, and commands for saved-result recomputation, checkpoint inference, and separate retraining.
 
 The archive contains seven current D01–D07 one-second platform exports and the current 400-entry platform field dictionary. Their exact historical version identity relative to the manuscript has not been established. The paper's statement of 32 numeric indicators does not map exactly to the current schema and dictionary. The five-second task tables intersect the one-second UTC time grid, but sampled same-timestamp host values differ; the artifact therefore does not claim that the task tables are simple resamples of those exports.

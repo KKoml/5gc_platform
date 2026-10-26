@@ -1,5 +1,7 @@
 # Local completion report
 
+> Historical scope: the 400/215 dictionary counts and earlier validation statements below describe the legacy platform catalog. For the current W1 dictionary and every screening decision, use the [W1 screening guide](../../platform_data/dictionaries/W1_DICTIONARY_GUIDE.md). This dictionary update preserves the original tables and saved evaluation results.
+
 Status: local candidate, not externally published; no verified reviewer URL.
 
 Added seven existing full platform time-series exports (D01-D07), totaling 611777 rows, with 81 columns on a continuous 1 s grid within each slot. Added seven source coverage reports, an index, and the current 400-entry platform dictionary (215 metrics). All source CSV cells were compared after the documented identity/address substitutions; numeric values and missing values were preserved. Source hashes and private mappings remain outside this package.
