@@ -1,0 +1,107 @@
+[
+  {
+    "run_id": "W1-D01",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 280,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-13T09:36:29.621000+00:00",
+    "ue_event_last_timestamp": "2026-08-13T09:53:15.936000+00:00",
+    "ran_log_kpi_rows": 103,
+    "ran_workload_rows": 16060,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D02",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 280,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-10T08:04:14.790000+00:00",
+    "ue_event_last_timestamp": "2026-08-10T08:33:48.623000+00:00",
+    "ran_log_kpi_rows": 180,
+    "ran_workload_rows": 16128,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D03",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 320,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-04T13:57:57.895000+00:00",
+    "ue_event_last_timestamp": "2026-08-04T15:13:38.513000+00:00",
+    "ran_log_kpi_rows": 457,
+    "ran_workload_rows": 16147,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D04",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 280,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-11T13:52:38.428000+00:00",
+    "ue_event_last_timestamp": "2026-08-11T14:09:02.502000+00:00",
+    "ran_log_kpi_rows": 101,
+    "ran_workload_rows": 16136,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D05",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 280,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-06T09:08:54.883000+00:00",
+    "ue_event_last_timestamp": "2026-08-06T09:25:38.941000+00:00",
+    "ran_log_kpi_rows": 103,
+    "ran_workload_rows": 16137,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D06",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 320,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-07T13:27:29.068000+00:00",
+    "ue_event_last_timestamp": "2026-08-07T14:44:13.658000+00:00",
+    "ran_log_kpi_rows": 463,
+    "ran_workload_rows": 16138,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  },
+  {
+    "run_id": "W1-D07",
+    "source_artifacts": [
+      "events/ran-ue.jsonl",
+      "metrics/ran-kpis.jsonl",
+      "metrics/ran-workloads.jsonl"
+    ],
+    "ue_event_rows": 280,
+    "ue_event_unique_supi_count": 40,
+    "ue_event_first_timestamp": "2026-08-08T19:10:02.223000+00:00",
+    "ue_event_last_timestamp": "2026-08-08T19:55:20.649000+00:00",
+    "ran_log_kpi_rows": 274,
+    "ran_workload_rows": 16135,
+    "verification_scope": "Full retained event JSONL and file row counts from the W1 raw-artifact audit; timestamp envelope is not continuous state coverage."
+  }
+]

@@ -1,0 +1,1 @@
+run,host_role,sample_index,timestamp_utc,available,probe_present,offset_ms,raw_offset_ms,offset_uncertainty_ms,probe_latency_ms,local_interval_ms,record_clock_skew_ms,formula_checked,formula_consistent,validity,flags

@@ -1,0 +1,170 @@
+[
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 292,
+      "n3-gtpu": 291,
+      "n4-pfcp": 292,
+      "n6-uplink": 291,
+      "sbi-http": 74
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 764992748,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3854,
+        "n6": 786425,
+        "sbi": 4770
+      },
+      "record_count": 795049
+    },
+    "run": "W1-D01",
+    "sampled_flow_csv_input_bytes": 53986361,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1304
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 291,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 82
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 761613511,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3833,
+        "n6": 781479,
+        "sbi": 4734
+      },
+      "record_count": 790046
+    },
+    "run": "W1-D02",
+    "sampled_flow_csv_input_bytes": 53315206,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1307
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 292,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 83
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 760016352,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3743,
+        "n6": 785657,
+        "sbi": 4687
+      },
+      "record_count": 794087
+    },
+    "run": "W1-D03",
+    "sampled_flow_csv_input_bytes": 54500872,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1302
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 291,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 86
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 764835999,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3716,
+        "n6": 787104,
+        "sbi": 4656
+      },
+      "record_count": 795476
+    },
+    "run": "W1-D04",
+    "sampled_flow_csv_input_bytes": 54363717,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1303
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 291,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 74
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 764516481,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3791,
+        "n6": 791337,
+        "sbi": 4724
+      },
+      "record_count": 799852
+    },
+    "run": "W1-D05",
+    "sampled_flow_csv_input_bytes": 54579761,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1306
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 292,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 86
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 762421312,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3728,
+        "n6": 786058,
+        "sbi": 4659
+      },
+      "record_count": 794445
+    },
+    "run": "W1-D06",
+    "sampled_flow_csv_input_bytes": 54154390,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1313
+  },
+  {
+    "capture_file_counts": {
+      "gtp-gold": 292,
+      "gtp-silver": 292,
+      "n3-gtpu": 291,
+      "n4-pfcp": 291,
+      "n6-uplink": 291,
+      "sbi-http": 85
+    },
+    "compatibility_files_excluded_same_basename": 0,
+    "retained_nf_link_file_bytes_not_scanned": 767802702,
+    "retained_nf_summary": {
+      "plane_counts": {
+        "n4": 3775,
+        "n6": 790415,
+        "sbi": 4698
+      },
+      "record_count": 798888
+    },
+    "run": "W1-D07",
+    "sampled_flow_csv_input_bytes": 53910207,
+    "sampling_stride_files_within_run_capture_family": 12,
+    "session_rows": 1305
+  }
+]

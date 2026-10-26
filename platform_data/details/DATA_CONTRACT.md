@@ -42,6 +42,10 @@ Registration/PDU rates must be interpreted with their source/export convention; 
 
 JSON `null`, empty CSV cells and unavailable sample statuses are preserved. A valid observed zero is different from unavailable/unsupported/stale/not-applicable. Field coverage status is one of `ok`, `replaced`, `snapshot_only`, `capability_missing` or `export_bug`. `ok` is producer-level coverage metadata, not a guarantee that every cell is present or that it is suitable for any model. `is_valid_row`, `metrics_available`, `is_filled_any` and source-age fields have separate roles. Plans, target labels and post-hoc recovery quantities can leak answers if used as prediction/detection inputs.
 
+## Direct platform quality evidence
+
+[Appendix B.5](../../manuscript_supplement/README.md#b5-direct-platform-data-quality-evidence) and the [quality summary](../quality/README.md) quantify clock-probe offset/uncertainty, raw-log field corroboration, association-route proportions and export availability across all accepted W1 runs. They retain measurement and sampling denominators. Probe statistics do not establish same-event alignment error; producer route labels do not establish independent association accuracy or field-level direct/fallback fractions. All five source-age columns remain empty.
+
 ## C.4 Recomputed coverage and real examples
 
 [RUN_LEDGER.csv](../tables/RUN_LEDGER.csv) and [FIELD_COVERAGE.csv](../tables/FIELD_COVERAGE.csv) are freshly derived by reading the existing complete base tables, without regenerating them. They report rows, schema width, actual first/last bucket, 1 s continuity, validity counts and per-field observed nonempty ratios alongside recorded coverage. The seven base tables total 611,777 rows. Every source coverage report has 58 `ok`, 19 `capability_missing`, 3 `snapshot_only` and 1 `replaced` fields. This is a status partition of 81 definitions, not a count of 81 successfully observed metrics. Per-run, per-field nonempty ratios are in the coverage table.

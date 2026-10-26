@@ -4,4 +4,6 @@ Start with the repository's single [A–D manuscript supplement](../manuscript_s
 
 No collection-platform source, launcher, build file or collector program is distributed here. Paths and hashes refer to the private audited collection revision. Evaluation and offline task-processing code remain in the separate existing evaluation/data directories.
 
+The [direct W1 platform-quality summary](quality/README.md) adds full remote-clock probe distributions, source-log field corroboration, association-route evidence and coverage limits. Offline audit tools recompute these results without model execution.
+
 See [delivery status](DELIVERY_STATUS.md) and [remaining evidence](OPEN_ITEMS.md). The original manuscript, raw data and platform checkout are untouched. Prior Git commits may retain the earlier source release; this directory does not erase history.

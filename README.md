@@ -57,6 +57,10 @@ The 1 s exports, 5 s observations, and prediction tables are separate products. 
 
 To restore an original-data package, download every part listed for that package in `00_Readme_And_Manifests/DRIVE_PACKAGE_INDEX.json`. Large archives use ordered 90 MiB chunks. Follow the [archive instructions](https://drive.google.com/file/d/15TNAxdYwus_3pCS2KRWLzte3bO69S5WQ/view) to verify SHA-256 checksums and restore into a new empty directory; the supplied `restore_package.py` helper requires Python 3.12 or newer.
 
+## Inspect platform data quality
+
+[Direct W1 quality evidence](platform_data/quality/README.md) reports all 38,480 remote clock probes, original-SMF-log corroboration for 9,100 session records, association-route counts with explicit denominators, and export availability. These measurements are separate from model performance. [Appendix B.5](manuscript_supplement/README.md#b5-direct-platform-data-quality-evidence) gives the concise paper-facing table; the evidence and offline tools support reproducible recomputation.
+
 ## Inspect the four evaluation tasks
 
 | Task | Evaluation setting | Paper result | Code and settings |

@@ -1,0 +1,1413 @@
+{
+  "aggregate": {
+    "exact_body_fields": {
+      "dnn": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "local_dl_teid": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "pdu_session_id": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "ran_addr": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "ran_dl_teid": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "supi": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "teid_dl": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "teid_ul": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "ue_ip": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "upf_id": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      },
+      "upf_pfcp_addr": {
+        "conflicting_exact_contexts": 0,
+        "denominator_mapping_rows": 9140,
+        "exact_body_corroborated": 9100,
+        "exact_body_mismatch": 0,
+        "map_value_nonnull": 9140,
+        "map_value_null": 0,
+        "no_exact_context": 0,
+        "raw_context_value_null": 0,
+        "source_log_unavailable": 0,
+        "source_outside_audited_log_scope": 40
+      }
+    },
+    "not_explicit_in_sessionmap_body": {
+      "pfcp_session_established": {
+        "denominator_mapping_rows": 9140,
+        "map_value_nonnull": 9140,
+        "not_a_sessionmap_body_field": 9140
+      },
+      "selected_amf": {
+        "denominator_mapping_rows": 9140,
+        "map_value_null": 9140,
+        "not_a_sessionmap_body_field": 9140
+      },
+      "snssai_sd": {
+        "denominator_mapping_rows": 9140,
+        "map_value_nonnull": 9140,
+        "not_a_sessionmap_body_field": 9140
+      },
+      "snssai_sst": {
+        "denominator_mapping_rows": 9140,
+        "map_value_nonnull": 9140,
+        "not_a_sessionmap_body_field": 9140
+      }
+    },
+    "rows": {
+      "conflicting_exact_contexts_rows": 0,
+      "duplicate_identical_context_rows": 2,
+      "exact_context_rows": 9100,
+      "mapping_rows": 9140,
+      "no_exact_context_rows": 0,
+      "source_log_unavailable_rows": 0,
+      "source_outside_audited_log_scope_rows": 40
+    },
+    "run_count": 7,
+    "selected_smf_producer_path_binding": {
+      "denominator_mapping_rows": 9140,
+      "producer_path_identity_agrees": 9100,
+      "source_outside_audited_log_scope": 40
+    }
+  },
+  "interpretation": "Retrospective consistency with raw-log text, not independently adjudicated association accuracy and not historical direct/fallback route counts. Out-of-scope aggregate-core-log rows remain unassessed. Selected SMF is corroborated separately by producer path, not by explicit SessionMap body text.",
+  "key_fields_are_not_independent_validation": [
+    "supi",
+    "pdu_session_id"
+  ],
+  "matching_keys": [
+    "source_log_basename",
+    "timestamp_utc_microseconds",
+    "supi",
+    "pdu_session_id"
+  ],
+  "nonkey_body_fields": [
+    "dnn",
+    "ue_ip",
+    "upf_id",
+    "upf_pfcp_addr",
+    "teid_ul",
+    "teid_dl",
+    "local_dl_teid",
+    "ran_addr",
+    "ran_dl_teid"
+  ],
+  "normalization": "Empty strings and zero-valued TEIDs normalize to null, following the retained mapping semantics; timestamps normalize to UTC with microsecond precision. Identical duplicate raw contexts are a single semantic candidate; conflicting contexts remain ambiguous.",
+  "runs": [
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1304,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1304,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 4
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1304,
+          "map_value_nonnull": 1304,
+          "not_a_sessionmap_body_field": 1304
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1304,
+          "map_value_null": 1304,
+          "not_a_sessionmap_body_field": 1304
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1304,
+          "map_value_nonnull": 1304,
+          "not_a_sessionmap_body_field": 1304
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1304,
+          "map_value_nonnull": 1304,
+          "not_a_sessionmap_body_field": 1304
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1304,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 4
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1304,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 4
+      },
+      "slot": "D01"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1307,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1307,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 7
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1307,
+          "map_value_nonnull": 1307,
+          "not_a_sessionmap_body_field": 1307
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1307,
+          "map_value_null": 1307,
+          "not_a_sessionmap_body_field": 1307
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1307,
+          "map_value_nonnull": 1307,
+          "not_a_sessionmap_body_field": 1307
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1307,
+          "map_value_nonnull": 1307,
+          "not_a_sessionmap_body_field": 1307
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1307,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 7
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1307,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 7
+      },
+      "slot": "D02"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1302,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1302,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 2
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1302,
+          "map_value_nonnull": 1302,
+          "not_a_sessionmap_body_field": 1302
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1302,
+          "map_value_null": 1302,
+          "not_a_sessionmap_body_field": 1302
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1302,
+          "map_value_nonnull": 1302,
+          "not_a_sessionmap_body_field": 1302
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1302,
+          "map_value_nonnull": 1302,
+          "not_a_sessionmap_body_field": 1302
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 2,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1302,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 2
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1302,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 2
+      },
+      "slot": "D03"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1303,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1303,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 3
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1303,
+          "map_value_nonnull": 1303,
+          "not_a_sessionmap_body_field": 1303
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1303,
+          "map_value_null": 1303,
+          "not_a_sessionmap_body_field": 1303
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1303,
+          "map_value_nonnull": 1303,
+          "not_a_sessionmap_body_field": 1303
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1303,
+          "map_value_nonnull": 1303,
+          "not_a_sessionmap_body_field": 1303
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1303,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 3
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1303,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 3
+      },
+      "slot": "D04"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1306,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1306,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 6
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1306,
+          "map_value_nonnull": 1306,
+          "not_a_sessionmap_body_field": 1306
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1306,
+          "map_value_null": 1306,
+          "not_a_sessionmap_body_field": 1306
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1306,
+          "map_value_nonnull": 1306,
+          "not_a_sessionmap_body_field": 1306
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1306,
+          "map_value_nonnull": 1306,
+          "not_a_sessionmap_body_field": 1306
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1306,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 6
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1306,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 6
+      },
+      "slot": "D05"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1313,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1313,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 13
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1313,
+          "map_value_nonnull": 1313,
+          "not_a_sessionmap_body_field": 1313
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1313,
+          "map_value_null": 1313,
+          "not_a_sessionmap_body_field": 1313
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1313,
+          "map_value_nonnull": 1313,
+          "not_a_sessionmap_body_field": 1313
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1313,
+          "map_value_nonnull": 1313,
+          "not_a_sessionmap_body_field": 1313
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1313,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 13
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1313,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 13
+      },
+      "slot": "D06"
+    },
+    {
+      "exact_body_fields": {
+        "dnn": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "local_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "pdu_session_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "ran_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "ran_dl_teid": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "supi": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "teid_dl": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "teid_ul": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "ue_ip": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "upf_id": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        },
+        "upf_pfcp_addr": {
+          "conflicting_exact_contexts": 0,
+          "denominator_mapping_rows": 1305,
+          "exact_body_corroborated": 1300,
+          "exact_body_mismatch": 0,
+          "map_value_nonnull": 1305,
+          "map_value_null": 0,
+          "no_exact_context": 0,
+          "raw_context_value_null": 0,
+          "source_log_unavailable": 0,
+          "source_outside_audited_log_scope": 5
+        }
+      },
+      "not_explicit_in_sessionmap_body": {
+        "pfcp_session_established": {
+          "denominator_mapping_rows": 1305,
+          "map_value_nonnull": 1305,
+          "not_a_sessionmap_body_field": 1305
+        },
+        "selected_amf": {
+          "denominator_mapping_rows": 1305,
+          "map_value_null": 1305,
+          "not_a_sessionmap_body_field": 1305
+        },
+        "snssai_sd": {
+          "denominator_mapping_rows": 1305,
+          "map_value_nonnull": 1305,
+          "not_a_sessionmap_body_field": 1305
+        },
+        "snssai_sst": {
+          "denominator_mapping_rows": 1305,
+          "map_value_nonnull": 1305,
+          "not_a_sessionmap_body_field": 1305
+        }
+      },
+      "rows": {
+        "conflicting_exact_contexts_rows": 0,
+        "duplicate_identical_context_rows": 0,
+        "exact_context_rows": 1300,
+        "mapping_rows": 1305,
+        "no_exact_context_rows": 0,
+        "source_log_unavailable_rows": 0,
+        "source_outside_audited_log_scope_rows": 5
+      },
+      "selected_smf_producer_path_binding": {
+        "denominator_mapping_rows": 1305,
+        "producer_path_identity_agrees": 1300,
+        "source_outside_audited_log_scope": 5
+      },
+      "slot": "D07"
+    }
+  ],
+  "schema": "w1-session-map-raw-log-corroboration/v1",
+  "scope": "W1 accepted D01-D07; retained session-map rows and the corresponding original smf-gold.log/smf-silver.log only."
+}

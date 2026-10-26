@@ -1,0 +1,22 @@
+{
+  "scope": "seven accepted W1 runs; retained export and source-evidence availability",
+  "runs": 7,
+  "run_field_records": 567,
+  "export_rows": 611777,
+  "export_columns_per_run": 81,
+  "ever_nonempty_columns_per_run": 64,
+  "entirely_empty_columns_per_run": 17,
+  "source_age_columns_per_run": 5,
+  "source_age_nonempty_cells_all_runs": 0,
+  "retained_ue_event_rows": 2040,
+  "ue_event_timestamp_envelope_seconds_min": 984.074,
+  "ue_event_timestamp_envelope_seconds_max": 4604.59,
+  "limitations": [
+    "Ever-nonempty columns include identifiers, labels, configuration, state and quality; this is not a usable-feature count.",
+    "Producer ok/missing/snapshot/replaced labels are preserved and do not independently certify accuracy.",
+    "All five source-age export columns are empty; per-bucket source freshness cannot be reconstructed from these columns.",
+    "UE event timestamp envelopes describe observed event times only, not continuous log completeness or full-day per-UE state coverage.",
+    "K3s Ready workload rows are a different signal from registered UEs, sessions and business activity.",
+    "No model score is used in these quality statistics."
+  ]
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "available_n": 2747,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2747,
+    "run": "W1-D01"
+  },
+  {
+    "available_n": 2749,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2749,
+    "run": "W1-D02"
+  },
+  {
+    "available_n": 2751,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2751,
+    "run": "W1-D03"
+  },
+  {
+    "available_n": 2751,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2751,
+    "run": "W1-D04"
+  },
+  {
+    "available_n": 2747,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2747,
+    "run": "W1-D05"
+  },
+  {
+    "available_n": 2748,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2748,
+    "run": "W1-D06"
+  },
+  {
+    "available_n": 2747,
+    "host_role": "core",
+    "missing_offset_n": 0,
+    "missing_probe_n": 0,
+    "nonzero_latency_n": 0,
+    "nonzero_offset_n": 0,
+    "probe_rows": 2747,
+    "run": "W1-D07"
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "schema": "w1-platform-quality-review/v1",
+  "scope": "seven accepted W1 runs; retained source evidence, not a new experiment",
+  "status": "offline_evidence_checks_passed",
+  "model_scores_used": false,
+  "checks": [
+    {
+      "tool": "tools/summarize_w1_clock_quality.py --check",
+      "exit_code": 0,
+      "result": "{\"checks_passed\": true, \"probe_rows\": 38480, \"summary_groups\": 17}"
+    },
+    {
+      "tool": "tools/summarize_w1_direct_field_quality.py --check",
+      "exit_code": 0,
+      "result": "PASS: exact summary text, aggregate counts and denominator conservation"
+    },
+    {
+      "tool": "tools/summarize_w1_association_quality.py --check",
+      "exit_code": 0,
+      "result": "PASS: association JSON and flow route CSV match compact evidence; retained NF plane totals are internally consistent"
+    },
+    {
+      "tool": "tools/summarize_w1_export_quality.py --check",
+      "exit_code": 0,
+      "result": "W1 export availability: 7 runs, 611777 rows, 81 columns; metadata check passed"
+    },
+    {
+      "tool": "tools/summarize_w1_platform_quality.py --check",
+      "exit_code": 0,
+      "result": "PASS: W1 platform-quality headline metrics; measured and unmeasured scopes remain separate"
+    }
+  ],
+  "source_audits": {
+    "clock": {
+      "health_records": 19240,
+      "remote_probe_rows": 38480,
+      "scope": "complete run-health records; all finite values preserved; core zero references separate"
+    },
+    "session_body": {
+      "mapping_rows": 9140,
+      "exact_source_context_rows": 9100,
+      "nonkey_comparisons_agree": 81900,
+      "nonkey_comparisons_judged": 81900,
+      "outside_source_scope_rows": 40,
+      "outside_source_scope_nonkey_comparisons": 360,
+      "scope": "all map rows and 14 SMF logs; aggregated free5gc log rows outside inspected source scope"
+    },
+    "flow": {
+      "sample_capture_files": 968,
+      "all_capture_files": 10767,
+      "sampled_artifact_rows": 1496478,
+      "all_producer_summary_artifact_rows": 16219915,
+      "scope": "all session rows and capture summaries; deterministic file sample for flow route/reuse analysis; logical N6 excluded; NF-link totals from retained summary"
+    },
+    "export": {
+      "rows": 611777,
+      "columns_per_run": 81,
+      "run_field_records": 567,
+      "ever_nonempty_columns_per_run": 64,
+      "entirely_empty_columns_per_run": 17,
+      "scope": "recompute from existing cell coverage counts and sanitized source envelopes; full export-cell counts independently verified in preceding W1 audit"
+    }
+  },
+  "independent_review": {
+    "result": "no_blocking_issues",
+    "checks": [
+      "Clock quantiles independently recomputed from all published remote rows",
+      "Session and capture/sample denominators independently summed",
+      "Non-key versus matching-key and producer-path corroboration distinctions reviewed",
+      "New quality directory checked for site IPs, SUPIs, private source roots and original run IDs",
+      "Both appendix views and headline metrics checked for measurement-scope consistency"
+    ]
+  },
+  "unmeasured": [
+    "matched_same_event_cross_host_alignment_error",
+    "field_level_historical_direct_fallback_fractions",
+    "independent_association_precision_recall",
+    "actual_misassociation_rate",
+    "per_bucket_source_freshness_from_empty_export_source_age_columns"
+  ],
+  "original_w1_artifacts_modified": false,
+  "model_execution_performed": false,
+  "notes": [
+    "Producer labels and raw-log consistency are not independent ground truth.",
+    "Flow sample shares are not full-population estimates or packet-level attribution rates.",
+    "Archive/source identity references and prior validation receipts are preserved; no content-hash workflow is part of this update."
+  ],
+  "generated_at_utc": "2026-10-26T16:58:19.323692+00:00"
+}

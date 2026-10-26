@@ -1,0 +1,9 @@
+run,mapping_rows,exact_context_rows,duplicate_identical_context_rows,conflicting_exact_contexts_rows,no_exact_context_rows,source_outside_audited_log_scope_rows,source_log_unavailable_rows,exact_context_fraction_all_mapping_rows,exact_context_fraction_audited_available_source_rows,nonkey_pairs_denominator_mapping_rows,nonkey_pairs_exact_body_corroborated,nonkey_pairs_exact_body_mismatch,nonkey_pairs_map_value_null,nonkey_pairs_source_outside_audited_log_scope
+W1-D01,1304,1300,0,0,0,4,0,0.9969325153374233,1.0,11736,11700,0,0,36
+W1-D02,1307,1300,0,0,0,7,0,0.9946442234123948,1.0,11763,11700,0,0,63
+W1-D03,1302,1300,2,0,0,2,0,0.9984639016897081,1.0,11718,11700,0,0,18
+W1-D04,1303,1300,0,0,0,3,0,0.9976976208749041,1.0,11727,11700,0,0,27
+W1-D05,1306,1300,0,0,0,6,0,0.9954058192955589,1.0,11754,11700,0,0,54
+W1-D06,1313,1300,0,0,0,13,0,0.9900990099009901,1.0,11817,11700,0,0,117
+W1-D07,1305,1300,0,0,0,5,0,0.9961685823754789,1.0,11745,11700,0,0,45
+ALL,9140,9100,2,0,0,40,0,0.9956236323851203,1.0,82260,81900,0,0,360

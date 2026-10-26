@@ -6,6 +6,7 @@ The latest English manuscript uses one supplementary A–D series. Start with [t
 | --- | --- | --- |
 | A | Platform implementation, deployment, configuration, control and recovery | [Implementation](platform_data/details/IMPLEMENTATION.md), [configuration](platform_data/details/CONFIGURATION.md), [development map](platform_data/tables/PLATFORM_DEVELOPMENT_MAP.csv) |
 | B | Data organization, dictionary, units, coverage and examples | [Data contract](platform_data/details/DATA_CONTRACT.md), [dictionary guide](platform_data/dictionaries/README.md), [one-run linked examples](platform_data/samples/W1-D06/README.md) |
+| B.5 | Direct platform data quality, with denominators and measurement limits | [Quality summary](platform_data/quality/README.md), [headline metrics](platform_data/quality/PLATFORM_QUALITY_METRICS.csv), [offline checks](CHECKS.md) |
 | C | Separate prediction/Core24 construction, preprocessing, windows and splits | [Processing/quality](platform_data/details/PROCESSING.md), [detailed task construction](appendix/D3_data_construction.md), [lineage](appendix/LINEAGE.md) |
 | D | Actual configurations, model hyperparameters, seeds, saved results and reproduction | [Model detail](appendix/E1_models_hyperparameters.md), [result correspondence](appendix/E2_results_correspondence.md), [reproduction](appendix/E3_reproduction.md) |
 

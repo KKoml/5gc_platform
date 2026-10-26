@@ -7,6 +7,7 @@
 | B | [DATA_CATEGORIES.csv](DATA_CATEGORIES.csv), [FILE_CATALOG.csv](FILE_CATALOG.csv) | Six manuscript data names and source formats |
 | B | [RUN_LEDGER.csv](RUN_LEDGER.csv), [FIELD_COVERAGE.csv](FIELD_COVERAGE.csv), [UNIT_AUDIT.csv](UNIT_AUDIT.csv) | Seven runs, observed coverage, unit conventions |
 | B | [STORAGE_INVENTORY.csv](STORAGE_INVENTORY.csv) | Original source-data volume (not all files included) |
+| B.5 | [Platform quality metrics](../quality/PLATFORM_QUALITY_METRICS.csv), [quality methods and evidence](../quality/README.md) | Direct platform measurements with units, denominators, per-run results and explicit unknowns |
 | C | [PROCESSING_LINEAGE.csv](PROCESSING_LINEAGE.csv) | Source → program/version/rule → output/field range; reference metadata only |
 | A–D | [MANUSCRIPT_CROSSWALK.csv](MANUSCRIPT_CROSSWALK.csv) | Latest body → supplementary evidence → limitations |
 

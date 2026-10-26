@@ -92,7 +92,7 @@ Configuration specifies each operation's target, parameters, planned start, and 
 
 ### A.5 Session association and outputs
 
-Session association groups extended SMF records within a run by SUPI and PDU-session identifier, merges them within a bounded time window, and uses UE addresses, UPFs, and tunnel information to associate network and traffic observations. When direct records are unavailable, packet addresses and deployment configuration provide fallback associations with source markers retained.
+Session association groups extended SMF records within a run by SUPI and PDU-session identifier and merges nearby evidence within a bounded correlation window. Packet processing uses UE addresses and tunnel information, with interface/subnet inference where applicable. Retained source markers identify producer routes; they do not record every enriched field's direct or fallback decision. The frozen flow matcher uses whole-run IP/TEID indices without a session-lifetime constraint. [B.5](#b5-direct-platform-data-quality-evidence) quantifies the available evidence and its limits.
 
 PCAP, log, and JSON/JSONL files are retrieved into run-specific directories. Retrieval checks compare source and destination file lists and contents and record failures. Processing then aggregates observations into statistical windows and aligns fault execution, UE count changes, and recovery checks by time, retaining the original records and timestamps. Outputs include time series, association records, and reports covering configuration, operations, recovery, completeness, field coverage, and timing quality.
 
@@ -150,6 +150,22 @@ Derived rates use the following definitions:
 3. **Traffic completion rate:** successful transfers divided by all terminated transfers in the window; terminated timeouts count as failures.
 
 Operation times and recovery outcomes accompany the observations. Unavailable sources, unsupported interfaces, and invalid observations retain their missing-value or status indicators rather than becoming zero-valued rates. Historical placeholders and misleading legacy proxies are identified in the screening crosswalk; their column names alone do not certify a valid observation.
+
+### B.5 Direct platform data-quality evidence
+
+The [W1 quality summary](../platform_data/quality/README.md) evaluates the seven accepted runs using collection records and original-log corroboration, independently of model scores. It includes per-run/per-host distributions, explicit denominators, route counts and reproducible offline checks.
+
+| Evidence | W1 result | Interpretation |
+|---|---|---|
+| Remote SSH clock probes | 38,480 probes; absolute midpoint offset median/p95/max 183/204.5/301.5 ms; half-interval uncertainty 163/177/277.5 ms | Physical-host probe measurements, not matched-event alignment error; core reference zeros excluded |
+| Probe-compatible interval endpoint | `abs(raw offset) + uncertainty` median/p95/max 345/380/579 ms | Conditional single-probe offset interval under stable-clock assumptions; no event-timing guarantee |
+| Original SMF log corroboration | 9,100/9,140 mapping records (99.56%); 81,900/81,900 judged non-key body fields agree | 40 aggregate-log rows/360 comparisons outside inspected source scope; SUPI/PDU used as keys; source consistency rather than independent accuracy |
+| Association routes | All 9,140 session rows use `control-plane-log`; separate [flow-route counts](../platform_data/quality/association/flow_route_summary.csv) report session-map, interface and subnet routes | Session row labels do not recover field-level direct/fallback decisions; flow route shares use the documented systematic file sample |
+| Export availability | 611,777 rows; 64/81 columns ever nonempty and 17/81 empty in each run; all five source-age columns empty | Availability is distinct from valid numerical features and source freshness |
+
+The flow-route audit reads 1,496,478 records from 968 systematically selected files out of 10,767 capture files, retaining separate capture-family denominators. The N3 sample has 579,213/579,217 session-map-route records (99.9993%), four empty routes and no interface/subnet routes; the two UPF GTP samples contain 280,731 and 292,338 records, respectively, all with the session-map route. These are sampled record-label proportions, not independent accuracy or packet-level attribution rates.
+
+The producer's residual-based `clock_skew_ms` (median/p95/max 26/41/100 ms) and the 15 s association window are not measured cross-host event-alignment errors. The retained artifacts do not provide independently labelled association precision/recall, actual misassociation rate or per-field historical direct/fallback fractions. Those quantities remain unmeasured rather than inferred from downstream model performance.
 
 ## Appendix C. Task construction
 

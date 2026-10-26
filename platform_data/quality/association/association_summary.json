@@ -1,0 +1,1791 @@
+{
+  "flow_presence_bit_order": [
+    "ue_ip",
+    "dnn",
+    "upf_id",
+    "supi",
+    "pdu_session_id"
+  ],
+  "independent_association_precision": null,
+  "independent_association_recall": null,
+  "independent_misassociation_rate": null,
+  "limits": [
+    "Source-route shares are producer metadata counts, not independent association precision or recall.",
+    "control-plane-log includes temporal and configuration/path-based inference; its field-level direct fraction is unknown.",
+    "authoritative:session-map is a static whole-run IP/TEID lookup; it has no lifecycle bounds or candidate-conflict output.",
+    "Flow label_source is initialized from the first packet in a flow aggregate; the aggregation key does not include label_source. These are flow-record label shares, not packet-level attribution fractions.",
+    "Run-wide UE-IP reuse exposure is potential lifecycle ambiguity, not simultaneous conflict or observed misassociation.",
+    "TEID integers are not evaluated as globally unique keys: UPF, peer and direction scopes are required.",
+    "Each capture family has its own artifact-row denominator; capture points, rotations and logical derivatives are not pooled into unique connections.",
+    "Flow producer-route and reuse-exposure shares use a deterministic systematic file sample, not all retained flow rows. All-capture row/labeled totals are copied from retained per-capture summaries. The logical N6 derivative is excluded from capture denominators.",
+    "Empty flow label_source is an unlabelled UE/session route and may be inapplicable for control/management traffic; it is not by itself an association failure.",
+    "NF links omit discarded/unmapped candidates and field-level provenance, so their complete success/failure/ambiguous denominator is unavailable.",
+    "Independent precision/recall and actual misassociation rate remain unmeasured without ground-truth labels."
+  ],
+  "runs": [
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 457633,
+          "all_retained_labeled_flow_record_count": 457633,
+          "nonempty_field_counts": {
+            "dnn": 39049,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 39049,
+            "upf_id": 39049
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 39049
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.314732772,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.314732772,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 39049,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 12290,
+            "single_identity": 26759
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 435264,
+          "all_retained_labeled_flow_record_count": 435264,
+          "nonempty_field_counts": {
+            "dnn": 41362,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 41362,
+            "upf_id": 41362
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 41362
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.808181423,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.808181423,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41362,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 33428,
+            "single_identity": 7934
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 897521,
+          "all_retained_labeled_flow_record_count": 897503,
+          "nonempty_field_counts": {
+            "dnn": 83269,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 83269,
+            "upf_id": 83269
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 83269
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.581681058,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.581681058,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 83269,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 48436,
+            "single_identity": 34833
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 1209,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 105
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 105,
+          "ue_ip_lookup_counts": {
+            "empty": 105
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 434416,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 41501
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41501,
+          "ue_ip_lookup_counts": {
+            "empty": 41501
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 74,
+          "all_retained_flow_record_count": 76629,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 7989
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 8,
+          "sampled_flow_artifact_record_count": 7989,
+          "ue_ip_lookup_counts": {
+            "empty": 7989
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3854,
+          "n6": 786425,
+          "sbi": 4770
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 795049
+      },
+      "run": "W1-D01",
+      "session_map": {
+        "control_plane_log_route_rows": 1304,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1304,
+          "pdu_session_id": 1304,
+          "pfcp_session_established": 1304,
+          "selected_amf": 0,
+          "selected_smf": 1304,
+          "supi": 1304,
+          "teid_dl": 1304,
+          "teid_ul": 1304,
+          "ue_ip": 1304,
+          "upf_id": 1304
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1304
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1264,
+        "row_count": 1304,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 128,
+          "2": 71,
+          "3": 2,
+          "4": 4,
+          "5": 2,
+          "6": 3
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 210,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 82,
+        "ue_ip_keys_with_multiple_supis": 82,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 453106,
+          "all_retained_labeled_flow_record_count": 453106,
+          "nonempty_field_counts": {
+            "dnn": 38683,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 38683,
+            "upf_id": 38683
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 38683
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.504097407,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.504097407,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 38683,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 19500,
+            "single_identity": 19183
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 438513,
+          "all_retained_labeled_flow_record_count": 438513,
+          "nonempty_field_counts": {
+            "dnn": 42155,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 42155,
+            "upf_id": 42155
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 42155
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.343589135,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.343589135,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 42155,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 14484,
+            "single_identity": 27671
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 900394,
+          "all_retained_labeled_flow_record_count": 900386,
+          "nonempty_field_counts": {
+            "dnn": 80500,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 80500,
+            "upf_id": 80500
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 80500
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.413726708,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.413726708,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 80500,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 33305,
+            "single_identity": 47195
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1202,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 105
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 105,
+          "ue_ip_lookup_counts": {
+            "empty": 105
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 441118,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 41272
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41272,
+          "ue_ip_lookup_counts": {
+            "empty": 41272
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 82,
+          "all_retained_flow_record_count": 76091,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 8177
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 8,
+          "sampled_flow_artifact_record_count": 8177,
+          "ue_ip_lookup_counts": {
+            "empty": 8177
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3833,
+          "n6": 781479,
+          "sbi": 4734
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 790046
+      },
+      "run": "W1-D02",
+      "session_map": {
+        "control_plane_log_route_rows": 1307,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1307,
+          "pdu_session_id": 1307,
+          "pfcp_session_established": 1307,
+          "selected_amf": 0,
+          "selected_smf": 1307,
+          "supi": 1307,
+          "teid_dl": 1307,
+          "teid_ul": 1307,
+          "ue_ip": 1307,
+          "upf_id": 1307
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1307
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1267,
+        "row_count": 1307,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 141,
+          "2": 122,
+          "3": 6,
+          "4": 5,
+          "5": 4,
+          "6": 2
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 280,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 139,
+        "ue_ip_keys_with_multiple_supis": 139,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 454438,
+          "all_retained_labeled_flow_record_count": 454438,
+          "nonempty_field_counts": {
+            "dnn": 39655,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 39655,
+            "upf_id": 39655
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 39655
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.213239188,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.213239188,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 39655,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 8456,
+            "single_identity": 31199
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 441347,
+          "all_retained_labeled_flow_record_count": 441347,
+          "nonempty_field_counts": {
+            "dnn": 41325,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 41325,
+            "upf_id": 41325
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 41325
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.577664852,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.577664852,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41325,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 23872,
+            "single_identity": 17453
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 901872,
+          "all_retained_labeled_flow_record_count": 901855,
+          "nonempty_field_counts": {
+            "dnn": 83010,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 83010,
+            "upf_id": 83010
+          },
+          "producer_route_counts": {
+            "<empty>": 2,
+            "authoritative:session-map": 83010
+          },
+          "producer_route_shares": {
+            "<empty>": 2.4093e-05,
+            "authoritative:session-map": 0.999975907
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.397255818,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.39726539,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 83012,
+          "ue_ip_lookup_counts": {
+            "empty": 2,
+            "multi_identity": 32977,
+            "single_identity": 50033
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1198,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 107
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 107,
+          "ue_ip_lookup_counts": {
+            "empty": 107
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 443619,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 41702
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41702,
+          "ue_ip_lookup_counts": {
+            "empty": 41702
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 83,
+          "all_retained_flow_record_count": 75755,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 10025
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 8,
+          "sampled_flow_artifact_record_count": 10025,
+          "ue_ip_lookup_counts": {
+            "empty": 10025
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3743,
+          "n6": 785657,
+          "sbi": 4687
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 794087
+      },
+      "run": "W1-D03",
+      "session_map": {
+        "control_plane_log_route_rows": 1302,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1302,
+          "pdu_session_id": 1302,
+          "pfcp_session_established": 1302,
+          "selected_amf": 0,
+          "selected_smf": 1302,
+          "supi": 1302,
+          "teid_dl": 1302,
+          "teid_ul": 1302,
+          "ue_ip": 1302,
+          "upf_id": 1302
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1302
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1262,
+        "row_count": 1302,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 245,
+          "2": 89,
+          "3": 1,
+          "4": 5,
+          "5": 8,
+          "6": 1,
+          "7": 1
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 350,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 105,
+        "ue_ip_keys_with_multiple_supis": 105,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 450352,
+          "all_retained_labeled_flow_record_count": 450352,
+          "nonempty_field_counts": {
+            "dnn": 41455,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 41455,
+            "upf_id": 41455
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 41455
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.184706308,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.184706308,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41455,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 7657,
+            "single_identity": 33798
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 447060,
+          "all_retained_labeled_flow_record_count": 447060,
+          "nonempty_field_counts": {
+            "dnn": 41963,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 41963,
+            "upf_id": 41963
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 41963
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.709672807,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.709672807,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41963,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 29780,
+            "single_identity": 12183
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 903777,
+          "all_retained_labeled_flow_record_count": 903767,
+          "nonempty_field_counts": {
+            "dnn": 83121,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 83121,
+            "upf_id": 83121
+          },
+          "producer_route_counts": {
+            "<empty>": 1,
+            "authoritative:session-map": 83121
+          },
+          "producer_route_shares": {
+            "<empty>": 1.2031e-05,
+            "authoritative:session-map": 0.999987969
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.442915233,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.442920562,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 83122,
+          "ue_ip_lookup_counts": {
+            "empty": 1,
+            "multi_identity": 36816,
+            "single_identity": 46305
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1192,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 104
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 104,
+          "ue_ip_lookup_counts": {
+            "empty": 104
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 447341,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 40611
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 40611,
+          "ue_ip_lookup_counts": {
+            "empty": 40611
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 86,
+          "all_retained_flow_record_count": 75489,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 7236
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 9,
+          "sampled_flow_artifact_record_count": 7236,
+          "ue_ip_lookup_counts": {
+            "empty": 7236
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3716,
+          "n6": 787104,
+          "sbi": 4656
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 795476
+      },
+      "run": "W1-D04",
+      "session_map": {
+        "control_plane_log_route_rows": 1303,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1303,
+          "pdu_session_id": 1303,
+          "pfcp_session_established": 1303,
+          "selected_amf": 0,
+          "selected_smf": 1303,
+          "supi": 1303,
+          "teid_dl": 1303,
+          "teid_ul": 1303,
+          "ue_ip": 1303,
+          "upf_id": 1303
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1303
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1263,
+        "row_count": 1303,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 205,
+          "2": 90,
+          "3": 4,
+          "4": 3,
+          "5": 5,
+          "6": 3
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 310,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 105,
+        "ue_ip_keys_with_multiple_supis": 105,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 459124,
+          "all_retained_labeled_flow_record_count": 459124,
+          "nonempty_field_counts": {
+            "dnn": 40228,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 40228,
+            "upf_id": 40228
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 40228
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.747812469,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.747812469,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 40228,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 30083,
+            "single_identity": 10145
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 443418,
+          "all_retained_labeled_flow_record_count": 443418,
+          "nonempty_field_counts": {
+            "dnn": 42760,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 42760,
+            "upf_id": 42760
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 42760
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.36924696,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.36924696,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 42760,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 15789,
+            "single_identity": 26971
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 907519,
+          "all_retained_labeled_flow_record_count": 907511,
+          "nonempty_field_counts": {
+            "dnn": 83167,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 83167,
+            "upf_id": 83167
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 83167
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.566558851,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.566558851,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 83167,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 47119,
+            "single_identity": 36048
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1197,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 106
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 106,
+          "ue_ip_lookup_counts": {
+            "empty": 106
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 444851,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 41755
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41755,
+          "ue_ip_lookup_counts": {
+            "empty": 41755
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 74,
+          "all_retained_flow_record_count": 76057,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 7282
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 8,
+          "sampled_flow_artifact_record_count": 7282,
+          "ue_ip_lookup_counts": {
+            "empty": 7282
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3791,
+          "n6": 791337,
+          "sbi": 4724
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 799852
+      },
+      "run": "W1-D05",
+      "session_map": {
+        "control_plane_log_route_rows": 1306,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1306,
+          "pdu_session_id": 1306,
+          "pfcp_session_established": 1306,
+          "selected_amf": 0,
+          "selected_smf": 1306,
+          "supi": 1306,
+          "teid_dl": 1306,
+          "teid_ul": 1306,
+          "ue_ip": 1306,
+          "upf_id": 1306
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1306
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1266,
+        "row_count": 1306,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 125,
+          "2": 109,
+          "3": 6,
+          "4": 1,
+          "5": 5,
+          "6": 4
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 250,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 125,
+        "ue_ip_keys_with_multiple_supis": 125,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 454226,
+          "all_retained_labeled_flow_record_count": 454226,
+          "nonempty_field_counts": {
+            "dnn": 39773,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 39773,
+            "upf_id": 39773
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 39773
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.643677872,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.643677872,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 39773,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 25601,
+            "single_identity": 14172
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 438184,
+          "all_retained_labeled_flow_record_count": 438184,
+          "nonempty_field_counts": {
+            "dnn": 42053,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 42053,
+            "upf_id": 42053
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 42053
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.541174233,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.541174233,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 42053,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 22758,
+            "single_identity": 19295
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 898784,
+          "all_retained_labeled_flow_record_count": 898775,
+          "nonempty_field_counts": {
+            "dnn": 83239,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 83239,
+            "upf_id": 83239
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 83239
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.606374416,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.606374416,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 83239,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 50474,
+            "single_identity": 32765
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1192,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 105
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 105,
+          "ue_ip_lookup_counts": {
+            "empty": 105
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 439034,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 41868
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41868,
+          "ue_ip_lookup_counts": {
+            "empty": 41868
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 86,
+          "all_retained_flow_record_count": 75457,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 6817
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 9,
+          "sampled_flow_artifact_record_count": 6817,
+          "ue_ip_lookup_counts": {
+            "empty": 6817
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3728,
+          "n6": 786058,
+          "sbi": 4659
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 794445
+      },
+      "run": "W1-D06",
+      "session_map": {
+        "control_plane_log_route_rows": 1313,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1313,
+          "pdu_session_id": 1313,
+          "pfcp_session_established": 1313,
+          "selected_amf": 0,
+          "selected_smf": 1313,
+          "supi": 1313,
+          "teid_dl": 1313,
+          "teid_ul": 1313,
+          "ue_ip": 1313,
+          "upf_id": 1313
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1313
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1273,
+        "row_count": 1313,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 171,
+          "2": 67,
+          "3": 1,
+          "4": 3,
+          "5": 5,
+          "6": 1,
+          "7": 2
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 250,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 79,
+        "ue_ip_keys_with_multiple_supis": 79,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    },
+    {
+      "flow_artifacts_by_capture_family": {
+        "gtp-gold": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 448386,
+          "all_retained_labeled_flow_record_count": 448386,
+          "nonempty_field_counts": {
+            "dnn": 41888,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 41888,
+            "upf_id": 41888
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 41888
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.318850267,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.318850267,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 41888,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 13356,
+            "single_identity": 28532
+          }
+        },
+        "gtp-silver": {
+          "all_capture_file_count": 292,
+          "all_retained_flow_record_count": 447587,
+          "all_retained_labeled_flow_record_count": 447587,
+          "nonempty_field_counts": {
+            "dnn": 40720,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 40720,
+            "upf_id": 40720
+          },
+          "producer_route_counts": {
+            "authoritative:session-map": 40720
+          },
+          "producer_route_shares": {
+            "authoritative:session-map": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.625810413,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.625810413,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 40720,
+          "ue_ip_lookup_counts": {
+            "multi_identity": 25483,
+            "single_identity": 15237
+          }
+        },
+        "n3-gtpu": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 901811,
+          "all_retained_labeled_flow_record_count": 901803,
+          "nonempty_field_counts": {
+            "dnn": 82907,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 82907,
+            "upf_id": 82907
+          },
+          "producer_route_counts": {
+            "<empty>": 1,
+            "authoritative:session-map": 82907
+          },
+          "producer_route_shares": {
+            "<empty>": 1.2062e-05,
+            "authoritative:session-map": 0.999987938
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.473705794,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.473711508,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 82908,
+          "ue_ip_lookup_counts": {
+            "empty": 1,
+            "multi_identity": 39274,
+            "single_identity": 43633
+          }
+        },
+        "n4-pfcp": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 1197,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 105
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 105,
+          "ue_ip_lookup_counts": {
+            "empty": 105
+          }
+        },
+        "n6-uplink": {
+          "all_capture_file_count": 291,
+          "all_retained_flow_record_count": 449639,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 40758
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 26,
+          "sampled_flow_artifact_record_count": 40758,
+          "ue_ip_lookup_counts": {
+            "empty": 40758
+          }
+        },
+        "sbi-http": {
+          "all_capture_file_count": 85,
+          "all_retained_flow_record_count": 75716,
+          "all_retained_labeled_flow_record_count": 0,
+          "nonempty_field_counts": {
+            "dnn": 0,
+            "pdu_session_id": 0,
+            "supi": 0,
+            "ue_ip": 0,
+            "upf_id": 0
+          },
+          "producer_route_counts": {
+            "<empty>": 6462
+          },
+          "producer_route_shares": {
+            "<empty>": 1.0
+          },
+          "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+          "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+          "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+          "sampled_capture_file_count": 8,
+          "sampled_flow_artifact_record_count": 6462,
+          "ue_ip_lookup_counts": {
+            "empty": 6462
+          }
+        }
+      },
+      "nf_links": {
+        "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+        "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+        "observation_source_counts": null,
+        "plane_counts": {
+          "n4": 3775,
+          "n6": 790415,
+          "sbi": 4698
+        },
+        "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+        "record_count": 798888
+      },
+      "run": "W1-D07",
+      "session_map": {
+        "control_plane_log_route_rows": 1305,
+        "empty_or_unrecognized_route_rows": 0,
+        "exact_lifecycle_key_duplicate_records": 0,
+        "explicit_ran_n3_fallback_route_rows": 0,
+        "field_level_direct_versus_fallback_counts": null,
+        "nonempty_field_counts": {
+          "dnn": 1305,
+          "pdu_session_id": 1305,
+          "pfcp_session_established": 1305,
+          "selected_amf": 0,
+          "selected_smf": 1305,
+          "supi": 1305,
+          "teid_dl": 1305,
+          "teid_ul": 1305,
+          "ue_ip": 1305,
+          "upf_id": 1305
+        },
+        "producer_route_counts": {
+          "control-plane-log": 1305
+        },
+        "producer_route_shares": {
+          "control-plane-log": 1.0
+        },
+        "records_beyond_first_per_supi_pdu_key": 1265,
+        "row_count": 1305,
+        "supi_identity_count_distribution_by_ue_ip_key": {
+          "1": 133,
+          "2": 99,
+          "3": 8,
+          "4": 4,
+          "5": 2,
+          "6": 4
+        },
+        "supi_pdu_keys_with_multiple_records": 40,
+        "ue_ip_keys": 250,
+        "ue_ip_keys_with_multiple_supi_pdu_identities": 117,
+        "ue_ip_keys_with_multiple_supis": 117,
+        "unique_run_supi_keys": 40,
+        "unique_run_supi_pdu_keys": 40
+      }
+    }
+  ],
+  "scope": "Seven accepted W1 runs; retained producer routes, not accuracy",
+  "session_presence_bit_order": [
+    "supi",
+    "pdu_session_id",
+    "ue_ip",
+    "dnn",
+    "upf_id",
+    "selected_amf",
+    "selected_smf",
+    "teid_ul",
+    "teid_dl",
+    "pfcp_session_established"
+  ],
+  "totals": {
+    "flow_artifacts_by_capture_family": {
+      "gtp-gold": {
+        "all_capture_file_count": 2044,
+        "all_retained_flow_record_count": 3177265,
+        "all_retained_labeled_flow_record_count": 3177265,
+        "nonempty_field_counts": {
+          "dnn": 280731,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 280731,
+          "upf_id": 280731
+        },
+        "producer_route_counts": {
+          "authoritative:session-map": 280731
+        },
+        "producer_route_shares": {
+          "authoritative:session-map": 1.0
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.416566037,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.416566037,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 182,
+        "sampled_flow_artifact_record_count": 280731,
+        "ue_ip_lookup_counts": {
+          "multi_identity": 116943,
+          "single_identity": 163788
+        }
+      },
+      "gtp-silver": {
+        "all_capture_file_count": 2041,
+        "all_retained_flow_record_count": 3091373,
+        "all_retained_labeled_flow_record_count": 3091373,
+        "nonempty_field_counts": {
+          "dnn": 292338,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 292338,
+          "upf_id": 292338
+        },
+        "producer_route_counts": {
+          "authoritative:session-map": 292338
+        },
+        "producer_route_shares": {
+          "authoritative:session-map": 1.0
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.566447058,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.566447058,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 182,
+        "sampled_flow_artifact_record_count": 292338,
+        "ue_ip_lookup_counts": {
+          "multi_identity": 165594,
+          "single_identity": 126744
+        }
+      },
+      "n3-gtpu": {
+        "all_capture_file_count": 2037,
+        "all_retained_flow_record_count": 6311678,
+        "all_retained_labeled_flow_record_count": 6311600,
+        "nonempty_field_counts": {
+          "dnn": 579213,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 579213,
+          "upf_id": 579213
+        },
+        "producer_route_counts": {
+          "<empty>": 4,
+          "authoritative:session-map": 579213
+        },
+        "producer_route_shares": {
+          "<empty>": 6.906e-06,
+          "authoritative:session-map": 0.999993094
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.497915289,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": 0.497918728,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 182,
+        "sampled_flow_artifact_record_count": 579217,
+        "ue_ip_lookup_counts": {
+          "empty": 4,
+          "multi_identity": 288401,
+          "single_identity": 290812
+        }
+      },
+      "n4-pfcp": {
+        "all_capture_file_count": 2038,
+        "all_retained_flow_record_count": 8387,
+        "all_retained_labeled_flow_record_count": 0,
+        "nonempty_field_counts": {
+          "dnn": 0,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 0,
+          "upf_id": 0
+        },
+        "producer_route_counts": {
+          "<empty>": 737
+        },
+        "producer_route_shares": {
+          "<empty>": 1.0
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 182,
+        "sampled_flow_artifact_record_count": 737,
+        "ue_ip_lookup_counts": {
+          "empty": 737
+        }
+      },
+      "n6-uplink": {
+        "all_capture_file_count": 2037,
+        "all_retained_flow_record_count": 3100018,
+        "all_retained_labeled_flow_record_count": 0,
+        "nonempty_field_counts": {
+          "dnn": 0,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 0,
+          "upf_id": 0
+        },
+        "producer_route_counts": {
+          "<empty>": 289467
+        },
+        "producer_route_shares": {
+          "<empty>": 1.0
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 182,
+        "sampled_flow_artifact_record_count": 289467,
+        "ue_ip_lookup_counts": {
+          "empty": 289467
+        }
+      },
+      "sbi-http": {
+        "all_capture_file_count": 570,
+        "all_retained_flow_record_count": 531194,
+        "all_retained_labeled_flow_record_count": 0,
+        "nonempty_field_counts": {
+          "dnn": 0,
+          "pdu_session_id": 0,
+          "supi": 0,
+          "ue_ip": 0,
+          "upf_id": 0
+        },
+        "producer_route_counts": {
+          "<empty>": 53988
+        },
+        "producer_route_shares": {
+          "<empty>": 1.0
+        },
+        "run_wide_multi_identity_ip_exposure_share_all_rows": 0.0,
+        "run_wide_multi_identity_ip_exposure_share_session_map_hits": null,
+        "sample_scope": "Every Nth file per run/capture family from sorted canonical filenames, starting with the first file and including the final file; N is recorded in source_inventory.json. Shares apply only to sampled rows; no population accuracy estimate.",
+        "sampled_capture_file_count": 58,
+        "sampled_flow_artifact_record_count": 53988,
+        "ue_ip_lookup_counts": {
+          "empty": 53988
+        }
+      }
+    },
+    "nf_links": {
+      "count_source": "retained nf-links.latest.json producer summary; full NF-link records not rescanned",
+      "field_level_direct_fallback_ambiguous_unmapped_counts": null,
+      "observation_source_counts": null,
+      "plane_counts": {
+        "n4": 26440,
+        "n6": 5508475,
+        "sbi": 32928
+      },
+      "reason": "Producer output omits per-field route, rejected candidate, ambiguity and unmatched inventories.",
+      "record_count": 5567843
+    },
+    "run": "ALL",
+    "session_map": {
+      "control_plane_log_route_rows": 9140,
+      "empty_or_unrecognized_route_rows": 0,
+      "exact_lifecycle_key_duplicate_records": 0,
+      "explicit_ran_n3_fallback_route_rows": 0,
+      "field_level_direct_versus_fallback_counts": null,
+      "nonempty_field_counts": {
+        "dnn": 9140,
+        "pdu_session_id": 9140,
+        "pfcp_session_established": 9140,
+        "selected_amf": 0,
+        "selected_smf": 9140,
+        "supi": 9140,
+        "teid_dl": 9140,
+        "teid_ul": 9140,
+        "ue_ip": 9140,
+        "upf_id": 9140
+      },
+      "producer_route_counts": {
+        "control-plane-log": 9140
+      },
+      "producer_route_shares": {
+        "control-plane-log": 1.0
+      },
+      "records_beyond_first_per_supi_pdu_key": 8860,
+      "row_count": 9140,
+      "supi_identity_count_distribution_by_ue_ip_key": {
+        "1": 1148,
+        "2": 647,
+        "3": 28,
+        "4": 25,
+        "5": 31,
+        "6": 18,
+        "7": 3
+      },
+      "supi_pdu_keys_with_multiple_records": 280,
+      "ue_ip_keys": 1900,
+      "ue_ip_keys_with_multiple_supi_pdu_identities": 752,
+      "ue_ip_keys_with_multiple_supis": 752,
+      "unique_run_supi_keys": 280,
+      "unique_run_supi_pdu_keys": 280
+    }
+  }
+}
